@@ -8,12 +8,12 @@ import marisa_trie
 from ..utils.const import LAST_NAMES, INSTITUTE_NAMES, CATS
 
 
-FILTER_BYS = ['institute', 'name']      # deciding factors of a native language background
-L2_LANGS = ['en', 'zh']                 # native language options of users
-TARGET_LANGS = ['en']                   # target language options
-N_AUTHORS = 2                           # number of authors to consider
-SAVE_PATH_DIR = 'project/data'          # data directory
-LOG_PATH_DIR = 'project/output/logs'    # log directory
+FILTER_BYS = ['institute', 'name', 'both']  # deciding factors of a native language background
+L2_LANGS = ['en', 'zh']                     # native language options of users
+TARGET_LANGS = ['en']                       # target language options
+N_AUTHORS = 2                               # number of authors to consider
+SAVE_PATH_DIR = 'project/data'              # data directory
+LOG_PATH_DIR = 'project/output/logs'        # log directory
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Scrape all data.')
@@ -21,8 +21,8 @@ def parse_args():
                         help='The native languages of users to scrape. Use language code2 to specify, e.g. en for English, zh for Chinese.')
     parser.add_argument('--target-lang', type=str, default='en',
                         help='The target language. Use language code2 to specify, e.g. en for English, zh for Chinese. Default: en')
-    parser.add_argument('--filter-by', type=str, default='institute',
-                        help='The key to filter the papers, either "institute" or "name". Default: institute')
+    parser.add_argument('--filter-by', type=str, default='both',
+                        help='The key to filter the papers, either "institute", "name", or "both". Default: both')
     parser.add_argument('--max-sent', type=int, default=100,
                         help='Maximum number of sentences to scrape for each type of corpus.')
 
@@ -56,6 +56,10 @@ def create_filter(lang, filter_by):
     elif filter_by == 'name':
         names = marisa_trie.Trie(LAST_NAMES[lang])
         return lambda tup: name_filter(tup, names)
+    elif filter_by == 'both':
+        last_names = marisa_trie.Trie(LAST_NAMES[lang])
+        institute_names = marisa_trie.Trie(INSTITUTE_NAMES[lang])
+        return lambda tup: name_filter(tup, last_names) and institute_filter(tup, institute_names)
 
 def create_meta_filter(langs):
     names = []
