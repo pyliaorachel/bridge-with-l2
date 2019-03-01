@@ -3,7 +3,7 @@ import sys
 import os
 
 from paperscraper.scraper import Scraper
-import trie_search
+import marisa_trie
 
 from ..utils.const import LAST_NAMES, INSTITUTE_NAMES, CATS
 
@@ -51,17 +51,17 @@ def name_filter(tup, names):
 
 def create_filter(lang, filter_by):
     if filter_by == 'institute':
-        names = trie_search.TrieSearch(INSTITUTE_NAMES[lang])
+        names = marisa_trie.Trie(INSTITUTE_NAMES[lang])
         return lambda tup: institute_filter(tup, names)
     elif filter_by == 'name':
-        names = trie_search.TrieSearch(LAST_NAMES[lang])
+        names = marisa_trie.Trie(LAST_NAMES[lang])
         return lambda tup: name_filter(tup, names)
 
 def create_meta_filter(langs):
     names = []
     for lang in langs:
         names += LAST_NAMES[lang]
-    return { 'authors': trie_search.TrieSearch(names) }
+    return { 'authors': marisa_trie.Trie(names) }
 
 if __name__ == '__main__':
     args = parse_args()
