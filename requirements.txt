@@ -1,0 +1,2 @@
+-e git+https://github.com/pyliaorachel/paperscraper.git#egg=paperscraper
+trie-search==0.3.0
