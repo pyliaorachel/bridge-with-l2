@@ -107,4 +107,4 @@ venv.bak/
 .DS_Store
 *.swp
 # project/data/
-src
+src/paperscraper
