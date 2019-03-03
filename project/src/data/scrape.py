@@ -5,22 +5,23 @@ import os
 from paperscraper.scraper import Scraper
 import marisa_trie
 
-from ..utils.const import LAST_NAMES, INSTITUTE_NAMES, CATS
+from ..utils.const import LAST_NAMES, INSTITUTE_NAMES, CATS, QUERIES
+from ..utils.utils import num_human_format, is_chinese, always_true
 
 
 FILTER_BYS = ['institute', 'name', 'both']  # deciding factors of a native language background
-L2_LANGS = ['en', 'zh']                     # native language options of users
-TARGET_LANGS = ['en']                       # target language options
+ARXIV_LANGS = ['en', 'zh']                  # supported language users of corpora to scrape from arXiv
+GOOGLE_SCHOLAR_LANGS = ['zh']               # supported language users of corpora to scrape from Google Scholar
 N_AUTHORS = 2                               # number of authors to consider
 SAVE_PATH_DIR = 'project/data'              # data directory
 LOG_PATH_DIR = 'project/output/logs'        # log directory
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Scrape all data.')
-    parser.add_argument('--langs', type=str, nargs='+', required=True,
-                        help='The native languages of users to scrape. Use language code2 to specify, e.g. en for English, zh for Chinese.')
-    parser.add_argument('--target-lang', type=str, default='en',
-                        help='The target language. Use language code2 to specify, e.g. en for English, zh for Chinese. Default: en')
+    parser.add_argument('--arxiv', type=str, nargs='+', required=True,
+                        help='The language users of arXiv papers to scrape. Use language code2 to specify, e.g. en for English, zh for Chinese.')
+    parser.add_argument('--gs', type=str, nargs='+', required=True,
+                        help='The language users of Google Scholar papers to scrape. Use language code2 to specify, e.g. en for English, zh for Chinese.')
     parser.add_argument('--filter-by', type=str, default='both',
                         help='The key to filter the papers, either "institute", "name", or "both". Default: both')
     parser.add_argument('--max-sent', type=int, default=100,
@@ -69,34 +70,32 @@ def create_meta_filter(langs):
 
 if __name__ == '__main__':
     args = parse_args()
+    max_sent_str = num_human_format(args.max_sent)
 
-    # Create classification filters
+    # arXiv site
+    print('========== arXiv ==========')
+    site = 'arxiv'
+
+    ## Create classification filters
     if args.filter_by not in FILTER_BYS:
         print('filter by must be either one in {}'.format(FILTER_BYS))
         sys.exit()
 
     classifications = []
-    for lang in args.langs:
-        if lang not in L2_LANGS:
-            print('language must be in {}'.format(L2_LANGS))
+    for lang in args.arxiv:
+        if lang not in ARXIV_LANGS:
+            print('language must be in {}'.format(ARXIV_LANGS))
             sys.exit()
         
         classifications.append(create_filter(lang, args.filter_by))
- 
-    meta_filters = create_meta_filter(args.langs)
 
-    # Determine sites to scrape from by target language
-    if args.target_lang == 'en':
-        site = 'arxiv'
-    else:
-        print('target language must be in {}'.format(TARGET_LANGS))
-        sys.exit()
+    meta_filters = create_meta_filter(args.arxiv)
 
-    # Create save paths
-    save_paths = [os.path.join(SAVE_PATH_DIR, '{}_{}.txt'.format(lang, args.target_lang)) for lang in args.langs]
-    log_path = os.path.join(LOG_PATH_DIR, '{}.log'.format(site))
+    ## Create save paths
+    save_paths = [os.path.join(SAVE_PATH_DIR, '{}_{}_en_{}.txt'.format(site, lang, max_sent_str)) for lang in args.arxiv]
+    log_path = os.path.join(LOG_PATH_DIR, '{}_{}.log'.format(site, max_sent_str))
 
-    # Scrape for each category until max sentence count reached
+    ## Scrape for each category until max sentence count reached
     sent_cnts = [0] * len(classifications)
     termination_reached = [False] * len(classifications)
     for category in CATS:
@@ -105,6 +104,7 @@ if __name__ == '__main__':
             classifications=classifications, filters=meta_filters
         )
         this_sent_cnts = scraper.scrape_text(site, save_to=save_paths, log_to=log_path, day_intv=5, append=True)
+        print('Sentence counts for {}: {}'.format(category, this_sent_cnts))
 
         # Update sentence counts
         for i in range(len(classifications)):
@@ -118,4 +118,31 @@ if __name__ == '__main__':
         if all(termination_reached):
             break
 
-    print('Done.')
+    print('Done arXiv.')
+
+    # Google Scholar site
+    print('========== Google Scholar ==========')
+    site = 'google-scholar'
+
+    for lang in args.gs:
+        if lang not in GOOGLE_SCHOLAR_LANGS:
+            print('language must be in {}'.format(GOOGLE_SCHOLAR_LANGS))
+            continue
+        
+        filter_text = always_true
+        if lang == 'zh':
+            filter_text = is_chinese
+
+        ## Create queries
+        queries = QUERIES[lang]
+
+        ## Create save paths
+        save_path = os.path.join(SAVE_PATH_DIR, '{}_{}_{}_{}.txt'.format(site, lang, lang, max_sent_str))
+        log_path = os.path.join(LOG_PATH_DIR, '{}_{}_{}.log'.format(site, lang, max_sent_str))
+
+        ## Scrape for each query until max sentence count reached
+        scraper = Scraper(filter_text=filter_text, max_sent=args.max_sent)
+        sent_cnt = scraper.scrape_text(site, queries=queries, save_to=save_path, log_to=log_path, append=True)
+        print('Sentence count for {}: {}'.format(lang, sent_cnt))
+
+    print('Done Google Scholar.')
