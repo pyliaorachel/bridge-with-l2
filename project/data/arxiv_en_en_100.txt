@@ -1,0 +1,164 @@
+In this paper, we consider a general stochastic optimization problem which is often at the core of supervised learning, such as deep learning and linear classification.
+ We consider a standard stochastic gradient descent (SGD) method with a fixed, large step size and propose a novel assumption on the objective function, under which this method has the improved convergence rates (to a neighborhood of the optimal solutions).
+ We then empirically demonstrate that these assumptions hold for logistic regression and standard deep neural networks on classical data sets.
+ Thus our analysis helps to explain when efficient behavior can be expected from the SGD method in training classification models and deep neural networks.
+In this paper we are interested in analyzing behavior of the stochastic gradient algorithm when solving empirical and expected risk minimization problems.
+ For the sake of generality we consider the following stochastic optimization problem [ f(where $is a random variable obeying some distribution.
+More generally represents the expected risk minimization.
+Stochastic gradient descent (SGD), originally introduced in but also when  is large.
+ Theoretical justification for using SGD for machine learning problems is given, for example, in where it is shown that, at least for convex problem, SGD is an optimal method for minimizing expected risk, which is the ultimate goal of learning.
+ From the practical perspective SGD is often preferred to the standard gradient descent (GD) method simply because GD requires computation of a full gradient on each iteration, which, for example, in the case of deep neural networks (DNN), requires applying backpropagation for all  samples, which can be prohibitive.
+We set  and generate these two scenarios by setting all the noise components  to be small (4025 ) for case (ii).
+ We can observe from Figure that SGD algorithm converges to the optimal solution of Ff_iFf_i's $ are far from each other and from the overall optimum, then iterates of SGD wander randomly in the region around these individual optima, as shown on the right of Figure Hence, SGD cannot work effectively in case (ii), unless we either reduce the learning rate or reduce the variance of the steps thus attaining more accurate gradient information.
+In this paper we generalize this result for stochastic problem under much weaker assumptions.
+ In particular, we do not assume that the gradients {stochastic gradients, but assume that it holds with suitably large probability.
+ We then show that SGD has fast convergence rates in the strongly convex, convex and nonconvex cases, until some accuracy is reached, where this accuracy is dictated by the behavior of the stochastic gradients at the optimal solution.
+We conjecture that success of SGD for training many machine learning models is the result of the associated optimization problems having this properties - most of the component gradients are suitably small at the solution.
+ To verify this claim, we trained linear classifiers (via logistic regression) and standard neural networks on several well-known datasets and subsequently computed the fraction of individual gradients of , that were small.
+ The results show that more than 99of component functions  have the vanishing gradient at $.
+We conjecture that in many instances of empirical risk minimization and expected risk minimization SGD converges to a neighborhood of a stationary point of f_iF(is strongly convex, convex and nonconvex.
+The remainder of the paper is organized as follows.
+ The main convergence analysis for all three cases is carried out in Section and implications of our analysis and findings are summarized in Section The proofs are presented in the Appendix.
+In this section, we analyze the stochastic gradient descent algorithm (SGD) under a novel condition, based on the observations of the previous section, and derive improved convergence rates for the strongly convex, convex, and non-convex cases.
+ We present each result in the form of a general theorem with the bound on a certain optimality measure (depending on the case), followed by the corollary where we demonstrate that improved convergence rate can be observed until this optimality measure becomes small.
+ The rate and the threshold for optimality measure are dictated by the properties of the stochastic gradient at the solution.
+First we introduce the basic definition of -smoothness.
+We now define the quantities that will be useful in our results.
+The quantity 1can be interpreted as the average bound of large components M_{if we want to eliminate its dependence on to be close to  for all but very small values of increases and vice versa, but if there exists a small .
+In this section, we analyze the SGD method in the context of minimizing a convex objective function.
+ We will bound the expected optimality gap at a given iterate in terms of the value of FF$ is strongly convex.
+Using this definition, we state the following result for the strongly convex case.
+Suppose that .
+ Then, for any F(and $M_{and respectively.
+The main conclusion is stated in the following corollary.
+Note that in Corollary we assume that only to simplify the expressions.
+ (The proof in detail is in the Appendix.
+) We conclude that under the assumption .
+Again, the convergence rate of SGD is governed by the initial solution and quantities $p_{.
+ Hence we have the following corollary.
+Similarly to the strongly convex case, under the key assumption that we again assume that only to simplify the expressions and to replace 2$ in the complexity bound.
+In this section, we establish expected complexity bound for Algorithmwhen applied to nonconvex objective functions.
+ This setting includes deep neural networks in which the cost function is a sum of nonconvex function components.
+ Despite the nonconvexity of the objective, it has been observed that deep neural networks can be trained fairly quickly by SGD algorithms.
+ It has also been observed that after reaching certain accuracy, the SGD algorithm may slow down dramatically.
+For the analysis of the nonconvex case, we need to make an assumption on the rate of change in the gradients near all local solutions, or at least those to which iterates $generated by the algorithm may converge.
+This assumption is made for any realization ), in other words, bounds the average expected rate of {holds for problems of training deep neural networks.
+We also need to slightly modify Definition Let {M_{We know that p_{.
+ This time, if we assume that F(a large fraction of stochastic gradients have small norm at those points.
+ Essentially,  consists of stationary points to which different realization of SGD iterates converge.
+Let Assumption hold for some .
+ Suppose that  is -smooth.
+ Consider Algorithm with + ( 1 - p_{where  is any lower bound of ; and $p_{are defined in and respectively.
+We consider from the LIBSVM website and method with the stopping criterion and the batch-size  and 100 epochs.
+ The final solution given by the SGD algorithm is denoted by p_expressed in percentage form for different values of $.
+As we can see from Table that indicates that SGD with a fixed step size can converge to a small neighborhood of the optimal solution of .
+ The success of using SGD is illustrated, optimality gaps $F(- F(are small in our experiments.
+& & & Train accuracy & 7& 100& 0.
+9219 & 2& 100& 1& 100& 0.
+For experiments with nonconvex problems we train DNNs using two standard network architectures: feed forward network (FFN) and convolutional neural network (CNN).
+ Configuration of FNN includes  dense layers each containing  neurons followed by a ReLU activation.
+ The output layer consists of  neurons with the softmax activation where  is the number of classes.
+ For CNN, we configure the network to have  convolutional layers followed by  dense layers.
+ Convolutional layers contain a convolutional operator followed by a ReLU activation and then a max pooling.
+ The number of filters of both the convolutional operators are set to  and the associated filter sizes are 28 (73257 training images of size 32 (50000 training color images of size $32 summarizes the data sets.
+We trained the networks by the popular Adam algorithm with a minibatch of size  and reported the values of p_in terms of percentage for different thresholds p_is close to  for a sufficiently small f_iF$.
+& & Train accuracy &  & & & 3.
+5& 99.
+94& & 8.
+1& 99.
+99& & 5.
+5& 99.
+The value of  is the estimation of  in shows only an approximation of the behavior at the local solution.
+This section shows how to estimate .
+We show two plots to see behaviors of  for MNIST (FFN) and CIFAR10 (CNN) (others are reported in Tablethat  is bounded above by a constant.
+ (Note that .
+We have demonstrated that based on the behavior of the stochastic gradient estimates at or near the stationary points, SGD with fixed step size converges with the same rate as full gradient descent of the variance reduction methods, until it reaches the accuracy where the variance in the stochastic gradient estimates starts to dominate and prevents further convergence.
+ In particular out assumption is that at the solution.
+ Note b$.
+Let b1-p_can be achieved for smaller values of we recover full gradient method and its convergence behavior.
+Let and $M_{and respectively.
+We are going to use mathematical induction to prove the result.
+Let assume that it is true with , we are going to show it is also true with .
+hold for some .
+ Suppose that  is -smooth.
+Let us assume that, there exists a local minima $F(F(p (1 - p) M.
+Therefore, [ - - p_{(1-p_{- where the last inequality follows since $1-p_{.
+Fluorescence microscopy is a type of an optical microscopy that uses fluorescence to image 3D subcellular structures Three dimensional segmentation is needed to quantify and characterize cells, nuclei or other biological structures.
+Various nuclei segmentation methods have been investigated in the last few decades.
+ Active contours which minimizes an energy functional to fit desired shapes has been one of the most successful methods in microscopy image analysis.
+ Since active contours uses the image gradient to evolve a contour to the boundary of an object, this method can be sensitive to noise and highly dependent on initial contour placement.
+ In an external energy term which convolves a controllable vector field kernel with an image edge map was introduced to address these problems.
+ In 2D region-based active contours using image intensity to identify a region of interest was described.
+ This achieves better performance on noisy image and is relatively independent of the initial curve placement.
+ Extending this to 3D, described 3D segmentation of a rat kidney structure.
+ This technique was further extended to address the problem of 3D intensity inhomogeneity described a method known as Squassh to solve the energy minimization problem from a generalized linear model to couple image restoration and segmentation.
+ In addition, described multidimensional segmentation using random seeds combined with multi-resolution, multi-scale, and region-growing technique.
+Generating realistic synthetic microscopy image volumes remains a challenging problem since various types of noise and biological structures with different shapes are present and need to be modeled.
+ Recently, in a generative adversarial network (GAN) was described to address image-to-image translation problems using two adversarial networks, a generative network and a discriminative network.
+ In particular, the discriminative network learns a loss function to distinguish whether the output image is real or fake whereas the generative network tries to minimize this loss function.
+ One of the extensions of GANs is Pix2Pix which uses conditional GANs to learn the relationship between the input image and output image that can generate realistic images.
+ One issue with Pix2Pix is that it still requires paired training data to train the networks.
+ In coupled GANs (CoGAN) for learning the joint distribution of multi-domain images without having the corresponding groundtruth images was introduced.
+ Later, cycle-consistent adversarial networks (CycleGAN) employed a cycle consistent term in the adversarial loss function for image generation without using paired training data.
+In this paper, we present a 3D segmentation method to identify and segment nuclei in fluorescence microscopy volumes without the need of manual segmented groundtruth volumes.
+ Three dimensional synthetic training data is generated using spatially constrained CycleGAN.
+ A 3D CNN network is then trained using 3D synthetic data to segment nuclei structures.
+ Our method is evaluated using hand segmented groundtruth volumes of real fluorescence microscopy data from a rat kidney.
+ Our data are collected using two-photon microscopy with nuclei labeled with Hoechst 33342 staining.
+Three dimensional synthetic data generation consists of synthetic binary volume generation, SpCycleGAN training, and SpCycleGAN inferences.
+ In synthetic binary volume generation, nuclei are assumed to have an ellipsoidal shape, multiple nuclei are randomly generated in different orientations and locations in a volume The original CycleGAN and our SpCycleGAN were trained to generate a set of synthetic volumes.
+Although the CycleGAN uses cycle consistency loss to constrain the similarity of the distribution of  and , CycleGAN does not provide enough spatial constraints on the locations of the nuclei.
+ CycleGAN generates realistic synthetic microscopy images but a spatial shifting on the location of the nuclei in  and  was observed.
+ To create a spatial constraint on the location of the nuclei, a network  is added to the CycleGAN and takes  as an input to generate a binary mask, .
+ Here, the architecture of  is the same as the architecture of .
+ Network  minimizes a  loss, H(G(I^))I^serves as a spatial regulation term in the total loss function.
+ The network  is trained together with .
+ The loss function of the SpCycleGAN is defined as: and $, respectively.
+For the inference step we first zero-padded  by  voxels on the boundaries.
+ A 3D window with size of xyz32I^32 32 32$.
+ This process is done until the 3D window maps an entire volume.
+We tested our proposed method on two different rat kidney data sets.
+ These data sets contain grayscale images of size Z = 512Z = 64$.
+Our SpCycleGAN is implemented in Pytorch using the Adam optimizer with default parameters given by CycleGAN and a G^128 and a G^$.
+We generated  sets of I^I^I^G^I^200I^I^128 on ,  pairs of  and corresponding , of size of I^I^I^64 and  are then generated.
+Our modified 3D U-Net is implemented in Pytorch using the Adam optimizer with learning rate .
+ For the evaluation purpose, we use different settings of using 3D synthetic data generation methods (CycleGAN or SpCycleGAN), different number of pairs of synthetic training volume  ( or ) among  pairs of synthetic binary volume corresponding synthetic microscopy volume.
+ Also, we use different loss functions with different settings of the .
+ Moreover, we also compared our modified 3D U-Net with 3D encoder-decoder architecture Lastly, small objects which are less than  voxels were removed using 3D connected components.
+Figure shows the synthetic images generated by our proposed method.
+ The left column indicates original images whereas middle column shows synthetic images artificially generated from corresponding synthetic binary images provided in right column.
+ As can be seen from Figure the synthetic images reflect characteristics of the original microscopy images such as background noise, nuclei shape, orientation and intensity.
+Additionally, two synthetic data generation methods between CycleGAN and SpCycleGAN from the same synthetic binary image are compared in Figure Here, the synthetic binary image is overlaid on the synthetic microscopy image and labeled in red.
+ It is observed that our spatial constraint loss reduces the location shift of nuclei between a synthetic microscopy image and its synthetic binary image.
+ Our realistic synthetic microscopy volumes from SpCycleGAN can be used to train our modified 3D U-Net.
+Our proposed method was compared to other 3D segmentation methods including 3D active surface ), subvolume  ($I^_{), respectively.
+ Corresponding groundtruth of each subvolume was hand segmented.
+ Voxx was used to visualize the segmentation results in 3D and compared to the manually annotated volumes.
+ In Figure yields smaller segmentation mask and suffered from location shift.
+ Our proposed method shown in Figure outperforms Figure since our proposed method uses spatially constrained CycleGAN and takes consideration of the Dice loss and the binary cross-entropy loss.
+All segmentation results were evaluated quantitatively based on voxel accuracy, Type-I error and Type-II error metrics, using 3D hand segmented volumes.
+ Here, = , n_, n_, n_are defined to be the number of true-positives (voxels segmented as nuclei correctly), true-negatives (voxels segmented as background correctly), false-positives (voxels falsely segmented as nuclei), false-negatives (voxels falsely segmented as background), and the total number of voxels in a volume, respectively.
+The quantitatively evaluations for the subvolumes are shown in Table Our proposed method outperforms other compared methods.
+ The smaller Type-I error shows our proposed method successfully rejects non-nuclei structures during segmentation.
+ Also, our proposed method has reasonably low Type-II errors compared to other segmentation methods.
+ Moreover, in this table, we show that our proposed SpCycleGAN creates better paired synthetic volumes which reflects in segmentation accuracy.
+ Instead of 3D encoder-decoder structure, we use 3D U-Net which leads to better results since 3D U-Net has skip connections that can preserve spatial information.
+ In addition, the combination of two loss functions such as the Dice loss and the BCE loss turns out to be better for the segmentation task in our application.
+ In particular, the Dice loss constrains the shape of the nuclei segmentation whereas the BCE loss regulates voxelwise binary prediction.
+ It is observed that training with more synthetic volumes can generalize our method to achieve better segmentation accuracy.
+ Finally, the postprocessing (PP) that eliminates small components helps to improve segmentation performance.
+To make this clear, segmentation results were color coded using 3D connected component labeling and overlaid on the original volumes.
+ The method from cannot distinguish between nuclei and non-nuclei structures including noise.
+ This is especially recognizable from segmentation results of Data-I in which multiple nuclei and non-nuclei structures are colored with the same color.
+ As can be observed from Figure and and segments nuclei with the right shape at the correct locations.
+In this paper we presented a modified 3D U-Net nuclei segmentation method using paired synthetic volumes.
+ The training was done using synthetic volumes generated from a spatially constrained CycleGAN.
+ The combination of the Dice loss and the binary cross-entropy loss functions are optimized during training.
+ We compared our proposed method to various segmentation methods and with manually annotated 3D groundtruth from real data.
+ The experimental results indicate that our method can successfully distinguish between non-nuclei and nuclei structure and capture nuclei regions well from various microscopy volumes.
+ One drawback of our proposed segmentation method is that our method cannot separate nuclei if they are physically touching to each other.
+ In the future, we plan to develop nuclei localization method to identify overlapping nuclei to individuals.
+Data-I was provided by Malgorzata Kamocka of Indiana University and was collected at the Indiana Center for Biological Microscopy.
+Address all correspondence to Edward J.
+ Delp, ace@ecn.
+purdue.

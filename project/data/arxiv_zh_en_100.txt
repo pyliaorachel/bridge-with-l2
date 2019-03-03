@@ -1,0 +1,181 @@
+Active object recognition plays a central role in robot-operated autonomous scene understanding and object manipulation.
+ The problem involves online planning the views of the visual sensor of a robot to maximally increase the accuracy and confidence of object recognition, which is also referred to as the next-best-view (NBV) problem for active object recognition.
+For view selection, most existing works lie in the paradigm of information theoretic view evaluation (e.
+g.
+For example, from a set of candidates, the view maximizing the mutual information between observations and object classes is selected.
+ Such methods often present two issues.
+Some works formulate active recognition as a reinforcement learning problem, to learn a viewing policy under various observations.
+ Especially, a few recent works attempted end-to-end reinforcement learning based on recurrent neural networksApplying a learned policy is apparently much more efficient than sampling from a generative model.
+ However, these models are known to be hard to train, with difficult parameter tuning and relatively long training timeMoreover, the success of these methods highly depends on the hand-designed reward functions.
+However, the popular formulation of attention model based on recurrent neural networkssuffers from the problem of indifferentiable recognition loss over the attentional locations, making the network optimization by backpropagation infeasible.
+ To make it learnable, the training is often turned into a partially observable Markov decision process (POMDP), which comes back to reinforcement learning.
+However, extending the standard STN to predict views in 3D space while keeping its differentiability is non-trivial.
+ To facilitate the backpropagation of loss gradient from a 2.
+5D depth image to 3D viewing parameters, we propose to parameterize the depth value at each pixel  in a depth image over the parameters of the corresponding view $(A 3D attentional architecture that integrates RNN and STN for simultaneous object recognition and next-best-view (NBV) selection.
+ A differentiable extension of STN for view selection in 3D space, leading to an end-to-end attentional network which can be trained efficiently.
+Active object recognition has a rich literature in robotics, vision and graphics (surveys available from e.
+g.
+We provide a brief review for 3D object recognition, especially those active methods (categorized into information theoretic and policy learning approaches).
+ We then discuss some recent attempts on end-to-end learning for NBV selection.
+One of the most popular methods for 3D object recognition is directly deploying deep learning on point setsrenders a 3D shape to gray images from different views, uses CNN to extract features for each rendered image, and aggregates features from all rendered images with max pooling.
+ A hierarchical view-group-shape architecture is proposedaiming to treat each view discriminatively, while all views are treated equally inImpressive improvement is gained inbut it still need evenly sample several views before testing, which means all views are fixed when testing.
+ This kind of method is not suitable for some scenarios, such as robot-operated NBV problem, which always tries to achieve the highest accuracy with as few as possible views.
+Information theoretic formulation represents a standard approach to active vision problems.
+Another line of research seeks to learn viewing policies.
+ The problem is often viewed as a stochastic optimal control one and cast as a partially-observable Markov decision process.
+ Inreinforcement learning is utilized to offline learn an approximate policy that maps a sequence of observations to a discriminative viewpoint.
+ Kurniawati et al.
+ employ a point-based approximate solver to obtain a non-greedy policy offlineIn contrast to offline learning, Lauri et al.
+ attempted to apply Monte Carlo tree search (MCTS) to obtain online active hypothesis testing policy for view selectionOur method learns and compiles viewing policies into the hidden layers of RNN, leading to a high-capacity view planning model.
+The recent fast development of deep learning models has aroused the interest of end-to-end learning of active vision policiesin taking 2.
+5D depth images as input and 3D shapes as training data.
+ They adopt a volumetric representation of 3D shapes and train a Convolutional Deep Belief Network (CDBN) to model the joint distribution over volume occupancy and shape category.
+ By sampling from the distribution, shape completion can be performed based on observed depth images, over which virtual scanning is conducted to estimate the information gain of a view.
+ Different from their method, our attention model is trained offline hence no online sampling is required, making it efficient for online active recognition.
+ The works of Jayaraman and Graumanand Chen et al.
+are the most related to ours.
+ Compared to MV-RNNexplicitly integrates view confidence and view location constrains into reward function, and deploy some strategies to do view-enhancement.
+ In these methods, the recognition and control modules are jointly optimized based on reinforcement learning.
+ We employ the spatial transformer unitsas our locator networks to obtain a fully differentiable network.
+STN fits well to our problem setting.
+ Due to its differentiability, it enables end-to-end training with backpropagation, making the network easier to learn.
+ It is relatively straightforward to employ it for object localization in the image of a given view.
+ However, when using it to predict views in 3D, we face the problem of indifferentiable pixel depth values over viewing parameters, which is addressed by our work.
+Fig.
+shows the architecture of our recurrent attentional model.
+ The main body of the model is a Recurrent Neural Network (RNN) for modeling the sequential dependencies among consecutive views.
+Our model works as follows.
+ Given a current view of an object, it first uses ray casting algorithm to generate a depth image, then the depth image is fed into a stack of convolutional layers (Conv_{and FC =  + ) can be obtained.
+ Using , a new depth image can be generated, which serves as the input to the next time step.
+As shown in Fig.
+and the fully connected layers FC_{and FC$_{, which is a standard Convolutional Neural Network (CNN) classifier.
+ Moreover, the convolutional layers are shared by the SC and the 3D-STN.
+Depth layer (DL) is a critical part of our model, including depth images generation and loss backpropagation.
+ With loss backpropagation, this layer allows us to build up an end-to-end training fashion deep neural network.
+ During forward propagation, we use ray casting to generate depth images, and record every hit point position on the surface of shapes into a table, which will be used in backpropagation.
+ During backpropagation, we fill the gap between depth images loss gradient and camera views loss gradient.
+Ray casting is to solve the general problem of determining the hit points of shape intersected by a ray.
+ As illustrated in Fig.
+As illustrated in Fig.
+&0&where  is single pixel length along -axis and -axis of projection coordinate,  represent the principal point, which would be ideally in the center of depth images, and skew coefficient between -axis and -axis is set to 0.
+ Since we have a pre-defined up direction of the camera, we can compute the world coordinate position of each pixel in projection plane.
+ When  is located in (around -axis, and the second rotation is Z$-axis.
+For each pixel in projection plane, we can form a ray from  to , and the extention of ray will (or not) hit the shape surface.
+ Using ray casting algorithm, we can get the hit point () position  in the shape surface (if hit) and the hit distance () between the start point () and hit point ().
+ As shown in Fig.
+if a ray hits the shape, the depth value of related pixel is represented by .
+ The distance between  and  is calculated in Eq.
+~(And according to similar triangle theorem, we have Eq.
+~(We use a table to record all hit points and their related pixels.
+= - )}^2} +  + } (,) = }} - f.
+} }} = }}}}}} = }}} each pixel of depth image will get a  and , we just average all the  and  to get the final loss gradients of .
+Given an input depth image, the goal of 3D-STN is to extract image features, regress the 3D viewing parameters of the increment of current view (_{and FC_{takes the depth image  as input and extracts features.
+ With the features, FCv_t).
+ Note that the viewing parameters does not include radius (), since  is set to be a constant.
+Specifically, the convolutional network ConvW_{are the weights of Convh_g(and  are the weights for input-to-hidden and hidden-to-hidden connections, respectively.
+ The aggregated features in  is then used to regress the increment of current view: (= f_{where _{.
+The depth image output by the depth layer at each time step is passed into a shape classifier (SC, Conv_{) for class label prediction.
+ Note that the classification is also based on the aggregated features of both current and past views: c_t = f_{where _{.
+We employ cross-entropy loss to train our model.
+ Cross-entropy loss measures the performance of a classification model whose output is a probability value between 0 and 1.
+ Our loss function is: L = - where  is the number of classes,  is a binary indicator indicating whether class label  is the correct classification for current observation , and  is the predicted probability observation  is of class .
+To make the training more efficient, we propose to decompose our training into two parts and tune their parameters separately.
+: 1) pre-training SC; 2) joint training 3D-STN, SC and RNN.
+ The first part is trained by virtually recognizing 3D shapes in the training dataset, using generated depth images, we hope the Conv$_{of SC have a good ability to extract features for depth images.
+ For each shape, we randomly select dozens of views to generate depth images, and feed them to a pre-trained CNN classifier (we use AlexNetas shown in Fig.
+in order to train it with respect to an image classification task.
+For training 3D-STN, we evenly select 50 views as the initial views, and from each initial view, we start the virtual recognizing for an episode of 10 time steps.
+ In each step, the network takes images as input, and outputs both class label and the increment of the current view.
+ The network is trained the cross entropy loss in classification.
+ The training leverage parameters of the pre-trained SC, and tunes the parameters of the 3D-STN, the RNN and SC simultaneously, using backpropagation through time (BPTT)The number of initial views is a trade-off between networks performance and computation density.
+ With more initial views to explore, networks will obtain better performance, but the training time will be greatly increased.
+ We choose 50 as the number of initial views such that our networks can obtain a good performance and the training time is affordable.
+At inference time, given a object, a depth image is generated using ray casting algorithm with a random initial view from our selected 50 views.
+ The generated depth image is then passed into our attentional model.
+ Our attentional model firstly extract features of depth image, and then the extracted features are used for both object classification (SC) and next-best-view prediction (3D-STN).
+ Our 3D-STN will automatically regress the increment of current view.
+ With current view and the view increment, our camera will move to next-best-view, and generate a new depth image.
+ RNN hidden layers can help aggregate current depth image features with those from the past views.
+ This is repeated until termination conditions are met.
+ We set two termination conditions for inference: 1) The classification uncertainty, measured by the Shannon entropy of the classification probability, is less than a threshold (); 2) The maximum number () of time steps has been reached.
+We use the ReLU activation functions for all hidden layers, , for fast training.
+Obviously the size of hidden layer is an important hyper-parameter that affects the performance of recurrent neural networks.
+ In this experiment, we evaluate the effect of hidden layer size.
+ We carry out object recognition experiment on ModelNet40, and show the accuracy.
+ The view number for each sequence are set to be 5, and the radius () remains 1.
+The candidate sizes of hidden layer are , , , , and .
+We have set a fixed radius of spherical coordinate system in our previous experiments.
+ However, the radius has an big impact on the recognition performance.
+ If the radius is to large, the 3D shape will be a very small projection on depth image plane.
+ The aim of this experiment is to find the best radius for our task.
+All 3D shapes are scaled to the range of .
+ We conduct a comparison over different radius: , , , , and  over ModelNet40 with the view number being .
+As shown in Table.
+ Results show that camera should neither be too far nor too near to the 3D shape.
+ On one hand, if the camera is too far to the 3D shape, the accuracy will drop dramatically.
+ If the camera is too near to the 3D shape, on the other hand, the shape projection on depth image will be clipped, which will decrease the accuracy of recognition.
+ Moreover, if the projection of 3D shape spans the full depth image, some details of shape border will be lost during the convolution operation.
+We tackle next-best-view (NBV) problem as seeking single camera views in order to improve accuracy of 3D shape recognition.
+ Depending on this setting, NBV can be seen as an incremental approach to build up a sensing strategy for multi-view active object recognition, and NBV always tries to achieve the highest possible accuracy with the smallest number of views.
+ But, with partial observation of a 3D shape, it is very hard to acquire the global optimal for NBV, so we set two criteria on evaluating NBV estimation: recognition accuracy and information gain.
+To evaluate the performance of NBV estimation, we compare our attentional method against four alternatives, including a baseline method and three state-of-the-art ones.
+ The baseline method selects the next view randomly.
+To further evaluate the efficiency of the NBVs, we plot in Fig.
+the information gain of different NBVs.
+To evaluate the performance of recognition, we carry out comparison experiment on three datasets: ModelNet10, ModelNet40 and ShapeNetCore55.
+Tableshows the recognition results for a random initial view from our selected 50 views.
+ Our method achieves the best results, and we note that and our methods are depth-based, while learninguses both greyscale and depth images.
+ In our experiment, however, we only use deep images for learning for a fair comparison.
+We also notice that VERAMachieves recognition accuracy of 92.
+1on ModelNet40 with 9 views of gray images.
+ They align all shapes and render 144 gray images for each shape with Phong reflection model.
+ Reinforcement learning is adopted to solve the problem that gradient from observation subnetwork can not be back propagated to recurrent subnetwork.
+ They integrate view confidence and view location constrains into reward function.
+ Moreover, three strategies (Sign, Clamp and ELU) are deployed to enhance gradient.
+ For RNN, they deploy Long Short-Term Memory (LSTM) units.
+ For a fair comparison, we test with three experimental settings of VERAM: First, we change 144 viewpoints to 50 viewpoints; Second, we use our ray casting method to generate depth images instead Phong gray images; Third, we modify LSTM of RNN with linear mapping to keep the same setting as our method.
+ Both VERAM and our method use AlexNet and the same radius.
+ We find that, under the setting of modified VERAM, the recognition accuracy of ModelNet40 with 9 views is 88.
+7which is inferior to our method (89.
+Tablecompares the training time of three methods, i.
+e.
+, and ours on ModelNet40.
+ The training of involves learning the generative model with CDBN.
+ is trained with reinforcement learning.
+ The comparison shows the training efficiency of our model over the two alternatives.
+ All timings were obtained on a workstation with an Intel$^{Titan Xp graphics card with 12GB memory.
+To visually investigate the behavior of our model, we visualize in Fig.
+for view sequences comparison between learningand our method.
+ The results demonstrate that our method can correctly recognize the objects with plausibly planned views.
+ We note that the regressed view sequences tends to have a whole coverage of shapes for higher recognition rates than learning.
+ In our method, we start training our model from separate 50 initial views, which means we can start from different initial views when testing.
+ More results of our method are shown in Fig.
+All input objects are from the test set of ModelNet40.
+We have proposed a 3D attentional formulation to the active object recognition problem.
+A drawback of learning a policy offline is that physical restrictions during testing are hard to incorporate and when the environment is changed, the computed policy would no longer be useful.
+ This problem can be alleviated by learning from a large amount of training data and cases using a high capacity learning model such as deep neural networks as we do.
+ Our method does not handle mutual occlusion between objects which is a frequent case in cluttered scenes.
+ One possible solution is to train the recognition network using depth images with synthetic occlusion.
+In the future, we would like to investigate a principled solution for handling object occlusion in real indoor scenes, e.
+g.
+, using STN to help localize the shape parts which are both visible and discriminative, in a similar spirit toAnother interesting direction is to study multi-agent attentions in achieving cooperative vision tasks, such as multi-robot scene reconstruction and understanding.
+ It is particularly interesting to study the shared and distinct attentional patterns among heterogeneous robots such as mobile robots and drones.
+, is parameterized in the local spherical coordinate system w.
+r.
+t.
+ the current view .
+&&& &3 views&6 views & 9 views&Average &3 views &6 views &9 views &Average&3 views & 6 views& 9 views&Average&86.
+1 &88.
+7 &89.
+8 &&71.
+6 &74.
+5 &76.
+& 87.
+6 & 87.
+& 82.
+6 & 75.
+8 & 69.
+and our method.
+& & & Joint training & Pre-training SC ModelNet40 &  hr.
+ &  hr.
+learningand ours (input objects are from ModelNet40).
