@@ -108,3 +108,4 @@ venv.bak/
 *.swp
 # project/data/
 src/paperscraper
+backup/
