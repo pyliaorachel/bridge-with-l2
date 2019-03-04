@@ -103,11 +103,29 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# VIM
+## swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+## session
+Session.vim
+## temporary
+.netrwhist
+*~
+## auto-generated tag files
+tags
+
 # Others
 .DS_Store
-*.swp
 # project/data/
 src/paperscraper
 backup/
 *.bin
 *.vec
+
+# MUSE
+MUSE/data/crosslingual/
+MUSE/data/monolingual/
+MUSE/dumped/
