@@ -109,3 +109,5 @@ venv.bak/
 # project/data/
 src/paperscraper
 backup/
+*.bin
+*.vec
