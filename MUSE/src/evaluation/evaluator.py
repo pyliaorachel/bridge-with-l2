@@ -10,6 +10,7 @@ from copy import deepcopy
 import numpy as np
 from torch.autograd import Variable
 from torch import Tensor as torch_tensor
+import torch
 
 from . import get_wordsim_scores, get_crosslingual_wordsim_scores, get_wordanalogy_scores
 from . import get_word_translation_accuracy
@@ -228,15 +229,16 @@ class Evaluator(object):
 
         self.discriminator.eval()
 
-        for i in range(0, self.src_emb.num_embeddings, bs):
-            emb = Variable(self.src_emb.weight[i:i + bs].data, volatile=True)
-            preds = self.discriminator(self.mapping(emb))
-            src_preds.extend(preds.data.cpu().tolist())
+        with torch.no_grad():
+            for i in range(0, self.src_emb.num_embeddings, bs):
+                emb = Variable(self.src_emb.weight[i:i + bs].data)
+                preds = self.discriminator(self.mapping(emb))
+                src_preds.extend(preds.data.cpu().tolist())
 
-        for i in range(0, self.tgt_emb.num_embeddings, bs):
-            emb = Variable(self.tgt_emb.weight[i:i + bs].data, volatile=True)
-            preds = self.discriminator(emb)
-            tgt_preds.extend(preds.data.cpu().tolist())
+            for i in range(0, self.tgt_emb.num_embeddings, bs):
+                emb = Variable(self.tgt_emb.weight[i:i + bs].data)
+                preds = self.discriminator(emb)
+                tgt_preds.extend(preds.data.cpu().tolist())
 
         src_pred = np.mean(src_preds)
         tgt_pred = np.mean(tgt_preds)

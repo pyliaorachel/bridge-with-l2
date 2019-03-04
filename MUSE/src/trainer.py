@@ -66,17 +66,18 @@ class Trainer(object):
             tgt_ids = tgt_ids.cuda()
 
         # get word embeddings
-        src_emb = self.src_emb(Variable(src_ids, volatile=True))
-        tgt_emb = self.tgt_emb(Variable(tgt_ids, volatile=True))
-        src_emb = self.mapping(Variable(src_emb.data, volatile=volatile))
-        tgt_emb = Variable(tgt_emb.data, volatile=volatile)
+        src_emb = self.src_emb(Variable(src_ids))
+        tgt_emb = self.tgt_emb(Variable(tgt_ids))
+        with torch.set_grad_enabled(not volatile):
+            src_emb = self.mapping(Variable(src_emb.data))
+            tgt_emb = Variable(tgt_emb.data)
 
-        # input / target
-        x = torch.cat([src_emb, tgt_emb], 0)
-        y = torch.FloatTensor(2 * bs).zero_()
-        y[:bs] = 1 - self.params.dis_smooth
-        y[bs:] = self.params.dis_smooth
-        y = Variable(y.cuda() if self.params.cuda else y)
+            # input / target
+            x = torch.cat([src_emb, tgt_emb], 0)
+            y = torch.FloatTensor(2 * bs).zero_()
+            y[:bs] = 1 - self.params.dis_smooth
+            y[bs:] = self.params.dis_smooth
+            y = Variable(y.cuda() if self.params.cuda else y)
 
         return x, y
 
@@ -258,9 +259,10 @@ class Trainer(object):
         # map source embeddings to the target space
         bs = 4096
         logger.info("Map source embeddings to the target space ...")
-        for i, k in enumerate(range(0, len(src_emb), bs)):
-            x = Variable(src_emb[k:k + bs], volatile=True)
-            src_emb[k:k + bs] = self.mapping(x.cuda() if params.cuda else x).data.cpu()
+        with torch.no_grad():
+            for i, k in enumerate(range(0, len(src_emb), bs)):
+                x = Variable(src_emb[k:k + bs])
+                src_emb[k:k + bs] = self.mapping(x.cuda() if params.cuda else x).data.cpu()
 
         # write embeddings to the disk
         export_embeddings(src_emb, tgt_emb, params)
