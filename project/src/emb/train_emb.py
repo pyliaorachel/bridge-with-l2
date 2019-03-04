@@ -21,6 +21,7 @@ def load_corpus(corpus_file, lang):
         for line in fin:
             if lang == 'zh':
                 tokens = jieba.lcut(line)
+                tokens = [token for token in tokens if token != '\n' and token != ' ']
             else:
                 tokens = word_tokenize(line.lower())
             yield tokens
