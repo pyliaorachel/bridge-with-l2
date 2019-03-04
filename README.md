@@ -8,12 +8,29 @@ Install dependencies:
 
 ```bash
 $ pip install -r requirements.txt
+$ python
+>>> import nltk
+>>> nltk.download('punkt')
 ```
 
 Collect data:
 
 ```bash
+$ python -m project.src.data.scrape --arxiv [LANG ...] --gs [LANG ...]
+# e.g.
 $ python -m project.src.data.scrape --arxiv zh en --gs zh
+# outputs
+# project/data/<site>_<user-lang>_<lang>_<max-sent>.txt
+```
+
+Train embeddings:
+
+```bash
+$ python -m project.src.emb.train_emb --corpora [CORPUS_PATH ...]
+# e.g.
+$ python -m project.src.emb.train_emb --corpora project/data/arxiv_en_en_100.txt project/data/google-scholar_zh_zh_100.txt
+# outputs
+# project/data/<corpus-file-name>.bin, project/data/<corpus-file-name>.vec
 ```
 
 ## Data
