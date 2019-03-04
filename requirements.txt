@@ -1,5 +1,0 @@
--e git+https://github.com/pyliaorachel/paperscraper.git#egg=paperscraper
-marisa-trie==0.7.5
-nltk==3.4
-jieba==0.39
-gensim==3.7.1

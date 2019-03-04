@@ -7,7 +7,12 @@ In exploration of the bridging effect of an L2 corpus between source and target 
 Install dependencies:
 
 ```bash
-$ pip install -r requirements.txt
+# Without GPU:
+$ conda env create -f environment.yml
+# With GPU:
+$ conda env create -f gpu_environment.yml
+
+$ conda activate l2
 $ python
 >>> import nltk
 >>> nltk.download('punkt')

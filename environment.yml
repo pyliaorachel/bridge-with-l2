@@ -1,0 +1,16 @@
+name: l2
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.6
+  - numpy
+  - scipy
+  - pytorch
+  - nltk
+  - gensim
+  - faiss-cpu
+  - pip:
+    - -e git+https://github.com/pyliaorachel/paperscraper.git#egg=paperscraper
+    - marisa-trie
+    - jieba
