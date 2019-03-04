@@ -14,3 +14,4 @@ dependencies:
     - -e git+https://github.com/pyliaorachel/paperscraper.git#egg=paperscraper
     - marisa-trie
     - jieba
+    - opencc-python-reimplemented

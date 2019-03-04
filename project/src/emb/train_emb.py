@@ -4,6 +4,8 @@ import os
 from gensim.models import Word2Vec
 import jieba
 from nltk.tokenize import word_tokenize
+from opencc import OpenCC
+cc = OpenCC('s2twp') # Taiwan phrase; this aligns with the dict from MUSE
 
 
 def parse_args():
@@ -20,6 +22,7 @@ def load_corpus(corpus_file, lang):
     with open(corpus_file, 'r') as fin:
         for line in fin:
             if lang == 'zh':
+                line = cc.convert(line)
                 tokens = jieba.lcut(line)
                 tokens = [token for token in tokens if token != '\n' and token != ' ']
             else:
