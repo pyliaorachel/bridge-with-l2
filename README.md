@@ -28,12 +28,22 @@ $ python -m project.src.data.scrape --arxiv zh en --gs zh
 # project/data/<site>_<user-lang>_<lang>_<max-sent>.txt
 ```
 
-Train embeddings:
+Clean corpus (outputs each sentence as a list of space-separated tokens):
+
+```bash
+$ python -m project.src.emb.clean_corpus --corpora [CORPUS_PATH ...]
+# e.g.
+$ python -m project.src.emb.clean_corpus --corpora project/data/arxiv_en_en_100.txt project/data/google-scholar_zh_zh_100.txt
+# outputs
+# project/data/<corpus-file-name>_clean.txt
+```
+
+Train embeddings (on cleaned corpora):
 
 ```bash
 $ python -m project.src.emb.train_emb --corpora [CORPUS_PATH ...]
 # e.g.
-$ python -m project.src.emb.train_emb --corpora project/data/arxiv_en_en_100.txt project/data/google-scholar_zh_zh_100.txt
+$ python -m project.src.emb.train_emb --corpora project/data/arxiv_en_en_100_clean.txt project/data/google-scholar_zh_zh_100_clean.txt
 # outputs
 # project/data/<corpus-file-name>.bin, project/data/<corpus-file-name>.vec
 ```
