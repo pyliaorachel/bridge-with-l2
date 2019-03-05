@@ -36,10 +36,16 @@ if __name__ == '__main__':
         lang = corpus.split('_')[2]
         sents = load_corpus(corpus, lang)
 
+        print('Building model...')
         model = Word2Vec(min_count=2, size=args.dim)
         model.build_vocab(sents)
+
+        print('Training model...')
         model.train(sents, total_examples=model.corpus_count, epochs=model.iter)
 
+        print('Saving model...')
         filename = os.path.splitext(corpus)[0]
         model.save(filename + '.bin')
         model.wv.save_word2vec_format(filename + '.vec')
+
+        print('Done {}'.format(corpus))
