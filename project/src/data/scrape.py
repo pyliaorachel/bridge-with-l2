@@ -6,7 +6,7 @@ from paperscraper.scraper import Scraper
 import marisa_trie
 
 from ..utils.const import LAST_NAMES, INSTITUTE_NAMES, CATS, QUERIES
-from ..utils.utils import num_human_format, is_chinese, always_true
+from ..utils.utils import num_human_format, is_chinese, always_true, has_letters
 
 
 FILTER_BYS = ['institute', 'name', 'both']  # deciding factors of a native language background
@@ -76,6 +76,7 @@ if __name__ == '__main__':
     if args.arxiv is not None:
         print('========== arXiv ==========')
         site = 'arxiv'
+        filter_text = has_letters
 
         ## Create classification filters
         if args.filter_by not in FILTER_BYS:
@@ -102,7 +103,7 @@ if __name__ == '__main__':
         for category in CATS:
             scraper = Scraper(
                 category=category, date_from='2001-01-01', date_until='2018-12-31', max_sent=args.max_sent,
-                classifications=classifications, filters=meta_filters
+                classifications=classifications, filters=meta_filters, filter_text=filter_text
             )
             this_sent_cnts = scraper.scrape_text(site, save_to=save_paths, log_to=log_path, day_intv=5, append=True)
             print('Sentence counts for {}: {}'.format(category, this_sent_cnts))
@@ -131,7 +132,7 @@ if __name__ == '__main__':
                 print('language must be in {}'.format(GOOGLE_SCHOLAR_LANGS))
                 continue
             
-            filter_text = always_true
+            filter_text = has_letters
             if lang == 'zh':
                 filter_text = is_chinese
 

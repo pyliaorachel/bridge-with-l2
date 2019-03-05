@@ -11,5 +11,8 @@ def num_human_format(num):
 def is_chinese(text):
     return len(re.findall('[\u4e00-\u9fff]+', text)) > 0
 
+def has_letters(text):
+    return len(re.findall('[a-zA-Z]+', text)) > 0
+
 def always_true(x):
     return True
