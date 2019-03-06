@@ -59,6 +59,7 @@ INSTITUTE_NAMES = {
         'university of essex', 'university of the west of england', 'royal holloway, university of london', 'sheffield hallam university', 'brunel university london', 'university of portsmouth', 'coventry university', 'university of plymouth', 'manchester metropolitan university', 'nottingham trent university'
     ]
 }
+INSTITUTE_NAMES['en_loose'] = INSTITUTE_NAMES['en']
 
 LAST_NAMES = {
     'zh': [
@@ -179,6 +180,7 @@ LAST_NAMES = {
         'duke', 'odom', 'daugherty', 'travis'
     ]
 }
+LAST_NAMES['en_loose'] = LAST_NAMES['en']
 
 QUERIES = {
     'zh': [

@@ -10,7 +10,7 @@ from ..utils.utils import num_human_format, is_chinese, always_true, has_letters
 
 
 FILTER_BYS = ['institute', 'name', 'both']  # deciding factors of a native language background
-ARXIV_LANGS = ['en', 'zh']                  # supported language users of corpora to scrape from arXiv
+ARXIV_LANGS = ['en', 'zh', 'en-loose']      # supported language users of corpora to scrape from arXiv
 GOOGLE_SCHOLAR_LANGS = ['zh']               # supported language users of corpora to scrape from Google Scholar
 N_AUTHORS = 2                               # number of authors to consider
 SAVE_PATH_DIR = 'project/data'              # data directory
@@ -20,10 +20,10 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Scrape all data.')
     parser.add_argument('--arxiv', type=str, nargs='+', default=None,
                         help='The language users of arXiv papers to scrape. Use language code2 to specify, e.g. en for English, zh for Chinese.')
+    parser.add_argument('--arxiv-filter-by', type=str, nargs='+', default=None,
+                        help='The key to filter the papers, either "institute", "name", or "both". The listed order should match with --arxiv option.')
     parser.add_argument('--gs', type=str, nargs='+', default=None,
                         help='The language users of Google Scholar papers to scrape. Use language code2 to specify, e.g. en for English, zh for Chinese.')
-    parser.add_argument('--filter-by', type=str, default='both',
-                        help='The key to filter the papers, either "institute", "name", or "both". Default: both')
     parser.add_argument('--max-sent', type=int, default=100,
                         help='Maximum number of sentences to scrape for each type of corpus.')
 
@@ -62,7 +62,12 @@ def create_filter(lang, filter_by):
         institute_names = marisa_trie.Trie(INSTITUTE_NAMES[lang])
         return lambda tup: name_filter(tup, last_names) and institute_filter(tup, institute_names)
 
-def create_meta_filter(langs):
+def create_meta_filter(langs, filter_bys):
+    # If any classes do not use name as filters, than all names should be considered
+    for filter_by in filter_bys:
+        if filter_by == 'institute':
+            return {}
+    # Otherwise, only the names in each lang should be considered
     names = []
     for lang in langs:
         names += LAST_NAMES[lang]
@@ -74,24 +79,29 @@ if __name__ == '__main__':
 
     # arXiv site
     if args.arxiv is not None:
+        if len(args.arxiv) != len(args.arxiv_filter_by):
+            print('--filter-by should be a list of the same size as --arxiv.')
+            sys.exit()
+
         print('========== arXiv ==========')
         site = 'arxiv'
         filter_text = has_letters
 
         ## Create classification filters
-        if args.filter_by not in FILTER_BYS:
-            print('filter by must be either one in {}'.format(FILTER_BYS))
-            sys.exit()
+        for filter_by in args.arxiv_filter_by:
+            if filter_by not in FILTER_BYS:
+                print('filter by must be either one in {}'.format(FILTER_BYS))
+                sys.exit()
 
         classifications = []
-        for lang in args.arxiv:
+        for lang, filter_by in zip(args.arxiv, args.arxiv_filter_by):
             if lang not in ARXIV_LANGS:
                 print('language must be in {}'.format(ARXIV_LANGS))
                 sys.exit()
             
-            classifications.append(create_filter(lang, args.filter_by))
+            classifications.append(create_filter(lang, filter_by))
 
-        meta_filters = create_meta_filter(args.arxiv)
+        meta_filters = create_meta_filter(args.arxiv, args.arxiv_filter_by)
 
         ## Create save paths
         save_paths = [os.path.join(SAVE_PATH_DIR, '{}_{}_en_{}.txt'.format(site, lang, max_sent_str)) for lang in args.arxiv]

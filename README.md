@@ -21,9 +21,9 @@ $ python
 Collect data:
 
 ```bash
-$ python -m project.src.data.scrape --arxiv [LANG ...] --gs [LANG ...]
+$ python -m project.src.data.scrape --arxiv [LANG ...] --gs [LANG ...] --arxiv-filter-by [FILTER_BY ...]
 # e.g.
-$ python -m project.src.data.scrape --arxiv zh en --gs zh
+$ python -m project.src.data.scrape --arxiv zh en-loose en --gs zh --arxiv-filter-by both institute both
 # outputs
 # project/data/<site>_<user-lang>_<lang>_<max-sent>.txt
 ```
