@@ -41,9 +41,9 @@ $ python -m project.src.emb.clean_corpus --corpora project/data/arxiv_en_en_100.
 Train embeddings (on cleaned corpora):
 
 ```bash
-$ python -m project.src.emb.train_emb --corpora [CORPUS_PATH ...]
+$ python -m project.src.emb.train_emb --corpora [CORPUS_PATH ...] --method METHOD --epochs EPOCHS
 # e.g.
-$ python -m project.src.emb.train_emb --corpora project/data/arxiv_en_en_100_clean.txt project/data/google-scholar_zh_zh_100_clean.txt
+$ python -m project.src.emb.train_emb --corpora project/data/arxiv_en_en_100_clean.txt project/data/google-scholar_zh_zh_100_clean.txt --method word2vec --epochs 5
 # outputs
 # project/data/<corpus-file-name>.bin, project/data/<corpus-file-name>.vec
 ```
