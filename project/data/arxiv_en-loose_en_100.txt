@@ -1,0 +1,239 @@
+9in 6.
+We consider single-hop radio networks with multiple channels as a model of wireless networks.
+ There are  stations connected to  radio channels that do not provide collision detection.
+ A station uses all the channels concurrently and independently.
+ Some  stations may become active spontaneously at arbitrary times.
+ The goal is to wake up the network, which occurs when all the stations hear a successful transmission on some channel.
+ Duration of a waking-up execution is measured starting from the first spontaneous activation.
+ We present a deterministic algorithm that wakes up a network in , and the other in time  when the inequality  holds, both with probabilities that are at least $1-1/.
+multiple access channel, radio network, multi channel, wake-up, synchronization, deterministic algorithm, randomized algorithm, distributed algorithm.
+We consider wireless networks organized as a group of stations connected to a number of channels.
+ Each channel provides the functionality of a single-hop radio network.
+ A station can use any of these channels to communicate directly and concurrently with all the stations.
+A restriction often assumed about such networks is that a station can connect to at most one channel at a time for either transmitting or listening.
+ We depart from this constraint and consider an apparently stronger model in which a station can use all the available channels simultaneously and independently from each other, for instance, some for transmitting and others for listening.
+ On the other hand, we do not assume collision detection on any channel.
+The algorithmic problem we consider is to wake up such a network.
+ Initially, all the stations are dormant but connected and passively listening to all channels.
+ Some stations become active spontaneously and want the whole network to be activated and synchronized.
+ The first successful transmission on any channel suffices to accomplish this goal.
+The algorithms we develop are oblivious in the sense that actions of stations are scheduled in advance.
+ Deterministic oblivious algorithms are determined by decisions for each station when to transmit on each channel and when not.
+ Randomized oblivious algorithms are determined by the probabilities for each station and each channel if to transmit on the channel in a round.
+We use the following parameters to characterize a multi-channel single-hop radio network.
+ The number of stations is denoted by  and the number of shared channels by~.
+ All stations know~.
+ At most  stations become active spontaneously at arbitrary times and join execution with the goal to wake up the network.
+ The parameter  is used to characterize scalability of wake-up algorithms, along with the number of channels~.
+We give randomized and deterministic oblivious algorithms to wake up a multi-channel single-hop radio network.
+ One of the algorithms scales well with both the number of stations  that may be activated spontaneously and with the number of channels~.
+We develop two deterministic algorithms for the case of unknown~.
+ Our general deterministic algorithm wakes up a network in  rounds.
+ We also give a deterministic algorithm which performs well when sufficiently many channels are available: it wakes up a network in  rounds when the numbers of nodes~ and channels~ satisfy the inequality .
+ An algorithm of time performance , like this one, misses time optimality by at most a factor of , because kb$.
+We give a randomized algorithm that wakes up a network within 1-, for any kk$.
+We also consider a model of jamming, in which each channel in any round may be jammed to prevent a successful transmission, which happens with some known probability~, treated as a parameter, independently across all channels and rounds.
+ For this model, we give two deterministic algorithms.
+ One of them wakes up the network in time  with a probability that is at least  with a large probability.
+Ggave a deterministic oblivious algorithm to wake up a single-hop single-channel radio network in time , which holds for the general deterministic oblivious algorithm, then what is obtained is .
+ Our algorithm, when applied in networks with one channel, has the advantage of scaling with the unknown number  of stations that are activated spontaneously, and provides an asymptotic improvement over the upper bound  even for just two channels.
+Jurdzigave two randomized algorithms to wake up a multiple access channel.
+ One of them works in time  with high probability, when performance is optimized with respect to~, and another works in time kk$ for even just two channels.
+Komlshowed how to resolve conflict for access to one channel among any of~ stations in time .
+ Second, when the number of channels satisfies  then another of our algorithms wakes up a network in time~.
+Shi et al.
+considered the model of a multi-channel network, where there are  nodes connected to  channels, each channel being a single-hop radio network.
+ A node can use all the available channels concurrently for transmitting and/or receiving transmissions.
+ They studied the information-exchange problem, in which some .
+The work reported by Shi et al.
+was the only one, that we are familiar with, to use the model in which nodes can use all the available channels concurrently and independently.
+ All the other work on algorithms for multi-channel single-hop radio networks used the model in which a node has to choose a channel per round to participate in communication only through this particular channel, either as a listener or as transmitter; variants of this model with adversarial disruptions of channels were also considered.
+ Next we review work done for this very multi-channel model, in which a station can use at most one channel at a time for communication.
+Dolev et al.
+studied a parametrized variant of gossip for multi-channel radio networks.
+ They gave oblivious deterministic algorithms for an adversarial setting in which a malicious adversary can disrupt one channel per round.
+ Daum et al.
+considered leader election and Dolev et al.
+gave algorithms to synchronize a network, both papers about an adversarial setting in which the adversary can disrupt a number of channels in each round, this number treated as a parameter in performance bounds.
+Information exchange has been investigated extensively for multi-channel wireless networks.
+ The problem is about some considered information-exchange in a model when rumors can be combined into compound messages and collision detection is available.
+ They gave an algorithm of time performance rumors held by + bn)n$ is not known.
+A multi-channel single-hop network is a generalization of a multiple-access channel, which consists of just one channel.
+ For recent work on algorithms for multiple-access channels seeAnantharamuCKR-JCSS19,AnantharamuCR-TCS17, AntaMM13,BienkowskiKKK-STACS10, ChlebusKR-DC09, ChlebusKR-TALG12, CzyzowiczGKP11,DeMarcoK15,JurdzinskiS15,Kowalski05}.
+The problem of waking up a radio network was first investigated by Gin the case of multiple-access channels, see for more on related work.
+Ad-hoc multi-hop multi-channel networks were studied by Alonso et al.
+and Dolev et al.
+We summarize the technical preliminaries in Sectiondiscusses specialized instantiations of the generic deterministic algorithm when the number of channels is sufficiently large with respect to the number of stations.
+The model of is defined as follows.
+ There are  nodes attached to a spectrum of  frequencies.
+ Each frequency determines a multiple access channel.
+ We use the term ``station'' and ``node'' interchangeably.
+ The set of all stations is denoted by~, where .
+ Each station has a unique name assigned to it, which is an integer in .
+All the available channels operate concurrently and independently from each other.
+ Each channel has a unique identifier, which is an integer in the interval .
+ A station identifies a channel by its identifier, which is the same for all stations.
+ A station can transmit on any set of channels at any time.
+ A station obtains the respective feedback from each channel, separately and concurrently among the channels.
+We say that a station a message on a channel when the station successfully receives a message transmitted on this channel.
+ A channel is in a time interval when no station transmits on this channel in this time interval.
+ When more than one stations transmit on a channel, such that their transmissions overlap, then we say that a occurs on this channel during the time of overlap.
+ We say that a channel is equipped with when feedback from the channel allows to distinguish between the channel being silent and a collision occurring on the channel.
+ When stations receive the same feedback from a channel when it is silent and when a collision occurs on this channel then the channel is said to be collision detection}.
+When a station transmits on some channel and no collision occurs on this channel during such a transmission then each station hears the transmitted message on this channel.
+ When a station transmits a message and a collision occurs during the transmission on this channel then no station hears this transmitted message.
+ There could be a collision on one channel and at the same time a message may be heard on some other channel.
+ There is no collision detection on any channel.
+Transmissions on all channels are synchronized.
+ This means that an execution of an algorithm is partitioned into Rounds are understood to be of equal length.
+ Each station has its private clock which is ticking at the rate of rounds.
+ Rounds begin and end at the same time for all stations.
+ When we refer to a round number then this means the indication of some station's private clock, while this station is understood from context.
+Messages are scaled to duration of rounds, so that transmitting a message takes a whole round.
+ Two transmissions overlap in time precisely when they are performed in the same round.
+ This means that two messages result in a collision when and only when they are transmitted on the same channel and in the same round.
+Initially, all stations are in that they do not execute any communication algorithm, and in particular do not transmit any messages on any channel.
+ Passive stations listen to all channels all the time, in that when a message is heard on a channel then all passive stations hear it too.
+At an arbitrary point in time, some stations become spontaneously and afterwards they are Passive stations may keep getting activated spontaneously after the round of the first activations.
+ A specific scenario of timings of certain stations being activated is called an pattern}.
+ An activated station resets its private clock to zero at the round of activation.
+ When a station becomes active, it starts from the first round indicated by its private clock to execute a communication algorithm.
+Time, as measured by an external observer, is called Its units are of the same duration as rounds.
+ A unit of the global time is called a step}.
+ The first round of a spontaneous activation of some station is considered as the first time step of the global time.
+ The time step in which a station~ becomes activated spontaneously is denoted by~tW(t)$.
+The algorithms we consider have as their goal to wake up the network that is executing it.
+ A network gets in the first round when some active station transmits on some channel as the only station transmitting in this round on this particular channel.
+ This moment is understood as resulting in all passive stations receiving a signal to ``wake up'' and next proceed with executing a predetermined communication algorithm.
+ The round of waking up a network can be used to synchronize local clocks so that they begin to indicate the same number of a time step.
+Time performance of wake-up algorithms is measured as the number of rounds counted from the first spontaneous activation until the round of the first message heard on the network.
+ Performance bounds of wake-up algorithms in this paper employ the following three parameters: , , and , which are natural numbers such that .
+ Here  is the number of stations,  is the number of channels, and  denotes an upper bound on the number of stations that may get activated spontaneously in an execution.
+ Given the parameters , , and , they determine what can be called the (n,k,b)nbk$ stations can be activated spontaneously.
+We consider deterministic and randomized algorithms whose goal is to wake up a network.
+ They are in that the actions of stations are determined in advance; such a determination is given as the probabilities of actions in the case of randomized algorithms.
+A parameter of a system or executions is when it can be used in codes of algorithms.
+ For an instance of an -wake-up problem, the number of channels  is assumed to be known, which is natural, since stations need to know channels in order to use them.
+ Regarding the other parameters  and  in this paper, the assumptions are as follows.
+ If  is known then  is not assumed as known, which is the case of deterministic algorithms.
+ If  is known then  is not assumed to be known, which is the case of a randomized algorithm.
+We present a lower bound on time performance of any deterministic algorithm for the -wake-up problem.
+A family~Aof  elements there exists a set AB(n,k)nk$ stations are activated spontaneously.
+Clementi et al.
+showed that (n,k)elements, for  such that $2 < k.
+Wake-up protocols for our model of multi-channel networks can also be interpreted as -selective families.
+ An additional aspect is that we can apply  sets from the family simultaneously as concurrent transmissions on different channels.
+In the remaining part of this section, we demonstrate a lower bound on time of wake-up for multi-channel networks.
+ The arguments we expound follow the main ideas of the proof of a lower bound given by Clementi et al.
+for one channel; in particular, we also refer to properties of intersection-free families proved by Frankl and~F{as a lower bound.
+ First, proving Theoremmakes the paper self-contained.
+ Second, we state the lower bound in Theoremin a form that, first, improves the key involved constants, by obtaining kto a general case .
+We define a to be a set of ordered pairs iQ_i= , for a query~.
+ This represents the subset of all stations that transmit on channel~i$.
+We use the Iverson's bracket is a logical statement, that could be either true or false, defined as follows: is true and is false.
+ We denote by knkn$ stations.
+Two sets  and  in such that .
+ The relation of -similarity is an equivalence relation on~$.
+The proof is by induction on~.
+ The base of induction is obtained by taking an equivalence class of -similarity that is of a largest size.
+ This size is at least $|, by the pigeonhole principle.
+For the inductive step, assume that the claim holds for  such that AB.
+ There are at most  nonempty equivalence classes of this relation.
+ One of them has at least $ |.
+For |F_1 F_2 | for every  and  in $ .
+Let .
+ It is sufficient to verify the following equation: = &=& provide the needed verification.
+We use notation  to denote the binary logarithm .
+Let A,B, By Lemma|= {n / 2^ and =  , for every 1b1i tABsatisfy condition~(b).
+It remains to demonstrate that there are at least two sets in is a prime power.
+Now we proceed to prove the lower bound, which is formulated as follows.
+We set |XQ_{i,21b1i tXtX$ is heard on any channel.
+A pseudocode of a randomized algorithm, called is in FigureAll random bits generated during an execution are independent from each other.
+ The pseudocode refers to~, which means it is known.
+ At the same time,  needs not to be known, because only active stations participate in the execution, so their number is always bounded above by~.
+A randomized algorithm.
+ The same pseudocode is used by any station that gets activated spontaneously.
+Let  be a time step and let t.
+Let k^{(.
+Let us consider a set of contiguous time steps .
+ For .
+Algorithm demonstrates that the lower bound of Theoremcan be beaten by a randomized algorithm that can use the magnitude of the parameter~ explicitly.
+ Actually, the bound of Theoremis such that just for  channels the network is woken up with a positive probability in time that is is required.
+Deterministic oblivious algorithms are represented as schedules of transmission precomputed for each station.
+ A schedule is simply a binary sequence.
+ Such schedules of transmission are organized as rows of a binary matrix, for the sake of visualization and discussion.
+Let 01of array~of a transmission bit~$T(u,.
+For a transmission array for station~: transmit on channel~jT(u,= 1uVT(u,of some transmission array~$as a way to instantiate the code of a wake-up algorithm.
+A pseudocode representation of such a generic deterministic oblivious algorithm is given in FigureIn analysis of performance, based on properties of~nk$ is unknown.
+A pseudocode for a station  that gets activated spontaneously of a generic algorithm.
+Time is measured by each station's private clock, with rounds counted from the activation.
+ Let us recall that if a station  is active in a time step~ then  perceives this time step~ as round~$t-.
+A station  is tv .
+ A station  is when  is t1b$.
+For a given transmission array, by an we understand a pair tsuch that there is a t(t,is an isolated position of a transmission array~t$ when algorithm (is executed.
+We organize a transmission array by partitioning it into sections of increasing length.
+ We will use the property of the mapping $ito be strictly increasing, which can be verified directly.
+Let  be a positive integer and let us define the function i(u,of transmission bits.
+ A station executing the th section of its schedules is said to be stage~}.
+ The stations that are in a stage  at a time step~ are denoted by~.
+ The constant  will be determined later as needed.
+The identity W_i(j) = W(j) holds for every time step , because an active station is in some stage.
+ Observe that the length of the th section for any - , which can be verified to be at least as large as~$.
+These time steps at which sufficiently many stations are in a stage, say, , play a special role in the analysis.
+ The relevant notions are that of a balanced time step, given in Definitionand also of a balanced time interval, given in DefinitionIntuitively, a balanced time step is a round at which there are some and no station involved in the subsequent sections, for some .
+ Similarly, a balanced time interval is a time interval that includes sufficiently many balanced time slots.
+ These notions are precisely defined as follows.
+When we refer to time intervals then this means intervals of time steps of the global time.
+We show existence of a suitable array of waking schedules by the probabilistic method.
+ In the argument, we refer to randomized transmission arrays, as defined next.
+ These are arrays with entries being independent random variables.
+A has the structure of a transmission array.
+A has the structure of a transmission array.
+A randomized transmission array, whether regular or modified, is used to represent a randomized wake-up algorithm.
+ To decide if a station~ transmits on a channel~jn$-many channels.
+The length of a waking array is the worst-case time bound on performance of the wake-up algorithm determined by this transmission array.
+We consider waking arrays nnkn$.
+ The existence of waking arrays of small length is shown by the probabilistic method.
+We proceed with a sequence of preparatory Lemmas.
+ Let  be the set of stations that are activated first.
+ Let .
+Let $(- = .
+Fix a time step  and an integer $W_(j') .
+If jholds then there is nothing to prove.
+Let us pick j-balanced interval .
+Let us assume that does not hold, otherwise we are done.
+ Let .
+ By Lemmais identified.
+There exists an for every j is proved.
+Let every station be executing a randomized algorithm as represented by a regular randomized transmission array.
+ There exists an $.
+Let  in the definition of  such that, for any transmission array, there is an integer  .
+Consider a regular randomized transmission array, as defined in Definition, for any .
+Note that more than the fraction  of random arrays defined in the beginning of the proof satisfy the complementary event.
+ Hence, this array satisfies Claim (1) with respect to any activation pattern.
+We conclude with a proof of Theoremk)$.
+ This follows from point (1) of Lemmaandis thereby proved.
+In the final part of this Section, we consider a model of a network in which channels may get jammed.
+ Assume that at each time step and on every channel a jamming error occurs with the probability~, for , independently over time steps and channels.
+ When a channel is jammed then the feedback it provides to the stations is the same as if there were a collision on this channel.
+We give a deterministic algorithm that has a better time-performance bound than the one given in TheoremThe construction applies to networks with sufficiently many channels with respect to the number of nodes.
+The proof is by way of showing the existence of a waking array, as defined in Definitiontoas well as Lemmahold for the current specification of function , while now we prove an analogous statement for $(2^i/b) n.
+Next we prove condition~(2).
+ By condition~(a) of Definitionfor every $j 1 .
+Let every station be executing the randomized algorithm as represented by a modified randomized transmission array.
+By Lemma= < b, for tTchannels 1b-isolating a station  at time  is at least~.
+Let us consider a modified randomized transmission array.
+ Let us assume that  in the specification is sufficiently large, for any 0such that each of them has at least $with the activation pattern.
+ We can clearly partition all activation patterns into disjoint classes based on the intervals associated with them.
+Observe that the expected number of isolated positions in the .
+We conclude with the proof of Theoremandcontrary to the assumptions.
+We also consider a model of random jamming of channels for the case of sufficiently many channels.
+ Let us assume that at each time step and on every channel, a jamming error occurs with the probability~, where , independently over time steps and channels.
+We considered waking up a multi-channel single-hop radio network by deterministic and randomized algorithms.
+ To assess optimality of a solution, we gave a lower bound kn$ are known.
+This lower bound can be beaten by randomized algorithms when  is known, as we demonstrated that a randomized algorithm exists that refers to  and works in time k$ is known, even for just two channels.
+We may interpret the parameters  and  as representing scalability of an algorithmic solution, by the presence of factors  and  in time-performance bounds.
+ This could mean that an algorithm that scales perfectly with  and  has time performance of the form , for some function~ such that n_0bk$ growing unbounded.
+Deterministic algorithms given in this paper are developed for the case when  is known but  is unknown.
+ Our general solution operates in time  reflects scalability with , which is close to linear in~, while the scalability with~ is poor, as  is not a factor in the performance bound at all.
+ When sufficiently many channels are available, we show that a multi-channel can be woken up deterministically in time kb, so it misses optimality in that respect by the factor of~ only.
