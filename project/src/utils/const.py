@@ -1,5 +1,5 @@
 CATS = [
-    'cs', 'econ', 'eess', 'math', 'physics', 'q-bio', 'q-fin', 'stat',
+    'cs', 'eess', 'econ', 'math', 'physics', 'q-bio', 'q-fin', 'stat',
     'physics:astro-ph', 'physics:cond-mat', 'physics:gr-qc', 'physics:hep-ex',
     'physics:hep-lat', 'physics:hep-ph', 'physics:hep-th', 'physics:math-ph',
     'physics:nlin', 'physics:nucl-ex', 'physics:nucl-th', 'physics:physics',
