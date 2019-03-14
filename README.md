@@ -41,11 +41,20 @@ $ python -m project.src.emb.clean_corpus --corpora project/data/arxiv_en_en_100.
 Train embeddings (on cleaned corpora):
 
 ```bash
-$ python -m project.src.emb.train_emb --corpora [CORPUS_PATH ...] --method METHOD --epochs EPOCHS
+# word2vec or fastText
+$ python -m project.src.emb.train_emb --corpora [CORPUS_PATH ...] --method METHOD --epochs EPOCHS --min-count MIN_COUNT --dim DIM
 # e.g.
 $ python -m project.src.emb.train_emb --corpora project/data/arxiv_en_en_100_clean.txt project/data/google-scholar_zh_zh_100_clean.txt --method word2vec --epochs 5
 # outputs
 # project/data/<corpus-file-name>.bin, project/data/<corpus-file-name>.vec
+
+# GloVe
+$ cd project/src/emb/GloVe
+$ ./demo.sh CORPUS_PATH EPOCHS DIM MIN_COUNT
+# e.g.
+$ ./demo.sh ../../../data/essay_zh_en_1M_clean.txt 20 200 5
+# outputs
+# vectors.txt, vocab.txt, vectors.bin, cooccurence.shuf.bin, cooccurrence.bin
 ```
 
 MUSE train:
