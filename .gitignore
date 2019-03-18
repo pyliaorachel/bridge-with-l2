@@ -129,3 +129,4 @@ backup/
 MUSE/data/crosslingual/
 MUSE/data/monolingual/
 MUSE/dumped/
+MUSE/config.py
