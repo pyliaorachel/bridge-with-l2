@@ -81,6 +81,18 @@ Sample logs in `project/output/logs/<site>_<max-sent>.log` or `project/output/lo
 
 The categories, institutes, last names, and queries are specified in `project/src/utils/const.py`.
 
+## Tools
+
+Visualization of `train.log`:
+
+```bash
+$ python project/tools/visualize.py TRAIN_LOG
+# e.g.
+$ python project/tools/visualize.py MUSE/dumped/fasttext_wiki-zh-zh_wiki-en-en_epoch-size-250000_epoch-10/rrmor5rqvo/train.log
+# outputs
+# dis_loss_acc.png, precision.png, prediction.png under the same folder
+```
+
 ### Sites
 
 - [arXiv.org](https://arxiv.org/)

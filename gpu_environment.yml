@@ -10,6 +10,7 @@ dependencies:
   - nltk
   - gensim
   - faiss-gpu
+  - matplotlib
   - pip:
     - -e git+https://github.com/pyliaorachel/paperscraper.git#egg=paperscraper
     - marisa-trie
