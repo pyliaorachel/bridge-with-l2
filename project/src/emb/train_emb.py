@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
         print('Saving model...')
         filename = '_'.join(os.path.splitext(corpus)[0].split('_')[:-1])
-        filename += '_{}'.format(args.epochs)
+        filename += '_{}.{}'.format(args.epochs, args.method.lower())
         model.save(filename + '.bin')
         model.wv.save_word2vec_format(filename + '.vec')
 
