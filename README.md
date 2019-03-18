@@ -83,7 +83,7 @@ The categories, institutes, last names, and queries are specified in `project/sr
 
 ## Tools
 
-Visualization of `train.log`:
+Visualize of `train.log`:
 
 ```bash
 $ python project/tools/visualize.py TRAIN_LOG
@@ -91,6 +91,14 @@ $ python project/tools/visualize.py TRAIN_LOG
 $ python project/tools/visualize.py MUSE/dumped/fasttext_wiki-zh-zh_wiki-en-en_epoch-size-250000_epoch-10/rrmor5rqvo/train.log
 # outputs
 # dis_loss_acc.png, precision.png, prediction.png under the same folder
+```
+
+Calculate perplexity:
+
+```bash
+$ python project/tools/perplexity.py --train TRAIN_CORPUS --corpora [TEST_CORPUS ...]
+# e.g.
+$ python project/tools/perplexity.py --train project/data/wiki.en.txt --corpora project/data/arxiv_zh_en_880K.txt project/data/arxiv_en_en_480K.txt
 ```
 
 ### Sites
