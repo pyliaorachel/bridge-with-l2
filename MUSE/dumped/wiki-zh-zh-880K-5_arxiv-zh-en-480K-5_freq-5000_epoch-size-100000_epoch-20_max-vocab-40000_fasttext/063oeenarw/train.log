@@ -1,0 +1,1144 @@
+INFO - 03/19/19 01:21:51 - 0:00:00 - ============ Initialized logger ============
+INFO - 03/19/19 01:21:51 - 0:00:00 - adversarial: True
+                                     batch_size: 32
+                                     cuda: True
+                                     dico_build: S2T
+                                     dico_eval: default
+                                     dico_max_rank: 15000
+                                     dico_max_size: 0
+                                     dico_method: csls_knn_10
+                                     dico_min_size: 0
+                                     dico_threshold: 0
+                                     dis_clip_weights: 0
+                                     dis_dropout: 0.0
+                                     dis_hid_dim: 2048
+                                     dis_input_dropout: 0.1
+                                     dis_lambda: 1
+                                     dis_layers: 2
+                                     dis_most_frequent: 5000
+                                     dis_optimizer: sgd,lr=0.1
+                                     dis_smooth: 0.1
+                                     dis_steps: 5
+                                     emb_dim: 300
+                                     epoch_size: 100000
+                                     exp_id: 
+                                     exp_name: wiki-zh-zh-880K-5_arxiv-zh-en-480K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_fasttext
+                                     exp_path: /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-880K-5_arxiv-zh-en-480K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_fasttext/063oeenarw
+                                     export: txt
+                                     lr_decay: 0.98
+                                     lr_shrink: 0.5
+                                     map_beta: 0.001
+                                     map_id_init: True
+                                     map_optimizer: sgd,lr=0.1
+                                     max_vocab: 40000
+                                     min_lr: 1e-06
+                                     n_epochs: 20
+                                     n_refinement: 5
+                                     normalize_embeddings: center
+                                     seed: -1
+                                     src_emb: project/data/wiki_zh_zh_880K_5.fasttext.vec
+                                     src_lang: zh
+                                     tgt_emb: project/data/arxiv_zh_en_480K_5.fasttext.vec
+                                     tgt_lang: en
+                                     verbose: 2
+INFO - 03/19/19 01:21:51 - 0:00:00 - The experiment will be stored in /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-880K-5_arxiv-zh-en-480K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_fasttext/063oeenarw
+INFO - 03/19/19 01:21:58 - 0:00:07 - Loaded 40000 pre-trained word embeddings.
+INFO - 03/19/19 01:22:11 - 0:00:20 - Loaded 29217 pre-trained word embeddings.
+INFO - 03/19/19 01:22:11 - 0:00:21 - ----> ADVERSARIAL TRAINING <----
+                                     
+                                     
+INFO - 03/19/19 01:22:11 - 0:00:21 - Starting adversarial training epoch 0...
+INFO - 03/19/19 01:22:12 - 0:00:22 - 000000 - Discriminator loss: 0.6736 - 81 samples/s
+INFO - 03/19/19 01:22:22 - 0:00:31 - 004000 - Discriminator loss: 0.4360 - 811 samples/s
+INFO - 03/19/19 01:22:32 - 0:00:41 - 008000 - Discriminator loss: 0.4435 - 795 samples/s
+INFO - 03/19/19 01:22:42 - 0:00:51 - 012000 - Discriminator loss: 0.4481 - 816 samples/s
+INFO - 03/19/19 01:22:51 - 0:01:01 - 016000 - Discriminator loss: 0.4518 - 835 samples/s
+INFO - 03/19/19 01:23:03 - 0:01:12 - 020000 - Discriminator loss: 0.4540 - 717 samples/s
+INFO - 03/19/19 01:23:13 - 0:01:22 - 024000 - Discriminator loss: 0.4476 - 802 samples/s
+INFO - 03/19/19 01:23:23 - 0:01:32 - 028000 - Discriminator loss: 0.4395 - 805 samples/s
+INFO - 03/19/19 01:23:33 - 0:01:43 - 032000 - Discriminator loss: 0.4335 - 733 samples/s
+INFO - 03/19/19 01:23:45 - 0:01:54 - 036000 - Discriminator loss: 0.4294 - 708 samples/s
+INFO - 03/19/19 01:23:56 - 0:02:05 - 040000 - Discriminator loss: 0.4228 - 730 samples/s
+INFO - 03/19/19 01:24:07 - 0:02:16 - 044000 - Discriminator loss: 0.4170 - 728 samples/s
+INFO - 03/19/19 01:24:18 - 0:02:27 - 048000 - Discriminator loss: 0.4132 - 728 samples/s
+INFO - 03/19/19 01:24:27 - 0:02:36 - 052000 - Discriminator loss: 0.4081 - 871 samples/s
+INFO - 03/19/19 01:24:37 - 0:02:46 - 056000 - Discriminator loss: 0.3996 - 815 samples/s
+INFO - 03/19/19 01:24:47 - 0:02:57 - 060000 - Discriminator loss: 0.4064 - 741 samples/s
+INFO - 03/19/19 01:24:57 - 0:03:07 - 064000 - Discriminator loss: 0.3916 - 819 samples/s
+INFO - 03/19/19 01:25:09 - 0:03:18 - 068000 - Discriminator loss: 0.3940 - 687 samples/s
+INFO - 03/19/19 01:25:20 - 0:03:29 - 072000 - Discriminator loss: 0.3896 - 732 samples/s
+INFO - 03/19/19 01:25:31 - 0:03:40 - 076000 - Discriminator loss: 0.3874 - 728 samples/s
+INFO - 03/19/19 01:25:42 - 0:03:51 - 080000 - Discriminator loss: 0.3868 - 733 samples/s
+INFO - 03/19/19 01:25:53 - 0:04:02 - 084000 - Discriminator loss: 0.3837 - 730 samples/s
+INFO - 03/19/19 01:26:04 - 0:04:13 - 088000 - Discriminator loss: 0.3832 - 731 samples/s
+INFO - 03/19/19 01:26:14 - 0:04:24 - 092000 - Discriminator loss: 0.3752 - 732 samples/s
+INFO - 03/19/19 01:26:25 - 0:04:35 - 096000 - Discriminator loss: 0.3747 - 728 samples/s
+INFO - 03/19/19 01:26:36 - 0:04:46 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:26:36 - 0:04:46 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 01:26:36 - 0:04:46 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 01:26:36 - 0:04:46 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 01:26:36 - 0:04:46 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:26:49 - 0:04:58 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 01:26:49 - 0:04:58 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 01:26:49 - 0:04:58 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 01:26:50 - 0:05:00 - Building the train dictionary ...
+INFO - 03/19/19 01:26:50 - 0:05:00 - New train dictionary of 4831 pairs.
+INFO - 03/19/19 01:26:50 - 0:05:00 - Mean cosine (nn method, S2T build, 10000 max size): 0.53073
+INFO - 03/19/19 01:27:26 - 0:05:35 - Building the train dictionary ...
+INFO - 03/19/19 01:27:26 - 0:05:35 - New train dictionary of 4686 pairs.
+INFO - 03/19/19 01:27:26 - 0:05:35 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.52229
+INFO - 03/19/19 01:27:28 - 0:05:37 - Discriminator source / target predictions: 0.91953 / 0.31777
+INFO - 03/19/19 01:27:28 - 0:05:37 - Discriminator source / target / global accuracy: 0.99815 / 0.73998 / 0.88917
+INFO - 03/19/19 01:27:28 - 0:05:37 - __log__:{"n_epoch": 0, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.5307286977767944, "mean_cosine-csls_knn_10-S2T-10000": 0.5222925543785095, "dis_accu": 0.8891746247309187, "dis_src_pred": 0.9195346641294658, "dis_tgt_pred": 0.31777044040013125}
+INFO - 03/19/19 01:27:28 - 0:05:37 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.52229
+INFO - 03/19/19 01:27:28 - 0:05:37 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-880K-5_arxiv-zh-en-480K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_fasttext/063oeenarw/best_mapping.pth ...
+INFO - 03/19/19 01:27:28 - 0:05:37 - End of epoch 0.
+                                     
+                                     
+INFO - 03/19/19 01:27:28 - 0:05:37 - Decreasing learning rate: 0.10000000 -> 0.09800000
+INFO - 03/19/19 01:27:28 - 0:05:37 - Starting adversarial training epoch 1...
+INFO - 03/19/19 01:27:28 - 0:05:37 - 000000 - Discriminator loss: 0.3724 - 1060 samples/s
+INFO - 03/19/19 01:27:37 - 0:05:46 - 004000 - Discriminator loss: 0.3766 - 895 samples/s
+INFO - 03/19/19 01:27:46 - 0:05:56 - 008000 - Discriminator loss: 0.3721 - 840 samples/s
+INFO - 03/19/19 01:27:55 - 0:06:05 - 012000 - Discriminator loss: 0.3650 - 903 samples/s
+INFO - 03/19/19 01:28:05 - 0:06:14 - 016000 - Discriminator loss: 0.3654 - 811 samples/s
+INFO - 03/19/19 01:28:16 - 0:06:25 - 020000 - Discriminator loss: 0.3690 - 746 samples/s
+INFO - 03/19/19 01:28:26 - 0:06:36 - 024000 - Discriminator loss: 0.3652 - 751 samples/s
+INFO - 03/19/19 01:28:37 - 0:06:46 - 028000 - Discriminator loss: 0.3613 - 772 samples/s
+INFO - 03/19/19 01:28:45 - 0:06:55 - 032000 - Discriminator loss: 0.3637 - 943 samples/s
+INFO - 03/19/19 01:28:56 - 0:07:05 - 036000 - Discriminator loss: 0.3639 - 755 samples/s
+INFO - 03/19/19 01:29:08 - 0:07:17 - 040000 - Discriminator loss: 0.3617 - 673 samples/s
+INFO - 03/19/19 01:29:19 - 0:07:28 - 044000 - Discriminator loss: 0.3621 - 728 samples/s
+INFO - 03/19/19 01:29:29 - 0:07:39 - 048000 - Discriminator loss: 0.3606 - 744 samples/s
+INFO - 03/19/19 01:29:38 - 0:07:48 - 052000 - Discriminator loss: 0.3623 - 888 samples/s
+INFO - 03/19/19 01:29:48 - 0:07:58 - 056000 - Discriminator loss: 0.3621 - 808 samples/s
+INFO - 03/19/19 01:29:56 - 0:08:05 - 060000 - Discriminator loss: 0.3618 - 1044 samples/s
+INFO - 03/19/19 01:30:03 - 0:08:12 - 064000 - Discriminator loss: 0.3611 - 1162 samples/s
+INFO - 03/19/19 01:30:13 - 0:08:22 - 068000 - Discriminator loss: 0.3590 - 803 samples/s
+INFO - 03/19/19 01:30:23 - 0:08:33 - 072000 - Discriminator loss: 0.3574 - 767 samples/s
+INFO - 03/19/19 01:30:34 - 0:08:44 - 076000 - Discriminator loss: 0.3577 - 730 samples/s
+INFO - 03/19/19 01:30:45 - 0:08:54 - 080000 - Discriminator loss: 0.3536 - 732 samples/s
+INFO - 03/19/19 01:30:56 - 0:09:05 - 084000 - Discriminator loss: 0.3550 - 734 samples/s
+INFO - 03/19/19 01:31:07 - 0:09:16 - 088000 - Discriminator loss: 0.3546 - 733 samples/s
+INFO - 03/19/19 01:31:18 - 0:09:27 - 092000 - Discriminator loss: 0.3518 - 732 samples/s
+INFO - 03/19/19 01:31:29 - 0:09:38 - 096000 - Discriminator loss: 0.3528 - 727 samples/s
+INFO - 03/19/19 01:31:40 - 0:09:49 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:31:40 - 0:09:49 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 01:31:40 - 0:09:49 - 665 source words - nn - Precision at k = 5: 0.150376
+INFO - 03/19/19 01:31:40 - 0:09:49 - 665 source words - nn - Precision at k = 10: 0.451128
+INFO - 03/19/19 01:31:40 - 0:09:49 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:31:52 - 0:10:01 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 01:31:52 - 0:10:01 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 01:31:52 - 0:10:01 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 01:31:53 - 0:10:03 - Building the train dictionary ...
+INFO - 03/19/19 01:31:53 - 0:10:03 - New train dictionary of 4948 pairs.
+INFO - 03/19/19 01:31:53 - 0:10:03 - Mean cosine (nn method, S2T build, 10000 max size): 0.53383
+INFO - 03/19/19 01:32:24 - 0:10:34 - Building the train dictionary ...
+INFO - 03/19/19 01:32:24 - 0:10:34 - New train dictionary of 4840 pairs.
+INFO - 03/19/19 01:32:24 - 0:10:34 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.52417
+INFO - 03/19/19 01:32:26 - 0:10:35 - Discriminator source / target predictions: 0.88618 / 0.28336
+INFO - 03/19/19 01:32:26 - 0:10:35 - Discriminator source / target / global accuracy: 0.99310 / 0.77065 / 0.89920
+INFO - 03/19/19 01:32:26 - 0:10:35 - __log__:{"n_epoch": 1, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.15037593984962408, "precision_at_10-nn": 0.4511278195488722, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.5338255167007446, "mean_cosine-csls_knn_10-S2T-10000": 0.5241714119911194, "dis_accu": 0.8992010633225942, "dis_src_pred": 0.8861848960194737, "dis_tgt_pred": 0.28336290921850776}
+INFO - 03/19/19 01:32:26 - 0:10:35 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.52417
+INFO - 03/19/19 01:32:26 - 0:10:35 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-880K-5_arxiv-zh-en-480K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_fasttext/063oeenarw/best_mapping.pth ...
+INFO - 03/19/19 01:32:26 - 0:10:35 - End of epoch 1.
+                                     
+                                     
+INFO - 03/19/19 01:32:26 - 0:10:35 - Decreasing learning rate: 0.09800000 -> 0.09604000
+INFO - 03/19/19 01:32:26 - 0:10:35 - Starting adversarial training epoch 2...
+INFO - 03/19/19 01:32:26 - 0:10:35 - 000000 - Discriminator loss: 0.3509 - 699 samples/s
+INFO - 03/19/19 01:32:36 - 0:10:45 - 004000 - Discriminator loss: 0.3533 - 801 samples/s
+INFO - 03/19/19 01:32:45 - 0:10:54 - 008000 - Discriminator loss: 0.3543 - 885 samples/s
+INFO - 03/19/19 01:32:56 - 0:11:05 - 012000 - Discriminator loss: 0.3506 - 716 samples/s
+INFO - 03/19/19 01:33:07 - 0:11:17 - 016000 - Discriminator loss: 0.3541 - 700 samples/s
+INFO - 03/19/19 01:33:17 - 0:11:26 - 020000 - Discriminator loss: 0.3491 - 865 samples/s
+INFO - 03/19/19 01:33:27 - 0:11:36 - 024000 - Discriminator loss: 0.3492 - 810 samples/s
+INFO - 03/19/19 01:33:38 - 0:11:47 - 028000 - Discriminator loss: 0.3487 - 692 samples/s
+INFO - 03/19/19 01:33:49 - 0:11:59 - 032000 - Discriminator loss: 0.3490 - 721 samples/s
+INFO - 03/19/19 01:33:59 - 0:12:08 - 036000 - Discriminator loss: 0.3512 - 821 samples/s
+INFO - 03/19/19 01:34:10 - 0:12:19 - 040000 - Discriminator loss: 0.3503 - 716 samples/s
+INFO - 03/19/19 01:34:22 - 0:12:32 - 044000 - Discriminator loss: 0.3487 - 655 samples/s
+INFO - 03/19/19 01:34:34 - 0:12:44 - 048000 - Discriminator loss: 0.3474 - 669 samples/s
+INFO - 03/19/19 01:34:48 - 0:12:58 - 052000 - Discriminator loss: 0.3458 - 576 samples/s
+INFO - 03/19/19 01:34:57 - 0:13:07 - 056000 - Discriminator loss: 0.3462 - 872 samples/s
+INFO - 03/19/19 01:35:09 - 0:13:18 - 060000 - Discriminator loss: 0.3449 - 700 samples/s
+INFO - 03/19/19 01:35:20 - 0:13:30 - 064000 - Discriminator loss: 0.3453 - 686 samples/s
+INFO - 03/19/19 01:35:34 - 0:13:43 - 068000 - Discriminator loss: 0.3455 - 596 samples/s
+INFO - 03/19/19 01:35:46 - 0:13:56 - 072000 - Discriminator loss: 0.3457 - 643 samples/s
+INFO - 03/19/19 01:36:01 - 0:14:10 - 076000 - Discriminator loss: 0.3471 - 561 samples/s
+INFO - 03/19/19 01:36:14 - 0:14:24 - 080000 - Discriminator loss: 0.3478 - 575 samples/s
+INFO - 03/19/19 01:36:30 - 0:14:39 - 084000 - Discriminator loss: 0.3449 - 512 samples/s
+INFO - 03/19/19 01:36:46 - 0:14:56 - 088000 - Discriminator loss: 0.3446 - 493 samples/s
+INFO - 03/19/19 01:37:01 - 0:15:10 - 092000 - Discriminator loss: 0.3476 - 560 samples/s
+INFO - 03/19/19 01:37:16 - 0:15:25 - 096000 - Discriminator loss: 0.3453 - 530 samples/s
+INFO - 03/19/19 01:37:31 - 0:15:40 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:37:31 - 0:15:40 - 665 source words - nn - Precision at k = 1: 0.150376
+INFO - 03/19/19 01:37:31 - 0:15:40 - 665 source words - nn - Precision at k = 5: 0.150376
+INFO - 03/19/19 01:37:31 - 0:15:40 - 665 source words - nn - Precision at k = 10: 0.150376
+INFO - 03/19/19 01:37:31 - 0:15:40 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:37:49 - 0:15:58 - 665 source words - csls_knn_10 - Precision at k = 1: 0.150376
+INFO - 03/19/19 01:37:49 - 0:15:58 - 665 source words - csls_knn_10 - Precision at k = 5: 0.150376
+INFO - 03/19/19 01:37:49 - 0:15:58 - 665 source words - csls_knn_10 - Precision at k = 10: 0.150376
+INFO - 03/19/19 01:37:50 - 0:16:00 - Building the train dictionary ...
+INFO - 03/19/19 01:37:50 - 0:16:00 - New train dictionary of 5084 pairs.
+INFO - 03/19/19 01:37:50 - 0:16:00 - Mean cosine (nn method, S2T build, 10000 max size): 0.52465
+INFO - 03/19/19 01:38:27 - 0:16:37 - Building the train dictionary ...
+INFO - 03/19/19 01:38:27 - 0:16:37 - New train dictionary of 4866 pairs.
+INFO - 03/19/19 01:38:28 - 0:16:37 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.52239
+INFO - 03/19/19 01:38:30 - 0:16:39 - Discriminator source / target predictions: 0.88719 / 0.28100
+INFO - 03/19/19 01:38:30 - 0:16:39 - Discriminator source / target / global accuracy: 0.98935 / 0.76729 / 0.89562
+INFO - 03/19/19 01:38:30 - 0:16:39 - __log__:{"n_epoch": 2, "precision_at_1-nn": 0.15037593984962408, "precision_at_5-nn": 0.15037593984962408, "precision_at_10-nn": 0.15037593984962408, "precision_at_1-csls_knn_10": 0.15037593984962408, "precision_at_5-csls_knn_10": 0.15037593984962408, "precision_at_10-csls_knn_10": 0.15037593984962408, "mean_cosine-nn-S2T-10000": 0.5246472358703613, "mean_cosine-csls_knn_10-S2T-10000": 0.5223862528800964, "dis_accu": 0.895618128494445, "dis_src_pred": 0.8871922679066658, "dis_tgt_pred": 0.28099534765259215}
+INFO - 03/19/19 01:38:30 - 0:16:39 - End of epoch 2.
+                                     
+                                     
+INFO - 03/19/19 01:38:30 - 0:16:39 - Decreasing learning rate: 0.09604000 -> 0.09411920
+INFO - 03/19/19 01:38:30 - 0:16:39 - Validation metric is smaller than the best: 0.52239 vs 0.52417
+INFO - 03/19/19 01:38:30 - 0:16:39 - Starting adversarial training epoch 3...
+INFO - 03/19/19 01:38:30 - 0:16:39 - 000000 - Discriminator loss: 0.3427 - 573 samples/s
+INFO - 03/19/19 01:38:43 - 0:16:52 - 004000 - Discriminator loss: 0.3469 - 599 samples/s
+INFO - 03/19/19 01:38:57 - 0:17:06 - 008000 - Discriminator loss: 0.3445 - 595 samples/s
+INFO - 03/19/19 01:39:09 - 0:17:18 - 012000 - Discriminator loss: 0.3437 - 643 samples/s
+INFO - 03/19/19 01:39:23 - 0:17:32 - 016000 - Discriminator loss: 0.3435 - 582 samples/s
+INFO - 03/19/19 01:39:36 - 0:17:45 - 020000 - Discriminator loss: 0.3455 - 617 samples/s
+INFO - 03/19/19 01:39:48 - 0:17:57 - 024000 - Discriminator loss: 0.3435 - 651 samples/s
+INFO - 03/19/19 01:40:04 - 0:18:13 - 028000 - Discriminator loss: 0.3440 - 510 samples/s
+INFO - 03/19/19 01:40:15 - 0:18:25 - 032000 - Discriminator loss: 0.3454 - 683 samples/s
+INFO - 03/19/19 01:40:29 - 0:18:38 - 036000 - Discriminator loss: 0.3456 - 595 samples/s
+INFO - 03/19/19 01:40:41 - 0:18:50 - 040000 - Discriminator loss: 0.3441 - 675 samples/s
+INFO - 03/19/19 01:40:55 - 0:19:04 - 044000 - Discriminator loss: 0.3440 - 571 samples/s
+INFO - 03/19/19 01:41:08 - 0:19:17 - 048000 - Discriminator loss: 0.3441 - 612 samples/s
+INFO - 03/19/19 01:41:22 - 0:19:32 - 052000 - Discriminator loss: 0.3429 - 548 samples/s
+INFO - 03/19/19 01:41:35 - 0:19:45 - 056000 - Discriminator loss: 0.3428 - 617 samples/s
+INFO - 03/19/19 01:41:48 - 0:19:57 - 060000 - Discriminator loss: 0.3429 - 625 samples/s
+INFO - 03/19/19 01:42:03 - 0:20:12 - 064000 - Discriminator loss: 0.3422 - 549 samples/s
+INFO - 03/19/19 01:42:17 - 0:20:27 - 068000 - Discriminator loss: 0.3427 - 543 samples/s
+INFO - 03/19/19 01:42:31 - 0:20:40 - 072000 - Discriminator loss: 0.3423 - 597 samples/s
+INFO - 03/19/19 01:42:45 - 0:20:54 - 076000 - Discriminator loss: 0.3426 - 555 samples/s
+INFO - 03/19/19 01:42:58 - 0:21:07 - 080000 - Discriminator loss: 0.3420 - 631 samples/s
+INFO - 03/19/19 01:43:11 - 0:21:21 - 084000 - Discriminator loss: 0.3427 - 586 samples/s
+INFO - 03/19/19 01:43:26 - 0:21:36 - 088000 - Discriminator loss: 0.3413 - 533 samples/s
+INFO - 03/19/19 01:43:41 - 0:21:50 - 092000 - Discriminator loss: 0.3414 - 565 samples/s
+INFO - 03/19/19 01:43:55 - 0:22:04 - 096000 - Discriminator loss: 0.3421 - 570 samples/s
+INFO - 03/19/19 01:44:10 - 0:22:19 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:44:10 - 0:22:20 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 01:44:10 - 0:22:20 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 01:44:10 - 0:22:20 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 01:44:10 - 0:22:20 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:44:27 - 0:22:36 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 01:44:27 - 0:22:36 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 01:44:27 - 0:22:36 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 01:44:29 - 0:22:38 - Building the train dictionary ...
+INFO - 03/19/19 01:44:29 - 0:22:38 - New train dictionary of 4978 pairs.
+INFO - 03/19/19 01:44:29 - 0:22:38 - Mean cosine (nn method, S2T build, 10000 max size): 0.53381
+INFO - 03/19/19 01:45:06 - 0:23:15 - Building the train dictionary ...
+INFO - 03/19/19 01:45:06 - 0:23:15 - New train dictionary of 4879 pairs.
+INFO - 03/19/19 01:45:06 - 0:23:15 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.52610
+INFO - 03/19/19 01:45:08 - 0:23:17 - Discriminator source / target predictions: 0.85298 / 0.25319
+INFO - 03/19/19 01:45:08 - 0:23:17 - Discriminator source / target / global accuracy: 0.97925 / 0.80518 / 0.90577
+INFO - 03/19/19 01:45:08 - 0:23:17 - __log__:{"n_epoch": 3, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.5338112115859985, "mean_cosine-csls_knn_10-S2T-10000": 0.526098370552063, "dis_accu": 0.9057745929468194, "dis_src_pred": 0.8529828471828252, "dis_tgt_pred": 0.25318830588361857}
+INFO - 03/19/19 01:45:08 - 0:23:17 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.52610
+INFO - 03/19/19 01:45:08 - 0:23:17 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-880K-5_arxiv-zh-en-480K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_fasttext/063oeenarw/best_mapping.pth ...
+INFO - 03/19/19 01:45:08 - 0:23:17 - End of epoch 3.
+                                     
+                                     
+INFO - 03/19/19 01:45:08 - 0:23:17 - Decreasing learning rate: 0.09411920 -> 0.09223682
+INFO - 03/19/19 01:45:08 - 0:23:17 - Starting adversarial training epoch 4...
+INFO - 03/19/19 01:45:08 - 0:23:17 - 000000 - Discriminator loss: 0.3379 - 718 samples/s
+INFO - 03/19/19 01:45:21 - 0:23:31 - 004000 - Discriminator loss: 0.3408 - 600 samples/s
+INFO - 03/19/19 01:45:34 - 0:23:44 - 008000 - Discriminator loss: 0.3407 - 614 samples/s
+INFO - 03/19/19 01:45:47 - 0:23:57 - 012000 - Discriminator loss: 0.3419 - 619 samples/s
+INFO - 03/19/19 01:46:01 - 0:24:11 - 016000 - Discriminator loss: 0.3421 - 560 samples/s
+INFO - 03/19/19 01:46:14 - 0:24:23 - 020000 - Discriminator loss: 0.3413 - 636 samples/s
+INFO - 03/19/19 01:46:26 - 0:24:35 - 024000 - Discriminator loss: 0.3413 - 670 samples/s
+INFO - 03/19/19 01:46:41 - 0:24:50 - 028000 - Discriminator loss: 0.3396 - 529 samples/s
+INFO - 03/19/19 01:46:55 - 0:25:04 - 032000 - Discriminator loss: 0.3407 - 587 samples/s
+INFO - 03/19/19 01:47:07 - 0:25:16 - 036000 - Discriminator loss: 0.3394 - 665 samples/s
+INFO - 03/19/19 01:47:20 - 0:25:30 - 040000 - Discriminator loss: 0.3402 - 582 samples/s
+INFO - 03/19/19 01:47:36 - 0:25:45 - 044000 - Discriminator loss: 0.3396 - 527 samples/s
+INFO - 03/19/19 01:47:48 - 0:25:57 - 048000 - Discriminator loss: 0.3395 - 653 samples/s
+INFO - 03/19/19 01:48:03 - 0:26:12 - 052000 - Discriminator loss: 0.3397 - 539 samples/s
+INFO - 03/19/19 01:48:18 - 0:26:27 - 056000 - Discriminator loss: 0.3386 - 536 samples/s
+INFO - 03/19/19 01:48:34 - 0:26:43 - 060000 - Discriminator loss: 0.3398 - 489 samples/s
+INFO - 03/19/19 01:48:49 - 0:26:59 - 064000 - Discriminator loss: 0.3379 - 526 samples/s
+INFO - 03/19/19 01:49:02 - 0:27:11 - 068000 - Discriminator loss: 0.3389 - 621 samples/s
+INFO - 03/19/19 01:49:16 - 0:27:26 - 072000 - Discriminator loss: 0.3377 - 553 samples/s
+INFO - 03/19/19 01:49:29 - 0:27:39 - 076000 - Discriminator loss: 0.3406 - 615 samples/s
+INFO - 03/19/19 01:49:44 - 0:27:53 - 080000 - Discriminator loss: 0.3397 - 558 samples/s
+INFO - 03/19/19 01:49:56 - 0:28:06 - 084000 - Discriminator loss: 0.3396 - 644 samples/s
+INFO - 03/19/19 01:50:11 - 0:28:21 - 088000 - Discriminator loss: 0.3414 - 529 samples/s
+INFO - 03/19/19 01:50:25 - 0:28:35 - 092000 - Discriminator loss: 0.3388 - 565 samples/s
+INFO - 03/19/19 01:50:40 - 0:28:49 - 096000 - Discriminator loss: 0.3399 - 569 samples/s
+INFO - 03/19/19 01:50:53 - 0:29:02 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:50:53 - 0:29:02 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 01:50:53 - 0:29:02 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 01:50:53 - 0:29:02 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 01:50:53 - 0:29:02 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:51:11 - 0:29:20 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 01:51:11 - 0:29:20 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 01:51:11 - 0:29:20 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 01:51:13 - 0:29:22 - Building the train dictionary ...
+INFO - 03/19/19 01:51:13 - 0:29:22 - New train dictionary of 5185 pairs.
+INFO - 03/19/19 01:51:13 - 0:29:22 - Mean cosine (nn method, S2T build, 10000 max size): 0.52573
+INFO - 03/19/19 01:51:55 - 0:30:04 - Building the train dictionary ...
+INFO - 03/19/19 01:51:55 - 0:30:04 - New train dictionary of 5014 pairs.
+INFO - 03/19/19 01:51:55 - 0:30:04 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.51688
+INFO - 03/19/19 01:51:57 - 0:30:06 - Discriminator source / target predictions: 0.86424 / 0.28677
+INFO - 03/19/19 01:51:57 - 0:30:06 - Discriminator source / target / global accuracy: 0.98555 / 0.76147 / 0.89097
+INFO - 03/19/19 01:51:57 - 0:30:06 - __log__:{"n_epoch": 4, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.5257293581962585, "mean_cosine-csls_knn_10-S2T-10000": 0.516875147819519, "dis_accu": 0.8909660921449932, "dis_src_pred": 0.8642363906390965, "dis_tgt_pred": 0.28676596607586113}
+INFO - 03/19/19 01:51:57 - 0:30:06 - End of epoch 4.
+                                     
+                                     
+INFO - 03/19/19 01:51:57 - 0:30:06 - Decreasing learning rate: 0.09223682 -> 0.09039208
+INFO - 03/19/19 01:51:57 - 0:30:06 - Validation metric is smaller than the best: 0.51688 vs 0.52610
+INFO - 03/19/19 01:51:57 - 0:30:06 - Shrinking the learning rate: 0.09039 -> 0.04520
+INFO - 03/19/19 01:51:57 - 0:30:06 - Starting adversarial training epoch 5...
+INFO - 03/19/19 01:51:57 - 0:30:06 - 000000 - Discriminator loss: 0.3385 - 716 samples/s
+INFO - 03/19/19 01:52:10 - 0:30:20 - 004000 - Discriminator loss: 0.3375 - 587 samples/s
+INFO - 03/19/19 01:52:25 - 0:30:34 - 008000 - Discriminator loss: 0.3373 - 555 samples/s
+INFO - 03/19/19 01:52:39 - 0:30:49 - 012000 - Discriminator loss: 0.3357 - 552 samples/s
+INFO - 03/19/19 01:52:53 - 0:31:03 - 016000 - Discriminator loss: 0.3356 - 569 samples/s
+INFO - 03/19/19 01:53:07 - 0:31:16 - 020000 - Discriminator loss: 0.3352 - 580 samples/s
+INFO - 03/19/19 01:53:20 - 0:31:29 - 024000 - Discriminator loss: 0.3355 - 616 samples/s
+INFO - 03/19/19 01:53:35 - 0:31:44 - 028000 - Discriminator loss: 0.3356 - 545 samples/s
+INFO - 03/19/19 01:53:48 - 0:31:58 - 032000 - Discriminator loss: 0.3361 - 582 samples/s
+INFO - 03/19/19 01:54:02 - 0:32:11 - 036000 - Discriminator loss: 0.3348 - 582 samples/s
+INFO - 03/19/19 01:54:16 - 0:32:25 - 040000 - Discriminator loss: 0.3347 - 591 samples/s
+INFO - 03/19/19 01:54:29 - 0:32:39 - 044000 - Discriminator loss: 0.3356 - 582 samples/s
+INFO - 03/19/19 01:54:43 - 0:32:52 - 048000 - Discriminator loss: 0.3362 - 594 samples/s
+INFO - 03/19/19 01:54:57 - 0:33:06 - 052000 - Discriminator loss: 0.3344 - 580 samples/s
+INFO - 03/19/19 01:55:11 - 0:33:20 - 056000 - Discriminator loss: 0.3341 - 565 samples/s
+INFO - 03/19/19 01:55:25 - 0:33:34 - 060000 - Discriminator loss: 0.3336 - 572 samples/s
+INFO - 03/19/19 01:55:39 - 0:33:49 - 064000 - Discriminator loss: 0.3347 - 543 samples/s
+INFO - 03/19/19 01:55:53 - 0:34:03 - 068000 - Discriminator loss: 0.3344 - 579 samples/s
+INFO - 03/19/19 01:56:06 - 0:34:16 - 072000 - Discriminator loss: 0.3340 - 616 samples/s
+INFO - 03/19/19 01:56:20 - 0:34:30 - 076000 - Discriminator loss: 0.3339 - 569 samples/s
+INFO - 03/19/19 01:56:33 - 0:34:43 - 080000 - Discriminator loss: 0.3334 - 606 samples/s
+INFO - 03/19/19 01:56:47 - 0:34:56 - 084000 - Discriminator loss: 0.3335 - 585 samples/s
+INFO - 03/19/19 01:57:00 - 0:35:09 - 088000 - Discriminator loss: 0.3328 - 625 samples/s
+INFO - 03/19/19 01:57:15 - 0:35:24 - 092000 - Discriminator loss: 0.3328 - 535 samples/s
+INFO - 03/19/19 01:57:30 - 0:35:39 - 096000 - Discriminator loss: 0.3331 - 531 samples/s
+INFO - 03/19/19 01:57:44 - 0:35:53 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:57:44 - 0:35:54 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 01:57:44 - 0:35:54 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 01:57:44 - 0:35:54 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 01:57:44 - 0:35:54 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 01:58:03 - 0:36:12 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 01:58:03 - 0:36:12 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 01:58:03 - 0:36:12 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 01:58:05 - 0:36:15 - Building the train dictionary ...
+INFO - 03/19/19 01:58:05 - 0:36:15 - New train dictionary of 5187 pairs.
+INFO - 03/19/19 01:58:05 - 0:36:15 - Mean cosine (nn method, S2T build, 10000 max size): 0.50445
+INFO - 03/19/19 01:58:46 - 0:36:55 - Building the train dictionary ...
+INFO - 03/19/19 01:58:46 - 0:36:55 - New train dictionary of 4952 pairs.
+INFO - 03/19/19 01:58:46 - 0:36:55 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.49673
+INFO - 03/19/19 01:58:48 - 0:36:57 - Discriminator source / target predictions: 0.86968 / 0.24620
+INFO - 03/19/19 01:58:48 - 0:36:57 - Discriminator source / target / global accuracy: 0.97235 / 0.82695 / 0.91098
+INFO - 03/19/19 01:58:48 - 0:36:57 - __log__:{"n_epoch": 5, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.5044538378715515, "mean_cosine-csls_knn_10-S2T-10000": 0.49672675132751465, "dis_accu": 0.9109756273747779, "dis_src_pred": 0.8696780237741768, "dis_tgt_pred": 0.24620417069478132}
+INFO - 03/19/19 01:58:48 - 0:36:57 - End of epoch 5.
+                                     
+                                     
+INFO - 03/19/19 01:58:48 - 0:36:57 - Decreasing learning rate: 0.04519604 -> 0.04429212
+INFO - 03/19/19 01:58:48 - 0:36:57 - Validation metric is smaller than the best: 0.49673 vs 0.52610
+INFO - 03/19/19 01:58:48 - 0:36:57 - Shrinking the learning rate: 0.04429 -> 0.02215
+INFO - 03/19/19 01:58:48 - 0:36:57 - Starting adversarial training epoch 6...
+INFO - 03/19/19 01:58:48 - 0:36:58 - 000000 - Discriminator loss: 0.3390 - 707 samples/s
+INFO - 03/19/19 01:59:04 - 0:37:14 - 004000 - Discriminator loss: 0.3344 - 496 samples/s
+INFO - 03/19/19 01:59:18 - 0:37:27 - 008000 - Discriminator loss: 0.3328 - 597 samples/s
+INFO - 03/19/19 01:59:31 - 0:37:41 - 012000 - Discriminator loss: 0.3316 - 585 samples/s
+INFO - 03/19/19 01:59:45 - 0:37:54 - 016000 - Discriminator loss: 0.3311 - 593 samples/s
+INFO - 03/19/19 01:59:59 - 0:38:08 - 020000 - Discriminator loss: 0.3315 - 567 samples/s
+INFO - 03/19/19 02:00:09 - 0:38:18 - 024000 - Discriminator loss: 0.3309 - 817 samples/s
+INFO - 03/19/19 02:00:23 - 0:38:32 - 028000 - Discriminator loss: 0.3306 - 563 samples/s
+INFO - 03/19/19 02:00:35 - 0:38:45 - 032000 - Discriminator loss: 0.3305 - 647 samples/s
+INFO - 03/19/19 02:00:48 - 0:38:58 - 036000 - Discriminator loss: 0.3306 - 608 samples/s
+INFO - 03/19/19 02:01:02 - 0:39:11 - 040000 - Discriminator loss: 0.3311 - 586 samples/s
+INFO - 03/19/19 02:01:16 - 0:39:25 - 044000 - Discriminator loss: 0.3306 - 585 samples/s
+INFO - 03/19/19 02:01:29 - 0:39:38 - 048000 - Discriminator loss: 0.3307 - 602 samples/s
+INFO - 03/19/19 02:01:43 - 0:39:52 - 052000 - Discriminator loss: 0.3306 - 583 samples/s
+INFO - 03/19/19 02:01:55 - 0:40:04 - 056000 - Discriminator loss: 0.3319 - 651 samples/s
+INFO - 03/19/19 02:02:07 - 0:40:17 - 060000 - Discriminator loss: 0.3301 - 647 samples/s
+INFO - 03/19/19 02:02:21 - 0:40:30 - 064000 - Discriminator loss: 0.3308 - 594 samples/s
+INFO - 03/19/19 02:02:33 - 0:40:42 - 068000 - Discriminator loss: 0.3305 - 671 samples/s
+INFO - 03/19/19 02:02:46 - 0:40:55 - 072000 - Discriminator loss: 0.3306 - 596 samples/s
+INFO - 03/19/19 02:02:59 - 0:41:08 - 076000 - Discriminator loss: 0.3303 - 617 samples/s
+INFO - 03/19/19 02:03:14 - 0:41:23 - 080000 - Discriminator loss: 0.3301 - 537 samples/s
+INFO - 03/19/19 02:03:27 - 0:41:37 - 084000 - Discriminator loss: 0.3299 - 591 samples/s
+INFO - 03/19/19 02:03:42 - 0:41:51 - 088000 - Discriminator loss: 0.3311 - 564 samples/s
+INFO - 03/19/19 02:03:54 - 0:42:03 - 092000 - Discriminator loss: 0.3295 - 652 samples/s
+INFO - 03/19/19 02:04:08 - 0:42:18 - 096000 - Discriminator loss: 0.3295 - 548 samples/s
+INFO - 03/19/19 02:04:22 - 0:42:31 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:04:22 - 0:42:31 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:04:22 - 0:42:31 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:04:22 - 0:42:31 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:04:22 - 0:42:31 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:04:40 - 0:42:49 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:04:40 - 0:42:49 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:04:40 - 0:42:49 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:04:42 - 0:42:51 - Building the train dictionary ...
+INFO - 03/19/19 02:04:42 - 0:42:51 - New train dictionary of 5555 pairs.
+INFO - 03/19/19 02:04:42 - 0:42:51 - Mean cosine (nn method, S2T build, 10000 max size): 0.46357
+INFO - 03/19/19 02:05:20 - 0:43:30 - Building the train dictionary ...
+INFO - 03/19/19 02:05:20 - 0:43:30 - New train dictionary of 5063 pairs.
+INFO - 03/19/19 02:05:20 - 0:43:30 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.45077
+INFO - 03/19/19 02:05:23 - 0:43:32 - Discriminator source / target predictions: 0.88323 / 0.20787
+INFO - 03/19/19 02:05:23 - 0:43:32 - Discriminator source / target / global accuracy: 0.99935 / 0.89349 / 0.95466
+INFO - 03/19/19 02:05:23 - 0:43:32 - __log__:{"n_epoch": 6, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4635676443576813, "mean_cosine-csls_knn_10-S2T-10000": 0.45077192783355713, "dis_accu": 0.9546643165696288, "dis_src_pred": 0.8832268873125315, "dis_tgt_pred": 0.20787410657329738}
+INFO - 03/19/19 02:05:23 - 0:43:32 - End of epoch 6.
+                                     
+                                     
+INFO - 03/19/19 02:05:23 - 0:43:32 - Decreasing learning rate: 0.02214606 -> 0.02170314
+INFO - 03/19/19 02:05:23 - 0:43:32 - Validation metric is smaller than the best: 0.45077 vs 0.52610
+INFO - 03/19/19 02:05:23 - 0:43:32 - Shrinking the learning rate: 0.02170 -> 0.01085
+INFO - 03/19/19 02:05:23 - 0:43:32 - Starting adversarial training epoch 7...
+INFO - 03/19/19 02:05:23 - 0:43:32 - 000000 - Discriminator loss: 0.3288 - 852 samples/s
+INFO - 03/19/19 02:05:37 - 0:43:46 - 004000 - Discriminator loss: 0.3300 - 555 samples/s
+INFO - 03/19/19 02:05:52 - 0:44:01 - 008000 - Discriminator loss: 0.3292 - 535 samples/s
+INFO - 03/19/19 02:06:06 - 0:44:16 - 012000 - Discriminator loss: 0.3288 - 552 samples/s
+INFO - 03/19/19 02:06:20 - 0:44:29 - 016000 - Discriminator loss: 0.3291 - 595 samples/s
+INFO - 03/19/19 02:06:34 - 0:44:43 - 020000 - Discriminator loss: 0.3286 - 584 samples/s
+INFO - 03/19/19 02:06:48 - 0:44:57 - 024000 - Discriminator loss: 0.3298 - 562 samples/s
+INFO - 03/19/19 02:07:02 - 0:45:11 - 028000 - Discriminator loss: 0.3287 - 569 samples/s
+INFO - 03/19/19 02:07:16 - 0:45:25 - 032000 - Discriminator loss: 0.3288 - 573 samples/s
+INFO - 03/19/19 02:07:30 - 0:45:39 - 036000 - Discriminator loss: 0.3287 - 567 samples/s
+INFO - 03/19/19 02:07:42 - 0:45:52 - 040000 - Discriminator loss: 0.3287 - 634 samples/s
+INFO - 03/19/19 02:07:57 - 0:46:06 - 044000 - Discriminator loss: 0.3286 - 553 samples/s
+INFO - 03/19/19 02:08:10 - 0:46:19 - 048000 - Discriminator loss: 0.3284 - 613 samples/s
+INFO - 03/19/19 02:08:24 - 0:46:34 - 052000 - Discriminator loss: 0.3285 - 558 samples/s
+INFO - 03/19/19 02:08:40 - 0:46:49 - 056000 - Discriminator loss: 0.3287 - 521 samples/s
+INFO - 03/19/19 02:08:53 - 0:47:02 - 060000 - Discriminator loss: 0.3284 - 619 samples/s
+INFO - 03/19/19 02:09:06 - 0:47:16 - 064000 - Discriminator loss: 0.3283 - 581 samples/s
+INFO - 03/19/19 02:09:20 - 0:47:29 - 068000 - Discriminator loss: 0.3281 - 599 samples/s
+INFO - 03/19/19 02:09:33 - 0:47:43 - 072000 - Discriminator loss: 0.3282 - 585 samples/s
+INFO - 03/19/19 02:09:46 - 0:47:55 - 076000 - Discriminator loss: 0.3288 - 646 samples/s
+INFO - 03/19/19 02:10:01 - 0:48:11 - 080000 - Discriminator loss: 0.3282 - 506 samples/s
+INFO - 03/19/19 02:10:15 - 0:48:24 - 084000 - Discriminator loss: 0.3283 - 608 samples/s
+INFO - 03/19/19 02:10:28 - 0:48:38 - 088000 - Discriminator loss: 0.3282 - 576 samples/s
+INFO - 03/19/19 02:10:42 - 0:48:51 - 092000 - Discriminator loss: 0.3282 - 601 samples/s
+INFO - 03/19/19 02:10:55 - 0:49:04 - 096000 - Discriminator loss: 0.3281 - 609 samples/s
+INFO - 03/19/19 02:11:09 - 0:49:18 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:11:09 - 0:49:18 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:11:09 - 0:49:18 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:11:09 - 0:49:18 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:11:09 - 0:49:18 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:11:28 - 0:49:37 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:11:28 - 0:49:37 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:11:28 - 0:49:37 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:11:30 - 0:49:39 - Building the train dictionary ...
+INFO - 03/19/19 02:11:30 - 0:49:39 - New train dictionary of 5527 pairs.
+INFO - 03/19/19 02:11:30 - 0:49:39 - Mean cosine (nn method, S2T build, 10000 max size): 0.44192
+INFO - 03/19/19 02:12:13 - 0:50:22 - Building the train dictionary ...
+INFO - 03/19/19 02:12:13 - 0:50:22 - New train dictionary of 5102 pairs.
+INFO - 03/19/19 02:12:13 - 0:50:22 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.43046
+INFO - 03/19/19 02:12:14 - 0:50:24 - Discriminator source / target predictions: 0.87578 / 0.16939
+INFO - 03/19/19 02:12:14 - 0:50:24 - Discriminator source / target / global accuracy: 0.99950 / 0.94982 / 0.97853
+INFO - 03/19/19 02:12:14 - 0:50:24 - __log__:{"n_epoch": 7, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4419173002243042, "mean_cosine-csls_knn_10-S2T-10000": 0.43045708537101746, "dis_accu": 0.9785312856668159, "dis_src_pred": 0.8757811402477323, "dis_tgt_pred": 0.1693910613333331}
+INFO - 03/19/19 02:12:14 - 0:50:24 - End of epoch 7.
+                                     
+                                     
+INFO - 03/19/19 02:12:14 - 0:50:24 - Decreasing learning rate: 0.01085157 -> 0.01063454
+INFO - 03/19/19 02:12:14 - 0:50:24 - Validation metric is smaller than the best: 0.43046 vs 0.52610
+INFO - 03/19/19 02:12:14 - 0:50:24 - Shrinking the learning rate: 0.01063 -> 0.00532
+INFO - 03/19/19 02:12:14 - 0:50:24 - Starting adversarial training epoch 8...
+INFO - 03/19/19 02:12:14 - 0:50:24 - 000000 - Discriminator loss: 0.3277 - 655 samples/s
+INFO - 03/19/19 02:12:30 - 0:50:39 - 004000 - Discriminator loss: 0.3279 - 526 samples/s
+INFO - 03/19/19 02:12:43 - 0:50:53 - 008000 - Discriminator loss: 0.3281 - 581 samples/s
+INFO - 03/19/19 02:12:56 - 0:51:06 - 012000 - Discriminator loss: 0.3277 - 612 samples/s
+INFO - 03/19/19 02:13:10 - 0:51:20 - 016000 - Discriminator loss: 0.3276 - 572 samples/s
+INFO - 03/19/19 02:13:24 - 0:51:33 - 020000 - Discriminator loss: 0.3277 - 595 samples/s
+INFO - 03/19/19 02:13:35 - 0:51:44 - 024000 - Discriminator loss: 0.3276 - 753 samples/s
+INFO - 03/19/19 02:13:47 - 0:51:56 - 028000 - Discriminator loss: 0.3277 - 650 samples/s
+INFO - 03/19/19 02:14:00 - 0:52:09 - 032000 - Discriminator loss: 0.3276 - 599 samples/s
+INFO - 03/19/19 02:14:13 - 0:52:23 - 036000 - Discriminator loss: 0.3276 - 606 samples/s
+INFO - 03/19/19 02:14:24 - 0:52:34 - 040000 - Discriminator loss: 0.3275 - 739 samples/s
+INFO - 03/19/19 02:14:39 - 0:52:48 - 044000 - Discriminator loss: 0.3273 - 540 samples/s
+INFO - 03/19/19 02:14:53 - 0:53:02 - 048000 - Discriminator loss: 0.3291 - 577 samples/s
+INFO - 03/19/19 02:15:07 - 0:53:16 - 052000 - Discriminator loss: 0.3274 - 557 samples/s
+INFO - 03/19/19 02:15:22 - 0:53:31 - 056000 - Discriminator loss: 0.3274 - 551 samples/s
+INFO - 03/19/19 02:15:36 - 0:53:45 - 060000 - Discriminator loss: 0.3273 - 571 samples/s
+INFO - 03/19/19 02:15:48 - 0:53:58 - 064000 - Discriminator loss: 0.3274 - 629 samples/s
+INFO - 03/19/19 02:16:02 - 0:54:11 - 068000 - Discriminator loss: 0.3276 - 590 samples/s
+INFO - 03/19/19 02:16:16 - 0:54:25 - 072000 - Discriminator loss: 0.3273 - 580 samples/s
+INFO - 03/19/19 02:16:29 - 0:54:38 - 076000 - Discriminator loss: 0.3272 - 598 samples/s
+INFO - 03/19/19 02:16:43 - 0:54:52 - 080000 - Discriminator loss: 0.3273 - 596 samples/s
+INFO - 03/19/19 02:16:57 - 0:55:06 - 084000 - Discriminator loss: 0.3273 - 552 samples/s
+INFO - 03/19/19 02:17:10 - 0:55:19 - 088000 - Discriminator loss: 0.3272 - 622 samples/s
+INFO - 03/19/19 02:17:24 - 0:55:34 - 092000 - Discriminator loss: 0.3277 - 546 samples/s
+INFO - 03/19/19 02:17:37 - 0:55:46 - 096000 - Discriminator loss: 0.3271 - 647 samples/s
+INFO - 03/19/19 02:17:50 - 0:56:00 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:17:50 - 0:56:00 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:17:50 - 0:56:00 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:17:50 - 0:56:00 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:17:50 - 0:56:00 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:18:11 - 0:56:20 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:18:11 - 0:56:20 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:18:11 - 0:56:20 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:18:14 - 0:56:23 - Building the train dictionary ...
+INFO - 03/19/19 02:18:14 - 0:56:23 - New train dictionary of 5542 pairs.
+INFO - 03/19/19 02:18:14 - 0:56:23 - Mean cosine (nn method, S2T build, 10000 max size): 0.42937
+INFO - 03/19/19 02:18:58 - 0:57:07 - Building the train dictionary ...
+INFO - 03/19/19 02:18:58 - 0:57:07 - New train dictionary of 4990 pairs.
+INFO - 03/19/19 02:18:58 - 0:57:07 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41584
+INFO - 03/19/19 02:19:00 - 0:57:10 - Discriminator source / target predictions: 0.87762 / 0.15217
+INFO - 03/19/19 02:19:00 - 0:57:10 - Discriminator source / target / global accuracy: 0.99980 / 0.96923 / 0.98690
+INFO - 03/19/19 02:19:00 - 0:57:10 - __log__:{"n_epoch": 8, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4293747544288635, "mean_cosine-csls_knn_10-S2T-10000": 0.41583722829818726, "dis_accu": 0.9868962827051158, "dis_src_pred": 0.8776207477100193, "dis_tgt_pred": 0.15217096171683453}
+INFO - 03/19/19 02:19:00 - 0:57:10 - End of epoch 8.
+                                     
+                                     
+INFO - 03/19/19 02:19:00 - 0:57:10 - Decreasing learning rate: 0.00531727 -> 0.00521092
+INFO - 03/19/19 02:19:00 - 0:57:10 - Validation metric is smaller than the best: 0.41584 vs 0.52610
+INFO - 03/19/19 02:19:00 - 0:57:10 - Shrinking the learning rate: 0.00521 -> 0.00261
+INFO - 03/19/19 02:19:00 - 0:57:10 - Starting adversarial training epoch 9...
+INFO - 03/19/19 02:19:00 - 0:57:10 - 000000 - Discriminator loss: 0.3269 - 444 samples/s
+INFO - 03/19/19 02:19:16 - 0:57:25 - 004000 - Discriminator loss: 0.3272 - 522 samples/s
+INFO - 03/19/19 02:19:30 - 0:57:39 - 008000 - Discriminator loss: 0.3292 - 570 samples/s
+INFO - 03/19/19 02:19:43 - 0:57:52 - 012000 - Discriminator loss: 0.3272 - 619 samples/s
+INFO - 03/19/19 02:19:56 - 0:58:06 - 016000 - Discriminator loss: 0.3272 - 578 samples/s
+INFO - 03/19/19 02:20:10 - 0:58:19 - 020000 - Discriminator loss: 0.3284 - 584 samples/s
+INFO - 03/19/19 02:20:19 - 0:58:28 - 024000 - Discriminator loss: 0.3271 - 893 samples/s
+INFO - 03/19/19 02:20:33 - 0:58:43 - 028000 - Discriminator loss: 0.3270 - 561 samples/s
+INFO - 03/19/19 02:20:46 - 0:58:56 - 032000 - Discriminator loss: 0.3269 - 611 samples/s
+INFO - 03/19/19 02:20:59 - 0:59:09 - 036000 - Discriminator loss: 0.3270 - 611 samples/s
+INFO - 03/19/19 02:21:13 - 0:59:22 - 040000 - Discriminator loss: 0.3269 - 599 samples/s
+INFO - 03/19/19 02:21:25 - 0:59:35 - 044000 - Discriminator loss: 0.3269 - 633 samples/s
+INFO - 03/19/19 02:21:39 - 0:59:48 - 048000 - Discriminator loss: 0.3269 - 594 samples/s
+INFO - 03/19/19 02:21:54 - 1:00:03 - 052000 - Discriminator loss: 0.3268 - 548 samples/s
+INFO - 03/19/19 02:22:08 - 1:00:17 - 056000 - Discriminator loss: 0.3268 - 546 samples/s
+INFO - 03/19/19 02:22:24 - 1:00:33 - 060000 - Discriminator loss: 0.3269 - 519 samples/s
+INFO - 03/19/19 02:22:39 - 1:00:48 - 064000 - Discriminator loss: 0.3270 - 533 samples/s
+INFO - 03/19/19 02:22:53 - 1:01:02 - 068000 - Discriminator loss: 0.3268 - 563 samples/s
+INFO - 03/19/19 02:23:04 - 1:01:13 - 072000 - Discriminator loss: 0.3269 - 732 samples/s
+INFO - 03/19/19 02:23:17 - 1:01:27 - 076000 - Discriminator loss: 0.3269 - 583 samples/s
+INFO - 03/19/19 02:23:30 - 1:01:39 - 080000 - Discriminator loss: 0.3272 - 626 samples/s
+INFO - 03/19/19 02:23:43 - 1:01:53 - 084000 - Discriminator loss: 0.3268 - 608 samples/s
+INFO - 03/19/19 02:23:56 - 1:02:06 - 088000 - Discriminator loss: 0.3267 - 609 samples/s
+INFO - 03/19/19 02:24:12 - 1:02:21 - 092000 - Discriminator loss: 0.3268 - 524 samples/s
+INFO - 03/19/19 02:24:25 - 1:02:34 - 096000 - Discriminator loss: 0.3267 - 620 samples/s
+INFO - 03/19/19 02:24:38 - 1:02:48 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:24:38 - 1:02:48 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:24:38 - 1:02:48 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:24:38 - 1:02:48 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:24:38 - 1:02:48 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:25:03 - 1:03:13 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:25:03 - 1:03:13 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:25:03 - 1:03:13 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:25:07 - 1:03:17 - Building the train dictionary ...
+INFO - 03/19/19 02:25:07 - 1:03:17 - New train dictionary of 5507 pairs.
+INFO - 03/19/19 02:25:07 - 1:03:17 - Mean cosine (nn method, S2T build, 10000 max size): 0.42694
+INFO - 03/19/19 02:25:59 - 1:04:08 - Building the train dictionary ...
+INFO - 03/19/19 02:25:59 - 1:04:08 - New train dictionary of 5036 pairs.
+INFO - 03/19/19 02:25:59 - 1:04:08 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41396
+INFO - 03/19/19 02:26:01 - 1:04:10 - Discriminator source / target predictions: 0.87988 / 0.14704
+INFO - 03/19/19 02:26:01 - 1:04:10 - Discriminator source / target / global accuracy: 0.99995 / 0.97402 / 0.98901
+INFO - 03/19/19 02:26:01 - 1:04:10 - __log__:{"n_epoch": 9, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.42694365978240967, "mean_cosine-csls_knn_10-S2T-10000": 0.4139624536037445, "dis_accu": 0.98900559111201, "dis_src_pred": 0.879879477840662, "dis_tgt_pred": 0.14704411695657285}
+INFO - 03/19/19 02:26:01 - 1:04:10 - End of epoch 9.
+                                     
+                                     
+INFO - 03/19/19 02:26:01 - 1:04:10 - Decreasing learning rate: 0.00260546 -> 0.00255335
+INFO - 03/19/19 02:26:01 - 1:04:10 - Validation metric is smaller than the best: 0.41396 vs 0.52610
+INFO - 03/19/19 02:26:01 - 1:04:10 - Shrinking the learning rate: 0.00255 -> 0.00128
+INFO - 03/19/19 02:26:01 - 1:04:10 - Starting adversarial training epoch 10...
+INFO - 03/19/19 02:26:01 - 1:04:11 - 000000 - Discriminator loss: 0.3270 - 573 samples/s
+INFO - 03/19/19 02:26:15 - 1:04:24 - 004000 - Discriminator loss: 0.3267 - 594 samples/s
+INFO - 03/19/19 02:26:29 - 1:04:39 - 008000 - Discriminator loss: 0.3267 - 541 samples/s
+INFO - 03/19/19 02:26:41 - 1:04:50 - 012000 - Discriminator loss: 0.3267 - 692 samples/s
+INFO - 03/19/19 02:26:55 - 1:05:04 - 016000 - Discriminator loss: 0.3267 - 587 samples/s
+INFO - 03/19/19 02:27:07 - 1:05:16 - 020000 - Discriminator loss: 0.3266 - 669 samples/s
+INFO - 03/19/19 02:27:23 - 1:05:32 - 024000 - Discriminator loss: 0.3266 - 492 samples/s
+INFO - 03/19/19 02:27:35 - 1:05:44 - 028000 - Discriminator loss: 0.3266 - 646 samples/s
+INFO - 03/19/19 02:27:49 - 1:05:59 - 032000 - Discriminator loss: 0.3267 - 562 samples/s
+INFO - 03/19/19 02:28:02 - 1:06:12 - 036000 - Discriminator loss: 0.3266 - 614 samples/s
+INFO - 03/19/19 02:28:15 - 1:06:25 - 040000 - Discriminator loss: 0.3266 - 620 samples/s
+INFO - 03/19/19 02:28:28 - 1:06:37 - 044000 - Discriminator loss: 0.3266 - 645 samples/s
+INFO - 03/19/19 02:28:41 - 1:06:51 - 048000 - Discriminator loss: 0.3266 - 586 samples/s
+INFO - 03/19/19 02:28:55 - 1:07:04 - 052000 - Discriminator loss: 0.3266 - 586 samples/s
+INFO - 03/19/19 02:29:10 - 1:07:19 - 056000 - Discriminator loss: 0.3265 - 532 samples/s
+INFO - 03/19/19 02:29:25 - 1:07:34 - 060000 - Discriminator loss: 0.3266 - 528 samples/s
+INFO - 03/19/19 02:29:40 - 1:07:49 - 064000 - Discriminator loss: 0.3266 - 544 samples/s
+INFO - 03/19/19 02:29:53 - 1:08:02 - 068000 - Discriminator loss: 0.3265 - 620 samples/s
+INFO - 03/19/19 02:30:07 - 1:08:16 - 072000 - Discriminator loss: 0.3267 - 571 samples/s
+INFO - 03/19/19 02:30:18 - 1:08:27 - 076000 - Discriminator loss: 0.3265 - 701 samples/s
+INFO - 03/19/19 02:30:32 - 1:08:41 - 080000 - Discriminator loss: 0.3265 - 576 samples/s
+INFO - 03/19/19 02:30:43 - 1:08:53 - 084000 - Discriminator loss: 0.3265 - 695 samples/s
+INFO - 03/19/19 02:30:55 - 1:09:04 - 088000 - Discriminator loss: 0.3265 - 696 samples/s
+INFO - 03/19/19 02:31:08 - 1:09:18 - 092000 - Discriminator loss: 0.3265 - 593 samples/s
+INFO - 03/19/19 02:31:23 - 1:09:32 - 096000 - Discriminator loss: 0.3265 - 562 samples/s
+INFO - 03/19/19 02:31:36 - 1:09:46 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:31:37 - 1:09:46 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:31:37 - 1:09:46 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:31:37 - 1:09:46 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:31:37 - 1:09:46 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:32:05 - 1:10:14 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:32:05 - 1:10:14 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:32:05 - 1:10:14 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:32:09 - 1:10:18 - Building the train dictionary ...
+INFO - 03/19/19 02:32:09 - 1:10:18 - New train dictionary of 5513 pairs.
+INFO - 03/19/19 02:32:09 - 1:10:18 - Mean cosine (nn method, S2T build, 10000 max size): 0.42414
+INFO - 03/19/19 02:33:13 - 1:11:23 - Building the train dictionary ...
+INFO - 03/19/19 02:33:13 - 1:11:23 - New train dictionary of 5063 pairs.
+INFO - 03/19/19 02:33:13 - 1:11:23 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41103
+INFO - 03/19/19 02:33:16 - 1:11:25 - Discriminator source / target predictions: 0.87710 / 0.13877
+INFO - 03/19/19 02:33:16 - 1:11:25 - Discriminator source / target / global accuracy: 0.99992 / 0.97991 / 0.99148
+INFO - 03/19/19 02:33:16 - 1:11:25 - __log__:{"n_epoch": 10, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4241427779197693, "mean_cosine-csls_knn_10-S2T-10000": 0.411030113697052, "dis_accu": 0.9914760824652903, "dis_src_pred": 0.8771035515360535, "dis_tgt_pred": 0.1387732204088842}
+INFO - 03/19/19 02:33:16 - 1:11:25 - End of epoch 10.
+                                     
+                                     
+INFO - 03/19/19 02:33:16 - 1:11:25 - Decreasing learning rate: 0.00127668 -> 0.00125114
+INFO - 03/19/19 02:33:16 - 1:11:25 - Validation metric is smaller than the best: 0.41103 vs 0.52610
+INFO - 03/19/19 02:33:16 - 1:11:25 - Shrinking the learning rate: 0.00125 -> 0.00063
+INFO - 03/19/19 02:33:16 - 1:11:25 - Starting adversarial training epoch 11...
+INFO - 03/19/19 02:33:16 - 1:11:25 - 000000 - Discriminator loss: 0.3266 - 553 samples/s
+INFO - 03/19/19 02:33:29 - 1:11:39 - 004000 - Discriminator loss: 0.3264 - 585 samples/s
+INFO - 03/19/19 02:33:43 - 1:11:52 - 008000 - Discriminator loss: 0.3264 - 606 samples/s
+INFO - 03/19/19 02:33:58 - 1:12:07 - 012000 - Discriminator loss: 0.3265 - 528 samples/s
+INFO - 03/19/19 02:34:12 - 1:12:21 - 016000 - Discriminator loss: 0.3264 - 575 samples/s
+INFO - 03/19/19 02:34:25 - 1:12:35 - 020000 - Discriminator loss: 0.3265 - 579 samples/s
+INFO - 03/19/19 02:34:40 - 1:12:50 - 024000 - Discriminator loss: 0.3264 - 537 samples/s
+INFO - 03/19/19 02:34:53 - 1:13:02 - 028000 - Discriminator loss: 0.3264 - 628 samples/s
+INFO - 03/19/19 02:35:05 - 1:13:15 - 032000 - Discriminator loss: 0.3264 - 656 samples/s
+INFO - 03/19/19 02:35:19 - 1:13:28 - 036000 - Discriminator loss: 0.3264 - 594 samples/s
+INFO - 03/19/19 02:35:30 - 1:13:40 - 040000 - Discriminator loss: 0.3263 - 692 samples/s
+INFO - 03/19/19 02:35:43 - 1:13:52 - 044000 - Discriminator loss: 0.3264 - 647 samples/s
+INFO - 03/19/19 02:35:54 - 1:14:04 - 048000 - Discriminator loss: 0.3264 - 687 samples/s
+INFO - 03/19/19 02:36:05 - 1:14:14 - 052000 - Discriminator loss: 0.3263 - 749 samples/s
+INFO - 03/19/19 02:36:17 - 1:14:26 - 056000 - Discriminator loss: 0.3263 - 689 samples/s
+INFO - 03/19/19 02:36:31 - 1:14:40 - 060000 - Discriminator loss: 0.3264 - 564 samples/s
+INFO - 03/19/19 02:36:42 - 1:14:51 - 064000 - Discriminator loss: 0.3263 - 732 samples/s
+INFO - 03/19/19 02:36:52 - 1:15:01 - 068000 - Discriminator loss: 0.3264 - 808 samples/s
+INFO - 03/19/19 02:37:02 - 1:15:11 - 072000 - Discriminator loss: 0.3266 - 778 samples/s
+INFO - 03/19/19 02:37:12 - 1:15:22 - 076000 - Discriminator loss: 0.3263 - 767 samples/s
+INFO - 03/19/19 02:37:22 - 1:15:32 - 080000 - Discriminator loss: 0.3265 - 795 samples/s
+INFO - 03/19/19 02:37:33 - 1:15:42 - 084000 - Discriminator loss: 0.3264 - 758 samples/s
+INFO - 03/19/19 02:37:42 - 1:15:51 - 088000 - Discriminator loss: 0.3263 - 876 samples/s
+INFO - 03/19/19 02:37:51 - 1:16:00 - 092000 - Discriminator loss: 0.3263 - 891 samples/s
+INFO - 03/19/19 02:38:02 - 1:16:11 - 096000 - Discriminator loss: 0.3263 - 758 samples/s
+INFO - 03/19/19 02:38:13 - 1:16:22 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:38:13 - 1:16:22 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:38:13 - 1:16:22 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:38:13 - 1:16:22 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:38:13 - 1:16:22 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:38:31 - 1:16:41 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:38:31 - 1:16:41 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:38:31 - 1:16:41 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:38:34 - 1:16:43 - Building the train dictionary ...
+INFO - 03/19/19 02:38:34 - 1:16:43 - New train dictionary of 5496 pairs.
+INFO - 03/19/19 02:38:34 - 1:16:43 - Mean cosine (nn method, S2T build, 10000 max size): 0.42498
+INFO - 03/19/19 02:39:20 - 1:17:29 - Building the train dictionary ...
+INFO - 03/19/19 02:39:20 - 1:17:29 - New train dictionary of 5055 pairs.
+INFO - 03/19/19 02:39:20 - 1:17:29 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41179
+INFO - 03/19/19 02:39:22 - 1:17:31 - Discriminator source / target predictions: 0.87320 / 0.13633
+INFO - 03/19/19 02:39:22 - 1:17:31 - Discriminator source / target / global accuracy: 0.99987 / 0.98230 / 0.99246
+INFO - 03/19/19 02:39:22 - 1:17:31 - __log__:{"n_epoch": 11, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4249790906906128, "mean_cosine-csls_knn_10-S2T-10000": 0.4117920398712158, "dis_accu": 0.9924585000794602, "dis_src_pred": 0.873202598849684, "dis_tgt_pred": 0.13633201634806844}
+INFO - 03/19/19 02:39:22 - 1:17:31 - End of epoch 11.
+                                     
+                                     
+INFO - 03/19/19 02:39:22 - 1:17:31 - Decreasing learning rate: 0.00062557 -> 0.00061306
+INFO - 03/19/19 02:39:22 - 1:17:31 - Validation metric is smaller than the best: 0.41179 vs 0.52610
+INFO - 03/19/19 02:39:22 - 1:17:31 - Shrinking the learning rate: 0.00061 -> 0.00031
+INFO - 03/19/19 02:39:22 - 1:17:31 - Starting adversarial training epoch 12...
+INFO - 03/19/19 02:39:22 - 1:17:31 - 000000 - Discriminator loss: 0.3267 - 730 samples/s
+INFO - 03/19/19 02:39:32 - 1:17:42 - 004000 - Discriminator loss: 0.3263 - 766 samples/s
+INFO - 03/19/19 02:39:43 - 1:17:53 - 008000 - Discriminator loss: 0.3263 - 724 samples/s
+INFO - 03/19/19 02:39:54 - 1:18:03 - 012000 - Discriminator loss: 0.3263 - 774 samples/s
+INFO - 03/19/19 02:40:03 - 1:18:13 - 016000 - Discriminator loss: 0.3263 - 842 samples/s
+INFO - 03/19/19 02:40:14 - 1:18:23 - 020000 - Discriminator loss: 0.3263 - 769 samples/s
+INFO - 03/19/19 02:40:24 - 1:18:33 - 024000 - Discriminator loss: 0.3263 - 800 samples/s
+INFO - 03/19/19 02:40:35 - 1:18:44 - 028000 - Discriminator loss: 0.3263 - 728 samples/s
+INFO - 03/19/19 02:40:47 - 1:18:56 - 032000 - Discriminator loss: 0.3263 - 641 samples/s
+INFO - 03/19/19 02:40:56 - 1:19:05 - 036000 - Discriminator loss: 0.3263 - 933 samples/s
+INFO - 03/19/19 02:41:05 - 1:19:14 - 040000 - Discriminator loss: 0.3262 - 872 samples/s
+INFO - 03/19/19 02:41:14 - 1:19:23 - 044000 - Discriminator loss: 0.3263 - 881 samples/s
+INFO - 03/19/19 02:41:23 - 1:19:32 - 048000 - Discriminator loss: 0.3263 - 872 samples/s
+INFO - 03/19/19 02:41:31 - 1:19:40 - 052000 - Discriminator loss: 0.3263 - 997 samples/s
+INFO - 03/19/19 02:41:39 - 1:19:49 - 056000 - Discriminator loss: 0.3262 - 949 samples/s
+INFO - 03/19/19 02:41:48 - 1:19:57 - 060000 - Discriminator loss: 0.3263 - 952 samples/s
+INFO - 03/19/19 02:41:57 - 1:20:07 - 064000 - Discriminator loss: 0.3262 - 847 samples/s
+INFO - 03/19/19 02:42:06 - 1:20:15 - 068000 - Discriminator loss: 0.3262 - 949 samples/s
+INFO - 03/19/19 02:42:14 - 1:20:23 - 072000 - Discriminator loss: 0.3262 - 977 samples/s
+INFO - 03/19/19 02:42:22 - 1:20:31 - 076000 - Discriminator loss: 0.3262 - 973 samples/s
+INFO - 03/19/19 02:42:31 - 1:20:41 - 080000 - Discriminator loss: 0.3262 - 865 samples/s
+INFO - 03/19/19 02:42:40 - 1:20:49 - 084000 - Discriminator loss: 0.3262 - 975 samples/s
+INFO - 03/19/19 02:42:48 - 1:20:57 - 088000 - Discriminator loss: 0.3262 - 936 samples/s
+INFO - 03/19/19 02:42:56 - 1:21:06 - 092000 - Discriminator loss: 0.3263 - 979 samples/s
+INFO - 03/19/19 02:43:03 - 1:21:13 - 096000 - Discriminator loss: 0.3263 - 1119 samples/s
+INFO - 03/19/19 02:43:13 - 1:21:23 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:43:13 - 1:21:23 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:43:13 - 1:21:23 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:43:13 - 1:21:23 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:43:13 - 1:21:23 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:43:29 - 1:21:38 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:43:29 - 1:21:38 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:43:29 - 1:21:38 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:43:30 - 1:21:40 - Building the train dictionary ...
+INFO - 03/19/19 02:43:30 - 1:21:40 - New train dictionary of 5482 pairs.
+INFO - 03/19/19 02:43:30 - 1:21:40 - Mean cosine (nn method, S2T build, 10000 max size): 0.42521
+INFO - 03/19/19 02:43:56 - 1:22:06 - Building the train dictionary ...
+INFO - 03/19/19 02:43:56 - 1:22:06 - New train dictionary of 5049 pairs.
+INFO - 03/19/19 02:43:56 - 1:22:06 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41252
+INFO - 03/19/19 02:43:58 - 1:22:07 - Discriminator source / target predictions: 0.87092 / 0.13450
+INFO - 03/19/19 02:43:58 - 1:22:07 - Discriminator source / target / global accuracy: 0.99990 / 0.98326 / 0.99288
+INFO - 03/19/19 02:43:58 - 1:22:07 - __log__:{"n_epoch": 12, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.42521193623542786, "mean_cosine-csls_knn_10-S2T-10000": 0.4125199019908905, "dis_accu": 0.992877472297268, "dis_src_pred": 0.8709240988284349, "dis_tgt_pred": 0.13450329899152932}
+INFO - 03/19/19 02:43:58 - 1:22:07 - End of epoch 12.
+                                     
+                                     
+INFO - 03/19/19 02:43:58 - 1:22:07 - Decreasing learning rate: 0.00030653 -> 0.00030040
+INFO - 03/19/19 02:43:58 - 1:22:07 - Validation metric is smaller than the best: 0.41252 vs 0.52610
+INFO - 03/19/19 02:43:58 - 1:22:07 - Shrinking the learning rate: 0.00030 -> 0.00015
+INFO - 03/19/19 02:43:58 - 1:22:07 - Starting adversarial training epoch 13...
+INFO - 03/19/19 02:43:58 - 1:22:07 - 000000 - Discriminator loss: 0.3262 - 927 samples/s
+INFO - 03/19/19 02:44:08 - 1:22:17 - 004000 - Discriminator loss: 0.3262 - 791 samples/s
+INFO - 03/19/19 02:44:14 - 1:22:24 - 008000 - Discriminator loss: 0.3262 - 1254 samples/s
+INFO - 03/19/19 02:44:22 - 1:22:31 - 012000 - Discriminator loss: 0.3262 - 1033 samples/s
+INFO - 03/19/19 02:44:32 - 1:22:41 - 016000 - Discriminator loss: 0.3262 - 842 samples/s
+INFO - 03/19/19 02:44:40 - 1:22:49 - 020000 - Discriminator loss: 0.3262 - 987 samples/s
+INFO - 03/19/19 02:44:47 - 1:22:56 - 024000 - Discriminator loss: 0.3262 - 1109 samples/s
+INFO - 03/19/19 02:44:57 - 1:23:06 - 028000 - Discriminator loss: 0.3262 - 831 samples/s
+INFO - 03/19/19 02:45:03 - 1:23:13 - 032000 - Discriminator loss: 0.3262 - 1156 samples/s
+INFO - 03/19/19 02:45:12 - 1:23:21 - 036000 - Discriminator loss: 0.3262 - 947 samples/s
+INFO - 03/19/19 02:45:21 - 1:23:30 - 040000 - Discriminator loss: 0.3262 - 923 samples/s
+INFO - 03/19/19 02:45:30 - 1:23:39 - 044000 - Discriminator loss: 0.3262 - 889 samples/s
+INFO - 03/19/19 02:45:39 - 1:23:48 - 048000 - Discriminator loss: 0.3262 - 888 samples/s
+INFO - 03/19/19 02:45:48 - 1:23:57 - 052000 - Discriminator loss: 0.3262 - 889 samples/s
+INFO - 03/19/19 02:45:57 - 1:24:06 - 056000 - Discriminator loss: 0.3261 - 890 samples/s
+INFO - 03/19/19 02:46:06 - 1:24:15 - 060000 - Discriminator loss: 0.3262 - 889 samples/s
+INFO - 03/19/19 02:46:15 - 1:24:24 - 064000 - Discriminator loss: 0.3262 - 886 samples/s
+INFO - 03/19/19 02:46:24 - 1:24:33 - 068000 - Discriminator loss: 0.3262 - 889 samples/s
+INFO - 03/19/19 02:46:33 - 1:24:42 - 072000 - Discriminator loss: 0.3262 - 870 samples/s
+INFO - 03/19/19 02:46:40 - 1:24:49 - 076000 - Discriminator loss: 0.3261 - 1137 samples/s
+INFO - 03/19/19 02:46:49 - 1:24:58 - 080000 - Discriminator loss: 0.3262 - 896 samples/s
+INFO - 03/19/19 02:46:55 - 1:25:04 - 084000 - Discriminator loss: 0.3261 - 1249 samples/s
+INFO - 03/19/19 02:47:03 - 1:25:12 - 088000 - Discriminator loss: 0.3261 - 1006 samples/s
+INFO - 03/19/19 02:47:12 - 1:25:21 - 092000 - Discriminator loss: 0.3262 - 882 samples/s
+INFO - 03/19/19 02:47:21 - 1:25:30 - 096000 - Discriminator loss: 0.3261 - 891 samples/s
+INFO - 03/19/19 02:47:30 - 1:25:39 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:47:30 - 1:25:39 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:47:30 - 1:25:39 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:47:30 - 1:25:39 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:47:30 - 1:25:39 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:47:42 - 1:25:51 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:47:42 - 1:25:51 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:47:42 - 1:25:51 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:47:43 - 1:25:53 - Building the train dictionary ...
+INFO - 03/19/19 02:47:43 - 1:25:53 - New train dictionary of 5495 pairs.
+INFO - 03/19/19 02:47:43 - 1:25:53 - Mean cosine (nn method, S2T build, 10000 max size): 0.42519
+INFO - 03/19/19 02:48:09 - 1:26:19 - Building the train dictionary ...
+INFO - 03/19/19 02:48:09 - 1:26:19 - New train dictionary of 5048 pairs.
+INFO - 03/19/19 02:48:09 - 1:26:19 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41293
+INFO - 03/19/19 02:48:10 - 1:26:20 - Discriminator source / target predictions: 0.86939 / 0.13236
+INFO - 03/19/19 02:48:10 - 1:26:20 - Discriminator source / target / global accuracy: 0.99990 / 0.98443 / 0.99337
+INFO - 03/19/19 02:48:10 - 1:26:20 - __log__:{"n_epoch": 13, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4251945912837982, "mean_cosine-csls_knn_10-S2T-10000": 0.4129277169704437, "dis_accu": 0.993368681104353, "dis_src_pred": 0.8693930805258453, "dis_tgt_pred": 0.13235877705802018}
+INFO - 03/19/19 02:48:10 - 1:26:20 - End of epoch 13.
+                                     
+                                     
+INFO - 03/19/19 02:48:10 - 1:26:20 - Decreasing learning rate: 0.00015020 -> 0.00014720
+INFO - 03/19/19 02:48:10 - 1:26:20 - Validation metric is smaller than the best: 0.41293 vs 0.52610
+INFO - 03/19/19 02:48:10 - 1:26:20 - Shrinking the learning rate: 0.00015 -> 0.00007
+INFO - 03/19/19 02:48:10 - 1:26:20 - Starting adversarial training epoch 14...
+INFO - 03/19/19 02:48:10 - 1:26:20 - 000000 - Discriminator loss: 0.3262 - 909 samples/s
+INFO - 03/19/19 02:48:19 - 1:26:29 - 004000 - Discriminator loss: 0.3261 - 891 samples/s
+INFO - 03/19/19 02:48:28 - 1:26:38 - 008000 - Discriminator loss: 0.3261 - 889 samples/s
+INFO - 03/19/19 02:48:37 - 1:26:46 - 012000 - Discriminator loss: 0.3261 - 926 samples/s
+INFO - 03/19/19 02:48:44 - 1:26:53 - 016000 - Discriminator loss: 0.3261 - 1133 samples/s
+INFO - 03/19/19 02:48:51 - 1:27:00 - 020000 - Discriminator loss: 0.3261 - 1186 samples/s
+INFO - 03/19/19 02:48:59 - 1:27:09 - 024000 - Discriminator loss: 0.3261 - 948 samples/s
+INFO - 03/19/19 02:49:06 - 1:27:15 - 028000 - Discriminator loss: 0.3261 - 1191 samples/s
+INFO - 03/19/19 02:49:14 - 1:27:23 - 032000 - Discriminator loss: 0.3261 - 1036 samples/s
+INFO - 03/19/19 02:49:23 - 1:27:33 - 036000 - Discriminator loss: 0.3261 - 826 samples/s
+INFO - 03/19/19 02:49:31 - 1:27:40 - 040000 - Discriminator loss: 0.3261 - 1056 samples/s
+INFO - 03/19/19 02:49:38 - 1:27:47 - 044000 - Discriminator loss: 0.3261 - 1135 samples/s
+INFO - 03/19/19 02:49:47 - 1:27:57 - 048000 - Discriminator loss: 0.3261 - 853 samples/s
+INFO - 03/19/19 02:49:57 - 1:28:07 - 052000 - Discriminator loss: 0.3261 - 798 samples/s
+INFO - 03/19/19 02:50:06 - 1:28:16 - 056000 - Discriminator loss: 0.3261 - 888 samples/s
+INFO - 03/19/19 02:50:15 - 1:28:25 - 060000 - Discriminator loss: 0.3261 - 889 samples/s
+INFO - 03/19/19 02:50:24 - 1:28:34 - 064000 - Discriminator loss: 0.3261 - 889 samples/s
+INFO - 03/19/19 02:50:33 - 1:28:42 - 068000 - Discriminator loss: 0.3261 - 937 samples/s
+INFO - 03/19/19 02:50:40 - 1:28:50 - 072000 - Discriminator loss: 0.3260 - 1078 samples/s
+INFO - 03/19/19 02:50:47 - 1:28:56 - 076000 - Discriminator loss: 0.3261 - 1167 samples/s
+INFO - 03/19/19 02:50:55 - 1:29:05 - 080000 - Discriminator loss: 0.3261 - 960 samples/s
+INFO - 03/19/19 02:51:05 - 1:29:15 - 084000 - Discriminator loss: 0.3261 - 801 samples/s
+INFO - 03/19/19 02:51:14 - 1:29:24 - 088000 - Discriminator loss: 0.3261 - 888 samples/s
+INFO - 03/19/19 02:51:23 - 1:29:33 - 092000 - Discriminator loss: 0.3261 - 889 samples/s
+INFO - 03/19/19 02:51:32 - 1:29:42 - 096000 - Discriminator loss: 0.3261 - 890 samples/s
+INFO - 03/19/19 02:51:41 - 1:29:51 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:51:41 - 1:29:51 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:51:41 - 1:29:51 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:51:41 - 1:29:51 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:51:41 - 1:29:51 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:51:51 - 1:30:01 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:51:51 - 1:30:01 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:51:51 - 1:30:01 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:51:53 - 1:30:02 - Building the train dictionary ...
+INFO - 03/19/19 02:51:53 - 1:30:02 - New train dictionary of 5486 pairs.
+INFO - 03/19/19 02:51:53 - 1:30:02 - Mean cosine (nn method, S2T build, 10000 max size): 0.42528
+INFO - 03/19/19 02:52:16 - 1:30:26 - Building the train dictionary ...
+INFO - 03/19/19 02:52:16 - 1:30:26 - New train dictionary of 5050 pairs.
+INFO - 03/19/19 02:52:16 - 1:30:26 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41311
+INFO - 03/19/19 02:52:17 - 1:30:27 - Discriminator source / target predictions: 0.86885 / 0.13119
+INFO - 03/19/19 02:52:17 - 1:30:27 - Discriminator source / target / global accuracy: 0.99990 / 0.98528 / 0.99373
+INFO - 03/19/19 02:52:17 - 1:30:27 - __log__:{"n_epoch": 14, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.425283819437027, "mean_cosine-csls_knn_10-S2T-10000": 0.413105845451355, "dis_accu": 0.9937298640507389, "dis_src_pred": 0.868847379861027, "dis_tgt_pred": 0.13119279035755418}
+INFO - 03/19/19 02:52:17 - 1:30:27 - End of epoch 14.
+                                     
+                                     
+INFO - 03/19/19 02:52:17 - 1:30:27 - Decreasing learning rate: 0.00007360 -> 0.00007213
+INFO - 03/19/19 02:52:17 - 1:30:27 - Validation metric is smaller than the best: 0.41311 vs 0.52610
+INFO - 03/19/19 02:52:17 - 1:30:27 - Shrinking the learning rate: 0.00007 -> 0.00004
+INFO - 03/19/19 02:52:17 - 1:30:27 - Starting adversarial training epoch 15...
+INFO - 03/19/19 02:52:18 - 1:30:27 - 000000 - Discriminator loss: 0.3260 - 916 samples/s
+INFO - 03/19/19 02:52:27 - 1:30:36 - 004000 - Discriminator loss: 0.3261 - 888 samples/s
+INFO - 03/19/19 02:52:36 - 1:30:45 - 008000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:52:45 - 1:30:54 - 012000 - Discriminator loss: 0.3261 - 888 samples/s
+INFO - 03/19/19 02:52:53 - 1:31:03 - 016000 - Discriminator loss: 0.3261 - 890 samples/s
+INFO - 03/19/19 02:53:03 - 1:31:12 - 020000 - Discriminator loss: 0.3260 - 888 samples/s
+INFO - 03/19/19 02:53:12 - 1:31:21 - 024000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:53:21 - 1:31:30 - 028000 - Discriminator loss: 0.3261 - 886 samples/s
+INFO - 03/19/19 02:53:28 - 1:31:37 - 032000 - Discriminator loss: 0.3261 - 1080 samples/s
+INFO - 03/19/19 02:53:36 - 1:31:45 - 036000 - Discriminator loss: 0.3261 - 975 samples/s
+INFO - 03/19/19 02:53:44 - 1:31:53 - 040000 - Discriminator loss: 0.3261 - 1023 samples/s
+INFO - 03/19/19 02:53:53 - 1:32:02 - 044000 - Discriminator loss: 0.3260 - 867 samples/s
+INFO - 03/19/19 02:54:01 - 1:32:11 - 048000 - Discriminator loss: 0.3260 - 990 samples/s
+INFO - 03/19/19 02:54:08 - 1:32:18 - 052000 - Discriminator loss: 0.3260 - 1104 samples/s
+INFO - 03/19/19 02:54:16 - 1:32:26 - 056000 - Discriminator loss: 0.3260 - 1003 samples/s
+INFO - 03/19/19 02:54:24 - 1:32:33 - 060000 - Discriminator loss: 0.3260 - 1061 samples/s
+INFO - 03/19/19 02:54:32 - 1:32:41 - 064000 - Discriminator loss: 0.3260 - 1014 samples/s
+INFO - 03/19/19 02:54:40 - 1:32:49 - 068000 - Discriminator loss: 0.3260 - 990 samples/s
+INFO - 03/19/19 02:54:48 - 1:32:58 - 072000 - Discriminator loss: 0.3260 - 968 samples/s
+INFO - 03/19/19 02:54:56 - 1:33:05 - 076000 - Discriminator loss: 0.3260 - 1036 samples/s
+INFO - 03/19/19 02:55:05 - 1:33:15 - 080000 - Discriminator loss: 0.3260 - 835 samples/s
+INFO - 03/19/19 02:55:14 - 1:33:24 - 084000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:55:23 - 1:33:33 - 088000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:55:32 - 1:33:42 - 092000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:55:41 - 1:33:51 - 096000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:55:50 - 1:34:00 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:55:51 - 1:34:00 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:55:51 - 1:34:00 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:55:51 - 1:34:00 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:55:51 - 1:34:00 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 02:56:02 - 1:34:11 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 02:56:02 - 1:34:11 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 02:56:02 - 1:34:11 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 02:56:04 - 1:34:13 - Building the train dictionary ...
+INFO - 03/19/19 02:56:04 - 1:34:13 - New train dictionary of 5480 pairs.
+INFO - 03/19/19 02:56:04 - 1:34:13 - Mean cosine (nn method, S2T build, 10000 max size): 0.42528
+INFO - 03/19/19 02:56:26 - 1:34:35 - Building the train dictionary ...
+INFO - 03/19/19 02:56:26 - 1:34:35 - New train dictionary of 5051 pairs.
+INFO - 03/19/19 02:56:26 - 1:34:35 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41306
+INFO - 03/19/19 02:56:27 - 1:34:36 - Discriminator source / target predictions: 0.87078 / 0.13215
+INFO - 03/19/19 02:56:27 - 1:34:36 - Discriminator source / target / global accuracy: 0.99990 / 0.98429 / 0.99331
+INFO - 03/19/19 02:56:27 - 1:34:36 - __log__:{"n_epoch": 15, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4252786934375763, "mean_cosine-csls_knn_10-S2T-10000": 0.41305941343307495, "dis_accu": 0.9933108918329312, "dis_src_pred": 0.8707754752397537, "dis_tgt_pred": 0.13214998817559723}
+INFO - 03/19/19 02:56:27 - 1:34:36 - End of epoch 15.
+                                     
+                                     
+INFO - 03/19/19 02:56:27 - 1:34:36 - Decreasing learning rate: 0.00003606 -> 0.00003534
+INFO - 03/19/19 02:56:27 - 1:34:36 - Validation metric is smaller than the best: 0.41306 vs 0.52610
+INFO - 03/19/19 02:56:27 - 1:34:36 - Shrinking the learning rate: 0.00004 -> 0.00002
+INFO - 03/19/19 02:56:27 - 1:34:36 - Starting adversarial training epoch 16...
+INFO - 03/19/19 02:56:27 - 1:34:36 - 000000 - Discriminator loss: 0.3260 - 921 samples/s
+INFO - 03/19/19 02:56:36 - 1:34:45 - 004000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:56:45 - 1:34:54 - 008000 - Discriminator loss: 0.3260 - 888 samples/s
+INFO - 03/19/19 02:56:54 - 1:35:03 - 012000 - Discriminator loss: 0.3260 - 884 samples/s
+INFO - 03/19/19 02:57:03 - 1:35:12 - 016000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:57:12 - 1:35:21 - 020000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:57:21 - 1:35:30 - 024000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:57:30 - 1:35:39 - 028000 - Discriminator loss: 0.3260 - 888 samples/s
+INFO - 03/19/19 02:57:39 - 1:35:48 - 032000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 02:57:48 - 1:35:57 - 036000 - Discriminator loss: 0.3260 - 865 samples/s
+INFO - 03/19/19 02:57:57 - 1:36:07 - 040000 - Discriminator loss: 0.3260 - 882 samples/s
+INFO - 03/19/19 02:58:04 - 1:36:14 - 044000 - Discriminator loss: 0.3260 - 1137 samples/s
+INFO - 03/19/19 02:58:12 - 1:36:22 - 048000 - Discriminator loss: 0.3260 - 999 samples/s
+INFO - 03/19/19 02:58:20 - 1:36:29 - 052000 - Discriminator loss: 0.3260 - 1040 samples/s
+INFO - 03/19/19 02:58:28 - 1:36:38 - 056000 - Discriminator loss: 0.3260 - 967 samples/s
+INFO - 03/19/19 02:58:35 - 1:36:45 - 060000 - Discriminator loss: 0.3260 - 1109 samples/s
+INFO - 03/19/19 02:58:45 - 1:36:54 - 064000 - Discriminator loss: 0.3260 - 864 samples/s
+INFO - 03/19/19 02:58:53 - 1:37:02 - 068000 - Discriminator loss: 0.3260 - 1006 samples/s
+INFO - 03/19/19 02:59:02 - 1:37:12 - 072000 - Discriminator loss: 0.3260 - 833 samples/s
+INFO - 03/19/19 02:59:10 - 1:37:19 - 076000 - Discriminator loss: 0.3260 - 1015 samples/s
+INFO - 03/19/19 02:59:20 - 1:37:29 - 080000 - Discriminator loss: 0.3259 - 840 samples/s
+INFO - 03/19/19 02:59:29 - 1:37:38 - 084000 - Discriminator loss: 0.3259 - 901 samples/s
+INFO - 03/19/19 02:59:36 - 1:37:46 - 088000 - Discriminator loss: 0.3260 - 1041 samples/s
+INFO - 03/19/19 02:59:45 - 1:37:55 - 092000 - Discriminator loss: 0.3260 - 878 samples/s
+INFO - 03/19/19 02:59:54 - 1:38:04 - 096000 - Discriminator loss: 0.3259 - 890 samples/s
+INFO - 03/19/19 03:00:03 - 1:38:13 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:00:03 - 1:38:13 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:00:03 - 1:38:13 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:00:03 - 1:38:13 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 03:00:03 - 1:38:13 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:00:15 - 1:38:24 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:00:15 - 1:38:24 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:00:15 - 1:38:24 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 03:00:16 - 1:38:26 - Building the train dictionary ...
+INFO - 03/19/19 03:00:16 - 1:38:26 - New train dictionary of 5482 pairs.
+INFO - 03/19/19 03:00:16 - 1:38:26 - Mean cosine (nn method, S2T build, 10000 max size): 0.42529
+INFO - 03/19/19 03:00:40 - 1:38:49 - Building the train dictionary ...
+INFO - 03/19/19 03:00:40 - 1:38:49 - New train dictionary of 5050 pairs.
+INFO - 03/19/19 03:00:40 - 1:38:49 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41309
+INFO - 03/19/19 03:00:41 - 1:38:50 - Discriminator source / target predictions: 0.86698 / 0.12991
+INFO - 03/19/19 03:00:41 - 1:38:50 - Discriminator source / target / global accuracy: 0.99987 / 0.98545 / 0.99379
+INFO - 03/19/19 03:00:41 - 1:38:50 - __log__:{"n_epoch": 16, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4252943992614746, "mean_cosine-csls_knn_10-S2T-10000": 0.4130888283252716, "dis_accu": 0.9937876533221608, "dis_src_pred": 0.8669847911246121, "dis_tgt_pred": 0.12991423902192695}
+INFO - 03/19/19 03:00:41 - 1:38:50 - End of epoch 16.
+                                     
+                                     
+INFO - 03/19/19 03:00:41 - 1:38:50 - Decreasing learning rate: 0.00001767 -> 0.00001732
+INFO - 03/19/19 03:00:41 - 1:38:50 - Validation metric is smaller than the best: 0.41309 vs 0.52610
+INFO - 03/19/19 03:00:41 - 1:38:50 - Shrinking the learning rate: 0.00002 -> 0.00001
+INFO - 03/19/19 03:00:41 - 1:38:50 - Starting adversarial training epoch 17...
+INFO - 03/19/19 03:00:41 - 1:38:50 - 000000 - Discriminator loss: 0.3259 - 913 samples/s
+INFO - 03/19/19 03:00:50 - 1:38:59 - 004000 - Discriminator loss: 0.3260 - 887 samples/s
+INFO - 03/19/19 03:00:59 - 1:39:08 - 008000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 03:01:08 - 1:39:17 - 012000 - Discriminator loss: 0.3259 - 890 samples/s
+INFO - 03/19/19 03:01:17 - 1:39:27 - 016000 - Discriminator loss: 0.3259 - 863 samples/s
+INFO - 03/19/19 03:01:26 - 1:39:35 - 020000 - Discriminator loss: 0.3259 - 889 samples/s
+INFO - 03/19/19 03:01:35 - 1:39:44 - 024000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 03:01:44 - 1:39:53 - 028000 - Discriminator loss: 0.3259 - 889 samples/s
+INFO - 03/19/19 03:01:53 - 1:40:02 - 032000 - Discriminator loss: 0.3259 - 889 samples/s
+INFO - 03/19/19 03:02:02 - 1:40:11 - 036000 - Discriminator loss: 0.3259 - 888 samples/s
+INFO - 03/19/19 03:02:11 - 1:40:20 - 040000 - Discriminator loss: 0.3259 - 889 samples/s
+INFO - 03/19/19 03:02:20 - 1:40:29 - 044000 - Discriminator loss: 0.3259 - 932 samples/s
+INFO - 03/19/19 03:02:28 - 1:40:37 - 048000 - Discriminator loss: 0.3259 - 975 samples/s
+INFO - 03/19/19 03:02:35 - 1:40:44 - 052000 - Discriminator loss: 0.3259 - 1177 samples/s
+INFO - 03/19/19 03:02:42 - 1:40:52 - 056000 - Discriminator loss: 0.3259 - 1032 samples/s
+INFO - 03/19/19 03:02:49 - 1:40:59 - 060000 - Discriminator loss: 0.3259 - 1138 samples/s
+INFO - 03/19/19 03:02:58 - 1:41:08 - 064000 - Discriminator loss: 0.3259 - 891 samples/s
+INFO - 03/19/19 03:03:05 - 1:41:15 - 068000 - Discriminator loss: 0.3259 - 1155 samples/s
+INFO - 03/19/19 03:03:14 - 1:41:23 - 072000 - Discriminator loss: 0.3259 - 985 samples/s
+INFO - 03/19/19 03:03:21 - 1:41:30 - 076000 - Discriminator loss: 0.3259 - 1119 samples/s
+INFO - 03/19/19 03:03:28 - 1:41:38 - 080000 - Discriminator loss: 0.3259 - 1053 samples/s
+INFO - 03/19/19 03:03:36 - 1:41:46 - 084000 - Discriminator loss: 0.3260 - 992 samples/s
+INFO - 03/19/19 03:03:43 - 1:41:52 - 088000 - Discriminator loss: 0.3259 - 1287 samples/s
+INFO - 03/19/19 03:03:50 - 1:41:59 - 092000 - Discriminator loss: 0.3259 - 1145 samples/s
+INFO - 03/19/19 03:03:57 - 1:42:07 - 096000 - Discriminator loss: 0.3259 - 1019 samples/s
+INFO - 03/19/19 03:04:05 - 1:42:14 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:04:05 - 1:42:15 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:04:05 - 1:42:15 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:04:05 - 1:42:15 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 03:04:05 - 1:42:15 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:04:16 - 1:42:26 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:04:16 - 1:42:26 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:04:16 - 1:42:26 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 03:04:18 - 1:42:27 - Building the train dictionary ...
+INFO - 03/19/19 03:04:18 - 1:42:27 - New train dictionary of 5483 pairs.
+INFO - 03/19/19 03:04:18 - 1:42:27 - Mean cosine (nn method, S2T build, 10000 max size): 0.42531
+INFO - 03/19/19 03:04:44 - 1:42:53 - Building the train dictionary ...
+INFO - 03/19/19 03:04:44 - 1:42:53 - New train dictionary of 5050 pairs.
+INFO - 03/19/19 03:04:44 - 1:42:53 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41309
+INFO - 03/19/19 03:04:45 - 1:42:54 - Discriminator source / target predictions: 0.86885 / 0.12940
+INFO - 03/19/19 03:04:45 - 1:42:54 - Discriminator source / target / global accuracy: 0.99990 / 0.98446 / 0.99338
+INFO - 03/19/19 03:04:45 - 1:42:54 - __log__:{"n_epoch": 17, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.42530739307403564, "mean_cosine-csls_knn_10-S2T-10000": 0.41309237480163574, "dis_accu": 0.9933831284222084, "dis_src_pred": 0.8688503532804549, "dis_tgt_pred": 0.12940014532814445}
+INFO - 03/19/19 03:04:45 - 1:42:54 - End of epoch 17.
+                                     
+                                     
+INFO - 03/19/19 03:04:45 - 1:42:54 - Decreasing learning rate: 0.00000866 -> 0.00000849
+INFO - 03/19/19 03:04:45 - 1:42:54 - Validation metric is smaller than the best: 0.41309 vs 0.52610
+INFO - 03/19/19 03:04:45 - 1:42:54 - Shrinking the learning rate: 0.00001 -> 0.00000
+INFO - 03/19/19 03:04:45 - 1:42:54 - Starting adversarial training epoch 18...
+INFO - 03/19/19 03:04:45 - 1:42:54 - 000000 - Discriminator loss: 0.3260 - 946 samples/s
+INFO - 03/19/19 03:04:54 - 1:43:03 - 004000 - Discriminator loss: 0.3259 - 888 samples/s
+INFO - 03/19/19 03:05:03 - 1:43:12 - 008000 - Discriminator loss: 0.3259 - 887 samples/s
+INFO - 03/19/19 03:05:12 - 1:43:21 - 012000 - Discriminator loss: 0.3259 - 888 samples/s
+INFO - 03/19/19 03:05:21 - 1:43:30 - 016000 - Discriminator loss: 0.3259 - 890 samples/s
+INFO - 03/19/19 03:05:30 - 1:43:39 - 020000 - Discriminator loss: 0.3259 - 888 samples/s
+INFO - 03/19/19 03:05:39 - 1:43:48 - 024000 - Discriminator loss: 0.3259 - 891 samples/s
+INFO - 03/19/19 03:05:48 - 1:43:57 - 028000 - Discriminator loss: 0.3259 - 889 samples/s
+INFO - 03/19/19 03:05:57 - 1:44:06 - 032000 - Discriminator loss: 0.3259 - 889 samples/s
+INFO - 03/19/19 03:06:06 - 1:44:16 - 036000 - Discriminator loss: 0.3259 - 888 samples/s
+INFO - 03/19/19 03:06:15 - 1:44:25 - 040000 - Discriminator loss: 0.3259 - 886 samples/s
+INFO - 03/19/19 03:06:23 - 1:44:33 - 044000 - Discriminator loss: 0.3259 - 986 samples/s
+INFO - 03/19/19 03:06:31 - 1:44:41 - 048000 - Discriminator loss: 0.3259 - 995 samples/s
+INFO - 03/19/19 03:06:38 - 1:44:48 - 052000 - Discriminator loss: 0.3259 - 1166 samples/s
+INFO - 03/19/19 03:06:46 - 1:44:56 - 056000 - Discriminator loss: 0.3259 - 967 samples/s
+INFO - 03/19/19 03:06:54 - 1:45:03 - 060000 - Discriminator loss: 0.3259 - 1129 samples/s
+INFO - 03/19/19 03:07:01 - 1:45:11 - 064000 - Discriminator loss: 0.3259 - 1039 samples/s
+INFO - 03/19/19 03:07:09 - 1:45:18 - 068000 - Discriminator loss: 0.3259 - 1063 samples/s
+INFO - 03/19/19 03:07:17 - 1:45:27 - 072000 - Discriminator loss: 0.3259 - 944 samples/s
+INFO - 03/19/19 03:07:24 - 1:45:33 - 076000 - Discriminator loss: 0.3259 - 1193 samples/s
+INFO - 03/19/19 03:07:32 - 1:45:41 - 080000 - Discriminator loss: 0.3259 - 1038 samples/s
+INFO - 03/19/19 03:07:39 - 1:45:48 - 084000 - Discriminator loss: 0.3259 - 1119 samples/s
+INFO - 03/19/19 03:07:46 - 1:45:56 - 088000 - Discriminator loss: 0.3259 - 1079 samples/s
+INFO - 03/19/19 03:07:54 - 1:46:04 - 092000 - Discriminator loss: 0.3259 - 1006 samples/s
+INFO - 03/19/19 03:08:02 - 1:46:11 - 096000 - Discriminator loss: 0.3259 - 1031 samples/s
+INFO - 03/19/19 03:08:10 - 1:46:19 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:08:10 - 1:46:19 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:08:10 - 1:46:19 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:08:10 - 1:46:19 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 03:08:10 - 1:46:19 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:08:25 - 1:46:35 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:08:25 - 1:46:35 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:08:25 - 1:46:35 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 03:08:27 - 1:46:37 - Building the train dictionary ...
+INFO - 03/19/19 03:08:27 - 1:46:37 - New train dictionary of 5483 pairs.
+INFO - 03/19/19 03:08:27 - 1:46:37 - Mean cosine (nn method, S2T build, 10000 max size): 0.42531
+INFO - 03/19/19 03:08:58 - 1:47:08 - Building the train dictionary ...
+INFO - 03/19/19 03:08:58 - 1:47:08 - New train dictionary of 5050 pairs.
+INFO - 03/19/19 03:08:58 - 1:47:08 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41310
+INFO - 03/19/19 03:09:00 - 1:47:09 - Discriminator source / target predictions: 0.86668 / 0.12741
+INFO - 03/19/19 03:09:00 - 1:47:09 - Discriminator source / target / global accuracy: 0.99987 / 0.98552 / 0.99382
+INFO - 03/19/19 03:09:00 - 1:47:09 - __log__:{"n_epoch": 18, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4253104627132416, "mean_cosine-csls_knn_10-S2T-10000": 0.41309869289398193, "dis_accu": 0.9938165479578717, "dis_src_pred": 0.8666763772033155, "dis_tgt_pred": 0.12741050320971134}
+INFO - 03/19/19 03:09:00 - 1:47:09 - End of epoch 18.
+                                     
+                                     
+INFO - 03/19/19 03:09:00 - 1:47:09 - Decreasing learning rate: 0.00000424 -> 0.00000416
+INFO - 03/19/19 03:09:00 - 1:47:09 - Validation metric is smaller than the best: 0.41310 vs 0.52610
+INFO - 03/19/19 03:09:00 - 1:47:09 - Shrinking the learning rate: 0.00000 -> 0.00000
+INFO - 03/19/19 03:09:00 - 1:47:09 - Starting adversarial training epoch 19...
+INFO - 03/19/19 03:09:00 - 1:47:09 - 000000 - Discriminator loss: 0.3259 - 923 samples/s
+INFO - 03/19/19 03:09:09 - 1:47:18 - 004000 - Discriminator loss: 0.3259 - 892 samples/s
+INFO - 03/19/19 03:09:18 - 1:47:27 - 008000 - Discriminator loss: 0.3259 - 888 samples/s
+INFO - 03/19/19 03:09:27 - 1:47:36 - 012000 - Discriminator loss: 0.3259 - 889 samples/s
+INFO - 03/19/19 03:09:36 - 1:47:45 - 016000 - Discriminator loss: 0.3259 - 888 samples/s
+INFO - 03/19/19 03:09:45 - 1:47:54 - 020000 - Discriminator loss: 0.3259 - 888 samples/s
+INFO - 03/19/19 03:09:54 - 1:48:03 - 024000 - Discriminator loss: 0.3260 - 889 samples/s
+INFO - 03/19/19 03:10:03 - 1:48:12 - 028000 - Discriminator loss: 0.3259 - 888 samples/s
+INFO - 03/19/19 03:10:12 - 1:48:21 - 032000 - Discriminator loss: 0.3259 - 889 samples/s
+INFO - 03/19/19 03:10:21 - 1:48:30 - 036000 - Discriminator loss: 0.3259 - 886 samples/s
+INFO - 03/19/19 03:10:27 - 1:48:36 - 040000 - Discriminator loss: 0.3259 - 1243 samples/s
+INFO - 03/19/19 03:10:36 - 1:48:45 - 044000 - Discriminator loss: 0.3259 - 884 samples/s
+INFO - 03/19/19 03:10:45 - 1:48:54 - 048000 - Discriminator loss: 0.3258 - 906 samples/s
+INFO - 03/19/19 03:10:53 - 1:49:02 - 052000 - Discriminator loss: 0.3259 - 981 samples/s
+INFO - 03/19/19 03:11:01 - 1:49:10 - 056000 - Discriminator loss: 0.3259 - 1061 samples/s
+INFO - 03/19/19 03:11:09 - 1:49:18 - 060000 - Discriminator loss: 0.3259 - 995 samples/s
+INFO - 03/19/19 03:11:16 - 1:49:25 - 064000 - Discriminator loss: 0.3259 - 1098 samples/s
+INFO - 03/19/19 03:11:24 - 1:49:33 - 068000 - Discriminator loss: 0.3258 - 1040 samples/s
+INFO - 03/19/19 03:11:33 - 1:49:42 - 072000 - Discriminator loss: 0.3259 - 856 samples/s
+INFO - 03/19/19 03:11:41 - 1:49:50 - 076000 - Discriminator loss: 0.3258 - 978 samples/s
+INFO - 03/19/19 03:11:49 - 1:49:58 - 080000 - Discriminator loss: 0.3259 - 1080 samples/s
+INFO - 03/19/19 03:11:55 - 1:50:04 - 084000 - Discriminator loss: 0.3258 - 1287 samples/s
+INFO - 03/19/19 03:12:02 - 1:50:12 - 088000 - Discriminator loss: 0.3258 - 1033 samples/s
+INFO - 03/19/19 03:12:11 - 1:50:21 - 092000 - Discriminator loss: 0.3258 - 917 samples/s
+INFO - 03/19/19 03:12:20 - 1:50:29 - 096000 - Discriminator loss: 0.3258 - 918 samples/s
+INFO - 03/19/19 03:12:28 - 1:50:37 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:12:28 - 1:50:37 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:12:28 - 1:50:37 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:12:28 - 1:50:37 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 03:12:28 - 1:50:37 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:12:44 - 1:50:53 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:12:44 - 1:50:53 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:12:44 - 1:50:53 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 03:12:46 - 1:50:56 - Building the train dictionary ...
+INFO - 03/19/19 03:12:46 - 1:50:56 - New train dictionary of 5483 pairs.
+INFO - 03/19/19 03:12:46 - 1:50:56 - Mean cosine (nn method, S2T build, 10000 max size): 0.42531
+INFO - 03/19/19 03:13:23 - 1:51:32 - Building the train dictionary ...
+INFO - 03/19/19 03:13:23 - 1:51:32 - New train dictionary of 5049 pairs.
+INFO - 03/19/19 03:13:23 - 1:51:32 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.41312
+INFO - 03/19/19 03:13:24 - 1:51:33 - Discriminator source / target predictions: 0.86596 / 0.12733
+INFO - 03/19/19 03:13:24 - 1:51:33 - Discriminator source / target / global accuracy: 0.99987 / 0.98562 / 0.99386
+INFO - 03/19/19 03:13:24 - 1:51:33 - __log__:{"n_epoch": 19, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4253102242946625, "mean_cosine-csls_knn_10-S2T-10000": 0.4131166934967041, "dis_accu": 0.9938598899114379, "dis_src_pred": 0.8659608061134815, "dis_tgt_pred": 0.12732778812219953}
+INFO - 03/19/19 03:13:24 - 1:51:33 - End of epoch 19.
+                                     
+                                     
+INFO - 03/19/19 03:13:24 - 1:51:33 - Decreasing learning rate: 0.00000208 -> 0.00000204
+INFO - 03/19/19 03:13:24 - 1:51:33 - Validation metric is smaller than the best: 0.41312 vs 0.52610
+INFO - 03/19/19 03:13:24 - 1:51:33 - Shrinking the learning rate: 0.00000 -> 0.00000
+INFO - 03/19/19 03:13:24 - 1:51:33 - ----> ITERATIVE PROCRUSTES REFINEMENT <----
+                                     
+                                     
+INFO - 03/19/19 03:13:24 - 1:51:33 - * Reloading the best model from /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-880K-5_arxiv-zh-en-480K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_fasttext/063oeenarw/best_mapping.pth ...
+INFO - 03/19/19 03:13:24 - 1:51:33 - Starting refinement iteration 0...
+INFO - 03/19/19 03:13:24 - 1:51:33 - Building the train dictionary ...
+INFO - 03/19/19 03:13:42 - 1:51:51 - New train dictionary of 9261 pairs.
+INFO - 03/19/19 03:13:42 - 1:51:51 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:13:42 - 1:51:52 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:13:42 - 1:51:52 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:13:42 - 1:51:52 - 665 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/19/19 03:13:42 - 1:51:52 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:13:59 - 1:52:08 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:13:59 - 1:52:08 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:13:59 - 1:52:08 - 665 source words - csls_knn_10 - Precision at k = 10: 0.000000
+INFO - 03/19/19 03:14:01 - 1:52:10 - Building the train dictionary ...
+INFO - 03/19/19 03:14:01 - 1:52:10 - New train dictionary of 5664 pairs.
+INFO - 03/19/19 03:14:01 - 1:52:10 - Mean cosine (nn method, S2T build, 10000 max size): 0.47704
+INFO - 03/19/19 03:14:43 - 1:52:53 - Building the train dictionary ...
+INFO - 03/19/19 03:14:43 - 1:52:53 - New train dictionary of 5300 pairs.
+INFO - 03/19/19 03:14:43 - 1:52:53 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.46754
+INFO - 03/19/19 03:14:43 - 1:52:53 - __log__:{"n_iter": 0, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.0, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.0, "mean_cosine-nn-S2T-10000": 0.4770434498786926, "mean_cosine-csls_knn_10-S2T-10000": 0.4675399959087372}
+INFO - 03/19/19 03:14:43 - 1:52:53 - End of refinement iteration 0.
+                                     
+                                     
+INFO - 03/19/19 03:14:43 - 1:52:53 - Starting refinement iteration 1...
+INFO - 03/19/19 03:14:43 - 1:52:53 - Building the train dictionary ...
+INFO - 03/19/19 03:15:09 - 1:53:18 - New train dictionary of 9960 pairs.
+INFO - 03/19/19 03:15:09 - 1:53:19 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:15:10 - 1:53:19 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:15:10 - 1:53:19 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:15:10 - 1:53:19 - 665 source words - nn - Precision at k = 10: 0.150376
+INFO - 03/19/19 03:15:10 - 1:53:19 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:15:31 - 1:53:40 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:15:31 - 1:53:40 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:15:31 - 1:53:40 - 665 source words - csls_knn_10 - Precision at k = 10: 0.150376
+INFO - 03/19/19 03:15:33 - 1:53:43 - Building the train dictionary ...
+INFO - 03/19/19 03:15:33 - 1:53:43 - New train dictionary of 5817 pairs.
+INFO - 03/19/19 03:15:33 - 1:53:43 - Mean cosine (nn method, S2T build, 10000 max size): 0.49764
+INFO - 03/19/19 03:16:11 - 1:54:20 - Building the train dictionary ...
+INFO - 03/19/19 03:16:11 - 1:54:20 - New train dictionary of 5455 pairs.
+INFO - 03/19/19 03:16:11 - 1:54:20 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.49004
+INFO - 03/19/19 03:16:11 - 1:54:20 - __log__:{"n_iter": 1, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.15037593984962408, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.15037593984962408, "mean_cosine-nn-S2T-10000": 0.497637003660202, "mean_cosine-csls_knn_10-S2T-10000": 0.4900388717651367}
+INFO - 03/19/19 03:16:11 - 1:54:20 - End of refinement iteration 1.
+                                     
+                                     
+INFO - 03/19/19 03:16:11 - 1:54:20 - Starting refinement iteration 2...
+INFO - 03/19/19 03:16:11 - 1:54:20 - Building the train dictionary ...
+INFO - 03/19/19 03:16:30 - 1:54:39 - New train dictionary of 10357 pairs.
+INFO - 03/19/19 03:16:30 - 1:54:40 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:16:30 - 1:54:40 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:16:30 - 1:54:40 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:16:30 - 1:54:40 - 665 source words - nn - Precision at k = 10: 0.150376
+INFO - 03/19/19 03:16:30 - 1:54:40 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:16:47 - 1:54:56 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:16:47 - 1:54:56 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:16:47 - 1:54:56 - 665 source words - csls_knn_10 - Precision at k = 10: 0.150376
+INFO - 03/19/19 03:16:49 - 1:54:58 - Building the train dictionary ...
+INFO - 03/19/19 03:16:49 - 1:54:58 - New train dictionary of 5818 pairs.
+INFO - 03/19/19 03:16:49 - 1:54:58 - Mean cosine (nn method, S2T build, 10000 max size): 0.50459
+INFO - 03/19/19 03:17:25 - 1:55:34 - Building the train dictionary ...
+INFO - 03/19/19 03:17:25 - 1:55:34 - New train dictionary of 5572 pairs.
+INFO - 03/19/19 03:17:25 - 1:55:34 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.49780
+INFO - 03/19/19 03:17:25 - 1:55:34 - __log__:{"n_iter": 2, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.15037593984962408, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.15037593984962408, "mean_cosine-nn-S2T-10000": 0.50459223985672, "mean_cosine-csls_knn_10-S2T-10000": 0.49780192971229553}
+INFO - 03/19/19 03:17:25 - 1:55:34 - End of refinement iteration 2.
+                                     
+                                     
+INFO - 03/19/19 03:17:25 - 1:55:34 - Starting refinement iteration 3...
+INFO - 03/19/19 03:17:25 - 1:55:34 - Building the train dictionary ...
+INFO - 03/19/19 03:17:44 - 1:55:53 - New train dictionary of 10513 pairs.
+INFO - 03/19/19 03:17:44 - 1:55:53 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:17:44 - 1:55:54 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:17:44 - 1:55:54 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:17:44 - 1:55:54 - 665 source words - nn - Precision at k = 10: 0.150376
+INFO - 03/19/19 03:17:44 - 1:55:54 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:18:00 - 1:56:09 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:18:00 - 1:56:09 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:18:00 - 1:56:09 - 665 source words - csls_knn_10 - Precision at k = 10: 0.150376
+INFO - 03/19/19 03:18:02 - 1:56:11 - Building the train dictionary ...
+INFO - 03/19/19 03:18:02 - 1:56:11 - New train dictionary of 5925 pairs.
+INFO - 03/19/19 03:18:02 - 1:56:11 - Mean cosine (nn method, S2T build, 10000 max size): 0.50811
+INFO - 03/19/19 03:18:38 - 1:56:47 - Building the train dictionary ...
+INFO - 03/19/19 03:18:38 - 1:56:47 - New train dictionary of 5636 pairs.
+INFO - 03/19/19 03:18:38 - 1:56:47 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.50383
+INFO - 03/19/19 03:18:38 - 1:56:47 - __log__:{"n_iter": 3, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.15037593984962408, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.15037593984962408, "mean_cosine-nn-S2T-10000": 0.5081086754798889, "mean_cosine-csls_knn_10-S2T-10000": 0.5038334131240845}
+INFO - 03/19/19 03:18:38 - 1:56:47 - End of refinement iteration 3.
+                                     
+                                     
+INFO - 03/19/19 03:18:38 - 1:56:47 - Starting refinement iteration 4...
+INFO - 03/19/19 03:18:38 - 1:56:47 - Building the train dictionary ...
+INFO - 03/19/19 03:19:00 - 1:57:09 - New train dictionary of 10593 pairs.
+INFO - 03/19/19 03:19:00 - 1:57:09 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:19:00 - 1:57:09 - 665 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:19:00 - 1:57:09 - 665 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:19:00 - 1:57:09 - 665 source words - nn - Precision at k = 10: 0.150376
+INFO - 03/19/19 03:19:00 - 1:57:09 - Found 1019 pairs of words in the dictionary (665 unique). 1464 other pairs contained at least one unknown word (498 in lang1, 1281 in lang2)
+INFO - 03/19/19 03:19:19 - 1:57:28 - 665 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/19/19 03:19:19 - 1:57:28 - 665 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/19/19 03:19:19 - 1:57:28 - 665 source words - csls_knn_10 - Precision at k = 10: 0.150376
+INFO - 03/19/19 03:19:21 - 1:57:31 - Building the train dictionary ...
+INFO - 03/19/19 03:19:21 - 1:57:31 - New train dictionary of 5916 pairs.
+INFO - 03/19/19 03:19:21 - 1:57:31 - Mean cosine (nn method, S2T build, 10000 max size): 0.51264
+INFO - 03/19/19 03:20:05 - 1:58:14 - Building the train dictionary ...
+INFO - 03/19/19 03:20:05 - 1:58:14 - New train dictionary of 5680 pairs.
+INFO - 03/19/19 03:20:05 - 1:58:14 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.50638
+INFO - 03/19/19 03:20:05 - 1:58:14 - __log__:{"n_iter": 4, "precision_at_1-nn": 0.0, "precision_at_5-nn": 0.0, "precision_at_10-nn": 0.15037593984962408, "precision_at_1-csls_knn_10": 0.0, "precision_at_5-csls_knn_10": 0.0, "precision_at_10-csls_knn_10": 0.15037593984962408, "mean_cosine-nn-S2T-10000": 0.5126380920410156, "mean_cosine-csls_knn_10-S2T-10000": 0.5063779950141907}
+INFO - 03/19/19 03:20:05 - 1:58:14 - End of refinement iteration 4.
+                                     
+                                     
+INFO - 03/19/19 03:20:05 - 1:58:14 - * Reloading the best model from /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-880K-5_arxiv-zh-en-480K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_fasttext/063oeenarw/best_mapping.pth ...
+INFO - 03/19/19 03:20:05 - 1:58:14 - Reloading all embeddings for mapping ...
+INFO - 03/19/19 03:20:39 - 1:58:49 - Loaded 145393 pre-trained word embeddings.
+INFO - 03/19/19 03:20:48 - 1:58:57 - Loaded 29217 pre-trained word embeddings.
+INFO - 03/19/19 03:20:48 - 1:58:57 - Map source embeddings to the target space ...
+INFO - 03/19/19 03:20:48 - 1:58:58 - Writing source embeddings to /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-880K-5_arxiv-zh-en-480K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_fasttext/063oeenarw/vectors-zh.txt ...
+INFO - 03/19/19 03:25:34 - 2:03:43 - Writing target embeddings to /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-880K-5_arxiv-zh-en-480K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_fasttext/063oeenarw/vectors-en.txt ...

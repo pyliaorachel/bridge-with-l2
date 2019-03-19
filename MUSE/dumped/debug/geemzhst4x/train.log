@@ -1,0 +1,1515 @@
+INFO - 03/19/19 07:24:57 - 0:00:00 - ============ Initialized logger ============
+INFO - 03/19/19 07:24:57 - 0:00:00 - adversarial: True
+                                     batch_size: 32
+                                     cuda: True
+                                     dico_build: S2T
+                                     dico_eval: default
+                                     dico_max_rank: 15000
+                                     dico_max_size: 0
+                                     dico_method: csls_knn_10
+                                     dico_min_size: 0
+                                     dico_threshold: 0
+                                     dis_clip_weights: 0
+                                     dis_dropout: 0.0
+                                     dis_hid_dim: 2048
+                                     dis_input_dropout: 0.1
+                                     dis_lambda: 1
+                                     dis_layers: 2
+                                     dis_most_frequent: 75000
+                                     dis_optimizer: sgd,lr=0.1
+                                     dis_smooth: 0.1
+                                     dis_steps: 5
+                                     emb_dim: 300
+                                     epoch_size: 250000
+                                     exp_id: 
+                                     exp_name: debug
+                                     exp_path: /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x
+                                     export: txt
+                                     lr_decay: 0.98
+                                     lr_shrink: 0.5
+                                     map_beta: 0.001
+                                     map_id_init: True
+                                     map_optimizer: sgd,lr=0.1
+                                     max_vocab: 200000
+                                     min_lr: 1e-06
+                                     n_epochs: 10
+                                     n_refinement: 10
+                                     normalize_embeddings: center
+                                     seed: -1
+                                     src_emb: MUSE/data/gold/fasttext.wiki.zh.vec
+                                     src_lang: zh
+                                     tgt_emb: MUSE/data/gold/fasttext.wiki.en.vec
+                                     tgt_lang: en
+                                     verbose: 2
+INFO - 03/19/19 07:24:57 - 0:00:00 - The experiment will be stored in /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x
+INFO - 03/19/19 07:25:11 - 0:00:14 - Loaded 200000 pre-trained word embeddings.
+INFO - 03/19/19 07:25:26 - 0:00:29 - Loaded 200000 pre-trained word embeddings.
+INFO - 03/19/19 07:25:28 - 0:00:31 - ----> ADVERSARIAL TRAINING <----
+                                     
+                                     
+INFO - 03/19/19 07:25:28 - 0:00:31 - Starting adversarial training epoch 0...
+INFO - 03/19/19 07:25:28 - 0:00:31 - 000000 - Discriminator loss: 0.6883 - 381 samples/s
+INFO - 03/19/19 07:25:30 - 0:00:33 - 004000 - Discriminator loss: 0.5599 - 3911 samples/s
+INFO - 03/19/19 07:25:32 - 0:00:35 - 008000 - Discriminator loss: 0.4967 - 3959 samples/s
+INFO - 03/19/19 07:25:34 - 0:00:37 - 012000 - Discriminator loss: 0.5156 - 3937 samples/s
+INFO - 03/19/19 07:25:36 - 0:00:39 - 016000 - Discriminator loss: 0.5218 - 4062 samples/s
+INFO - 03/19/19 07:25:38 - 0:00:41 - 020000 - Discriminator loss: 0.5142 - 3992 samples/s
+INFO - 03/19/19 07:25:40 - 0:00:43 - 024000 - Discriminator loss: 0.4969 - 3945 samples/s
+INFO - 03/19/19 07:25:42 - 0:00:45 - 028000 - Discriminator loss: 0.4827 - 4074 samples/s
+INFO - 03/19/19 07:25:44 - 0:00:47 - 032000 - Discriminator loss: 0.4727 - 4070 samples/s
+INFO - 03/19/19 07:25:46 - 0:00:49 - 036000 - Discriminator loss: 0.4594 - 4069 samples/s
+INFO - 03/19/19 07:25:48 - 0:00:51 - 040000 - Discriminator loss: 0.4484 - 4152 samples/s
+INFO - 03/19/19 07:25:50 - 0:00:53 - 044000 - Discriminator loss: 0.4409 - 4087 samples/s
+INFO - 03/19/19 07:25:52 - 0:00:55 - 048000 - Discriminator loss: 0.4298 - 3832 samples/s
+INFO - 03/19/19 07:25:54 - 0:00:57 - 052000 - Discriminator loss: 0.4282 - 3909 samples/s
+INFO - 03/19/19 07:25:56 - 0:00:59 - 056000 - Discriminator loss: 0.4229 - 3846 samples/s
+INFO - 03/19/19 07:26:00 - 0:01:03 - 060000 - Discriminator loss: 0.4157 - 2115 samples/s
+INFO - 03/19/19 07:26:04 - 0:01:07 - 064000 - Discriminator loss: 0.4118 - 2102 samples/s
+INFO - 03/19/19 07:26:07 - 0:01:10 - 068000 - Discriminator loss: 0.4044 - 2104 samples/s
+INFO - 03/19/19 07:26:11 - 0:01:14 - 072000 - Discriminator loss: 0.4051 - 2117 samples/s
+INFO - 03/19/19 07:26:15 - 0:01:18 - 076000 - Discriminator loss: 0.4049 - 2105 samples/s
+INFO - 03/19/19 07:26:19 - 0:01:22 - 080000 - Discriminator loss: 0.4033 - 2099 samples/s
+INFO - 03/19/19 07:26:23 - 0:01:26 - 084000 - Discriminator loss: 0.3993 - 2092 samples/s
+INFO - 03/19/19 07:26:26 - 0:01:29 - 088000 - Discriminator loss: 0.3967 - 2109 samples/s
+INFO - 03/19/19 07:26:30 - 0:01:33 - 092000 - Discriminator loss: 0.3967 - 2106 samples/s
+INFO - 03/19/19 07:26:34 - 0:01:37 - 096000 - Discriminator loss: 0.3940 - 2110 samples/s
+INFO - 03/19/19 07:26:38 - 0:01:41 - 100000 - Discriminator loss: 0.3939 - 2098 samples/s
+INFO - 03/19/19 07:26:42 - 0:01:45 - 104000 - Discriminator loss: 0.3926 - 2106 samples/s
+INFO - 03/19/19 07:26:45 - 0:01:48 - 108000 - Discriminator loss: 0.3939 - 2107 samples/s
+INFO - 03/19/19 07:26:49 - 0:01:52 - 112000 - Discriminator loss: 0.3893 - 2115 samples/s
+INFO - 03/19/19 07:26:53 - 0:01:56 - 116000 - Discriminator loss: 0.3874 - 2110 samples/s
+INFO - 03/19/19 07:26:57 - 0:02:00 - 120000 - Discriminator loss: 0.3887 - 2104 samples/s
+INFO - 03/19/19 07:27:01 - 0:02:03 - 124000 - Discriminator loss: 0.3871 - 2107 samples/s
+INFO - 03/19/19 07:27:04 - 0:02:07 - 128000 - Discriminator loss: 0.3853 - 2114 samples/s
+INFO - 03/19/19 07:27:08 - 0:02:11 - 132000 - Discriminator loss: 0.3837 - 2102 samples/s
+INFO - 03/19/19 07:27:12 - 0:02:15 - 136000 - Discriminator loss: 0.3826 - 2098 samples/s
+INFO - 03/19/19 07:27:16 - 0:02:19 - 140000 - Discriminator loss: 0.3819 - 2115 samples/s
+INFO - 03/19/19 07:27:20 - 0:02:22 - 144000 - Discriminator loss: 0.3798 - 2107 samples/s
+INFO - 03/19/19 07:27:23 - 0:02:26 - 148000 - Discriminator loss: 0.3795 - 2111 samples/s
+INFO - 03/19/19 07:27:27 - 0:02:30 - 152000 - Discriminator loss: 0.3822 - 2102 samples/s
+INFO - 03/19/19 07:27:31 - 0:02:34 - 156000 - Discriminator loss: 0.3814 - 2100 samples/s
+INFO - 03/19/19 07:27:35 - 0:02:38 - 160000 - Discriminator loss: 0.3802 - 2101 samples/s
+INFO - 03/19/19 07:27:39 - 0:02:41 - 164000 - Discriminator loss: 0.3796 - 2111 samples/s
+INFO - 03/19/19 07:27:42 - 0:02:45 - 168000 - Discriminator loss: 0.3794 - 2113 samples/s
+INFO - 03/19/19 07:27:46 - 0:02:49 - 172000 - Discriminator loss: 0.3797 - 2103 samples/s
+INFO - 03/19/19 07:27:50 - 0:02:53 - 176000 - Discriminator loss: 0.3768 - 2101 samples/s
+INFO - 03/19/19 07:27:54 - 0:02:57 - 180000 - Discriminator loss: 0.3775 - 2121 samples/s
+INFO - 03/19/19 07:27:58 - 0:03:00 - 184000 - Discriminator loss: 0.3754 - 2114 samples/s
+INFO - 03/19/19 07:28:01 - 0:03:04 - 188000 - Discriminator loss: 0.3750 - 2114 samples/s
+INFO - 03/19/19 07:28:05 - 0:03:08 - 192000 - Discriminator loss: 0.3758 - 2122 samples/s
+INFO - 03/19/19 07:28:09 - 0:03:12 - 196000 - Discriminator loss: 0.3745 - 2118 samples/s
+INFO - 03/19/19 07:28:13 - 0:03:16 - 200000 - Discriminator loss: 0.3743 - 2108 samples/s
+INFO - 03/19/19 07:28:16 - 0:03:19 - 204000 - Discriminator loss: 0.3724 - 2107 samples/s
+INFO - 03/19/19 07:28:20 - 0:03:23 - 208000 - Discriminator loss: 0.3721 - 2101 samples/s
+INFO - 03/19/19 07:28:24 - 0:03:27 - 212000 - Discriminator loss: 0.3727 - 2112 samples/s
+INFO - 03/19/19 07:28:28 - 0:03:31 - 216000 - Discriminator loss: 0.3729 - 2102 samples/s
+INFO - 03/19/19 07:28:32 - 0:03:35 - 220000 - Discriminator loss: 0.3720 - 2112 samples/s
+INFO - 03/19/19 07:28:35 - 0:03:38 - 224000 - Discriminator loss: 0.3712 - 2108 samples/s
+INFO - 03/19/19 07:28:39 - 0:03:42 - 228000 - Discriminator loss: 0.3713 - 2100 samples/s
+INFO - 03/19/19 07:28:43 - 0:03:46 - 232000 - Discriminator loss: 0.3701 - 2114 samples/s
+INFO - 03/19/19 07:28:47 - 0:03:50 - 236000 - Discriminator loss: 0.3718 - 2112 samples/s
+INFO - 03/19/19 07:28:51 - 0:03:53 - 240000 - Discriminator loss: 0.3688 - 2116 samples/s
+INFO - 03/19/19 07:28:54 - 0:03:57 - 244000 - Discriminator loss: 0.3702 - 2125 samples/s
+INFO - 03/19/19 07:28:58 - 0:04:01 - 248000 - Discriminator loss: 0.3702 - 2114 samples/s
+INFO - 03/19/19 07:29:00 - 0:04:03 - ====================================================================
+INFO - 03/19/19 07:29:00 - 0:04:03 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 07:29:00 - 0:04:03 - ====================================================================
+INFO - 03/19/19 07:29:00 - 0:04:03 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 07:29:00 - 0:04:03 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 07:29:00 - 0:04:03 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 07:29:00 - 0:04:03 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 07:29:00 - 0:04:03 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 07:29:00 - 0:04:03 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 07:29:00 - 0:04:03 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 07:29:00 - 0:04:03 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 07:29:00 - 0:04:03 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 07:29:00 - 0:04:03 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 07:29:00 - 0:04:03 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 07:29:00 - 0:04:03 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 07:29:00 - 0:04:03 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 07:29:00 - 0:04:03 - ====================================================================
+INFO - 03/19/19 07:29:00 - 0:04:03 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 07:29:00 - 0:04:03 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 07:29:01 - 0:04:04 - 1500 source words - nn - Precision at k = 1: 0.066667
+INFO - 03/19/19 07:29:01 - 0:04:04 - 1500 source words - nn - Precision at k = 5: 0.066667
+INFO - 03/19/19 07:29:01 - 0:04:04 - 1500 source words - nn - Precision at k = 10: 0.066667
+INFO - 03/19/19 07:29:01 - 0:04:04 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 07:33:03 - 0:08:06 - 1500 source words - csls_knn_10 - Precision at k = 1: 0.066667
+INFO - 03/19/19 07:33:03 - 0:08:06 - 1500 source words - csls_knn_10 - Precision at k = 5: 0.066667
+INFO - 03/19/19 07:33:03 - 0:08:06 - 1500 source words - csls_knn_10 - Precision at k = 10: 0.066667
+INFO - 03/19/19 07:33:09 - 0:08:12 - Building the train dictionary ...
+INFO - 03/19/19 07:33:09 - 0:08:12 - New train dictionary of 1012 pairs.
+INFO - 03/19/19 07:33:09 - 0:08:12 - Mean cosine (nn method, S2T build, 10000 max size): 0.37197
+INFO - 03/19/19 07:58:01 - 0:33:04 - Building the train dictionary ...
+INFO - 03/19/19 07:58:01 - 0:33:04 - New train dictionary of 1112 pairs.
+INFO - 03/19/19 07:58:01 - 0:33:04 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.34907
+INFO - 03/19/19 07:58:11 - 0:33:14 - Discriminator source / target predictions: 0.87437 / 0.19145
+INFO - 03/19/19 07:58:11 - 0:33:14 - Discriminator source / target / global accuracy: 0.98509 / 0.93109 / 0.95809
+INFO - 03/19/19 07:58:11 - 0:33:14 - __log__:{"n_epoch": 0, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 0.06666666666666667, "precision_at_5-nn": 0.06666666666666667, "precision_at_10-nn": 0.06666666666666667, "precision_at_1-csls_knn_10": 0.06666666666666667, "precision_at_5-csls_knn_10": 0.06666666666666667, "precision_at_10-csls_knn_10": 0.06666666666666667, "mean_cosine-nn-S2T-10000": 0.37197068333625793, "mean_cosine-csls_knn_10-S2T-10000": 0.34906598925590515, "dis_accu": 0.95809, "dis_src_pred": 0.8743736638397351, "dis_tgt_pred": 0.19145401227791095}
+INFO - 03/19/19 07:58:11 - 0:33:14 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.34907
+INFO - 03/19/19 07:58:11 - 0:33:14 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 07:58:11 - 0:33:14 - End of epoch 0.
+                                     
+                                     
+INFO - 03/19/19 07:58:11 - 0:33:14 - Decreasing learning rate: 0.10000000 -> 0.09800000
+INFO - 03/19/19 07:58:11 - 0:33:14 - Starting adversarial training epoch 1...
+INFO - 03/19/19 07:58:12 - 0:33:14 - 000000 - Discriminator loss: 0.3604 - 468 samples/s
+INFO - 03/19/19 07:58:20 - 0:33:23 - 004000 - Discriminator loss: 0.3683 - 921 samples/s
+INFO - 03/19/19 07:58:29 - 0:33:32 - 008000 - Discriminator loss: 0.3672 - 937 samples/s
+INFO - 03/19/19 07:58:39 - 0:33:42 - 012000 - Discriminator loss: 0.3671 - 800 samples/s
+INFO - 03/19/19 07:58:48 - 0:33:51 - 016000 - Discriminator loss: 0.3677 - 839 samples/s
+INFO - 03/19/19 07:58:57 - 0:34:00 - 020000 - Discriminator loss: 0.3667 - 905 samples/s
+INFO - 03/19/19 07:59:06 - 0:34:09 - 024000 - Discriminator loss: 0.3680 - 922 samples/s
+INFO - 03/19/19 07:59:14 - 0:34:17 - 028000 - Discriminator loss: 0.3682 - 922 samples/s
+INFO - 03/19/19 07:59:24 - 0:34:27 - 032000 - Discriminator loss: 0.3683 - 872 samples/s
+INFO - 03/19/19 07:59:33 - 0:34:36 - 036000 - Discriminator loss: 0.3666 - 886 samples/s
+INFO - 03/19/19 07:59:41 - 0:34:44 - 040000 - Discriminator loss: 0.3687 - 967 samples/s
+INFO - 03/19/19 07:59:51 - 0:34:54 - 044000 - Discriminator loss: 0.3681 - 787 samples/s
+INFO - 03/19/19 07:59:58 - 0:35:01 - 048000 - Discriminator loss: 0.3680 - 1104 samples/s
+INFO - 03/19/19 08:00:09 - 0:35:12 - 052000 - Discriminator loss: 0.3673 - 770 samples/s
+INFO - 03/19/19 08:00:19 - 0:35:22 - 056000 - Discriminator loss: 0.3665 - 792 samples/s
+INFO - 03/19/19 08:00:28 - 0:35:31 - 060000 - Discriminator loss: 0.3659 - 870 samples/s
+INFO - 03/19/19 08:00:36 - 0:35:39 - 064000 - Discriminator loss: 0.3658 - 968 samples/s
+INFO - 03/19/19 08:00:44 - 0:35:47 - 068000 - Discriminator loss: 0.3655 - 1053 samples/s
+INFO - 03/19/19 08:00:53 - 0:35:55 - 072000 - Discriminator loss: 0.3654 - 917 samples/s
+INFO - 03/19/19 08:01:02 - 0:36:05 - 076000 - Discriminator loss: 0.3667 - 868 samples/s
+INFO - 03/19/19 08:01:10 - 0:36:13 - 080000 - Discriminator loss: 0.3662 - 997 samples/s
+INFO - 03/19/19 08:01:18 - 0:36:21 - 084000 - Discriminator loss: 0.3665 - 999 samples/s
+INFO - 03/19/19 08:01:26 - 0:36:29 - 088000 - Discriminator loss: 0.3663 - 955 samples/s
+INFO - 03/19/19 08:01:34 - 0:36:37 - 092000 - Discriminator loss: 0.3654 - 975 samples/s
+INFO - 03/19/19 08:01:43 - 0:36:46 - 096000 - Discriminator loss: 0.3650 - 954 samples/s
+INFO - 03/19/19 08:01:52 - 0:36:55 - 100000 - Discriminator loss: 0.3649 - 892 samples/s
+INFO - 03/19/19 08:02:01 - 0:37:03 - 104000 - Discriminator loss: 0.3646 - 904 samples/s
+INFO - 03/19/19 08:02:10 - 0:37:12 - 108000 - Discriminator loss: 0.3646 - 894 samples/s
+INFO - 03/19/19 08:02:18 - 0:37:21 - 112000 - Discriminator loss: 0.3643 - 968 samples/s
+INFO - 03/19/19 08:02:27 - 0:37:30 - 116000 - Discriminator loss: 0.3641 - 905 samples/s
+INFO - 03/19/19 08:02:35 - 0:37:38 - 120000 - Discriminator loss: 0.3642 - 917 samples/s
+INFO - 03/19/19 08:02:44 - 0:37:47 - 124000 - Discriminator loss: 0.3646 - 960 samples/s
+INFO - 03/19/19 08:02:52 - 0:37:55 - 128000 - Discriminator loss: 0.3645 - 972 samples/s
+INFO - 03/19/19 08:03:01 - 0:38:03 - 132000 - Discriminator loss: 0.3647 - 922 samples/s
+INFO - 03/19/19 08:03:09 - 0:38:12 - 136000 - Discriminator loss: 0.3656 - 936 samples/s
+INFO - 03/19/19 08:03:20 - 0:38:23 - 140000 - Discriminator loss: 0.3651 - 726 samples/s
+INFO - 03/19/19 08:03:28 - 0:38:31 - 144000 - Discriminator loss: 0.3633 - 972 samples/s
+INFO - 03/19/19 08:03:38 - 0:38:41 - 148000 - Discriminator loss: 0.3646 - 843 samples/s
+INFO - 03/19/19 08:03:48 - 0:38:51 - 152000 - Discriminator loss: 0.3638 - 804 samples/s
+INFO - 03/19/19 08:03:57 - 0:39:00 - 156000 - Discriminator loss: 0.3627 - 847 samples/s
+INFO - 03/19/19 08:04:06 - 0:39:08 - 160000 - Discriminator loss: 0.3640 - 967 samples/s
+INFO - 03/19/19 08:04:13 - 0:39:16 - 164000 - Discriminator loss: 0.3647 - 1034 samples/s
+INFO - 03/19/19 08:04:22 - 0:39:25 - 168000 - Discriminator loss: 0.3639 - 901 samples/s
+INFO - 03/19/19 08:04:31 - 0:39:34 - 172000 - Discriminator loss: 0.3616 - 872 samples/s
+INFO - 03/19/19 08:04:40 - 0:39:43 - 176000 - Discriminator loss: 0.3628 - 900 samples/s
+INFO - 03/19/19 08:04:50 - 0:39:53 - 180000 - Discriminator loss: 0.3623 - 817 samples/s
+INFO - 03/19/19 08:04:59 - 0:40:01 - 184000 - Discriminator loss: 0.3635 - 937 samples/s
+INFO - 03/19/19 08:05:08 - 0:40:11 - 188000 - Discriminator loss: 0.3624 - 851 samples/s
+INFO - 03/19/19 08:05:18 - 0:40:20 - 192000 - Discriminator loss: 0.3619 - 828 samples/s
+INFO - 03/19/19 08:05:27 - 0:40:29 - 196000 - Discriminator loss: 0.3625 - 894 samples/s
+INFO - 03/19/19 08:05:35 - 0:40:38 - 200000 - Discriminator loss: 0.3628 - 938 samples/s
+INFO - 03/19/19 08:05:44 - 0:40:47 - 204000 - Discriminator loss: 0.3619 - 909 samples/s
+INFO - 03/19/19 08:05:52 - 0:40:55 - 208000 - Discriminator loss: 0.3640 - 931 samples/s
+INFO - 03/19/19 08:06:01 - 0:41:04 - 212000 - Discriminator loss: 0.3635 - 926 samples/s
+INFO - 03/19/19 08:06:10 - 0:41:13 - 216000 - Discriminator loss: 0.3627 - 915 samples/s
+INFO - 03/19/19 08:06:19 - 0:41:22 - 220000 - Discriminator loss: 0.3618 - 897 samples/s
+INFO - 03/19/19 08:06:30 - 0:41:32 - 224000 - Discriminator loss: 0.3613 - 740 samples/s
+INFO - 03/19/19 08:06:38 - 0:41:40 - 228000 - Discriminator loss: 0.3618 - 993 samples/s
+INFO - 03/19/19 08:06:47 - 0:41:50 - 232000 - Discriminator loss: 0.3617 - 811 samples/s
+INFO - 03/19/19 08:06:59 - 0:42:02 - 236000 - Discriminator loss: 0.3620 - 691 samples/s
+INFO - 03/19/19 08:07:08 - 0:42:10 - 240000 - Discriminator loss: 0.3624 - 939 samples/s
+INFO - 03/19/19 08:07:17 - 0:42:20 - 244000 - Discriminator loss: 0.3633 - 818 samples/s
+INFO - 03/19/19 08:07:26 - 0:42:29 - 248000 - Discriminator loss: 0.3623 - 910 samples/s
+INFO - 03/19/19 08:07:31 - 0:42:34 - ====================================================================
+INFO - 03/19/19 08:07:31 - 0:42:34 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 08:07:31 - 0:42:34 - ====================================================================
+INFO - 03/19/19 08:07:32 - 0:42:34 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 08:07:32 - 0:42:34 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 08:07:32 - 0:42:34 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 08:07:32 - 0:42:35 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 08:07:32 - 0:42:35 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 08:07:32 - 0:42:35 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 08:07:32 - 0:42:35 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 08:07:32 - 0:42:35 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 08:07:32 - 0:42:35 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 08:07:32 - 0:42:35 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 08:07:32 - 0:42:35 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 08:07:32 - 0:42:35 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 08:07:32 - 0:42:35 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 08:07:32 - 0:42:35 - ====================================================================
+INFO - 03/19/19 08:07:32 - 0:42:35 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 08:07:33 - 0:42:36 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 08:07:34 - 0:42:37 - 1500 source words - nn - Precision at k = 1: 1.533333
+INFO - 03/19/19 08:07:34 - 0:42:37 - 1500 source words - nn - Precision at k = 5: 5.333333
+INFO - 03/19/19 08:07:34 - 0:42:37 - 1500 source words - nn - Precision at k = 10: 7.266667
+INFO - 03/19/19 08:07:34 - 0:42:37 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 08:23:05 - 0:58:08 - 1500 source words - csls_knn_10 - Precision at k = 1: 2.533333
+INFO - 03/19/19 08:23:05 - 0:58:08 - 1500 source words - csls_knn_10 - Precision at k = 5: 7.733333
+INFO - 03/19/19 08:23:05 - 0:58:08 - 1500 source words - csls_knn_10 - Precision at k = 10: 10.933333
+INFO - 03/19/19 08:23:13 - 0:58:16 - Building the train dictionary ...
+INFO - 03/19/19 08:23:13 - 0:58:16 - New train dictionary of 2074 pairs.
+INFO - 03/19/19 08:23:13 - 0:58:16 - Mean cosine (nn method, S2T build, 10000 max size): 0.42564
+INFO - 03/19/19 08:35:58 - 1:11:00 - Building the train dictionary ...
+INFO - 03/19/19 08:35:58 - 1:11:00 - New train dictionary of 2012 pairs.
+INFO - 03/19/19 08:35:58 - 1:11:00 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.40852
+INFO - 03/19/19 08:36:01 - 1:11:04 - Discriminator source / target predictions: 0.85777 / 0.18502
+INFO - 03/19/19 08:36:01 - 1:11:04 - Discriminator source / target / global accuracy: 0.97898 / 0.93900 / 0.95899
+INFO - 03/19/19 08:36:01 - 1:11:04 - __log__:{"n_epoch": 1, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 1.5333333333333332, "precision_at_5-nn": 5.333333333333334, "precision_at_10-nn": 7.2666666666666675, "precision_at_1-csls_knn_10": 2.533333333333333, "precision_at_5-csls_knn_10": 7.733333333333333, "precision_at_10-csls_knn_10": 10.933333333333334, "mean_cosine-nn-S2T-10000": 0.4256410598754883, "mean_cosine-csls_knn_10-S2T-10000": 0.40852487087249756, "dis_accu": 0.9589925, "dis_src_pred": 0.8577745651226119, "dis_tgt_pred": 0.1850214881777973}
+INFO - 03/19/19 08:36:01 - 1:11:04 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.40852
+INFO - 03/19/19 08:36:01 - 1:11:04 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 08:36:01 - 1:11:04 - End of epoch 1.
+                                     
+                                     
+INFO - 03/19/19 08:36:01 - 1:11:04 - Decreasing learning rate: 0.09800000 -> 0.09604000
+INFO - 03/19/19 08:36:01 - 1:11:04 - Starting adversarial training epoch 2...
+INFO - 03/19/19 08:36:01 - 1:11:04 - 000000 - Discriminator loss: 0.3599 - 2161 samples/s
+INFO - 03/19/19 08:36:05 - 1:11:07 - 004000 - Discriminator loss: 0.3633 - 2129 samples/s
+INFO - 03/19/19 08:36:08 - 1:11:11 - 008000 - Discriminator loss: 0.3626 - 2120 samples/s
+INFO - 03/19/19 08:36:12 - 1:11:15 - 012000 - Discriminator loss: 0.3641 - 2111 samples/s
+INFO - 03/19/19 08:36:16 - 1:11:19 - 016000 - Discriminator loss: 0.3639 - 2122 samples/s
+INFO - 03/19/19 08:36:20 - 1:11:23 - 020000 - Discriminator loss: 0.3640 - 2095 samples/s
+INFO - 03/19/19 08:36:24 - 1:11:26 - 024000 - Discriminator loss: 0.3636 - 2126 samples/s
+INFO - 03/19/19 08:36:27 - 1:11:30 - 028000 - Discriminator loss: 0.3630 - 2115 samples/s
+INFO - 03/19/19 08:36:31 - 1:11:34 - 032000 - Discriminator loss: 0.3626 - 2121 samples/s
+INFO - 03/19/19 08:36:35 - 1:11:38 - 036000 - Discriminator loss: 0.3641 - 2119 samples/s
+INFO - 03/19/19 08:36:37 - 1:11:40 - 040000 - Discriminator loss: 0.3628 - 3162 samples/s
+INFO - 03/19/19 08:36:40 - 1:11:43 - 044000 - Discriminator loss: 0.3633 - 3219 samples/s
+INFO - 03/19/19 08:36:42 - 1:11:45 - 048000 - Discriminator loss: 0.3632 - 4038 samples/s
+INFO - 03/19/19 08:36:44 - 1:11:47 - 052000 - Discriminator loss: 0.3630 - 4157 samples/s
+INFO - 03/19/19 08:36:46 - 1:11:49 - 056000 - Discriminator loss: 0.3624 - 3348 samples/s
+INFO - 03/19/19 08:36:48 - 1:11:51 - 060000 - Discriminator loss: 0.3620 - 4176 samples/s
+INFO - 03/19/19 08:36:50 - 1:11:53 - 064000 - Discriminator loss: 0.3626 - 4175 samples/s
+INFO - 03/19/19 08:36:52 - 1:11:55 - 068000 - Discriminator loss: 0.3629 - 3481 samples/s
+INFO - 03/19/19 08:36:55 - 1:11:58 - 072000 - Discriminator loss: 0.3634 - 3401 samples/s
+INFO - 03/19/19 08:36:57 - 1:11:59 - 076000 - Discriminator loss: 0.3624 - 4169 samples/s
+INFO - 03/19/19 08:36:58 - 1:12:01 - 080000 - Discriminator loss: 0.3622 - 4172 samples/s
+INFO - 03/19/19 08:37:00 - 1:12:03 - 084000 - Discriminator loss: 0.3634 - 4076 samples/s
+INFO - 03/19/19 08:37:02 - 1:12:05 - 088000 - Discriminator loss: 0.3635 - 4019 samples/s
+INFO - 03/19/19 08:37:04 - 1:12:07 - 092000 - Discriminator loss: 0.3637 - 4145 samples/s
+INFO - 03/19/19 08:37:07 - 1:12:09 - 096000 - Discriminator loss: 0.3624 - 3635 samples/s
+INFO - 03/19/19 08:37:09 - 1:12:12 - 100000 - Discriminator loss: 0.3630 - 3230 samples/s
+INFO - 03/19/19 08:37:11 - 1:12:14 - 104000 - Discriminator loss: 0.3639 - 4119 samples/s
+INFO - 03/19/19 08:37:16 - 1:12:19 - 108000 - Discriminator loss: 0.3632 - 1591 samples/s
+INFO - 03/19/19 08:37:18 - 1:12:21 - 112000 - Discriminator loss: 0.3634 - 3764 samples/s
+INFO - 03/19/19 08:37:21 - 1:12:24 - 116000 - Discriminator loss: 0.3640 - 3038 samples/s
+INFO - 03/19/19 08:37:23 - 1:12:26 - 120000 - Discriminator loss: 0.3638 - 3898 samples/s
+INFO - 03/19/19 08:37:25 - 1:12:28 - 124000 - Discriminator loss: 0.3630 - 4189 samples/s
+INFO - 03/19/19 08:37:27 - 1:12:30 - 128000 - Discriminator loss: 0.3638 - 4180 samples/s
+INFO - 03/19/19 08:37:29 - 1:12:31 - 132000 - Discriminator loss: 0.3627 - 4210 samples/s
+INFO - 03/19/19 08:37:31 - 1:12:33 - 136000 - Discriminator loss: 0.3621 - 3952 samples/s
+INFO - 03/19/19 08:37:33 - 1:12:36 - 140000 - Discriminator loss: 0.3637 - 3144 samples/s
+INFO - 03/19/19 08:37:35 - 1:12:38 - 144000 - Discriminator loss: 0.3637 - 4025 samples/s
+INFO - 03/19/19 08:37:38 - 1:12:41 - 148000 - Discriminator loss: 0.3646 - 3165 samples/s
+INFO - 03/19/19 08:37:40 - 1:12:43 - 152000 - Discriminator loss: 0.3645 - 3570 samples/s
+INFO - 03/19/19 08:37:42 - 1:12:45 - 156000 - Discriminator loss: 0.3636 - 4184 samples/s
+INFO - 03/19/19 08:37:44 - 1:12:47 - 160000 - Discriminator loss: 0.3637 - 3082 samples/s
+INFO - 03/19/19 08:37:47 - 1:12:49 - 164000 - Discriminator loss: 0.3636 - 3745 samples/s
+INFO - 03/19/19 08:37:48 - 1:12:51 - 168000 - Discriminator loss: 0.3629 - 4180 samples/s
+INFO - 03/19/19 08:37:51 - 1:12:54 - 172000 - Discriminator loss: 0.3631 - 3670 samples/s
+INFO - 03/19/19 08:37:53 - 1:12:56 - 176000 - Discriminator loss: 0.3634 - 2941 samples/s
+INFO - 03/19/19 08:37:55 - 1:12:58 - 180000 - Discriminator loss: 0.3631 - 3842 samples/s
+INFO - 03/19/19 08:37:58 - 1:13:01 - 184000 - Discriminator loss: 0.3629 - 3639 samples/s
+INFO - 03/19/19 08:38:00 - 1:13:02 - 188000 - Discriminator loss: 0.3624 - 4063 samples/s
+INFO - 03/19/19 08:38:02 - 1:13:04 - 192000 - Discriminator loss: 0.3616 - 4160 samples/s
+INFO - 03/19/19 08:38:04 - 1:13:07 - 196000 - Discriminator loss: 0.3628 - 3763 samples/s
+INFO - 03/19/19 08:38:06 - 1:13:09 - 200000 - Discriminator loss: 0.3616 - 3233 samples/s
+INFO - 03/19/19 08:38:09 - 1:13:12 - 204000 - Discriminator loss: 0.3612 - 3019 samples/s
+INFO - 03/19/19 08:38:11 - 1:13:14 - 208000 - Discriminator loss: 0.3619 - 3923 samples/s
+INFO - 03/19/19 08:38:13 - 1:13:16 - 212000 - Discriminator loss: 0.3617 - 3735 samples/s
+INFO - 03/19/19 08:38:15 - 1:13:18 - 216000 - Discriminator loss: 0.3614 - 4107 samples/s
+INFO - 03/19/19 08:38:17 - 1:13:20 - 220000 - Discriminator loss: 0.3608 - 4180 samples/s
+INFO - 03/19/19 08:38:19 - 1:13:22 - 224000 - Discriminator loss: 0.3605 - 4169 samples/s
+INFO - 03/19/19 08:38:21 - 1:13:24 - 228000 - Discriminator loss: 0.3608 - 4161 samples/s
+INFO - 03/19/19 08:38:23 - 1:13:25 - 232000 - Discriminator loss: 0.3610 - 4138 samples/s
+INFO - 03/19/19 08:38:24 - 1:13:27 - 236000 - Discriminator loss: 0.3612 - 4233 samples/s
+INFO - 03/19/19 08:38:26 - 1:13:29 - 240000 - Discriminator loss: 0.3605 - 4142 samples/s
+INFO - 03/19/19 08:38:32 - 1:13:35 - 244000 - Discriminator loss: 0.3605 - 1429 samples/s
+INFO - 03/19/19 08:38:37 - 1:13:40 - 248000 - Discriminator loss: 0.3592 - 1490 samples/s
+INFO - 03/19/19 08:38:39 - 1:13:42 - ====================================================================
+INFO - 03/19/19 08:38:39 - 1:13:42 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 08:38:39 - 1:13:42 - ====================================================================
+INFO - 03/19/19 08:38:39 - 1:13:42 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 08:38:39 - 1:13:42 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 08:38:39 - 1:13:42 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 08:38:39 - 1:13:42 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 08:38:39 - 1:13:42 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 08:38:39 - 1:13:42 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 08:38:39 - 1:13:42 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 08:38:39 - 1:13:42 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 08:38:39 - 1:13:42 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 08:38:40 - 1:13:42 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 08:38:40 - 1:13:42 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 08:38:40 - 1:13:42 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 08:38:40 - 1:13:42 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 08:38:40 - 1:13:42 - ====================================================================
+INFO - 03/19/19 08:38:40 - 1:13:42 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 08:38:40 - 1:13:43 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 08:38:40 - 1:13:43 - 1500 source words - nn - Precision at k = 1: 18.933333
+INFO - 03/19/19 08:38:40 - 1:13:43 - 1500 source words - nn - Precision at k = 5: 36.933333
+INFO - 03/19/19 08:38:40 - 1:13:43 - 1500 source words - nn - Precision at k = 10: 43.933333
+INFO - 03/19/19 08:38:40 - 1:13:43 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 08:42:36 - 1:17:39 - 1500 source words - csls_knn_10 - Precision at k = 1: 23.666667
+INFO - 03/19/19 08:42:36 - 1:17:39 - 1500 source words - csls_knn_10 - Precision at k = 5: 43.066667
+INFO - 03/19/19 08:42:36 - 1:17:39 - 1500 source words - csls_knn_10 - Precision at k = 10: 49.266667
+INFO - 03/19/19 08:42:42 - 1:17:45 - Building the train dictionary ...
+INFO - 03/19/19 08:42:42 - 1:17:45 - New train dictionary of 3245 pairs.
+INFO - 03/19/19 08:42:42 - 1:17:45 - Mean cosine (nn method, S2T build, 10000 max size): 0.46842
+INFO - 03/19/19 08:50:42 - 1:25:45 - Building the train dictionary ...
+INFO - 03/19/19 08:50:42 - 1:25:45 - New train dictionary of 2985 pairs.
+INFO - 03/19/19 08:50:42 - 1:25:45 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.48010
+INFO - 03/19/19 08:50:44 - 1:25:47 - Discriminator source / target predictions: 0.85251 / 0.17180
+INFO - 03/19/19 08:50:44 - 1:25:47 - Discriminator source / target / global accuracy: 0.98323 / 0.93869 / 0.96096
+INFO - 03/19/19 08:50:44 - 1:25:47 - __log__:{"n_epoch": 2, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 18.933333333333334, "precision_at_5-nn": 36.93333333333334, "precision_at_10-nn": 43.93333333333334, "precision_at_1-csls_knn_10": 23.666666666666668, "precision_at_5-csls_knn_10": 43.06666666666666, "precision_at_10-csls_knn_10": 49.266666666666666, "mean_cosine-nn-S2T-10000": 0.46842485666275024, "mean_cosine-csls_knn_10-S2T-10000": 0.4801032245159149, "dis_accu": 0.960965, "dis_src_pred": 0.8525078062761202, "dis_tgt_pred": 0.17179668277941296}
+INFO - 03/19/19 08:50:44 - 1:25:47 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.48010
+INFO - 03/19/19 08:50:44 - 1:25:47 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 08:50:44 - 1:25:47 - End of epoch 2.
+                                     
+                                     
+INFO - 03/19/19 08:50:44 - 1:25:47 - Decreasing learning rate: 0.09604000 -> 0.09411920
+INFO - 03/19/19 08:50:44 - 1:25:47 - Starting adversarial training epoch 3...
+INFO - 03/19/19 08:50:44 - 1:25:47 - 000000 - Discriminator loss: 0.3658 - 2732 samples/s
+INFO - 03/19/19 08:50:47 - 1:25:50 - 004000 - Discriminator loss: 0.3600 - 3352 samples/s
+INFO - 03/19/19 08:50:51 - 1:25:54 - 008000 - Discriminator loss: 0.3591 - 2124 samples/s
+INFO - 03/19/19 08:50:54 - 1:25:57 - 012000 - Discriminator loss: 0.3598 - 2658 samples/s
+INFO - 03/19/19 08:50:56 - 1:25:58 - 016000 - Discriminator loss: 0.3580 - 4148 samples/s
+INFO - 03/19/19 08:50:58 - 1:26:00 - 020000 - Discriminator loss: 0.3590 - 4049 samples/s
+INFO - 03/19/19 08:50:59 - 1:26:02 - 024000 - Discriminator loss: 0.3580 - 4154 samples/s
+INFO - 03/19/19 08:51:01 - 1:26:04 - 028000 - Discriminator loss: 0.3582 - 4186 samples/s
+INFO - 03/19/19 08:51:03 - 1:26:06 - 032000 - Discriminator loss: 0.3578 - 4107 samples/s
+INFO - 03/19/19 08:51:06 - 1:26:08 - 036000 - Discriminator loss: 0.3587 - 3532 samples/s
+INFO - 03/19/19 08:51:08 - 1:26:11 - 040000 - Discriminator loss: 0.3582 - 3851 samples/s
+INFO - 03/19/19 08:51:10 - 1:26:13 - 044000 - Discriminator loss: 0.3579 - 3860 samples/s
+INFO - 03/19/19 08:51:12 - 1:26:15 - 048000 - Discriminator loss: 0.3577 - 3598 samples/s
+INFO - 03/19/19 08:51:14 - 1:26:17 - 052000 - Discriminator loss: 0.3575 - 3301 samples/s
+INFO - 03/19/19 08:51:16 - 1:26:19 - 056000 - Discriminator loss: 0.3581 - 3978 samples/s
+INFO - 03/19/19 08:51:18 - 1:26:21 - 060000 - Discriminator loss: 0.3578 - 4185 samples/s
+INFO - 03/19/19 08:51:20 - 1:26:23 - 064000 - Discriminator loss: 0.3590 - 4168 samples/s
+INFO - 03/19/19 08:51:22 - 1:26:25 - 068000 - Discriminator loss: 0.3591 - 4119 samples/s
+INFO - 03/19/19 08:51:24 - 1:26:27 - 072000 - Discriminator loss: 0.3586 - 4169 samples/s
+INFO - 03/19/19 08:51:26 - 1:26:29 - 076000 - Discriminator loss: 0.3586 - 4178 samples/s
+INFO - 03/19/19 08:51:29 - 1:26:31 - 080000 - Discriminator loss: 0.3589 - 3098 samples/s
+INFO - 03/19/19 08:51:31 - 1:26:34 - 084000 - Discriminator loss: 0.3588 - 3363 samples/s
+INFO - 03/19/19 08:51:33 - 1:26:36 - 088000 - Discriminator loss: 0.3586 - 4108 samples/s
+INFO - 03/19/19 08:51:35 - 1:26:38 - 092000 - Discriminator loss: 0.3578 - 3346 samples/s
+INFO - 03/19/19 08:51:37 - 1:26:40 - 096000 - Discriminator loss: 0.3587 - 4181 samples/s
+INFO - 03/19/19 08:51:39 - 1:26:42 - 100000 - Discriminator loss: 0.3589 - 4191 samples/s
+INFO - 03/19/19 08:51:41 - 1:26:44 - 104000 - Discriminator loss: 0.3588 - 4191 samples/s
+INFO - 03/19/19 08:51:43 - 1:26:46 - 108000 - Discriminator loss: 0.3575 - 4149 samples/s
+INFO - 03/19/19 08:51:45 - 1:26:48 - 112000 - Discriminator loss: 0.3564 - 4056 samples/s
+INFO - 03/19/19 08:51:47 - 1:26:50 - 116000 - Discriminator loss: 0.3575 - 3790 samples/s
+INFO - 03/19/19 08:51:49 - 1:26:52 - 120000 - Discriminator loss: 0.3574 - 3734 samples/s
+INFO - 03/19/19 08:51:52 - 1:26:55 - 124000 - Discriminator loss: 0.3562 - 3054 samples/s
+INFO - 03/19/19 08:51:54 - 1:26:57 - 128000 - Discriminator loss: 0.3558 - 3555 samples/s
+INFO - 03/19/19 08:51:57 - 1:27:00 - 132000 - Discriminator loss: 0.3556 - 3063 samples/s
+INFO - 03/19/19 08:51:59 - 1:27:02 - 136000 - Discriminator loss: 0.3543 - 3363 samples/s
+INFO - 03/19/19 08:52:02 - 1:27:04 - 140000 - Discriminator loss: 0.3548 - 3171 samples/s
+INFO - 03/19/19 08:52:03 - 1:27:06 - 144000 - Discriminator loss: 0.3577 - 4195 samples/s
+INFO - 03/19/19 08:52:12 - 1:27:14 - 148000 - Discriminator loss: 0.3605 - 993 samples/s
+INFO - 03/19/19 08:52:14 - 1:27:17 - 152000 - Discriminator loss: 0.3621 - 2802 samples/s
+INFO - 03/19/19 08:52:17 - 1:27:20 - 156000 - Discriminator loss: 0.3642 - 3307 samples/s
+INFO - 03/19/19 08:52:19 - 1:27:22 - 160000 - Discriminator loss: 0.3651 - 3913 samples/s
+INFO - 03/19/19 08:52:21 - 1:27:24 - 164000 - Discriminator loss: 0.3634 - 4209 samples/s
+INFO - 03/19/19 08:52:23 - 1:27:26 - 168000 - Discriminator loss: 0.3635 - 3086 samples/s
+INFO - 03/19/19 08:52:26 - 1:27:29 - 172000 - Discriminator loss: 0.3629 - 3497 samples/s
+INFO - 03/19/19 08:52:28 - 1:27:31 - 176000 - Discriminator loss: 0.3644 - 3118 samples/s
+INFO - 03/19/19 08:52:30 - 1:27:33 - 180000 - Discriminator loss: 0.3646 - 4156 samples/s
+INFO - 03/19/19 08:52:32 - 1:27:35 - 184000 - Discriminator loss: 0.3652 - 3892 samples/s
+INFO - 03/19/19 08:52:34 - 1:27:37 - 188000 - Discriminator loss: 0.3640 - 3486 samples/s
+INFO - 03/19/19 08:52:37 - 1:27:39 - 192000 - Discriminator loss: 0.3637 - 3928 samples/s
+INFO - 03/19/19 08:52:39 - 1:27:42 - 196000 - Discriminator loss: 0.3644 - 3424 samples/s
+INFO - 03/19/19 08:52:41 - 1:27:44 - 200000 - Discriminator loss: 0.3624 - 3470 samples/s
+INFO - 03/19/19 08:52:43 - 1:27:46 - 204000 - Discriminator loss: 0.3622 - 3607 samples/s
+INFO - 03/19/19 08:52:46 - 1:27:49 - 208000 - Discriminator loss: 0.3614 - 3492 samples/s
+INFO - 03/19/19 08:52:48 - 1:27:51 - 212000 - Discriminator loss: 0.3595 - 3133 samples/s
+INFO - 03/19/19 08:52:51 - 1:27:54 - 216000 - Discriminator loss: 0.3590 - 2469 samples/s
+INFO - 03/19/19 08:52:54 - 1:27:57 - 220000 - Discriminator loss: 0.3580 - 3588 samples/s
+INFO - 03/19/19 08:52:56 - 1:27:59 - 224000 - Discriminator loss: 0.3586 - 4148 samples/s
+INFO - 03/19/19 08:52:58 - 1:28:00 - 228000 - Discriminator loss: 0.3581 - 4174 samples/s
+INFO - 03/19/19 08:52:59 - 1:28:02 - 232000 - Discriminator loss: 0.3574 - 4187 samples/s
+INFO - 03/19/19 08:53:02 - 1:28:05 - 236000 - Discriminator loss: 0.3562 - 2888 samples/s
+INFO - 03/19/19 08:53:04 - 1:28:07 - 240000 - Discriminator loss: 0.3572 - 3886 samples/s
+INFO - 03/19/19 08:53:07 - 1:28:10 - 244000 - Discriminator loss: 0.3561 - 3312 samples/s
+INFO - 03/19/19 08:53:09 - 1:28:12 - 248000 - Discriminator loss: 0.3551 - 3394 samples/s
+INFO - 03/19/19 08:53:10 - 1:28:13 - ====================================================================
+INFO - 03/19/19 08:53:10 - 1:28:13 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 08:53:10 - 1:28:13 - ====================================================================
+INFO - 03/19/19 08:53:10 - 1:28:13 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 08:53:10 - 1:28:13 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 08:53:10 - 1:28:13 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 08:53:10 - 1:28:13 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 08:53:10 - 1:28:13 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 08:53:10 - 1:28:13 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 08:53:10 - 1:28:13 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 08:53:10 - 1:28:13 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 08:53:10 - 1:28:13 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 08:53:10 - 1:28:13 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 08:53:10 - 1:28:13 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 08:53:11 - 1:28:13 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 08:53:11 - 1:28:13 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 08:53:11 - 1:28:13 - ====================================================================
+INFO - 03/19/19 08:53:11 - 1:28:13 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 08:53:11 - 1:28:14 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 08:53:11 - 1:28:14 - 1500 source words - nn - Precision at k = 1: 10.866667
+INFO - 03/19/19 08:53:11 - 1:28:14 - 1500 source words - nn - Precision at k = 5: 23.200000
+INFO - 03/19/19 08:53:11 - 1:28:14 - 1500 source words - nn - Precision at k = 10: 28.533333
+INFO - 03/19/19 08:53:11 - 1:28:14 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 08:57:32 - 1:32:35 - 1500 source words - csls_knn_10 - Precision at k = 1: 14.800000
+INFO - 03/19/19 08:57:32 - 1:32:35 - 1500 source words - csls_knn_10 - Precision at k = 5: 28.400000
+INFO - 03/19/19 08:57:32 - 1:32:35 - 1500 source words - csls_knn_10 - Precision at k = 10: 35.533333
+INFO - 03/19/19 08:57:37 - 1:32:40 - Building the train dictionary ...
+INFO - 03/19/19 08:57:37 - 1:32:40 - New train dictionary of 1393 pairs.
+INFO - 03/19/19 08:57:37 - 1:32:40 - Mean cosine (nn method, S2T build, 10000 max size): 0.41318
+INFO - 03/19/19 09:06:28 - 1:41:31 - Building the train dictionary ...
+INFO - 03/19/19 09:06:28 - 1:41:31 - New train dictionary of 1555 pairs.
+INFO - 03/19/19 09:06:28 - 1:41:31 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.40243
+INFO - 03/19/19 09:06:31 - 1:41:34 - Discriminator source / target predictions: 0.86121 / 0.17541
+INFO - 03/19/19 09:06:31 - 1:41:34 - Discriminator source / target / global accuracy: 0.99276 / 0.92858 / 0.96067
+INFO - 03/19/19 09:06:31 - 1:41:34 - __log__:{"n_epoch": 3, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 10.866666666666665, "precision_at_5-nn": 23.200000000000003, "precision_at_10-nn": 28.53333333333333, "precision_at_1-csls_knn_10": 14.799999999999999, "precision_at_5-csls_knn_10": 28.4, "precision_at_10-csls_knn_10": 35.53333333333333, "mean_cosine-nn-S2T-10000": 0.413179874420166, "mean_cosine-csls_knn_10-S2T-10000": 0.4024285078048706, "dis_accu": 0.96067, "dis_src_pred": 0.8612056174337864, "dis_tgt_pred": 0.17541137397754064}
+INFO - 03/19/19 09:06:31 - 1:41:34 - End of epoch 3.
+                                     
+                                     
+INFO - 03/19/19 09:06:31 - 1:41:34 - Decreasing learning rate: 0.09411920 -> 0.09223682
+INFO - 03/19/19 09:06:31 - 1:41:34 - Validation metric is smaller than the best: 0.40243 vs 0.48010
+INFO - 03/19/19 09:06:31 - 1:41:34 - Starting adversarial training epoch 4...
+INFO - 03/19/19 09:06:31 - 1:41:34 - 000000 - Discriminator loss: 0.3559 - 3010 samples/s
+INFO - 03/19/19 09:06:33 - 1:41:36 - 004000 - Discriminator loss: 0.3533 - 3739 samples/s
+INFO - 03/19/19 09:06:35 - 1:41:38 - 008000 - Discriminator loss: 0.3532 - 3880 samples/s
+INFO - 03/19/19 09:06:37 - 1:41:40 - 012000 - Discriminator loss: 0.3531 - 4130 samples/s
+INFO - 03/19/19 09:06:39 - 1:41:42 - 016000 - Discriminator loss: 0.3525 - 4204 samples/s
+INFO - 03/19/19 09:06:41 - 1:41:44 - 020000 - Discriminator loss: 0.3522 - 3299 samples/s
+INFO - 03/19/19 09:06:43 - 1:41:46 - 024000 - Discriminator loss: 0.3525 - 3586 samples/s
+INFO - 03/19/19 09:06:45 - 1:41:48 - 028000 - Discriminator loss: 0.3526 - 4047 samples/s
+INFO - 03/19/19 09:06:48 - 1:41:51 - 032000 - Discriminator loss: 0.3531 - 3387 samples/s
+INFO - 03/19/19 09:06:52 - 1:41:55 - 036000 - Discriminator loss: 0.3522 - 1909 samples/s
+INFO - 03/19/19 09:06:57 - 1:42:00 - 040000 - Discriminator loss: 0.3525 - 1623 samples/s
+INFO - 03/19/19 09:06:59 - 1:42:02 - 044000 - Discriminator loss: 0.3528 - 3542 samples/s
+INFO - 03/19/19 09:07:02 - 1:42:05 - 048000 - Discriminator loss: 0.3529 - 3117 samples/s
+INFO - 03/19/19 09:07:04 - 1:42:07 - 052000 - Discriminator loss: 0.3521 - 3273 samples/s
+INFO - 03/19/19 09:07:07 - 1:42:10 - 056000 - Discriminator loss: 0.3515 - 3244 samples/s
+INFO - 03/19/19 09:07:09 - 1:42:12 - 060000 - Discriminator loss: 0.3523 - 3745 samples/s
+INFO - 03/19/19 09:07:11 - 1:42:14 - 064000 - Discriminator loss: 0.3516 - 3537 samples/s
+INFO - 03/19/19 09:07:13 - 1:42:16 - 068000 - Discriminator loss: 0.3513 - 3682 samples/s
+INFO - 03/19/19 09:07:16 - 1:42:19 - 072000 - Discriminator loss: 0.3512 - 2906 samples/s
+INFO - 03/19/19 09:07:19 - 1:42:22 - 076000 - Discriminator loss: 0.3515 - 2854 samples/s
+INFO - 03/19/19 09:07:21 - 1:42:24 - 080000 - Discriminator loss: 0.3513 - 3202 samples/s
+INFO - 03/19/19 09:07:23 - 1:42:26 - 084000 - Discriminator loss: 0.3517 - 4191 samples/s
+INFO - 03/19/19 09:07:25 - 1:42:28 - 088000 - Discriminator loss: 0.3512 - 4204 samples/s
+INFO - 03/19/19 09:07:27 - 1:42:30 - 092000 - Discriminator loss: 0.3503 - 4208 samples/s
+INFO - 03/19/19 09:07:29 - 1:42:32 - 096000 - Discriminator loss: 0.3506 - 4108 samples/s
+INFO - 03/19/19 09:07:32 - 1:42:34 - 100000 - Discriminator loss: 0.3504 - 3092 samples/s
+INFO - 03/19/19 09:07:35 - 1:42:38 - 104000 - Discriminator loss: 0.3502 - 2291 samples/s
+INFO - 03/19/19 09:07:38 - 1:42:40 - 108000 - Discriminator loss: 0.3505 - 3116 samples/s
+INFO - 03/19/19 09:07:40 - 1:42:43 - 112000 - Discriminator loss: 0.3508 - 3605 samples/s
+INFO - 03/19/19 09:07:43 - 1:42:46 - 116000 - Discriminator loss: 0.3506 - 2734 samples/s
+INFO - 03/19/19 09:07:45 - 1:42:48 - 120000 - Discriminator loss: 0.3508 - 4043 samples/s
+INFO - 03/19/19 09:07:47 - 1:42:50 - 124000 - Discriminator loss: 0.3504 - 4189 samples/s
+INFO - 03/19/19 09:07:49 - 1:42:51 - 128000 - Discriminator loss: 0.3499 - 4172 samples/s
+INFO - 03/19/19 09:07:51 - 1:42:53 - 132000 - Discriminator loss: 0.3507 - 4095 samples/s
+INFO - 03/19/19 09:07:53 - 1:42:56 - 136000 - Discriminator loss: 0.3488 - 3765 samples/s
+INFO - 03/19/19 09:07:55 - 1:42:58 - 140000 - Discriminator loss: 0.3490 - 3496 samples/s
+INFO - 03/19/19 09:07:57 - 1:43:00 - 144000 - Discriminator loss: 0.3496 - 3790 samples/s
+INFO - 03/19/19 09:07:59 - 1:43:02 - 148000 - Discriminator loss: 0.3493 - 4164 samples/s
+INFO - 03/19/19 09:08:01 - 1:43:04 - 152000 - Discriminator loss: 0.3495 - 4176 samples/s
+INFO - 03/19/19 09:08:03 - 1:43:06 - 156000 - Discriminator loss: 0.3485 - 3562 samples/s
+INFO - 03/19/19 09:08:05 - 1:43:08 - 160000 - Discriminator loss: 0.3489 - 4184 samples/s
+INFO - 03/19/19 09:08:07 - 1:43:10 - 164000 - Discriminator loss: 0.3484 - 4187 samples/s
+INFO - 03/19/19 09:08:09 - 1:43:12 - 168000 - Discriminator loss: 0.3487 - 4196 samples/s
+INFO - 03/19/19 09:08:11 - 1:43:14 - 172000 - Discriminator loss: 0.3488 - 4164 samples/s
+INFO - 03/19/19 09:08:15 - 1:43:18 - 176000 - Discriminator loss: 0.3486 - 1692 samples/s
+INFO - 03/19/19 09:08:18 - 1:43:21 - 180000 - Discriminator loss: 0.3495 - 2881 samples/s
+INFO - 03/19/19 09:08:20 - 1:43:23 - 184000 - Discriminator loss: 0.3494 - 3709 samples/s
+INFO - 03/19/19 09:08:23 - 1:43:26 - 188000 - Discriminator loss: 0.3494 - 3130 samples/s
+INFO - 03/19/19 09:08:25 - 1:43:28 - 192000 - Discriminator loss: 0.3488 - 3831 samples/s
+INFO - 03/19/19 09:08:28 - 1:43:30 - 196000 - Discriminator loss: 0.3491 - 3164 samples/s
+INFO - 03/19/19 09:08:30 - 1:43:32 - 200000 - Discriminator loss: 0.3478 - 4212 samples/s
+INFO - 03/19/19 09:08:31 - 1:43:34 - 204000 - Discriminator loss: 0.3485 - 4204 samples/s
+INFO - 03/19/19 09:08:33 - 1:43:36 - 208000 - Discriminator loss: 0.3481 - 4179 samples/s
+INFO - 03/19/19 09:08:36 - 1:43:39 - 212000 - Discriminator loss: 0.3480 - 3037 samples/s
+INFO - 03/19/19 09:08:38 - 1:43:41 - 216000 - Discriminator loss: 0.3480 - 3255 samples/s
+INFO - 03/19/19 09:08:41 - 1:43:44 - 220000 - Discriminator loss: 0.3472 - 3356 samples/s
+INFO - 03/19/19 09:08:43 - 1:43:46 - 224000 - Discriminator loss: 0.3472 - 3390 samples/s
+INFO - 03/19/19 09:08:45 - 1:43:48 - 228000 - Discriminator loss: 0.3483 - 3784 samples/s
+INFO - 03/19/19 09:08:47 - 1:43:50 - 232000 - Discriminator loss: 0.3481 - 4196 samples/s
+INFO - 03/19/19 09:08:49 - 1:43:52 - 236000 - Discriminator loss: 0.3491 - 3700 samples/s
+INFO - 03/19/19 09:08:52 - 1:43:55 - 240000 - Discriminator loss: 0.3502 - 3001 samples/s
+INFO - 03/19/19 09:08:54 - 1:43:57 - 244000 - Discriminator loss: 0.3521 - 3656 samples/s
+INFO - 03/19/19 09:08:56 - 1:43:59 - 248000 - Discriminator loss: 0.3528 - 4024 samples/s
+INFO - 03/19/19 09:08:57 - 1:44:00 - ====================================================================
+INFO - 03/19/19 09:08:57 - 1:44:00 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 09:08:57 - 1:44:00 - ====================================================================
+INFO - 03/19/19 09:08:57 - 1:44:00 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 09:08:57 - 1:44:00 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 09:08:57 - 1:44:00 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 09:08:57 - 1:44:00 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 09:08:57 - 1:44:00 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 09:08:57 - 1:44:00 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 09:08:57 - 1:44:00 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 09:08:57 - 1:44:00 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 09:08:57 - 1:44:00 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 09:08:57 - 1:44:00 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 09:08:57 - 1:44:00 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 09:08:57 - 1:44:00 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 09:08:57 - 1:44:00 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 09:08:57 - 1:44:00 - ====================================================================
+INFO - 03/19/19 09:08:57 - 1:44:00 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 09:08:58 - 1:44:01 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:08:58 - 1:44:01 - 1500 source words - nn - Precision at k = 1: 20.133333
+INFO - 03/19/19 09:08:58 - 1:44:01 - 1500 source words - nn - Precision at k = 5: 37.266667
+INFO - 03/19/19 09:08:58 - 1:44:01 - 1500 source words - nn - Precision at k = 10: 44.866667
+INFO - 03/19/19 09:08:58 - 1:44:01 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:13:20 - 1:48:22 - 1500 source words - csls_knn_10 - Precision at k = 1: 25.200000
+INFO - 03/19/19 09:13:20 - 1:48:22 - 1500 source words - csls_knn_10 - Precision at k = 5: 45.466667
+INFO - 03/19/19 09:13:20 - 1:48:22 - 1500 source words - csls_knn_10 - Precision at k = 10: 52.133333
+INFO - 03/19/19 09:13:26 - 1:48:29 - Building the train dictionary ...
+INFO - 03/19/19 09:13:26 - 1:48:29 - New train dictionary of 3601 pairs.
+INFO - 03/19/19 09:13:26 - 1:48:29 - Mean cosine (nn method, S2T build, 10000 max size): 0.48669
+INFO - 03/19/19 09:22:11 - 1:57:14 - Building the train dictionary ...
+INFO - 03/19/19 09:22:11 - 1:57:14 - New train dictionary of 3496 pairs.
+INFO - 03/19/19 09:22:11 - 1:57:14 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.48813
+INFO - 03/19/19 09:22:13 - 1:57:16 - Discriminator source / target predictions: 0.85435 / 0.14974
+INFO - 03/19/19 09:22:13 - 1:57:16 - Discriminator source / target / global accuracy: 0.98815 / 0.95581 / 0.97198
+INFO - 03/19/19 09:22:13 - 1:57:16 - __log__:{"n_epoch": 4, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 20.133333333333333, "precision_at_5-nn": 37.266666666666666, "precision_at_10-nn": 44.86666666666667, "precision_at_1-csls_knn_10": 25.2, "precision_at_5-csls_knn_10": 45.46666666666667, "precision_at_10-csls_knn_10": 52.13333333333333, "mean_cosine-nn-S2T-10000": 0.48668959736824036, "mean_cosine-csls_knn_10-S2T-10000": 0.4881265461444855, "dis_accu": 0.97198, "dis_src_pred": 0.8543517399374768, "dis_tgt_pred": 0.14974296535910253}
+INFO - 03/19/19 09:22:13 - 1:57:16 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.48813
+INFO - 03/19/19 09:22:13 - 1:57:16 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 09:22:13 - 1:57:16 - End of epoch 4.
+                                     
+                                     
+INFO - 03/19/19 09:22:13 - 1:57:16 - Decreasing learning rate: 0.09223682 -> 0.09039208
+INFO - 03/19/19 09:22:13 - 1:57:16 - Starting adversarial training epoch 5...
+INFO - 03/19/19 09:22:13 - 1:57:16 - 000000 - Discriminator loss: 0.3530 - 4277 samples/s
+INFO - 03/19/19 09:22:15 - 1:57:18 - 004000 - Discriminator loss: 0.3520 - 4221 samples/s
+INFO - 03/19/19 09:22:17 - 1:57:20 - 008000 - Discriminator loss: 0.3529 - 4275 samples/s
+INFO - 03/19/19 09:22:19 - 1:57:21 - 012000 - Discriminator loss: 0.3526 - 4284 samples/s
+INFO - 03/19/19 09:22:20 - 1:57:23 - 016000 - Discriminator loss: 0.3525 - 4218 samples/s
+INFO - 03/19/19 09:22:22 - 1:57:25 - 020000 - Discriminator loss: 0.3520 - 4195 samples/s
+INFO - 03/19/19 09:22:24 - 1:57:27 - 024000 - Discriminator loss: 0.3518 - 4247 samples/s
+INFO - 03/19/19 09:22:26 - 1:57:29 - 028000 - Discriminator loss: 0.3511 - 4218 samples/s
+INFO - 03/19/19 09:22:28 - 1:57:31 - 032000 - Discriminator loss: 0.3510 - 4245 samples/s
+INFO - 03/19/19 09:22:30 - 1:57:33 - 036000 - Discriminator loss: 0.3511 - 4215 samples/s
+INFO - 03/19/19 09:22:32 - 1:57:35 - 040000 - Discriminator loss: 0.3515 - 4247 samples/s
+INFO - 03/19/19 09:22:34 - 1:57:37 - 044000 - Discriminator loss: 0.3510 - 4252 samples/s
+INFO - 03/19/19 09:22:36 - 1:57:39 - 048000 - Discriminator loss: 0.3501 - 4215 samples/s
+INFO - 03/19/19 09:22:38 - 1:57:40 - 052000 - Discriminator loss: 0.3498 - 4061 samples/s
+INFO - 03/19/19 09:22:39 - 1:57:42 - 056000 - Discriminator loss: 0.3502 - 4254 samples/s
+INFO - 03/19/19 09:22:41 - 1:57:44 - 060000 - Discriminator loss: 0.3509 - 4250 samples/s
+INFO - 03/19/19 09:22:43 - 1:57:46 - 064000 - Discriminator loss: 0.3503 - 4276 samples/s
+INFO - 03/19/19 09:22:45 - 1:57:48 - 068000 - Discriminator loss: 0.3517 - 4268 samples/s
+INFO - 03/19/19 09:22:47 - 1:57:50 - 072000 - Discriminator loss: 0.3516 - 4276 samples/s
+INFO - 03/19/19 09:22:49 - 1:57:52 - 076000 - Discriminator loss: 0.3515 - 4260 samples/s
+INFO - 03/19/19 09:22:51 - 1:57:54 - 080000 - Discriminator loss: 0.3532 - 4240 samples/s
+INFO - 03/19/19 09:22:53 - 1:57:56 - 084000 - Discriminator loss: 0.3528 - 4251 samples/s
+INFO - 03/19/19 09:22:55 - 1:57:57 - 088000 - Discriminator loss: 0.3520 - 4262 samples/s
+INFO - 03/19/19 09:22:56 - 1:57:59 - 092000 - Discriminator loss: 0.3529 - 4243 samples/s
+INFO - 03/19/19 09:22:58 - 1:58:01 - 096000 - Discriminator loss: 0.3532 - 4272 samples/s
+INFO - 03/19/19 09:23:00 - 1:58:03 - 100000 - Discriminator loss: 0.3529 - 4258 samples/s
+INFO - 03/19/19 09:23:02 - 1:58:05 - 104000 - Discriminator loss: 0.3535 - 4252 samples/s
+INFO - 03/19/19 09:23:04 - 1:58:07 - 108000 - Discriminator loss: 0.3529 - 4265 samples/s
+INFO - 03/19/19 09:23:06 - 1:58:09 - 112000 - Discriminator loss: 0.3513 - 4291 samples/s
+INFO - 03/19/19 09:23:08 - 1:58:11 - 116000 - Discriminator loss: 0.3508 - 4257 samples/s
+INFO - 03/19/19 09:23:10 - 1:58:12 - 120000 - Discriminator loss: 0.3525 - 4253 samples/s
+INFO - 03/19/19 09:23:11 - 1:58:14 - 124000 - Discriminator loss: 0.3515 - 4197 samples/s
+INFO - 03/19/19 09:23:13 - 1:58:16 - 128000 - Discriminator loss: 0.3516 - 4252 samples/s
+INFO - 03/19/19 09:23:15 - 1:58:18 - 132000 - Discriminator loss: 0.3523 - 4242 samples/s
+INFO - 03/19/19 09:23:17 - 1:58:20 - 136000 - Discriminator loss: 0.3518 - 4278 samples/s
+INFO - 03/19/19 09:23:19 - 1:58:22 - 140000 - Discriminator loss: 0.3506 - 4256 samples/s
+INFO - 03/19/19 09:23:21 - 1:58:24 - 144000 - Discriminator loss: 0.3514 - 4158 samples/s
+INFO - 03/19/19 09:23:23 - 1:58:26 - 148000 - Discriminator loss: 0.3490 - 4199 samples/s
+INFO - 03/19/19 09:23:25 - 1:58:28 - 152000 - Discriminator loss: 0.3488 - 4163 samples/s
+INFO - 03/19/19 09:23:27 - 1:58:29 - 156000 - Discriminator loss: 0.3488 - 4264 samples/s
+INFO - 03/19/19 09:23:28 - 1:58:31 - 160000 - Discriminator loss: 0.3485 - 4206 samples/s
+INFO - 03/19/19 09:23:30 - 1:58:33 - 164000 - Discriminator loss: 0.3486 - 4124 samples/s
+INFO - 03/19/19 09:23:32 - 1:58:35 - 168000 - Discriminator loss: 0.3486 - 4256 samples/s
+INFO - 03/19/19 09:23:34 - 1:58:37 - 172000 - Discriminator loss: 0.3488 - 4166 samples/s
+INFO - 03/19/19 09:23:36 - 1:58:39 - 176000 - Discriminator loss: 0.3496 - 4269 samples/s
+INFO - 03/19/19 09:23:38 - 1:58:41 - 180000 - Discriminator loss: 0.3504 - 4152 samples/s
+INFO - 03/19/19 09:23:40 - 1:58:43 - 184000 - Discriminator loss: 0.3506 - 4227 samples/s
+INFO - 03/19/19 09:23:42 - 1:58:45 - 188000 - Discriminator loss: 0.3506 - 4176 samples/s
+INFO - 03/19/19 09:23:44 - 1:58:47 - 192000 - Discriminator loss: 0.3512 - 4248 samples/s
+INFO - 03/19/19 09:23:46 - 1:58:48 - 196000 - Discriminator loss: 0.3515 - 4273 samples/s
+INFO - 03/19/19 09:23:47 - 1:58:50 - 200000 - Discriminator loss: 0.3505 - 4268 samples/s
+INFO - 03/19/19 09:23:49 - 1:58:52 - 204000 - Discriminator loss: 0.3499 - 4266 samples/s
+INFO - 03/19/19 09:23:51 - 1:58:54 - 208000 - Discriminator loss: 0.3499 - 4187 samples/s
+INFO - 03/19/19 09:23:53 - 1:58:56 - 212000 - Discriminator loss: 0.3489 - 4274 samples/s
+INFO - 03/19/19 09:23:55 - 1:58:58 - 216000 - Discriminator loss: 0.3492 - 4211 samples/s
+INFO - 03/19/19 09:23:57 - 1:59:00 - 220000 - Discriminator loss: 0.3483 - 4037 samples/s
+INFO - 03/19/19 09:23:59 - 1:59:02 - 224000 - Discriminator loss: 0.3481 - 4245 samples/s
+INFO - 03/19/19 09:24:01 - 1:59:04 - 228000 - Discriminator loss: 0.3477 - 4232 samples/s
+INFO - 03/19/19 09:24:03 - 1:59:06 - 232000 - Discriminator loss: 0.3465 - 4267 samples/s
+INFO - 03/19/19 09:24:05 - 1:59:07 - 236000 - Discriminator loss: 0.3476 - 4290 samples/s
+INFO - 03/19/19 09:24:06 - 1:59:09 - 240000 - Discriminator loss: 0.3483 - 4235 samples/s
+INFO - 03/19/19 09:24:08 - 1:59:11 - 244000 - Discriminator loss: 0.3477 - 4254 samples/s
+INFO - 03/19/19 09:24:10 - 1:59:13 - 248000 - Discriminator loss: 0.3497 - 4187 samples/s
+INFO - 03/19/19 09:24:11 - 1:59:14 - ====================================================================
+INFO - 03/19/19 09:24:11 - 1:59:14 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 09:24:11 - 1:59:14 - ====================================================================
+INFO - 03/19/19 09:24:11 - 1:59:14 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 09:24:11 - 1:59:14 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 09:24:11 - 1:59:14 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 09:24:11 - 1:59:14 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 09:24:11 - 1:59:14 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 09:24:11 - 1:59:14 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 09:24:11 - 1:59:14 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 09:24:11 - 1:59:14 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 09:24:11 - 1:59:14 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 09:24:11 - 1:59:14 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 09:24:11 - 1:59:14 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 09:24:11 - 1:59:14 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 09:24:11 - 1:59:14 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 09:24:11 - 1:59:14 - ====================================================================
+INFO - 03/19/19 09:24:11 - 1:59:14 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 09:24:12 - 1:59:14 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:24:12 - 1:59:15 - 1500 source words - nn - Precision at k = 1: 18.666667
+INFO - 03/19/19 09:24:12 - 1:59:15 - 1500 source words - nn - Precision at k = 5: 37.000000
+INFO - 03/19/19 09:24:12 - 1:59:15 - 1500 source words - nn - Precision at k = 10: 45.600000
+INFO - 03/19/19 09:24:12 - 1:59:15 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:27:45 - 2:02:48 - 1500 source words - csls_knn_10 - Precision at k = 1: 25.000000
+INFO - 03/19/19 09:27:45 - 2:02:48 - 1500 source words - csls_knn_10 - Precision at k = 5: 44.866667
+INFO - 03/19/19 09:27:45 - 2:02:48 - 1500 source words - csls_knn_10 - Precision at k = 10: 52.066667
+INFO - 03/19/19 09:27:50 - 2:02:53 - Building the train dictionary ...
+INFO - 03/19/19 09:27:50 - 2:02:53 - New train dictionary of 3080 pairs.
+INFO - 03/19/19 09:27:50 - 2:02:53 - Mean cosine (nn method, S2T build, 10000 max size): 0.48681
+INFO - 03/19/19 09:31:49 - 2:06:52 - Building the train dictionary ...
+INFO - 03/19/19 09:31:49 - 2:06:52 - New train dictionary of 3114 pairs.
+INFO - 03/19/19 09:31:49 - 2:06:52 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.48234
+INFO - 03/19/19 09:31:51 - 2:06:53 - Discriminator source / target predictions: 0.87496 / 0.17864
+INFO - 03/19/19 09:31:51 - 2:06:53 - Discriminator source / target / global accuracy: 0.99788 / 0.92658 / 0.96223
+INFO - 03/19/19 09:31:51 - 2:06:53 - __log__:{"n_epoch": 5, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 18.666666666666668, "precision_at_5-nn": 37.0, "precision_at_10-nn": 45.6, "precision_at_1-csls_knn_10": 25.0, "precision_at_5-csls_knn_10": 44.86666666666667, "precision_at_10-csls_knn_10": 52.06666666666667, "mean_cosine-nn-S2T-10000": 0.4868115484714508, "mean_cosine-csls_knn_10-S2T-10000": 0.4823358654975891, "dis_accu": 0.9622325, "dis_src_pred": 0.8749612162104249, "dis_tgt_pred": 0.17864429765028458}
+INFO - 03/19/19 09:31:51 - 2:06:53 - End of epoch 5.
+                                     
+                                     
+INFO - 03/19/19 09:31:51 - 2:06:53 - Decreasing learning rate: 0.09039208 -> 0.08858424
+INFO - 03/19/19 09:31:51 - 2:06:53 - Validation metric is smaller than the best: 0.48234 vs 0.48813
+INFO - 03/19/19 09:31:51 - 2:06:53 - Shrinking the learning rate: 0.08858 -> 0.04429
+INFO - 03/19/19 09:31:51 - 2:06:53 - Starting adversarial training epoch 6...
+INFO - 03/19/19 09:31:51 - 2:06:53 - 000000 - Discriminator loss: 0.3489 - 4329 samples/s
+INFO - 03/19/19 09:31:52 - 2:06:55 - 004000 - Discriminator loss: 0.3464 - 4259 samples/s
+INFO - 03/19/19 09:31:54 - 2:06:57 - 008000 - Discriminator loss: 0.3455 - 4092 samples/s
+INFO - 03/19/19 09:31:56 - 2:06:59 - 012000 - Discriminator loss: 0.3447 - 4247 samples/s
+INFO - 03/19/19 09:31:58 - 2:07:01 - 016000 - Discriminator loss: 0.3443 - 4252 samples/s
+INFO - 03/19/19 09:32:00 - 2:07:03 - 020000 - Discriminator loss: 0.3440 - 4252 samples/s
+INFO - 03/19/19 09:32:02 - 2:07:05 - 024000 - Discriminator loss: 0.3437 - 4260 samples/s
+INFO - 03/19/19 09:32:04 - 2:07:07 - 028000 - Discriminator loss: 0.3431 - 4202 samples/s
+INFO - 03/19/19 09:32:06 - 2:07:09 - 032000 - Discriminator loss: 0.3431 - 4249 samples/s
+INFO - 03/19/19 09:32:08 - 2:07:10 - 036000 - Discriminator loss: 0.3426 - 4217 samples/s
+INFO - 03/19/19 09:32:10 - 2:07:12 - 040000 - Discriminator loss: 0.3427 - 4043 samples/s
+INFO - 03/19/19 09:32:11 - 2:07:14 - 044000 - Discriminator loss: 0.3423 - 4193 samples/s
+INFO - 03/19/19 09:32:13 - 2:07:16 - 048000 - Discriminator loss: 0.3424 - 4254 samples/s
+INFO - 03/19/19 09:32:15 - 2:07:18 - 052000 - Discriminator loss: 0.3421 - 4240 samples/s
+INFO - 03/19/19 09:32:17 - 2:07:20 - 056000 - Discriminator loss: 0.3421 - 4233 samples/s
+INFO - 03/19/19 09:32:19 - 2:07:22 - 060000 - Discriminator loss: 0.3420 - 4257 samples/s
+INFO - 03/19/19 09:32:21 - 2:07:24 - 064000 - Discriminator loss: 0.3433 - 4251 samples/s
+INFO - 03/19/19 09:32:23 - 2:07:26 - 068000 - Discriminator loss: 0.3424 - 4224 samples/s
+INFO - 03/19/19 09:32:25 - 2:07:28 - 072000 - Discriminator loss: 0.3414 - 4273 samples/s
+INFO - 03/19/19 09:32:27 - 2:07:29 - 076000 - Discriminator loss: 0.3417 - 4276 samples/s
+INFO - 03/19/19 09:32:28 - 2:07:31 - 080000 - Discriminator loss: 0.3414 - 4273 samples/s
+INFO - 03/19/19 09:32:30 - 2:07:33 - 084000 - Discriminator loss: 0.3416 - 4292 samples/s
+INFO - 03/19/19 09:32:32 - 2:07:35 - 088000 - Discriminator loss: 0.3417 - 4252 samples/s
+INFO - 03/19/19 09:32:34 - 2:07:37 - 092000 - Discriminator loss: 0.3419 - 4265 samples/s
+INFO - 03/19/19 09:32:36 - 2:07:39 - 096000 - Discriminator loss: 0.3417 - 4057 samples/s
+INFO - 03/19/19 09:32:38 - 2:07:41 - 100000 - Discriminator loss: 0.3418 - 4211 samples/s
+INFO - 03/19/19 09:32:40 - 2:07:43 - 104000 - Discriminator loss: 0.3414 - 4097 samples/s
+INFO - 03/19/19 09:32:42 - 2:07:45 - 108000 - Discriminator loss: 0.3418 - 4213 samples/s
+INFO - 03/19/19 09:32:44 - 2:07:47 - 112000 - Discriminator loss: 0.3423 - 4234 samples/s
+INFO - 03/19/19 09:32:46 - 2:07:48 - 116000 - Discriminator loss: 0.3419 - 4266 samples/s
+INFO - 03/19/19 09:32:47 - 2:07:50 - 120000 - Discriminator loss: 0.3411 - 4274 samples/s
+INFO - 03/19/19 09:32:49 - 2:07:52 - 124000 - Discriminator loss: 0.3408 - 4264 samples/s
+INFO - 03/19/19 09:32:51 - 2:07:54 - 128000 - Discriminator loss: 0.3411 - 4304 samples/s
+INFO - 03/19/19 09:32:53 - 2:07:56 - 132000 - Discriminator loss: 0.3410 - 4274 samples/s
+INFO - 03/19/19 09:32:55 - 2:07:58 - 136000 - Discriminator loss: 0.3411 - 4280 samples/s
+INFO - 03/19/19 09:32:57 - 2:08:00 - 140000 - Discriminator loss: 0.3411 - 4202 samples/s
+INFO - 03/19/19 09:32:59 - 2:08:02 - 144000 - Discriminator loss: 0.3412 - 4266 samples/s
+INFO - 03/19/19 09:33:01 - 2:08:04 - 148000 - Discriminator loss: 0.3409 - 4067 samples/s
+INFO - 03/19/19 09:33:03 - 2:08:05 - 152000 - Discriminator loss: 0.3409 - 4044 samples/s
+INFO - 03/19/19 09:33:05 - 2:08:07 - 156000 - Discriminator loss: 0.3406 - 4166 samples/s
+INFO - 03/19/19 09:33:06 - 2:08:09 - 160000 - Discriminator loss: 0.3408 - 4126 samples/s
+INFO - 03/19/19 09:33:08 - 2:08:11 - 164000 - Discriminator loss: 0.3405 - 4302 samples/s
+INFO - 03/19/19 09:33:10 - 2:08:13 - 168000 - Discriminator loss: 0.3412 - 4236 samples/s
+INFO - 03/19/19 09:33:12 - 2:08:15 - 172000 - Discriminator loss: 0.3414 - 4037 samples/s
+INFO - 03/19/19 09:33:14 - 2:08:17 - 176000 - Discriminator loss: 0.3411 - 4046 samples/s
+INFO - 03/19/19 09:33:16 - 2:08:19 - 180000 - Discriminator loss: 0.3406 - 4113 samples/s
+INFO - 03/19/19 09:33:18 - 2:08:21 - 184000 - Discriminator loss: 0.3410 - 4150 samples/s
+INFO - 03/19/19 09:33:20 - 2:08:23 - 188000 - Discriminator loss: 0.3404 - 4102 samples/s
+INFO - 03/19/19 09:33:22 - 2:08:25 - 192000 - Discriminator loss: 0.3403 - 4175 samples/s
+INFO - 03/19/19 09:33:24 - 2:08:27 - 196000 - Discriminator loss: 0.3405 - 4268 samples/s
+INFO - 03/19/19 09:33:26 - 2:08:29 - 200000 - Discriminator loss: 0.3407 - 4215 samples/s
+INFO - 03/19/19 09:33:28 - 2:08:30 - 204000 - Discriminator loss: 0.3406 - 4264 samples/s
+INFO - 03/19/19 09:33:29 - 2:08:32 - 208000 - Discriminator loss: 0.3412 - 4235 samples/s
+INFO - 03/19/19 09:33:31 - 2:08:34 - 212000 - Discriminator loss: 0.3412 - 4055 samples/s
+INFO - 03/19/19 09:33:33 - 2:08:36 - 216000 - Discriminator loss: 0.3407 - 4048 samples/s
+INFO - 03/19/19 09:33:35 - 2:08:38 - 220000 - Discriminator loss: 0.3409 - 4187 samples/s
+INFO - 03/19/19 09:33:37 - 2:08:40 - 224000 - Discriminator loss: 0.3407 - 4261 samples/s
+INFO - 03/19/19 09:33:39 - 2:08:42 - 228000 - Discriminator loss: 0.3402 - 4298 samples/s
+INFO - 03/19/19 09:33:41 - 2:08:44 - 232000 - Discriminator loss: 0.3399 - 4180 samples/s
+INFO - 03/19/19 09:33:43 - 2:08:46 - 236000 - Discriminator loss: 0.3402 - 4260 samples/s
+INFO - 03/19/19 09:33:45 - 2:08:48 - 240000 - Discriminator loss: 0.3398 - 4278 samples/s
+INFO - 03/19/19 09:33:47 - 2:08:49 - 244000 - Discriminator loss: 0.3395 - 4293 samples/s
+INFO - 03/19/19 09:33:49 - 2:08:51 - 248000 - Discriminator loss: 0.3399 - 4093 samples/s
+INFO - 03/19/19 09:33:50 - 2:08:53 - ====================================================================
+INFO - 03/19/19 09:33:50 - 2:08:53 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 09:33:50 - 2:08:53 - ====================================================================
+INFO - 03/19/19 09:33:50 - 2:08:53 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 09:33:50 - 2:08:53 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 09:33:50 - 2:08:53 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 09:33:50 - 2:08:53 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 09:33:50 - 2:08:53 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 09:33:50 - 2:08:53 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 09:33:50 - 2:08:53 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 09:33:50 - 2:08:53 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 09:33:50 - 2:08:53 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 09:33:50 - 2:08:53 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 09:33:50 - 2:08:53 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 09:33:50 - 2:08:53 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 09:33:50 - 2:08:53 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 09:33:50 - 2:08:53 - ====================================================================
+INFO - 03/19/19 09:33:50 - 2:08:53 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 09:33:50 - 2:08:53 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:33:50 - 2:08:53 - 1500 source words - nn - Precision at k = 1: 22.400000
+INFO - 03/19/19 09:33:50 - 2:08:53 - 1500 source words - nn - Precision at k = 5: 41.466667
+INFO - 03/19/19 09:33:50 - 2:08:53 - 1500 source words - nn - Precision at k = 10: 48.266667
+INFO - 03/19/19 09:33:50 - 2:08:53 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:35:36 - 2:10:39 - 1500 source words - csls_knn_10 - Precision at k = 1: 27.266667
+INFO - 03/19/19 09:35:36 - 2:10:39 - 1500 source words - csls_knn_10 - Precision at k = 5: 48.133333
+INFO - 03/19/19 09:35:36 - 2:10:39 - 1500 source words - csls_knn_10 - Precision at k = 10: 55.333333
+INFO - 03/19/19 09:35:41 - 2:10:44 - Building the train dictionary ...
+INFO - 03/19/19 09:35:41 - 2:10:44 - New train dictionary of 3907 pairs.
+INFO - 03/19/19 09:35:41 - 2:10:44 - Mean cosine (nn method, S2T build, 10000 max size): 0.51059
+INFO - 03/19/19 09:39:21 - 2:14:24 - Building the train dictionary ...
+INFO - 03/19/19 09:39:21 - 2:14:24 - New train dictionary of 3752 pairs.
+INFO - 03/19/19 09:39:22 - 2:14:24 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.51293
+INFO - 03/19/19 09:39:23 - 2:14:26 - Discriminator source / target predictions: 0.88742 / 0.15968
+INFO - 03/19/19 09:39:23 - 2:14:26 - Discriminator source / target / global accuracy: 0.99903 / 0.95332 / 0.97617
+INFO - 03/19/19 09:39:23 - 2:14:26 - __log__:{"n_epoch": 6, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 22.400000000000002, "precision_at_5-nn": 41.46666666666667, "precision_at_10-nn": 48.266666666666666, "precision_at_1-csls_knn_10": 27.266666666666666, "precision_at_5-csls_knn_10": 48.13333333333333, "precision_at_10-csls_knn_10": 55.333333333333336, "mean_cosine-nn-S2T-10000": 0.510589063167572, "mean_cosine-csls_knn_10-S2T-10000": 0.512925922870636, "dis_accu": 0.97617, "dis_src_pred": 0.8874172916620969, "dis_tgt_pred": 0.1596778372826369}
+INFO - 03/19/19 09:39:23 - 2:14:26 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.51293
+INFO - 03/19/19 09:39:23 - 2:14:26 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 09:39:23 - 2:14:26 - End of epoch 6.
+                                     
+                                     
+INFO - 03/19/19 09:39:23 - 2:14:26 - Decreasing learning rate: 0.04429212 -> 0.04340628
+INFO - 03/19/19 09:39:23 - 2:14:26 - Starting adversarial training epoch 7...
+INFO - 03/19/19 09:39:23 - 2:14:26 - 000000 - Discriminator loss: 0.3404 - 2200 samples/s
+INFO - 03/19/19 09:39:25 - 2:14:28 - 004000 - Discriminator loss: 0.3397 - 4247 samples/s
+INFO - 03/19/19 09:39:27 - 2:14:30 - 008000 - Discriminator loss: 0.3398 - 4287 samples/s
+INFO - 03/19/19 09:39:29 - 2:14:32 - 012000 - Discriminator loss: 0.3394 - 4235 samples/s
+INFO - 03/19/19 09:39:31 - 2:14:34 - 016000 - Discriminator loss: 0.3399 - 4262 samples/s
+INFO - 03/19/19 09:39:33 - 2:14:36 - 020000 - Discriminator loss: 0.3400 - 4202 samples/s
+INFO - 03/19/19 09:39:35 - 2:14:38 - 024000 - Discriminator loss: 0.3397 - 4131 samples/s
+INFO - 03/19/19 09:39:37 - 2:14:40 - 028000 - Discriminator loss: 0.3402 - 4248 samples/s
+INFO - 03/19/19 09:39:39 - 2:14:41 - 032000 - Discriminator loss: 0.3398 - 4253 samples/s
+INFO - 03/19/19 09:39:40 - 2:14:43 - 036000 - Discriminator loss: 0.3395 - 4242 samples/s
+INFO - 03/19/19 09:39:42 - 2:14:45 - 040000 - Discriminator loss: 0.3390 - 4294 samples/s
+INFO - 03/19/19 09:39:44 - 2:14:47 - 044000 - Discriminator loss: 0.3398 - 4276 samples/s
+INFO - 03/19/19 09:39:46 - 2:14:49 - 048000 - Discriminator loss: 0.3394 - 4254 samples/s
+INFO - 03/19/19 09:39:48 - 2:14:51 - 052000 - Discriminator loss: 0.3397 - 4247 samples/s
+INFO - 03/19/19 09:39:50 - 2:14:53 - 056000 - Discriminator loss: 0.3393 - 4212 samples/s
+INFO - 03/19/19 09:39:52 - 2:14:55 - 060000 - Discriminator loss: 0.3393 - 4252 samples/s
+INFO - 03/19/19 09:39:54 - 2:14:57 - 064000 - Discriminator loss: 0.3395 - 4257 samples/s
+INFO - 03/19/19 09:39:56 - 2:14:58 - 068000 - Discriminator loss: 0.3394 - 4236 samples/s
+INFO - 03/19/19 09:39:57 - 2:15:00 - 072000 - Discriminator loss: 0.3390 - 4270 samples/s
+INFO - 03/19/19 09:39:59 - 2:15:02 - 076000 - Discriminator loss: 0.3391 - 4278 samples/s
+INFO - 03/19/19 09:40:01 - 2:15:04 - 080000 - Discriminator loss: 0.3390 - 4133 samples/s
+INFO - 03/19/19 09:40:03 - 2:15:06 - 084000 - Discriminator loss: 0.3391 - 4196 samples/s
+INFO - 03/19/19 09:40:05 - 2:15:08 - 088000 - Discriminator loss: 0.3389 - 4266 samples/s
+INFO - 03/19/19 09:40:07 - 2:15:10 - 092000 - Discriminator loss: 0.3386 - 4234 samples/s
+INFO - 03/19/19 09:40:09 - 2:15:12 - 096000 - Discriminator loss: 0.3389 - 4273 samples/s
+INFO - 03/19/19 09:40:11 - 2:15:13 - 100000 - Discriminator loss: 0.3391 - 4265 samples/s
+INFO - 03/19/19 09:40:12 - 2:15:15 - 104000 - Discriminator loss: 0.3392 - 4268 samples/s
+INFO - 03/19/19 09:40:14 - 2:15:17 - 108000 - Discriminator loss: 0.3386 - 4113 samples/s
+INFO - 03/19/19 09:40:16 - 2:15:19 - 112000 - Discriminator loss: 0.3386 - 4206 samples/s
+INFO - 03/19/19 09:40:18 - 2:15:21 - 116000 - Discriminator loss: 0.3386 - 4271 samples/s
+INFO - 03/19/19 09:40:20 - 2:15:23 - 120000 - Discriminator loss: 0.3390 - 4233 samples/s
+INFO - 03/19/19 09:40:22 - 2:15:25 - 124000 - Discriminator loss: 0.3387 - 4152 samples/s
+INFO - 03/19/19 09:40:24 - 2:15:27 - 128000 - Discriminator loss: 0.3396 - 4253 samples/s
+INFO - 03/19/19 09:40:26 - 2:15:29 - 132000 - Discriminator loss: 0.3394 - 4274 samples/s
+INFO - 03/19/19 09:40:28 - 2:15:31 - 136000 - Discriminator loss: 0.3392 - 4124 samples/s
+INFO - 03/19/19 09:40:30 - 2:15:32 - 140000 - Discriminator loss: 0.3389 - 4239 samples/s
+INFO - 03/19/19 09:40:31 - 2:15:34 - 144000 - Discriminator loss: 0.3392 - 4236 samples/s
+INFO - 03/19/19 09:40:33 - 2:15:36 - 148000 - Discriminator loss: 0.3394 - 4267 samples/s
+INFO - 03/19/19 09:40:35 - 2:15:38 - 152000 - Discriminator loss: 0.3390 - 4257 samples/s
+INFO - 03/19/19 09:40:37 - 2:15:40 - 156000 - Discriminator loss: 0.3389 - 4274 samples/s
+INFO - 03/19/19 09:40:39 - 2:15:42 - 160000 - Discriminator loss: 0.3386 - 4296 samples/s
+INFO - 03/19/19 09:40:41 - 2:15:44 - 164000 - Discriminator loss: 0.3391 - 4266 samples/s
+INFO - 03/19/19 09:40:43 - 2:15:46 - 168000 - Discriminator loss: 0.3386 - 4224 samples/s
+INFO - 03/19/19 09:40:45 - 2:15:48 - 172000 - Discriminator loss: 0.3382 - 4088 samples/s
+INFO - 03/19/19 09:40:47 - 2:15:50 - 176000 - Discriminator loss: 0.3384 - 4062 samples/s
+INFO - 03/19/19 09:40:49 - 2:15:51 - 180000 - Discriminator loss: 0.3383 - 4259 samples/s
+INFO - 03/19/19 09:40:50 - 2:15:53 - 184000 - Discriminator loss: 0.3385 - 4250 samples/s
+INFO - 03/19/19 09:40:52 - 2:15:55 - 188000 - Discriminator loss: 0.3390 - 4289 samples/s
+INFO - 03/19/19 09:40:54 - 2:15:57 - 192000 - Discriminator loss: 0.3387 - 4289 samples/s
+INFO - 03/19/19 09:40:56 - 2:15:59 - 196000 - Discriminator loss: 0.3388 - 4295 samples/s
+INFO - 03/19/19 09:40:58 - 2:16:01 - 200000 - Discriminator loss: 0.3381 - 4300 samples/s
+INFO - 03/19/19 09:41:00 - 2:16:03 - 204000 - Discriminator loss: 0.3381 - 4307 samples/s
+INFO - 03/19/19 09:41:02 - 2:16:04 - 208000 - Discriminator loss: 0.3383 - 4296 samples/s
+INFO - 03/19/19 09:41:03 - 2:16:06 - 212000 - Discriminator loss: 0.3382 - 4263 samples/s
+INFO - 03/19/19 09:41:05 - 2:16:08 - 216000 - Discriminator loss: 0.3381 - 4201 samples/s
+INFO - 03/19/19 09:41:07 - 2:16:10 - 220000 - Discriminator loss: 0.3385 - 4237 samples/s
+INFO - 03/19/19 09:41:09 - 2:16:12 - 224000 - Discriminator loss: 0.3382 - 4116 samples/s
+INFO - 03/19/19 09:41:11 - 2:16:14 - 228000 - Discriminator loss: 0.3382 - 4084 samples/s
+INFO - 03/19/19 09:41:13 - 2:16:16 - 232000 - Discriminator loss: 0.3383 - 4244 samples/s
+INFO - 03/19/19 09:41:15 - 2:16:18 - 236000 - Discriminator loss: 0.3386 - 4242 samples/s
+INFO - 03/19/19 09:41:17 - 2:16:20 - 240000 - Discriminator loss: 0.3386 - 4276 samples/s
+INFO - 03/19/19 09:41:19 - 2:16:22 - 244000 - Discriminator loss: 0.3391 - 4235 samples/s
+INFO - 03/19/19 09:41:21 - 2:16:24 - 248000 - Discriminator loss: 0.3390 - 4152 samples/s
+INFO - 03/19/19 09:41:22 - 2:16:25 - ====================================================================
+INFO - 03/19/19 09:41:22 - 2:16:25 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 09:41:22 - 2:16:25 - ====================================================================
+INFO - 03/19/19 09:41:22 - 2:16:25 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 09:41:22 - 2:16:25 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 09:41:22 - 2:16:25 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 09:41:22 - 2:16:25 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 09:41:22 - 2:16:25 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 09:41:22 - 2:16:25 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 09:41:22 - 2:16:25 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 09:41:22 - 2:16:25 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 09:41:22 - 2:16:25 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 09:41:22 - 2:16:25 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 09:41:22 - 2:16:25 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 09:41:22 - 2:16:25 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 09:41:22 - 2:16:25 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 09:41:22 - 2:16:25 - ====================================================================
+INFO - 03/19/19 09:41:22 - 2:16:25 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 09:41:22 - 2:16:25 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:41:22 - 2:16:25 - 1500 source words - nn - Precision at k = 1: 22.266667
+INFO - 03/19/19 09:41:22 - 2:16:25 - 1500 source words - nn - Precision at k = 5: 40.600000
+INFO - 03/19/19 09:41:22 - 2:16:25 - 1500 source words - nn - Precision at k = 10: 46.933333
+INFO - 03/19/19 09:41:22 - 2:16:25 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:43:08 - 2:18:11 - 1500 source words - csls_knn_10 - Precision at k = 1: 27.133333
+INFO - 03/19/19 09:43:08 - 2:18:11 - 1500 source words - csls_knn_10 - Precision at k = 5: 47.933333
+INFO - 03/19/19 09:43:08 - 2:18:11 - 1500 source words - csls_knn_10 - Precision at k = 10: 53.866667
+INFO - 03/19/19 09:43:13 - 2:18:16 - Building the train dictionary ...
+INFO - 03/19/19 09:43:13 - 2:18:16 - New train dictionary of 3110 pairs.
+INFO - 03/19/19 09:43:13 - 2:18:16 - Mean cosine (nn method, S2T build, 10000 max size): 0.52386
+INFO - 03/19/19 09:46:53 - 2:21:56 - Building the train dictionary ...
+INFO - 03/19/19 09:46:53 - 2:21:56 - New train dictionary of 3291 pairs.
+INFO - 03/19/19 09:46:53 - 2:21:56 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.51229
+INFO - 03/19/19 09:46:55 - 2:21:58 - Discriminator source / target predictions: 0.90054 / 0.17767
+INFO - 03/19/19 09:46:55 - 2:21:58 - Discriminator source / target / global accuracy: 0.99994 / 0.93773 / 0.96884
+INFO - 03/19/19 09:46:55 - 2:21:58 - __log__:{"n_epoch": 7, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 22.26666666666667, "precision_at_5-nn": 40.6, "precision_at_10-nn": 46.93333333333333, "precision_at_1-csls_knn_10": 27.133333333333333, "precision_at_5-csls_knn_10": 47.93333333333333, "precision_at_10-csls_knn_10": 53.86666666666666, "mean_cosine-nn-S2T-10000": 0.5238590240478516, "mean_cosine-csls_knn_10-S2T-10000": 0.5122891068458557, "dis_accu": 0.9688375, "dis_src_pred": 0.9005405942717195, "dis_tgt_pred": 0.17767267610059817}
+INFO - 03/19/19 09:46:55 - 2:21:58 - End of epoch 7.
+                                     
+                                     
+INFO - 03/19/19 09:46:55 - 2:21:58 - Decreasing learning rate: 0.04340628 -> 0.04253815
+INFO - 03/19/19 09:46:55 - 2:21:58 - Validation metric is smaller than the best: 0.51229 vs 0.51293
+INFO - 03/19/19 09:46:55 - 2:21:58 - Shrinking the learning rate: 0.04254 -> 0.02127
+INFO - 03/19/19 09:46:55 - 2:21:58 - Starting adversarial training epoch 8...
+INFO - 03/19/19 09:46:55 - 2:21:58 - 000000 - Discriminator loss: 0.3368 - 4142 samples/s
+INFO - 03/19/19 09:46:57 - 2:22:00 - 004000 - Discriminator loss: 0.3382 - 4273 samples/s
+INFO - 03/19/19 09:46:59 - 2:22:02 - 008000 - Discriminator loss: 0.3374 - 4277 samples/s
+INFO - 03/19/19 09:47:01 - 2:22:04 - 012000 - Discriminator loss: 0.3365 - 4170 samples/s
+INFO - 03/19/19 09:47:03 - 2:22:06 - 016000 - Discriminator loss: 0.3359 - 4217 samples/s
+INFO - 03/19/19 09:47:05 - 2:22:07 - 020000 - Discriminator loss: 0.3359 - 4260 samples/s
+INFO - 03/19/19 09:47:06 - 2:22:09 - 024000 - Discriminator loss: 0.3358 - 4255 samples/s
+INFO - 03/19/19 09:47:08 - 2:22:11 - 028000 - Discriminator loss: 0.3355 - 4251 samples/s
+INFO - 03/19/19 09:47:10 - 2:22:13 - 032000 - Discriminator loss: 0.3352 - 4223 samples/s
+INFO - 03/19/19 09:47:12 - 2:22:15 - 036000 - Discriminator loss: 0.3351 - 4183 samples/s
+INFO - 03/19/19 09:47:14 - 2:22:17 - 040000 - Discriminator loss: 0.3348 - 4233 samples/s
+INFO - 03/19/19 09:47:16 - 2:22:19 - 044000 - Discriminator loss: 0.3348 - 4261 samples/s
+INFO - 03/19/19 09:47:18 - 2:22:21 - 048000 - Discriminator loss: 0.3344 - 4294 samples/s
+INFO - 03/19/19 09:47:20 - 2:22:23 - 052000 - Discriminator loss: 0.3356 - 4255 samples/s
+INFO - 03/19/19 09:47:22 - 2:22:24 - 056000 - Discriminator loss: 0.3352 - 4270 samples/s
+INFO - 03/19/19 09:47:23 - 2:22:26 - 060000 - Discriminator loss: 0.3346 - 4286 samples/s
+INFO - 03/19/19 09:47:25 - 2:22:28 - 064000 - Discriminator loss: 0.3350 - 4251 samples/s
+INFO - 03/19/19 09:47:27 - 2:22:30 - 068000 - Discriminator loss: 0.3345 - 4235 samples/s
+INFO - 03/19/19 09:47:29 - 2:22:32 - 072000 - Discriminator loss: 0.3346 - 4262 samples/s
+INFO - 03/19/19 09:47:31 - 2:22:34 - 076000 - Discriminator loss: 0.3345 - 4272 samples/s
+INFO - 03/19/19 09:47:33 - 2:22:36 - 080000 - Discriminator loss: 0.3344 - 4286 samples/s
+INFO - 03/19/19 09:47:35 - 2:22:38 - 084000 - Discriminator loss: 0.3348 - 4148 samples/s
+INFO - 03/19/19 09:47:37 - 2:22:40 - 088000 - Discriminator loss: 0.3352 - 4166 samples/s
+INFO - 03/19/19 09:47:38 - 2:22:41 - 092000 - Discriminator loss: 0.3346 - 4261 samples/s
+INFO - 03/19/19 09:47:40 - 2:22:43 - 096000 - Discriminator loss: 0.3346 - 4272 samples/s
+INFO - 03/19/19 09:47:42 - 2:22:45 - 100000 - Discriminator loss: 0.3348 - 4252 samples/s
+INFO - 03/19/19 09:47:44 - 2:22:47 - 104000 - Discriminator loss: 0.3345 - 4249 samples/s
+INFO - 03/19/19 09:47:46 - 2:22:49 - 108000 - Discriminator loss: 0.3346 - 4264 samples/s
+INFO - 03/19/19 09:47:48 - 2:22:51 - 112000 - Discriminator loss: 0.3346 - 4290 samples/s
+INFO - 03/19/19 09:47:50 - 2:22:53 - 116000 - Discriminator loss: 0.3342 - 4282 samples/s
+INFO - 03/19/19 09:47:52 - 2:22:55 - 120000 - Discriminator loss: 0.3342 - 4270 samples/s
+INFO - 03/19/19 09:47:53 - 2:22:56 - 124000 - Discriminator loss: 0.3339 - 4284 samples/s
+INFO - 03/19/19 09:47:55 - 2:22:58 - 128000 - Discriminator loss: 0.3340 - 4247 samples/s
+INFO - 03/19/19 09:47:57 - 2:23:00 - 132000 - Discriminator loss: 0.3338 - 4264 samples/s
+INFO - 03/19/19 09:47:59 - 2:23:02 - 136000 - Discriminator loss: 0.3339 - 4265 samples/s
+INFO - 03/19/19 09:48:01 - 2:23:04 - 140000 - Discriminator loss: 0.3339 - 4248 samples/s
+INFO - 03/19/19 09:48:03 - 2:23:06 - 144000 - Discriminator loss: 0.3343 - 4258 samples/s
+INFO - 03/19/19 09:48:05 - 2:23:08 - 148000 - Discriminator loss: 0.3341 - 4221 samples/s
+INFO - 03/19/19 09:48:07 - 2:23:10 - 152000 - Discriminator loss: 0.3336 - 4277 samples/s
+INFO - 03/19/19 09:48:09 - 2:23:11 - 156000 - Discriminator loss: 0.3335 - 4232 samples/s
+INFO - 03/19/19 09:48:10 - 2:23:13 - 160000 - Discriminator loss: 0.3336 - 4236 samples/s
+INFO - 03/19/19 09:48:12 - 2:23:15 - 164000 - Discriminator loss: 0.3335 - 4252 samples/s
+INFO - 03/19/19 09:48:14 - 2:23:17 - 168000 - Discriminator loss: 0.3342 - 4156 samples/s
+INFO - 03/19/19 09:48:16 - 2:23:19 - 172000 - Discriminator loss: 0.3342 - 4123 samples/s
+INFO - 03/19/19 09:48:18 - 2:23:21 - 176000 - Discriminator loss: 0.3347 - 4261 samples/s
+INFO - 03/19/19 09:48:20 - 2:23:23 - 180000 - Discriminator loss: 0.3344 - 4248 samples/s
+INFO - 03/19/19 09:48:22 - 2:23:25 - 184000 - Discriminator loss: 0.3344 - 4222 samples/s
+INFO - 03/19/19 09:48:24 - 2:23:27 - 188000 - Discriminator loss: 0.3341 - 4223 samples/s
+INFO - 03/19/19 09:48:26 - 2:23:28 - 192000 - Discriminator loss: 0.3341 - 4272 samples/s
+INFO - 03/19/19 09:48:27 - 2:23:30 - 196000 - Discriminator loss: 0.3339 - 4231 samples/s
+INFO - 03/19/19 09:48:29 - 2:23:32 - 200000 - Discriminator loss: 0.3339 - 4231 samples/s
+INFO - 03/19/19 09:48:31 - 2:23:34 - 204000 - Discriminator loss: 0.3339 - 4258 samples/s
+INFO - 03/19/19 09:48:33 - 2:23:36 - 208000 - Discriminator loss: 0.3340 - 4261 samples/s
+INFO - 03/19/19 09:48:35 - 2:23:38 - 212000 - Discriminator loss: 0.3339 - 4243 samples/s
+INFO - 03/19/19 09:48:37 - 2:23:40 - 216000 - Discriminator loss: 0.3337 - 4287 samples/s
+INFO - 03/19/19 09:48:39 - 2:23:42 - 220000 - Discriminator loss: 0.3346 - 4257 samples/s
+INFO - 03/19/19 09:48:41 - 2:23:44 - 224000 - Discriminator loss: 0.3334 - 4223 samples/s
+INFO - 03/19/19 09:48:43 - 2:23:45 - 228000 - Discriminator loss: 0.3336 - 4289 samples/s
+INFO - 03/19/19 09:48:44 - 2:23:47 - 232000 - Discriminator loss: 0.3333 - 4208 samples/s
+INFO - 03/19/19 09:48:46 - 2:23:49 - 236000 - Discriminator loss: 0.3333 - 4174 samples/s
+INFO - 03/19/19 09:48:48 - 2:23:51 - 240000 - Discriminator loss: 0.3331 - 4242 samples/s
+INFO - 03/19/19 09:48:50 - 2:23:53 - 244000 - Discriminator loss: 0.3332 - 4220 samples/s
+INFO - 03/19/19 09:48:52 - 2:23:55 - 248000 - Discriminator loss: 0.3332 - 4227 samples/s
+INFO - 03/19/19 09:48:53 - 2:23:56 - ====================================================================
+INFO - 03/19/19 09:48:53 - 2:23:56 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 09:48:53 - 2:23:56 - ====================================================================
+INFO - 03/19/19 09:48:53 - 2:23:56 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 09:48:53 - 2:23:56 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 09:48:53 - 2:23:56 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 09:48:53 - 2:23:56 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 09:48:53 - 2:23:56 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 09:48:53 - 2:23:56 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 09:48:53 - 2:23:56 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 09:48:53 - 2:23:56 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 09:48:53 - 2:23:56 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 09:48:53 - 2:23:56 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 09:48:53 - 2:23:56 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 09:48:53 - 2:23:56 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 09:48:53 - 2:23:56 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 09:48:53 - 2:23:56 - ====================================================================
+INFO - 03/19/19 09:48:53 - 2:23:56 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 09:48:53 - 2:23:56 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:48:54 - 2:23:57 - 1500 source words - nn - Precision at k = 1: 18.733333
+INFO - 03/19/19 09:48:54 - 2:23:57 - 1500 source words - nn - Precision at k = 5: 37.666667
+INFO - 03/19/19 09:48:54 - 2:23:57 - 1500 source words - nn - Precision at k = 10: 45.000000
+INFO - 03/19/19 09:48:54 - 2:23:57 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:50:39 - 2:25:42 - 1500 source words - csls_knn_10 - Precision at k = 1: 26.133333
+INFO - 03/19/19 09:50:39 - 2:25:42 - 1500 source words - csls_knn_10 - Precision at k = 5: 46.933333
+INFO - 03/19/19 09:50:39 - 2:25:42 - 1500 source words - csls_knn_10 - Precision at k = 10: 53.866667
+INFO - 03/19/19 09:50:45 - 2:25:48 - Building the train dictionary ...
+INFO - 03/19/19 09:50:45 - 2:25:48 - New train dictionary of 3821 pairs.
+INFO - 03/19/19 09:50:45 - 2:25:48 - Mean cosine (nn method, S2T build, 10000 max size): 0.53256
+INFO - 03/19/19 09:54:25 - 2:29:28 - Building the train dictionary ...
+INFO - 03/19/19 09:54:25 - 2:29:28 - New train dictionary of 3891 pairs.
+INFO - 03/19/19 09:54:25 - 2:29:28 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.52239
+INFO - 03/19/19 09:54:27 - 2:29:30 - Discriminator source / target predictions: 0.89297 / 0.13785
+INFO - 03/19/19 09:54:27 - 2:29:30 - Discriminator source / target / global accuracy: 0.99977 / 0.97330 / 0.98654
+INFO - 03/19/19 09:54:27 - 2:29:30 - __log__:{"n_epoch": 8, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 18.73333333333333, "precision_at_5-nn": 37.666666666666664, "precision_at_10-nn": 45.0, "precision_at_1-csls_knn_10": 26.13333333333333, "precision_at_5-csls_knn_10": 46.93333333333333, "precision_at_10-csls_knn_10": 53.86666666666666, "mean_cosine-nn-S2T-10000": 0.5325630903244019, "mean_cosine-csls_knn_10-S2T-10000": 0.5223885178565979, "dis_accu": 0.986535, "dis_src_pred": 0.892966945656538, "dis_tgt_pred": 0.13785065576693742}
+INFO - 03/19/19 09:54:27 - 2:29:30 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.52239
+INFO - 03/19/19 09:54:27 - 2:29:30 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 09:54:27 - 2:29:30 - End of epoch 8.
+                                     
+                                     
+INFO - 03/19/19 09:54:27 - 2:29:30 - Decreasing learning rate: 0.02126908 -> 0.02084369
+INFO - 03/19/19 09:54:27 - 2:29:30 - Starting adversarial training epoch 9...
+INFO - 03/19/19 09:54:27 - 2:29:30 - 000000 - Discriminator loss: 0.3340 - 4256 samples/s
+INFO - 03/19/19 09:54:29 - 2:29:32 - 004000 - Discriminator loss: 0.3336 - 4277 samples/s
+INFO - 03/19/19 09:54:31 - 2:29:34 - 008000 - Discriminator loss: 0.3334 - 4281 samples/s
+INFO - 03/19/19 09:54:33 - 2:29:36 - 012000 - Discriminator loss: 0.3337 - 4269 samples/s
+INFO - 03/19/19 09:54:35 - 2:29:37 - 016000 - Discriminator loss: 0.3336 - 4301 samples/s
+INFO - 03/19/19 09:54:36 - 2:29:39 - 020000 - Discriminator loss: 0.3337 - 4297 samples/s
+INFO - 03/19/19 09:54:38 - 2:29:41 - 024000 - Discriminator loss: 0.3331 - 4147 samples/s
+INFO - 03/19/19 09:54:40 - 2:29:43 - 028000 - Discriminator loss: 0.3337 - 4066 samples/s
+INFO - 03/19/19 09:54:42 - 2:29:45 - 032000 - Discriminator loss: 0.3338 - 4266 samples/s
+INFO - 03/19/19 09:54:44 - 2:29:47 - 036000 - Discriminator loss: 0.3339 - 4257 samples/s
+INFO - 03/19/19 09:54:46 - 2:29:49 - 040000 - Discriminator loss: 0.3339 - 4273 samples/s
+INFO - 03/19/19 09:54:48 - 2:29:51 - 044000 - Discriminator loss: 0.3343 - 4248 samples/s
+INFO - 03/19/19 09:54:50 - 2:29:53 - 048000 - Discriminator loss: 0.3337 - 4241 samples/s
+INFO - 03/19/19 09:54:52 - 2:29:55 - 052000 - Discriminator loss: 0.3332 - 4217 samples/s
+INFO - 03/19/19 09:54:54 - 2:29:56 - 056000 - Discriminator loss: 0.3335 - 4267 samples/s
+INFO - 03/19/19 09:54:55 - 2:29:58 - 060000 - Discriminator loss: 0.3330 - 4252 samples/s
+INFO - 03/19/19 09:54:57 - 2:30:00 - 064000 - Discriminator loss: 0.3333 - 4262 samples/s
+INFO - 03/19/19 09:54:59 - 2:30:02 - 068000 - Discriminator loss: 0.3333 - 4185 samples/s
+INFO - 03/19/19 09:55:01 - 2:30:04 - 072000 - Discriminator loss: 0.3334 - 4267 samples/s
+INFO - 03/19/19 09:55:03 - 2:30:06 - 076000 - Discriminator loss: 0.3330 - 4258 samples/s
+INFO - 03/19/19 09:55:05 - 2:30:08 - 080000 - Discriminator loss: 0.3333 - 4265 samples/s
+INFO - 03/19/19 09:55:07 - 2:30:10 - 084000 - Discriminator loss: 0.3335 - 4237 samples/s
+INFO - 03/19/19 09:55:09 - 2:30:12 - 088000 - Discriminator loss: 0.3333 - 4117 samples/s
+INFO - 03/19/19 09:55:11 - 2:30:13 - 092000 - Discriminator loss: 0.3337 - 4137 samples/s
+INFO - 03/19/19 09:55:12 - 2:30:15 - 096000 - Discriminator loss: 0.3335 - 4262 samples/s
+INFO - 03/19/19 09:55:14 - 2:30:17 - 100000 - Discriminator loss: 0.3334 - 4264 samples/s
+INFO - 03/19/19 09:55:16 - 2:30:19 - 104000 - Discriminator loss: 0.3331 - 4232 samples/s
+INFO - 03/19/19 09:55:18 - 2:30:21 - 108000 - Discriminator loss: 0.3331 - 4248 samples/s
+INFO - 03/19/19 09:55:20 - 2:30:23 - 112000 - Discriminator loss: 0.3330 - 4233 samples/s
+INFO - 03/19/19 09:55:22 - 2:30:25 - 116000 - Discriminator loss: 0.3334 - 4185 samples/s
+INFO - 03/19/19 09:55:24 - 2:30:27 - 120000 - Discriminator loss: 0.3330 - 4250 samples/s
+INFO - 03/19/19 09:55:26 - 2:30:29 - 124000 - Discriminator loss: 0.3329 - 4240 samples/s
+INFO - 03/19/19 09:55:28 - 2:30:30 - 128000 - Discriminator loss: 0.3328 - 4259 samples/s
+INFO - 03/19/19 09:55:29 - 2:30:32 - 132000 - Discriminator loss: 0.3334 - 4229 samples/s
+INFO - 03/19/19 09:55:31 - 2:30:34 - 136000 - Discriminator loss: 0.3331 - 4271 samples/s
+INFO - 03/19/19 09:55:33 - 2:30:36 - 140000 - Discriminator loss: 0.3337 - 4260 samples/s
+INFO - 03/19/19 09:55:35 - 2:30:38 - 144000 - Discriminator loss: 0.3331 - 4135 samples/s
+INFO - 03/19/19 09:55:37 - 2:30:40 - 148000 - Discriminator loss: 0.3331 - 4045 samples/s
+INFO - 03/19/19 09:55:39 - 2:30:42 - 152000 - Discriminator loss: 0.3330 - 4272 samples/s
+INFO - 03/19/19 09:55:41 - 2:30:44 - 156000 - Discriminator loss: 0.3329 - 4131 samples/s
+INFO - 03/19/19 09:55:43 - 2:30:46 - 160000 - Discriminator loss: 0.3335 - 4263 samples/s
+INFO - 03/19/19 09:55:45 - 2:30:48 - 164000 - Discriminator loss: 0.3333 - 4156 samples/s
+INFO - 03/19/19 09:55:47 - 2:30:49 - 168000 - Discriminator loss: 0.3331 - 4257 samples/s
+INFO - 03/19/19 09:55:48 - 2:30:51 - 172000 - Discriminator loss: 0.3329 - 4217 samples/s
+INFO - 03/19/19 09:55:50 - 2:30:53 - 176000 - Discriminator loss: 0.3333 - 4228 samples/s
+INFO - 03/19/19 09:55:52 - 2:30:55 - 180000 - Discriminator loss: 0.3331 - 4258 samples/s
+INFO - 03/19/19 09:55:54 - 2:30:57 - 184000 - Discriminator loss: 0.3333 - 4273 samples/s
+INFO - 03/19/19 09:55:56 - 2:30:59 - 188000 - Discriminator loss: 0.3332 - 4261 samples/s
+INFO - 03/19/19 09:55:58 - 2:31:01 - 192000 - Discriminator loss: 0.3329 - 4268 samples/s
+INFO - 03/19/19 09:56:00 - 2:31:03 - 196000 - Discriminator loss: 0.3330 - 4164 samples/s
+INFO - 03/19/19 09:56:02 - 2:31:05 - 200000 - Discriminator loss: 0.3327 - 4262 samples/s
+INFO - 03/19/19 09:56:04 - 2:31:06 - 204000 - Discriminator loss: 0.3329 - 4253 samples/s
+INFO - 03/19/19 09:56:06 - 2:31:08 - 208000 - Discriminator loss: 0.3326 - 4110 samples/s
+INFO - 03/19/19 09:56:07 - 2:31:10 - 212000 - Discriminator loss: 0.3326 - 4237 samples/s
+INFO - 03/19/19 09:56:09 - 2:31:12 - 216000 - Discriminator loss: 0.3328 - 4277 samples/s
+INFO - 03/19/19 09:56:11 - 2:31:14 - 220000 - Discriminator loss: 0.3325 - 4216 samples/s
+INFO - 03/19/19 09:56:13 - 2:31:16 - 224000 - Discriminator loss: 0.3326 - 4230 samples/s
+INFO - 03/19/19 09:56:15 - 2:31:18 - 228000 - Discriminator loss: 0.3328 - 4262 samples/s
+INFO - 03/19/19 09:56:17 - 2:31:20 - 232000 - Discriminator loss: 0.3328 - 4069 samples/s
+INFO - 03/19/19 09:56:19 - 2:31:22 - 236000 - Discriminator loss: 0.3329 - 4254 samples/s
+INFO - 03/19/19 09:56:21 - 2:31:24 - 240000 - Discriminator loss: 0.3327 - 4222 samples/s
+INFO - 03/19/19 09:56:23 - 2:31:25 - 244000 - Discriminator loss: 0.3327 - 4190 samples/s
+INFO - 03/19/19 09:56:24 - 2:31:27 - 248000 - Discriminator loss: 0.3331 - 4276 samples/s
+INFO - 03/19/19 09:56:26 - 2:31:28 - ====================================================================
+INFO - 03/19/19 09:56:26 - 2:31:28 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 09:56:26 - 2:31:28 - ====================================================================
+INFO - 03/19/19 09:56:26 - 2:31:28 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 09:56:26 - 2:31:28 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 09:56:26 - 2:31:28 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 09:56:26 - 2:31:28 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 09:56:26 - 2:31:29 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 09:56:26 - 2:31:29 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 09:56:26 - 2:31:29 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 09:56:26 - 2:31:29 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 09:56:26 - 2:31:29 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 09:56:26 - 2:31:29 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 09:56:26 - 2:31:29 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 09:56:26 - 2:31:29 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 09:56:26 - 2:31:29 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 09:56:26 - 2:31:29 - ====================================================================
+INFO - 03/19/19 09:56:26 - 2:31:29 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 09:56:26 - 2:31:29 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:56:26 - 2:31:29 - 1500 source words - nn - Precision at k = 1: 20.466667
+INFO - 03/19/19 09:56:26 - 2:31:29 - 1500 source words - nn - Precision at k = 5: 39.666667
+INFO - 03/19/19 09:56:26 - 2:31:29 - 1500 source words - nn - Precision at k = 10: 46.800000
+INFO - 03/19/19 09:56:26 - 2:31:29 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 09:58:12 - 2:33:15 - 1500 source words - csls_knn_10 - Precision at k = 1: 26.933333
+INFO - 03/19/19 09:58:12 - 2:33:15 - 1500 source words - csls_knn_10 - Precision at k = 5: 48.066667
+INFO - 03/19/19 09:58:12 - 2:33:15 - 1500 source words - csls_knn_10 - Precision at k = 10: 54.666667
+INFO - 03/19/19 09:58:17 - 2:33:20 - Building the train dictionary ...
+INFO - 03/19/19 09:58:17 - 2:33:20 - New train dictionary of 4151 pairs.
+INFO - 03/19/19 09:58:17 - 2:33:20 - Mean cosine (nn method, S2T build, 10000 max size): 0.51592
+INFO - 03/19/19 10:01:57 - 2:37:00 - Building the train dictionary ...
+INFO - 03/19/19 10:01:57 - 2:37:00 - New train dictionary of 3869 pairs.
+INFO - 03/19/19 10:01:57 - 2:37:00 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.51750
+INFO - 03/19/19 10:01:59 - 2:37:02 - Discriminator source / target predictions: 0.89264 / 0.13725
+INFO - 03/19/19 10:01:59 - 2:37:02 - Discriminator source / target / global accuracy: 0.99991 / 0.97094 / 0.98542
+INFO - 03/19/19 10:01:59 - 2:37:02 - __log__:{"n_epoch": 9, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 20.466666666666665, "precision_at_5-nn": 39.666666666666664, "precision_at_10-nn": 46.800000000000004, "precision_at_1-csls_knn_10": 26.93333333333333, "precision_at_5-csls_knn_10": 48.06666666666667, "precision_at_10-csls_knn_10": 54.666666666666664, "mean_cosine-nn-S2T-10000": 0.5159173011779785, "mean_cosine-csls_knn_10-S2T-10000": 0.5175009965896606, "dis_accu": 0.985425, "dis_src_pred": 0.8926403365193307, "dis_tgt_pred": 0.13725314703729236}
+INFO - 03/19/19 10:01:59 - 2:37:02 - End of epoch 9.
+                                     
+                                     
+INFO - 03/19/19 10:01:59 - 2:37:02 - Decreasing learning rate: 0.02084369 -> 0.02042682
+INFO - 03/19/19 10:01:59 - 2:37:02 - Validation metric is smaller than the best: 0.51750 vs 0.52239
+INFO - 03/19/19 10:01:59 - 2:37:02 - Shrinking the learning rate: 0.02043 -> 0.01021
+INFO - 03/19/19 10:01:59 - 2:37:02 - ----> ITERATIVE PROCRUSTES REFINEMENT <----
+                                     
+                                     
+INFO - 03/19/19 10:01:59 - 2:37:02 - * Reloading the best model from /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 10:01:59 - 2:37:02 - Starting refinement iteration 0...
+INFO - 03/19/19 10:01:59 - 2:37:02 - Building the train dictionary ...
+INFO - 03/19/19 10:03:51 - 2:38:54 - New train dictionary of 6044 pairs.
+INFO - 03/19/19 10:03:51 - 2:38:54 - ====================================================================
+INFO - 03/19/19 10:03:51 - 2:38:54 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 10:03:51 - 2:38:54 - ====================================================================
+INFO - 03/19/19 10:03:51 - 2:38:54 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 10:03:51 - 2:38:54 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 10:03:51 - 2:38:54 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 10:03:51 - 2:38:54 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 10:03:51 - 2:38:54 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 10:03:51 - 2:38:54 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 10:03:51 - 2:38:54 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 10:03:51 - 2:38:54 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 10:03:51 - 2:38:54 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 10:03:51 - 2:38:54 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 10:03:51 - 2:38:54 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 10:03:51 - 2:38:54 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 10:03:51 - 2:38:54 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 10:03:51 - 2:38:54 - ====================================================================
+INFO - 03/19/19 10:03:51 - 2:38:54 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 10:03:52 - 2:38:55 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:03:52 - 2:38:55 - 1500 source words - nn - Precision at k = 1: 20.533333
+INFO - 03/19/19 10:03:52 - 2:38:55 - 1500 source words - nn - Precision at k = 5: 38.400000
+INFO - 03/19/19 10:03:52 - 2:38:55 - 1500 source words - nn - Precision at k = 10: 44.933333
+INFO - 03/19/19 10:03:52 - 2:38:55 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:05:38 - 2:40:41 - 1500 source words - csls_knn_10 - Precision at k = 1: 28.400000
+INFO - 03/19/19 10:05:38 - 2:40:41 - 1500 source words - csls_knn_10 - Precision at k = 5: 48.400000
+INFO - 03/19/19 10:05:38 - 2:40:41 - 1500 source words - csls_knn_10 - Precision at k = 10: 54.933333
+INFO - 03/19/19 10:05:44 - 2:40:46 - Building the train dictionary ...
+INFO - 03/19/19 10:05:44 - 2:40:46 - New train dictionary of 7519 pairs.
+INFO - 03/19/19 10:05:44 - 2:40:46 - Mean cosine (nn method, S2T build, 10000 max size): 0.60305
+INFO - 03/19/19 10:09:26 - 2:44:29 - Building the train dictionary ...
+INFO - 03/19/19 10:09:26 - 2:44:29 - New train dictionary of 6570 pairs.
+INFO - 03/19/19 10:09:26 - 2:44:29 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.59895
+INFO - 03/19/19 10:09:26 - 2:44:29 - __log__:{"n_iter": 0, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 20.533333333333335, "precision_at_5-nn": 38.4, "precision_at_10-nn": 44.93333333333333, "precision_at_1-csls_knn_10": 28.4, "precision_at_5-csls_knn_10": 48.4, "precision_at_10-csls_knn_10": 54.93333333333334, "mean_cosine-nn-S2T-10000": 0.6030451059341431, "mean_cosine-csls_knn_10-S2T-10000": 0.5989532470703125}
+INFO - 03/19/19 10:09:26 - 2:44:29 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.59895
+INFO - 03/19/19 10:09:26 - 2:44:29 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 10:09:26 - 2:44:29 - End of refinement iteration 0.
+                                     
+                                     
+INFO - 03/19/19 10:09:26 - 2:44:29 - Starting refinement iteration 1...
+INFO - 03/19/19 10:09:26 - 2:44:29 - Building the train dictionary ...
+INFO - 03/19/19 10:11:19 - 2:46:22 - New train dictionary of 9811 pairs.
+INFO - 03/19/19 10:11:19 - 2:46:22 - ====================================================================
+INFO - 03/19/19 10:11:19 - 2:46:22 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 10:11:19 - 2:46:22 - ====================================================================
+INFO - 03/19/19 10:11:19 - 2:46:22 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 10:11:19 - 2:46:22 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 10:11:19 - 2:46:22 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 10:11:19 - 2:46:22 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 10:11:19 - 2:46:22 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 10:11:19 - 2:46:22 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 10:11:19 - 2:46:22 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 10:11:19 - 2:46:22 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 10:11:19 - 2:46:22 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 10:11:19 - 2:46:22 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 10:11:19 - 2:46:22 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 10:11:19 - 2:46:22 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 10:11:19 - 2:46:22 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 10:11:19 - 2:46:22 - ====================================================================
+INFO - 03/19/19 10:11:19 - 2:46:22 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 10:11:20 - 2:46:23 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:11:20 - 2:46:23 - 1500 source words - nn - Precision at k = 1: 18.533333
+INFO - 03/19/19 10:11:20 - 2:46:23 - 1500 source words - nn - Precision at k = 5: 34.400000
+INFO - 03/19/19 10:11:20 - 2:46:23 - 1500 source words - nn - Precision at k = 10: 40.666667
+INFO - 03/19/19 10:11:20 - 2:46:23 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:13:06 - 2:48:09 - 1500 source words - csls_knn_10 - Precision at k = 1: 27.800000
+INFO - 03/19/19 10:13:06 - 2:48:09 - 1500 source words - csls_knn_10 - Precision at k = 5: 47.200000
+INFO - 03/19/19 10:13:06 - 2:48:09 - 1500 source words - csls_knn_10 - Precision at k = 10: 54.466667
+INFO - 03/19/19 10:13:11 - 2:48:14 - Building the train dictionary ...
+INFO - 03/19/19 10:13:11 - 2:48:14 - New train dictionary of 7991 pairs.
+INFO - 03/19/19 10:13:11 - 2:48:14 - Mean cosine (nn method, S2T build, 10000 max size): 0.67685
+INFO - 03/19/19 10:16:53 - 2:51:56 - Building the train dictionary ...
+INFO - 03/19/19 10:16:53 - 2:51:56 - New train dictionary of 7312 pairs.
+INFO - 03/19/19 10:16:53 - 2:51:56 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.68355
+INFO - 03/19/19 10:16:53 - 2:51:56 - __log__:{"n_iter": 1, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 18.53333333333333, "precision_at_5-nn": 34.4, "precision_at_10-nn": 40.666666666666664, "precision_at_1-csls_knn_10": 27.800000000000004, "precision_at_5-csls_knn_10": 47.199999999999996, "precision_at_10-csls_knn_10": 54.46666666666666, "mean_cosine-nn-S2T-10000": 0.6768507361412048, "mean_cosine-csls_knn_10-S2T-10000": 0.683551549911499}
+INFO - 03/19/19 10:16:53 - 2:51:56 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.68355
+INFO - 03/19/19 10:16:53 - 2:51:56 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 10:16:53 - 2:51:56 - End of refinement iteration 1.
+                                     
+                                     
+INFO - 03/19/19 10:16:53 - 2:51:56 - Starting refinement iteration 2...
+INFO - 03/19/19 10:16:53 - 2:51:56 - Building the train dictionary ...
+INFO - 03/19/19 10:18:46 - 2:53:49 - New train dictionary of 10801 pairs.
+INFO - 03/19/19 10:18:46 - 2:53:49 - ====================================================================
+INFO - 03/19/19 10:18:46 - 2:53:49 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 10:18:46 - 2:53:49 - ====================================================================
+INFO - 03/19/19 10:18:46 - 2:53:49 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 10:18:46 - 2:53:49 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 10:18:46 - 2:53:49 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 10:18:46 - 2:53:49 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 10:18:46 - 2:53:49 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 10:18:46 - 2:53:49 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 10:18:46 - 2:53:49 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 10:18:46 - 2:53:49 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 10:18:46 - 2:53:49 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 10:18:46 - 2:53:49 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 10:18:46 - 2:53:49 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 10:18:46 - 2:53:49 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 10:18:46 - 2:53:49 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 10:18:46 - 2:53:49 - ====================================================================
+INFO - 03/19/19 10:18:46 - 2:53:49 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 10:18:46 - 2:53:49 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:18:47 - 2:53:50 - 1500 source words - nn - Precision at k = 1: 17.266667
+INFO - 03/19/19 10:18:47 - 2:53:50 - 1500 source words - nn - Precision at k = 5: 32.933333
+INFO - 03/19/19 10:18:47 - 2:53:50 - 1500 source words - nn - Precision at k = 10: 39.866667
+INFO - 03/19/19 10:18:47 - 2:53:50 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:20:32 - 2:55:35 - 1500 source words - csls_knn_10 - Precision at k = 1: 28.066667
+INFO - 03/19/19 10:20:32 - 2:55:35 - 1500 source words - csls_knn_10 - Precision at k = 5: 46.533333
+INFO - 03/19/19 10:20:32 - 2:55:35 - 1500 source words - csls_knn_10 - Precision at k = 10: 53.933333
+INFO - 03/19/19 10:20:37 - 2:55:40 - Building the train dictionary ...
+INFO - 03/19/19 10:20:37 - 2:55:40 - New train dictionary of 8209 pairs.
+INFO - 03/19/19 10:20:37 - 2:55:40 - Mean cosine (nn method, S2T build, 10000 max size): 0.70395
+INFO - 03/19/19 10:24:17 - 2:59:20 - Building the train dictionary ...
+INFO - 03/19/19 10:24:17 - 2:59:20 - New train dictionary of 7368 pairs.
+INFO - 03/19/19 10:24:17 - 2:59:20 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.71688
+INFO - 03/19/19 10:24:17 - 2:59:20 - __log__:{"n_iter": 2, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 17.266666666666666, "precision_at_5-nn": 32.93333333333333, "precision_at_10-nn": 39.86666666666667, "precision_at_1-csls_knn_10": 28.066666666666666, "precision_at_5-csls_knn_10": 46.53333333333333, "precision_at_10-csls_knn_10": 53.93333333333333, "mean_cosine-nn-S2T-10000": 0.703949511051178, "mean_cosine-csls_knn_10-S2T-10000": 0.7168821096420288}
+INFO - 03/19/19 10:24:17 - 2:59:20 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.71688
+INFO - 03/19/19 10:24:17 - 2:59:20 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 10:24:17 - 2:59:20 - End of refinement iteration 2.
+                                     
+                                     
+INFO - 03/19/19 10:24:17 - 2:59:20 - Starting refinement iteration 3...
+INFO - 03/19/19 10:24:17 - 2:59:20 - Building the train dictionary ...
+INFO - 03/19/19 10:26:09 - 3:01:12 - New train dictionary of 10916 pairs.
+INFO - 03/19/19 10:26:09 - 3:01:12 - ====================================================================
+INFO - 03/19/19 10:26:09 - 3:01:12 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 10:26:09 - 3:01:12 - ====================================================================
+INFO - 03/19/19 10:26:09 - 3:01:12 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 10:26:09 - 3:01:12 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 10:26:09 - 3:01:12 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 10:26:09 - 3:01:12 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 10:26:09 - 3:01:12 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 10:26:09 - 3:01:12 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 10:26:09 - 3:01:12 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 10:26:09 - 3:01:12 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 10:26:09 - 3:01:12 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 10:26:09 - 3:01:12 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 10:26:09 - 3:01:12 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 10:26:09 - 3:01:12 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 10:26:09 - 3:01:12 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 10:26:09 - 3:01:12 - ====================================================================
+INFO - 03/19/19 10:26:09 - 3:01:12 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 10:26:10 - 3:01:13 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:26:10 - 3:01:13 - 1500 source words - nn - Precision at k = 1: 15.866667
+INFO - 03/19/19 10:26:10 - 3:01:13 - 1500 source words - nn - Precision at k = 5: 32.000000
+INFO - 03/19/19 10:26:10 - 3:01:13 - 1500 source words - nn - Precision at k = 10: 38.733333
+INFO - 03/19/19 10:26:10 - 3:01:13 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:27:56 - 3:02:58 - 1500 source words - csls_knn_10 - Precision at k = 1: 28.000000
+INFO - 03/19/19 10:27:56 - 3:02:58 - 1500 source words - csls_knn_10 - Precision at k = 5: 44.933333
+INFO - 03/19/19 10:27:56 - 3:02:58 - 1500 source words - csls_knn_10 - Precision at k = 10: 53.000000
+INFO - 03/19/19 10:28:01 - 3:03:04 - Building the train dictionary ...
+INFO - 03/19/19 10:28:01 - 3:03:04 - New train dictionary of 8274 pairs.
+INFO - 03/19/19 10:28:01 - 3:03:04 - Mean cosine (nn method, S2T build, 10000 max size): 0.70431
+INFO - 03/19/19 10:31:41 - 3:06:44 - Building the train dictionary ...
+INFO - 03/19/19 10:31:41 - 3:06:44 - New train dictionary of 7404 pairs.
+INFO - 03/19/19 10:31:41 - 3:06:44 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.71764
+INFO - 03/19/19 10:31:41 - 3:06:44 - __log__:{"n_iter": 3, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 15.866666666666667, "precision_at_5-nn": 32.0, "precision_at_10-nn": 38.733333333333334, "precision_at_1-csls_knn_10": 28.000000000000004, "precision_at_5-csls_knn_10": 44.93333333333333, "precision_at_10-csls_knn_10": 53.0, "mean_cosine-nn-S2T-10000": 0.7043110728263855, "mean_cosine-csls_knn_10-S2T-10000": 0.7176424264907837}
+INFO - 03/19/19 10:31:41 - 3:06:44 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.71764
+INFO - 03/19/19 10:31:41 - 3:06:44 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 10:31:41 - 3:06:44 - End of refinement iteration 3.
+                                     
+                                     
+INFO - 03/19/19 10:31:41 - 3:06:44 - Starting refinement iteration 4...
+INFO - 03/19/19 10:31:41 - 3:06:44 - Building the train dictionary ...
+INFO - 03/19/19 10:33:33 - 3:08:36 - New train dictionary of 10994 pairs.
+INFO - 03/19/19 10:33:33 - 3:08:36 - ====================================================================
+INFO - 03/19/19 10:33:33 - 3:08:36 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 10:33:33 - 3:08:36 - ====================================================================
+INFO - 03/19/19 10:33:33 - 3:08:36 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 10:33:33 - 3:08:36 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 10:33:33 - 3:08:36 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 10:33:33 - 3:08:36 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 10:33:33 - 3:08:36 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 10:33:33 - 3:08:36 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 10:33:33 - 3:08:36 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 10:33:33 - 3:08:36 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 10:33:33 - 3:08:36 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 10:33:33 - 3:08:36 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 10:33:33 - 3:08:36 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 10:33:33 - 3:08:36 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 10:33:33 - 3:08:36 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 10:33:33 - 3:08:36 - ====================================================================
+INFO - 03/19/19 10:33:33 - 3:08:36 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 10:33:33 - 3:08:36 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:33:34 - 3:08:37 - 1500 source words - nn - Precision at k = 1: 15.733333
+INFO - 03/19/19 10:33:34 - 3:08:37 - 1500 source words - nn - Precision at k = 5: 31.600000
+INFO - 03/19/19 10:33:34 - 3:08:37 - 1500 source words - nn - Precision at k = 10: 37.933333
+INFO - 03/19/19 10:33:34 - 3:08:37 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:35:19 - 3:10:22 - 1500 source words - csls_knn_10 - Precision at k = 1: 27.533333
+INFO - 03/19/19 10:35:19 - 3:10:22 - 1500 source words - csls_knn_10 - Precision at k = 5: 45.200000
+INFO - 03/19/19 10:35:19 - 3:10:22 - 1500 source words - csls_knn_10 - Precision at k = 10: 51.933333
+INFO - 03/19/19 10:35:24 - 3:10:27 - Building the train dictionary ...
+INFO - 03/19/19 10:35:24 - 3:10:27 - New train dictionary of 8287 pairs.
+INFO - 03/19/19 10:35:24 - 3:10:27 - Mean cosine (nn method, S2T build, 10000 max size): 0.70470
+INFO - 03/19/19 10:39:04 - 3:14:07 - Building the train dictionary ...
+INFO - 03/19/19 10:39:04 - 3:14:07 - New train dictionary of 7401 pairs.
+INFO - 03/19/19 10:39:04 - 3:14:07 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.71800
+INFO - 03/19/19 10:39:04 - 3:14:07 - __log__:{"n_iter": 4, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 15.733333333333333, "precision_at_5-nn": 31.6, "precision_at_10-nn": 37.93333333333334, "precision_at_1-csls_knn_10": 27.53333333333333, "precision_at_5-csls_knn_10": 45.2, "precision_at_10-csls_knn_10": 51.93333333333333, "mean_cosine-nn-S2T-10000": 0.7047004103660583, "mean_cosine-csls_knn_10-S2T-10000": 0.7180007696151733}
+INFO - 03/19/19 10:39:04 - 3:14:07 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.71800
+INFO - 03/19/19 10:39:04 - 3:14:07 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 10:39:04 - 3:14:07 - End of refinement iteration 4.
+                                     
+                                     
+INFO - 03/19/19 10:39:04 - 3:14:07 - Starting refinement iteration 5...
+INFO - 03/19/19 10:39:04 - 3:14:07 - Building the train dictionary ...
+INFO - 03/19/19 10:40:56 - 3:15:59 - New train dictionary of 11022 pairs.
+INFO - 03/19/19 10:40:56 - 3:15:59 - ====================================================================
+INFO - 03/19/19 10:40:56 - 3:15:59 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 10:40:56 - 3:15:59 - ====================================================================
+INFO - 03/19/19 10:40:56 - 3:15:59 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 10:40:56 - 3:15:59 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 10:40:56 - 3:15:59 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 10:40:56 - 3:15:59 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 10:40:56 - 3:15:59 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 10:40:56 - 3:15:59 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 10:40:56 - 3:15:59 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 10:40:56 - 3:15:59 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 10:40:56 - 3:15:59 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 10:40:56 - 3:15:59 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 10:40:56 - 3:15:59 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 10:40:56 - 3:15:59 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 10:40:56 - 3:15:59 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 10:40:56 - 3:15:59 - ====================================================================
+INFO - 03/19/19 10:40:56 - 3:15:59 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 10:40:56 - 3:15:59 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:40:57 - 3:15:59 - 1500 source words - nn - Precision at k = 1: 15.400000
+INFO - 03/19/19 10:40:57 - 3:15:59 - 1500 source words - nn - Precision at k = 5: 31.666667
+INFO - 03/19/19 10:40:57 - 3:15:59 - 1500 source words - nn - Precision at k = 10: 38.400000
+INFO - 03/19/19 10:40:57 - 3:15:59 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:42:42 - 3:17:45 - 1500 source words - csls_knn_10 - Precision at k = 1: 27.266667
+INFO - 03/19/19 10:42:42 - 3:17:45 - 1500 source words - csls_knn_10 - Precision at k = 5: 45.200000
+INFO - 03/19/19 10:42:42 - 3:17:45 - 1500 source words - csls_knn_10 - Precision at k = 10: 52.400000
+INFO - 03/19/19 10:42:47 - 3:17:50 - Building the train dictionary ...
+INFO - 03/19/19 10:42:47 - 3:17:50 - New train dictionary of 8291 pairs.
+INFO - 03/19/19 10:42:47 - 3:17:50 - Mean cosine (nn method, S2T build, 10000 max size): 0.70523
+INFO - 03/19/19 10:46:28 - 3:21:31 - Building the train dictionary ...
+INFO - 03/19/19 10:46:28 - 3:21:31 - New train dictionary of 7404 pairs.
+INFO - 03/19/19 10:46:28 - 3:21:31 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.71825
+INFO - 03/19/19 10:46:28 - 3:21:31 - __log__:{"n_iter": 5, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 15.4, "precision_at_5-nn": 31.666666666666664, "precision_at_10-nn": 38.4, "precision_at_1-csls_knn_10": 27.266666666666666, "precision_at_5-csls_knn_10": 45.2, "precision_at_10-csls_knn_10": 52.400000000000006, "mean_cosine-nn-S2T-10000": 0.7052265405654907, "mean_cosine-csls_knn_10-S2T-10000": 0.7182493209838867}
+INFO - 03/19/19 10:46:28 - 3:21:31 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.71825
+INFO - 03/19/19 10:46:28 - 3:21:31 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 10:46:28 - 3:21:31 - End of refinement iteration 5.
+                                     
+                                     
+INFO - 03/19/19 10:46:28 - 3:21:31 - Starting refinement iteration 6...
+INFO - 03/19/19 10:46:28 - 3:21:31 - Building the train dictionary ...
+INFO - 03/19/19 10:48:19 - 3:23:22 - New train dictionary of 11060 pairs.
+INFO - 03/19/19 10:48:19 - 3:23:22 - ====================================================================
+INFO - 03/19/19 10:48:19 - 3:23:22 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 10:48:19 - 3:23:22 - ====================================================================
+INFO - 03/19/19 10:48:19 - 3:23:22 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 10:48:19 - 3:23:22 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 10:48:19 - 3:23:22 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 10:48:19 - 3:23:22 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 10:48:19 - 3:23:22 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 10:48:19 - 3:23:22 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 10:48:19 - 3:23:22 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 10:48:19 - 3:23:22 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 10:48:19 - 3:23:22 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 10:48:19 - 3:23:22 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 10:48:19 - 3:23:22 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 10:48:19 - 3:23:22 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 10:48:19 - 3:23:22 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 10:48:19 - 3:23:22 - ====================================================================
+INFO - 03/19/19 10:48:19 - 3:23:22 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 10:48:20 - 3:23:22 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:48:20 - 3:23:23 - 1500 source words - nn - Precision at k = 1: 15.666667
+INFO - 03/19/19 10:48:20 - 3:23:23 - 1500 source words - nn - Precision at k = 5: 31.333333
+INFO - 03/19/19 10:48:20 - 3:23:23 - 1500 source words - nn - Precision at k = 10: 38.066667
+INFO - 03/19/19 10:48:20 - 3:23:23 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:50:05 - 3:25:08 - 1500 source words - csls_knn_10 - Precision at k = 1: 27.466667
+INFO - 03/19/19 10:50:05 - 3:25:08 - 1500 source words - csls_knn_10 - Precision at k = 5: 45.266667
+INFO - 03/19/19 10:50:05 - 3:25:08 - 1500 source words - csls_knn_10 - Precision at k = 10: 52.000000
+INFO - 03/19/19 10:50:10 - 3:25:13 - Building the train dictionary ...
+INFO - 03/19/19 10:50:10 - 3:25:13 - New train dictionary of 8288 pairs.
+INFO - 03/19/19 10:50:10 - 3:25:13 - Mean cosine (nn method, S2T build, 10000 max size): 0.70567
+INFO - 03/19/19 10:53:51 - 3:28:54 - Building the train dictionary ...
+INFO - 03/19/19 10:53:51 - 3:28:54 - New train dictionary of 7408 pairs.
+INFO - 03/19/19 10:53:51 - 3:28:54 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.71827
+INFO - 03/19/19 10:53:51 - 3:28:54 - __log__:{"n_iter": 6, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 15.666666666666668, "precision_at_5-nn": 31.333333333333336, "precision_at_10-nn": 38.06666666666666, "precision_at_1-csls_knn_10": 27.46666666666667, "precision_at_5-csls_knn_10": 45.266666666666666, "precision_at_10-csls_knn_10": 52.0, "mean_cosine-nn-S2T-10000": 0.7056660652160645, "mean_cosine-csls_knn_10-S2T-10000": 0.7182748913764954}
+INFO - 03/19/19 10:53:51 - 3:28:54 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.71827
+INFO - 03/19/19 10:53:51 - 3:28:54 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 10:53:51 - 3:28:54 - End of refinement iteration 6.
+                                     
+                                     
+INFO - 03/19/19 10:53:51 - 3:28:54 - Starting refinement iteration 7...
+INFO - 03/19/19 10:53:51 - 3:28:54 - Building the train dictionary ...
+INFO - 03/19/19 10:55:43 - 3:30:46 - New train dictionary of 11077 pairs.
+INFO - 03/19/19 10:55:43 - 3:30:46 - ====================================================================
+INFO - 03/19/19 10:55:43 - 3:30:46 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 10:55:43 - 3:30:46 - ====================================================================
+INFO - 03/19/19 10:55:43 - 3:30:46 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 10:55:43 - 3:30:46 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 10:55:43 - 3:30:46 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 10:55:43 - 3:30:46 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 10:55:43 - 3:30:46 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 10:55:43 - 3:30:46 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 10:55:43 - 3:30:46 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 10:55:43 - 3:30:46 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 10:55:43 - 3:30:46 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 10:55:43 - 3:30:46 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 10:55:43 - 3:30:46 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 10:55:43 - 3:30:46 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 10:55:43 - 3:30:46 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 10:55:43 - 3:30:46 - ====================================================================
+INFO - 03/19/19 10:55:43 - 3:30:46 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 10:55:43 - 3:30:46 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:55:43 - 3:30:46 - 1500 source words - nn - Precision at k = 1: 15.200000
+INFO - 03/19/19 10:55:43 - 3:30:46 - 1500 source words - nn - Precision at k = 5: 31.333333
+INFO - 03/19/19 10:55:43 - 3:30:46 - 1500 source words - nn - Precision at k = 10: 37.733333
+INFO - 03/19/19 10:55:43 - 3:30:46 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 10:57:29 - 3:32:32 - 1500 source words - csls_knn_10 - Precision at k = 1: 26.933333
+INFO - 03/19/19 10:57:29 - 3:32:32 - 1500 source words - csls_knn_10 - Precision at k = 5: 44.866667
+INFO - 03/19/19 10:57:29 - 3:32:32 - 1500 source words - csls_knn_10 - Precision at k = 10: 52.200000
+INFO - 03/19/19 10:57:34 - 3:32:37 - Building the train dictionary ...
+INFO - 03/19/19 10:57:34 - 3:32:37 - New train dictionary of 8307 pairs.
+INFO - 03/19/19 10:57:34 - 3:32:37 - Mean cosine (nn method, S2T build, 10000 max size): 0.70586
+INFO - 03/19/19 11:01:14 - 3:36:17 - Building the train dictionary ...
+INFO - 03/19/19 11:01:14 - 3:36:17 - New train dictionary of 7402 pairs.
+INFO - 03/19/19 11:01:14 - 3:36:17 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.71853
+INFO - 03/19/19 11:01:14 - 3:36:17 - __log__:{"n_iter": 7, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 15.2, "precision_at_5-nn": 31.333333333333336, "precision_at_10-nn": 37.733333333333334, "precision_at_1-csls_knn_10": 26.93333333333333, "precision_at_5-csls_knn_10": 44.86666666666667, "precision_at_10-csls_knn_10": 52.2, "mean_cosine-nn-S2T-10000": 0.705864667892456, "mean_cosine-csls_knn_10-S2T-10000": 0.7185308933258057}
+INFO - 03/19/19 11:01:14 - 3:36:17 - * Best value for "mean_cosine-csls_knn_10-S2T-10000": 0.71853
+INFO - 03/19/19 11:01:14 - 3:36:17 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 11:01:14 - 3:36:17 - End of refinement iteration 7.
+                                     
+                                     
+INFO - 03/19/19 11:01:14 - 3:36:17 - Starting refinement iteration 8...
+INFO - 03/19/19 11:01:14 - 3:36:17 - Building the train dictionary ...
+INFO - 03/19/19 11:03:07 - 3:38:10 - New train dictionary of 11079 pairs.
+INFO - 03/19/19 11:03:07 - 3:38:10 - ====================================================================
+INFO - 03/19/19 11:03:07 - 3:38:10 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 11:03:07 - 3:38:10 - ====================================================================
+INFO - 03/19/19 11:03:07 - 3:38:10 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 11:03:07 - 3:38:10 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 11:03:07 - 3:38:10 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 11:03:07 - 3:38:10 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 11:03:07 - 3:38:10 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 11:03:07 - 3:38:10 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 11:03:07 - 3:38:10 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 11:03:07 - 3:38:10 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 11:03:07 - 3:38:10 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 11:03:07 - 3:38:10 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 11:03:07 - 3:38:10 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 11:03:07 - 3:38:10 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 11:03:07 - 3:38:10 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 11:03:07 - 3:38:10 - ====================================================================
+INFO - 03/19/19 11:03:07 - 3:38:10 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 11:03:07 - 3:38:10 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 11:03:08 - 3:38:10 - 1500 source words - nn - Precision at k = 1: 15.133333
+INFO - 03/19/19 11:03:08 - 3:38:10 - 1500 source words - nn - Precision at k = 5: 31.466667
+INFO - 03/19/19 11:03:08 - 3:38:10 - 1500 source words - nn - Precision at k = 10: 37.800000
+INFO - 03/19/19 11:03:08 - 3:38:10 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 11:04:53 - 3:39:56 - 1500 source words - csls_knn_10 - Precision at k = 1: 27.000000
+INFO - 03/19/19 11:04:53 - 3:39:56 - 1500 source words - csls_knn_10 - Precision at k = 5: 45.000000
+INFO - 03/19/19 11:04:53 - 3:39:56 - 1500 source words - csls_knn_10 - Precision at k = 10: 52.400000
+INFO - 03/19/19 11:04:59 - 3:40:01 - Building the train dictionary ...
+INFO - 03/19/19 11:04:59 - 3:40:01 - New train dictionary of 8317 pairs.
+INFO - 03/19/19 11:04:59 - 3:40:01 - Mean cosine (nn method, S2T build, 10000 max size): 0.70615
+INFO - 03/19/19 11:08:39 - 3:43:42 - Building the train dictionary ...
+INFO - 03/19/19 11:08:39 - 3:43:42 - New train dictionary of 7409 pairs.
+INFO - 03/19/19 11:08:39 - 3:43:42 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.71843
+INFO - 03/19/19 11:08:39 - 3:43:42 - __log__:{"n_iter": 8, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 15.133333333333333, "precision_at_5-nn": 31.466666666666665, "precision_at_10-nn": 37.8, "precision_at_1-csls_knn_10": 27.0, "precision_at_5-csls_knn_10": 45.0, "precision_at_10-csls_knn_10": 52.400000000000006, "mean_cosine-nn-S2T-10000": 0.7061470746994019, "mean_cosine-csls_knn_10-S2T-10000": 0.7184337377548218}
+INFO - 03/19/19 11:08:39 - 3:43:42 - End of refinement iteration 8.
+                                     
+                                     
+INFO - 03/19/19 11:08:39 - 3:43:42 - Starting refinement iteration 9...
+INFO - 03/19/19 11:08:39 - 3:43:42 - Building the train dictionary ...
+INFO - 03/19/19 11:10:31 - 3:45:34 - New train dictionary of 11097 pairs.
+INFO - 03/19/19 11:10:31 - 3:45:34 - ====================================================================
+INFO - 03/19/19 11:10:31 - 3:45:34 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 11:10:31 - 3:45:34 - ====================================================================
+INFO - 03/19/19 11:10:31 - 3:45:34 -                 EN_RW-STANFORD       1323           711       0.5117
+INFO - 03/19/19 11:10:31 - 3:45:34 -                  EN_WS-353-ALL        353             0       0.7312
+INFO - 03/19/19 11:10:31 - 3:45:34 -                       EN_RG-65         65             0       0.8112
+INFO - 03/19/19 11:10:31 - 3:45:34 -                    EN_VERB-143        144             0       0.4229
+INFO - 03/19/19 11:10:31 - 3:45:34 -                   EN_MEN-TR-3k       3000             0       0.7701
+INFO - 03/19/19 11:10:31 - 3:45:34 -                  EN_WS-353-SIM        203             0       0.7847
+INFO - 03/19/19 11:10:31 - 3:45:34 -                   EN_SEMEVAL17        379             9       0.7277
+INFO - 03/19/19 11:10:31 - 3:45:34 -                      EN_YP-130        130             0       0.5437
+INFO - 03/19/19 11:10:31 - 3:45:34 -                       EN_MC-30         30             0       0.8502
+INFO - 03/19/19 11:10:31 - 3:45:34 -                  EN_SIMLEX-999        998             1       0.3851
+INFO - 03/19/19 11:10:31 - 3:45:34 -                   EN_MTurk-287        286             1       0.6754
+INFO - 03/19/19 11:10:31 - 3:45:34 -                  EN_WS-353-REL        252             0       0.6761
+INFO - 03/19/19 11:10:31 - 3:45:34 -                   EN_MTurk-771        771             0       0.6798
+INFO - 03/19/19 11:10:31 - 3:45:34 - ====================================================================
+INFO - 03/19/19 11:10:31 - 3:45:34 - Monolingual target word similarity score average: 0.65922
+INFO - 03/19/19 11:10:31 - 3:45:34 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 11:10:32 - 3:45:34 - 1500 source words - nn - Precision at k = 1: 15.333333
+INFO - 03/19/19 11:10:32 - 3:45:34 - 1500 source words - nn - Precision at k = 5: 31.533333
+INFO - 03/19/19 11:10:32 - 3:45:34 - 1500 source words - nn - Precision at k = 10: 37.800000
+INFO - 03/19/19 11:10:32 - 3:45:34 - Found 2483 pairs of words in the dictionary (1500 unique). 0 other pairs contained at least one unknown word (0 in lang1, 0 in lang2)
+INFO - 03/19/19 11:12:17 - 3:47:20 - 1500 source words - csls_knn_10 - Precision at k = 1: 27.066667
+INFO - 03/19/19 11:12:17 - 3:47:20 - 1500 source words - csls_knn_10 - Precision at k = 5: 44.800000
+INFO - 03/19/19 11:12:17 - 3:47:20 - 1500 source words - csls_knn_10 - Precision at k = 10: 52.133333
+INFO - 03/19/19 11:12:22 - 3:47:25 - Building the train dictionary ...
+INFO - 03/19/19 11:12:22 - 3:47:25 - New train dictionary of 8318 pairs.
+INFO - 03/19/19 11:12:22 - 3:47:25 - Mean cosine (nn method, S2T build, 10000 max size): 0.70639
+INFO - 03/19/19 11:16:03 - 3:51:06 - Building the train dictionary ...
+INFO - 03/19/19 11:16:03 - 3:51:06 - New train dictionary of 7423 pairs.
+INFO - 03/19/19 11:16:03 - 3:51:06 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.71829
+INFO - 03/19/19 11:16:03 - 3:51:06 - __log__:{"n_iter": 9, "tgt_ws_monolingual_scores": 0.6592189003869955, "tgt_EN_RW-STANFORD": 0.5116607642728178, "tgt_EN_WS-353-ALL": 0.7312363555234374, "tgt_EN_RG-65": 0.8112467392885365, "tgt_EN_VERB-143": 0.42288031933772263, "tgt_EN_MEN-TR-3k": 0.7700828241676684, "tgt_EN_WS-353-SIM": 0.7847160361793442, "tgt_EN_SEMEVAL17": 0.7277262252525413, "tgt_EN_YP-130": 0.543699012754561, "tgt_EN_MC-30": 0.8502447918553128, "tgt_EN_SIMLEX-999": 0.3850880458467982, "tgt_EN_MTurk-287": 0.6753521292160314, "tgt_EN_WS-353-REL": 0.6761105576004309, "tgt_EN_MTurk-771": 0.6798019037357385, "precision_at_1-nn": 15.333333333333332, "precision_at_5-nn": 31.533333333333335, "precision_at_10-nn": 37.8, "precision_at_1-csls_knn_10": 27.066666666666666, "precision_at_5-csls_knn_10": 44.800000000000004, "precision_at_10-csls_knn_10": 52.13333333333333, "mean_cosine-nn-S2T-10000": 0.7063935399055481, "mean_cosine-csls_knn_10-S2T-10000": 0.7182855010032654}
+INFO - 03/19/19 11:16:03 - 3:51:06 - End of refinement iteration 9.
+                                     
+                                     
+INFO - 03/19/19 11:16:03 - 3:51:06 - * Reloading the best model from /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/best_mapping.pth ...
+INFO - 03/19/19 11:16:03 - 3:51:06 - Reloading all embeddings for mapping ...
+INFO - 03/19/19 11:16:25 - 3:51:28 - Loaded 332647 pre-trained word embeddings.
+INFO - 03/19/19 11:19:06 - 3:54:09 - Loaded 2519370 pre-trained word embeddings.
+INFO - 03/19/19 11:19:13 - 3:54:16 - Map source embeddings to the target space ...
+INFO - 03/19/19 11:19:14 - 3:54:17 - Writing source embeddings to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/vectors-zh.txt ...
+INFO - 03/19/19 11:24:14 - 3:59:16 - Writing target embeddings to /data/home/pyliao/bridge-with-l2/MUSE/dumped/debug/geemzhst4x/vectors-en.txt ...

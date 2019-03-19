@@ -1,0 +1,43 @@
+INFO - 03/19/19 19:51:26 - 0:00:00 - ============ Initialized logger ============
+INFO - 03/19/19 19:51:26 - 0:00:00 - cuda: True
+                                     dico_eval: default
+                                     emb_dim: 300
+                                     exp_id: 
+                                     exp_name: supervised_eval
+                                     exp_path: /data/home/pyliao/bridge-with-l2/MUSE/dumped/supervised_eval/k7yqhu3fw4
+                                     max_vocab: 40000
+                                     normalize_embeddings: center
+                                     src_emb: MUSE/dumped/supervised/wiki-zh-zh-880K-5_arxiv-en-en-480K-5/vectors-zh.txt
+                                     src_lang: zh
+                                     tgt_emb: MUSE/dumped/supervised/wiki-zh-zh-880K-5_arxiv-en-en-480K-5/vectors-en.txt
+                                     tgt_lang: en
+                                     verbose: 2
+INFO - 03/19/19 19:51:26 - 0:00:00 - The experiment will be stored in /data/home/pyliao/bridge-with-l2/MUSE/dumped/supervised_eval/k7yqhu3fw4
+INFO - 03/19/19 19:51:38 - 0:00:12 - Loaded 40000 pre-trained word embeddings.
+INFO - 03/19/19 19:51:55 - 0:00:29 - Loaded 32303 pre-trained word embeddings.
+INFO - 03/19/19 19:51:56 - 0:00:30 - ====================================================================
+INFO - 03/19/19 19:51:56 - 0:00:30 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 19:51:56 - 0:00:30 - ====================================================================
+INFO - 03/19/19 19:51:56 - 0:00:30 -                 EN_RW-STANFORD        391          1643       0.2287
+INFO - 03/19/19 19:51:56 - 0:00:30 -                  EN_WS-353-ALL        249           104       0.3066
+INFO - 03/19/19 19:51:56 - 0:00:30 -                       EN_RG-65         19            46       0.2386
+INFO - 03/19/19 19:51:56 - 0:00:30 -                    EN_VERB-143        132            12       0.2487
+INFO - 03/19/19 19:51:56 - 0:00:30 -                   EN_MEN-TR-3k       1381          1619       0.2367
+INFO - 03/19/19 19:51:56 - 0:00:30 -                  EN_WS-353-SIM        137            66       0.3709
+INFO - 03/19/19 19:51:56 - 0:00:30 -                   EN_SEMEVAL17        179           209       0.2747
+INFO - 03/19/19 19:51:56 - 0:00:30 -                      EN_YP-130         75            55       0.0843
+INFO - 03/19/19 19:51:56 - 0:00:30 -                       EN_MC-30         11            19       0.3273
+INFO - 03/19/19 19:51:56 - 0:00:30 -                  EN_SIMLEX-999        656           343       0.2009
+INFO - 03/19/19 19:51:56 - 0:00:30 -                   EN_MTurk-287        131           156       0.2339
+INFO - 03/19/19 19:51:56 - 0:00:30 -                  EN_WS-353-REL        186            66       0.2592
+INFO - 03/19/19 19:51:56 - 0:00:30 -                   EN_MTurk-771        528           243       0.2361
+INFO - 03/19/19 19:51:56 - 0:00:30 - ====================================================================
+INFO - 03/19/19 19:51:56 - 0:00:30 - Monolingual target word similarity score average: 0.24972
+INFO - 03/19/19 19:51:57 - 0:00:30 - Found 1167 pairs of words in the dictionary (751 unique). 1316 other pairs contained at least one unknown word (498 in lang1, 1117 in lang2)
+INFO - 03/19/19 19:51:57 - 0:00:30 - 751 source words - nn - Precision at k = 1: 3.462051
+INFO - 03/19/19 19:51:57 - 0:00:30 - 751 source words - nn - Precision at k = 5: 7.589880
+INFO - 03/19/19 19:51:57 - 0:00:30 - 751 source words - nn - Precision at k = 10: 10.119840
+INFO - 03/19/19 19:51:57 - 0:00:31 - Found 1167 pairs of words in the dictionary (751 unique). 1316 other pairs contained at least one unknown word (498 in lang1, 1117 in lang2)
+INFO - 03/19/19 19:52:38 - 0:01:11 - 751 source words - csls_knn_10 - Precision at k = 1: 3.861518
+INFO - 03/19/19 19:52:38 - 0:01:11 - 751 source words - csls_knn_10 - Precision at k = 5: 7.190413
+INFO - 03/19/19 19:52:38 - 0:01:11 - 751 source words - csls_knn_10 - Precision at k = 10: 10.252996
