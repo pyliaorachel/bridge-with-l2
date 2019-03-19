@@ -17,8 +17,10 @@ def parse_args():
                         help='The word embedding dimension. Default: 300')
     parser.add_argument('--epochs', type=int, default=5,
                         help='Number of epochs to train. Default: 5')
+    parser.add_argument('--min-count', type=int, default=2,
+                        help='Min word frequency count. Default: 2')
     parser.add_argument('--method', type=str, default='word2vec',
-                        help='Word embedding training method, either \'word2vec\' or \'fastText\'. Default: fastText')
+                        help='Word embedding training method, either \'word2vec\' or \'fastText\'. Default: word2vec')
 
     args = parser.parse_args()
     return args
@@ -39,10 +41,11 @@ if __name__ == '__main__':
         sents = word2vec.LineSentence(corpus)
 
         print('Training model...')
-        model = WordEmb(sents, min_count=2, size=args.dim, iter=args.epochs)
+        model = WordEmb(sents, min_count=args.min_count, size=args.dim, iter=args.epochs)
 
         print('Saving model...')
         filename = '_'.join(os.path.splitext(corpus)[0].split('_')[:-1])
+        filename += '_{}.{}'.format(args.epochs, args.method.lower())
         model.save(filename + '.bin')
         model.wv.save_word2vec_format(filename + '.vec')
 
