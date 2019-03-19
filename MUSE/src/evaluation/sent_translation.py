@@ -14,7 +14,7 @@ import torch
 from src.utils import bow_idf, get_nn_avg_dist
 
 
-EUROPARL_DIR = 'data/crosslingual/europarl'
+EUROPARL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'data', 'crosslingual', 'europarl')
 
 
 logger = getLogger()

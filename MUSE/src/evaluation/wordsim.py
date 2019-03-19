@@ -13,8 +13,8 @@ import torch
 from scipy.stats import spearmanr
 
 
-MONOLINGUAL_EVAL_PATH = 'data/monolingual'
-SEMEVAL17_EVAL_PATH = 'data/crosslingual/wordsim'
+MONOLINGUAL_EVAL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'data', 'monolingual')
+SEMEVAL17_EVAL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'data', 'crosslingual', 'wordsim')
 
 
 logger = getLogger()
