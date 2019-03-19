@@ -45,6 +45,13 @@ def corpus_perplexity(corpus, lm):
     perplexity = pow(2.0, entropy)
     return perplexity
 
+def avg_sent_perplexity(corpus, lm):
+    perplexities = []
+    for sent in corpus:
+        ngrams = [ngram for ngram in sent]
+        perplexities.append(lm.perplexity(ngrams))
+    return sum(perplexities) / len(perplexities)
+
 if __name__ == '__main__':
     args = parse_args()
 
@@ -60,5 +67,5 @@ if __name__ == '__main__':
     for test_file in args.corpora:
         test_corpus = load_corpus(test_file)
         test, vocab = padded_everygram_pipeline(args.n, test_corpus)
-        perplexity = corpus_perplexity(test, lm)
+        perplexity = avg_sent_perplexity(test, lm)
         print('{}: {}'.format(test_file, perplexity))
