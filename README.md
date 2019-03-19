@@ -105,6 +105,10 @@ $ python project/tools/visualize.py MUSE/dumped/fasttext_wiki-zh-zh_wiki-en-en_e
 Calculate perplexity:
 
 ```bash
+$ python
+>>> import nltk
+>>> nltk.download('brown')
+
 $ python project/tools/perplexity.py [--train TRAIN_CORPUS] --corpora [TEST_CORPUS ...]
 # e.g. has a training corpus
 $ python project/tools/perplexity.py --train project/data/wiki.en.txt --corpora project/data/arxiv_zh_en_880K.txt project/data/arxiv_en_en_480K.txt
