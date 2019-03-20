@@ -1,0 +1,43 @@
+INFO - 03/20/19 20:31:21 - 0:00:00 - ============ Initialized logger ============
+INFO - 03/20/19 20:31:21 - 0:00:00 - cuda: True
+                                     dico_eval: default
+                                     emb_dim: 300
+                                     exp_id: 
+                                     exp_name: gold
+                                     exp_path: /data/home/pyliao/bridge-with-l2/MUSE/dumped/gold/6u2ru0vras
+                                     max_vocab: 40000
+                                     normalize_embeddings: center
+                                     src_emb: MUSE/dumped/gold/r7vchglbus/vectors-zh.txt
+                                     src_lang: zh
+                                     tgt_emb: MUSE/dumped/gold/r7vchglbus/vectors-en.txt
+                                     tgt_lang: en
+                                     verbose: 2
+INFO - 03/20/19 20:31:21 - 0:00:00 - The experiment will be stored in /data/home/pyliao/bridge-with-l2/MUSE/dumped/gold/6u2ru0vras
+INFO - 03/20/19 20:31:24 - 0:00:03 - Loaded 40000 pre-trained word embeddings.
+INFO - 03/20/19 20:31:29 - 0:00:08 - Loaded 40000 pre-trained word embeddings.
+INFO - 03/20/19 20:31:29 - 0:00:08 - ====================================================================
+INFO - 03/20/19 20:31:29 - 0:00:08 -                        Dataset      Found     Not found          Rho
+INFO - 03/20/19 20:31:29 - 0:00:08 - ====================================================================
+INFO - 03/20/19 20:31:29 - 0:00:08 -                 EN_RW-STANFORD        536          1498       0.5403
+INFO - 03/20/19 20:31:29 - 0:00:08 -                  EN_WS-353-ALL        346             7       0.7493
+INFO - 03/20/19 20:31:29 - 0:00:08 -                       EN_RG-65         61             4       0.7878
+INFO - 03/20/19 20:31:29 - 0:00:08 -                    EN_VERB-143        144             0       0.4281
+INFO - 03/20/19 20:31:29 - 0:00:08 -                   EN_MEN-TR-3k       2895           105       0.7724
+INFO - 03/20/19 20:31:29 - 0:00:08 -                  EN_WS-353-SIM        200             3       0.7959
+INFO - 03/20/19 20:31:29 - 0:00:08 -                   EN_SEMEVAL17        337            51       0.7265
+INFO - 03/20/19 20:31:29 - 0:00:08 -                      EN_YP-130        104            26       0.5094
+INFO - 03/20/19 20:31:29 - 0:00:08 -                       EN_MC-30         29             1       0.8381
+INFO - 03/20/19 20:31:29 - 0:00:08 -                  EN_SIMLEX-999        988            11       0.3880
+INFO - 03/20/19 20:31:29 - 0:00:08 -                   EN_MTurk-287        284             3       0.6880
+INFO - 03/20/19 20:31:29 - 0:00:08 -                  EN_WS-353-REL        248             4       0.6836
+INFO - 03/20/19 20:31:29 - 0:00:08 -                   EN_MTurk-771        767             4       0.6835
+INFO - 03/20/19 20:31:29 - 0:00:08 - ====================================================================
+INFO - 03/20/19 20:31:29 - 0:00:08 - Monolingual target word similarity score average: 0.66085
+INFO - 03/20/19 20:31:29 - 0:00:08 - Found 2240 pairs of words in the dictionary (1403 unique). 243 other pairs contained at least one unknown word (0 in lang1, 243 in lang2)
+INFO - 03/20/19 20:31:30 - 0:00:08 - 1403 source words - nn - Precision at k = 1: 1.211689
+INFO - 03/20/19 20:31:30 - 0:00:08 - 1403 source words - nn - Precision at k = 5: 3.421240
+INFO - 03/20/19 20:31:30 - 0:00:08 - 1403 source words - nn - Precision at k = 10: 4.561654
+INFO - 03/20/19 20:31:30 - 0:00:08 - Found 2240 pairs of words in the dictionary (1403 unique). 243 other pairs contained at least one unknown word (0 in lang1, 243 in lang2)
+INFO - 03/20/19 20:31:34 - 0:00:13 - 1403 source words - csls_knn_10 - Precision at k = 1: 1.069138
+INFO - 03/20/19 20:31:34 - 0:00:13 - 1403 source words - csls_knn_10 - Precision at k = 5: 4.205274
+INFO - 03/20/19 20:31:34 - 0:00:13 - 1403 source words - csls_knn_10 - Precision at k = 10: 6.699929
