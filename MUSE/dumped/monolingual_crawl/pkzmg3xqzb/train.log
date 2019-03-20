@@ -1,0 +1,35 @@
+INFO - 03/20/19 02:34:47 - 0:00:00 - ============ Initialized logger ============
+INFO - 03/20/19 02:34:47 - 0:00:00 - cuda: True
+                                     dico_eval: default
+                                     emb_dim: 300
+                                     exp_id: 
+                                     exp_name: monolingual_crawl
+                                     exp_path: /data/home/pyliao/bridge-with-l2/MUSE/dumped/monolingual_crawl/pkzmg3xqzb
+                                     max_vocab: 40000
+                                     normalize_embeddings: 
+                                     src_emb: MUSE/data/gold/fasttext.crawl.en.vec
+                                     src_lang: en
+                                     tgt_emb: 
+                                     tgt_lang: 
+                                     verbose: 2
+INFO - 03/20/19 02:34:47 - 0:00:00 - The experiment will be stored in /data/home/pyliao/bridge-with-l2/MUSE/dumped/monolingual_crawl/pkzmg3xqzb
+WARNING - 03/20/19 02:34:49 - 0:00:03 - Invalid dimension (76) for source word '.it' in line 40831.
+INFO - 03/20/19 02:34:49 - 0:00:03 - Loaded 31239 pre-trained word embeddings.
+INFO - 03/20/19 02:34:52 - 0:00:05 - ====================================================================
+INFO - 03/20/19 02:34:52 - 0:00:05 -                        Dataset      Found     Not found          Rho
+INFO - 03/20/19 02:34:52 - 0:00:05 - ====================================================================
+INFO - 03/20/19 02:34:52 - 0:00:05 -                 EN_RW-STANFORD        470          1564       0.6826
+INFO - 03/20/19 02:34:52 - 0:00:05 -                  EN_WS-353-ALL        337            16       0.7697
+INFO - 03/20/19 02:34:52 - 0:00:05 -                       EN_RG-65         61             4       0.8056
+INFO - 03/20/19 02:34:52 - 0:00:05 -                    EN_VERB-143        144             0       0.4473
+INFO - 03/20/19 02:34:52 - 0:00:05 -                   EN_MEN-TR-3k       2858           142       0.8008
+INFO - 03/20/19 02:34:52 - 0:00:05 -                  EN_WS-353-SIM        196             7       0.8084
+INFO - 03/20/19 02:34:52 - 0:00:05 -                   EN_SEMEVAL17        331            57       0.7768
+INFO - 03/20/19 02:34:52 - 0:00:05 -                      EN_YP-130        116            14       0.6084
+INFO - 03/20/19 02:34:52 - 0:00:05 -                       EN_MC-30         29             1       0.7859
+INFO - 03/20/19 02:34:52 - 0:00:05 -                  EN_SIMLEX-999        990             9       0.4906
+INFO - 03/20/19 02:34:52 - 0:00:05 -                   EN_MTurk-287        279             8       0.7394
+INFO - 03/20/19 02:34:52 - 0:00:05 -                  EN_WS-353-REL        243             9       0.7138
+INFO - 03/20/19 02:34:52 - 0:00:05 -                   EN_MTurk-771        771             0       0.7598
+INFO - 03/20/19 02:34:52 - 0:00:05 - ====================================================================
+INFO - 03/20/19 02:34:52 - 0:00:05 - Monolingual source word similarity score average: 0.70685
