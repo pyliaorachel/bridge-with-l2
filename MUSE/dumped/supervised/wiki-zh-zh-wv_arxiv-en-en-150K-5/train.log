@@ -1,0 +1,270 @@
+INFO - 03/20/19 14:57:21 - 0:00:00 - ============ Initialized logger ============
+INFO - 03/20/19 14:57:21 - 0:00:00 - cuda: True
+                                     dico_build: S2T&T2S
+                                     dico_eval: default
+                                     dico_max_rank: 10000
+                                     dico_max_size: 0
+                                     dico_method: csls_knn_10
+                                     dico_min_size: 0
+                                     dico_threshold: 0
+                                     dico_train: default
+                                     emb_dim: 300
+                                     exp_id: 
+                                     exp_name: supervised
+                                     exp_path: /data/home/pyliao/bridge-with-l2/MUSE/dumped/supervised/03iilhzefe
+                                     export: txt
+                                     max_vocab: 40000
+                                     n_refinement: 5
+                                     normalize_embeddings: center
+                                     seed: -1
+                                     src_emb: MUSE/data/gold/word2vec.wiki.zh.vec
+                                     src_lang: zh
+                                     tgt_emb: project/data/arxiv_en_en_150K_5.word2vec.vec
+                                     tgt_lang: en
+                                     verbose: 2
+INFO - 03/20/19 14:57:21 - 0:00:00 - The experiment will be stored in /data/home/pyliao/bridge-with-l2/MUSE/dumped/supervised/03iilhzefe
+INFO - 03/20/19 14:57:26 - 0:00:05 - Loaded 40000 pre-trained word embeddings.
+INFO - 03/20/19 14:57:34 - 0:00:14 - Loaded 33601 pre-trained word embeddings.
+INFO - 03/20/19 14:57:35 - 0:00:14 - Found 6082 pairs of words in the dictionary (3642 unique). 2809 other pairs contained at least one unknown word (381 in lang1, 2568 in lang2)
+INFO - 03/20/19 14:57:35 - 0:00:14 - Validation metric: precision_at_1-csls_knn_10
+INFO - 03/20/19 14:57:35 - 0:00:14 - Starting iteration 0...
+INFO - 03/20/19 14:57:44 - 0:00:23 - ====================================================================
+INFO - 03/20/19 14:57:44 - 0:00:23 -                        Dataset      Found     Not found          Rho
+INFO - 03/20/19 14:57:44 - 0:00:23 - ====================================================================
+INFO - 03/20/19 14:57:44 - 0:00:23 -                 EN_RW-STANFORD        393          1641       0.0738
+INFO - 03/20/19 14:57:44 - 0:00:23 -                  EN_WS-353-ALL        228           125       0.1762
+INFO - 03/20/19 14:57:44 - 0:00:23 -                       EN_RG-65         15            50       0.1286
+INFO - 03/20/19 14:57:44 - 0:00:23 -                    EN_VERB-143        135             9       0.1697
+INFO - 03/20/19 14:57:44 - 0:00:23 -                   EN_MEN-TR-3k       1407          1593       0.0933
+INFO - 03/20/19 14:57:44 - 0:00:23 -                  EN_WS-353-SIM        124            79       0.2644
+INFO - 03/20/19 14:57:44 - 0:00:23 -                   EN_SEMEVAL17        163           225       0.1280
+INFO - 03/20/19 14:57:44 - 0:00:23 -                      EN_YP-130         74            56      -0.0113
+INFO - 03/20/19 14:57:44 - 0:00:23 -                       EN_MC-30          8            22      -0.0238
+INFO - 03/20/19 14:57:44 - 0:00:23 -                  EN_SIMLEX-999        631           368       0.1320
+INFO - 03/20/19 14:57:44 - 0:00:23 -                   EN_MTurk-287        114           173       0.0420
+INFO - 03/20/19 14:57:44 - 0:00:23 -                  EN_WS-353-REL        169            83       0.1500
+INFO - 03/20/19 14:57:44 - 0:00:23 -                   EN_MTurk-771        516           255       0.1538
+INFO - 03/20/19 14:57:44 - 0:00:23 - ====================================================================
+INFO - 03/20/19 14:57:44 - 0:00:23 - Monolingual target word similarity score average: 0.11358
+INFO - 03/20/19 14:57:44 - 0:00:23 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 14:57:44 - 0:00:23 - 809 source words - nn - Precision at k = 1: 1.112485
+INFO - 03/20/19 14:57:44 - 0:00:23 - 809 source words - nn - Precision at k = 5: 3.213844
+INFO - 03/20/19 14:57:44 - 0:00:23 - 809 source words - nn - Precision at k = 10: 4.944376
+INFO - 03/20/19 14:57:44 - 0:00:23 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 14:58:38 - 0:01:17 - 809 source words - csls_knn_10 - Precision at k = 1: 1.483313
+INFO - 03/20/19 14:58:38 - 0:01:17 - 809 source words - csls_knn_10 - Precision at k = 5: 3.213844
+INFO - 03/20/19 14:58:38 - 0:01:17 - 809 source words - csls_knn_10 - Precision at k = 10: 5.686032
+INFO - 03/20/19 14:58:40 - 0:01:19 - Building the train dictionary ...
+INFO - 03/20/19 14:58:40 - 0:01:19 - New train dictionary of 6286 pairs.
+INFO - 03/20/19 14:58:40 - 0:01:19 - Mean cosine (nn method, S2T build, 10000 max size): 0.41228
+INFO - 03/20/19 15:00:52 - 0:03:31 - Building the train dictionary ...
+INFO - 03/20/19 15:00:52 - 0:03:31 - New train dictionary of 5743 pairs.
+INFO - 03/20/19 15:00:52 - 0:03:31 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.40320
+INFO - 03/20/19 15:00:52 - 0:03:31 - __log__:{"n_iter": 0, "tgt_ws_monolingual_scores": 0.11358498841609894, "tgt_EN_RW-STANFORD": 0.07379254843935937, "tgt_EN_WS-353-ALL": 0.1762063712197332, "tgt_EN_RG-65": 0.12857142857142856, "tgt_EN_VERB-143": 0.16966658843375404, "tgt_EN_MEN-TR-3k": 0.09327467662273647, "tgt_EN_WS-353-SIM": 0.2644255890352451, "tgt_EN_SEMEVAL17": 0.12799097811942733, "tgt_EN_YP-130": -0.011304649251853306, "tgt_EN_MC-30": -0.023809523809523815, "tgt_EN_SIMLEX-999": 0.13202342178588608, "tgt_EN_MTurk-287": 0.04195308520735491, "tgt_EN_WS-353-REL": 0.1500328502372203, "tgt_EN_MTurk-771": 0.15378148479851791, "precision_at_1-nn": 1.1124845488257107, "precision_at_5-nn": 3.2138442521631645, "precision_at_10-nn": 4.944375772558715, "precision_at_1-csls_knn_10": 1.4833127317676145, "precision_at_5-csls_knn_10": 3.2138442521631645, "precision_at_10-csls_knn_10": 5.686032138442522, "mean_cosine-nn-S2T-10000": 0.4122828245162964, "mean_cosine-csls_knn_10-S2T-10000": 0.4032019078731537}
+INFO - 03/20/19 15:00:52 - 0:03:31 - * Best value for "precision_at_1-csls_knn_10": 1.48331
+INFO - 03/20/19 15:00:52 - 0:03:31 - * Saving the mapping to /data/home/pyliao/bridge-with-l2/MUSE/dumped/supervised/03iilhzefe/best_mapping.pth ...
+INFO - 03/20/19 15:00:52 - 0:03:31 - End of iteration 0.
+                                     
+                                     
+INFO - 03/20/19 15:00:52 - 0:03:31 - Starting iteration 1...
+INFO - 03/20/19 15:00:52 - 0:03:31 - Building the train dictionary ...
+INFO - 03/20/19 15:03:10 - 0:05:49 - New train dictionary of 1134 pairs.
+INFO - 03/20/19 15:03:20 - 0:05:59 - ====================================================================
+INFO - 03/20/19 15:03:20 - 0:05:59 -                        Dataset      Found     Not found          Rho
+INFO - 03/20/19 15:03:20 - 0:05:59 - ====================================================================
+INFO - 03/20/19 15:03:20 - 0:05:59 -                 EN_RW-STANFORD        393          1641       0.0738
+INFO - 03/20/19 15:03:20 - 0:05:59 -                  EN_WS-353-ALL        228           125       0.1762
+INFO - 03/20/19 15:03:20 - 0:05:59 -                       EN_RG-65         15            50       0.1286
+INFO - 03/20/19 15:03:20 - 0:05:59 -                    EN_VERB-143        135             9       0.1697
+INFO - 03/20/19 15:03:20 - 0:05:59 -                   EN_MEN-TR-3k       1407          1593       0.0933
+INFO - 03/20/19 15:03:20 - 0:05:59 -                  EN_WS-353-SIM        124            79       0.2644
+INFO - 03/20/19 15:03:20 - 0:05:59 -                   EN_SEMEVAL17        163           225       0.1280
+INFO - 03/20/19 15:03:20 - 0:05:59 -                      EN_YP-130         74            56      -0.0113
+INFO - 03/20/19 15:03:20 - 0:05:59 -                       EN_MC-30          8            22      -0.0238
+INFO - 03/20/19 15:03:20 - 0:06:00 -                  EN_SIMLEX-999        631           368       0.1320
+INFO - 03/20/19 15:03:20 - 0:06:00 -                   EN_MTurk-287        114           173       0.0420
+INFO - 03/20/19 15:03:20 - 0:06:00 -                  EN_WS-353-REL        169            83       0.1500
+INFO - 03/20/19 15:03:20 - 0:06:00 -                   EN_MTurk-771        516           255       0.1538
+INFO - 03/20/19 15:03:20 - 0:06:00 - ====================================================================
+INFO - 03/20/19 15:03:20 - 0:06:00 - Monolingual target word similarity score average: 0.11358
+INFO - 03/20/19 15:03:20 - 0:06:00 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 15:03:20 - 0:06:00 - 809 source words - nn - Precision at k = 1: 0.741656
+INFO - 03/20/19 15:03:20 - 0:06:00 - 809 source words - nn - Precision at k = 5: 2.595797
+INFO - 03/20/19 15:03:20 - 0:06:00 - 809 source words - nn - Precision at k = 10: 3.955501
+INFO - 03/20/19 15:03:20 - 0:06:00 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 15:04:41 - 0:07:20 - 809 source words - csls_knn_10 - Precision at k = 1: 0.865266
+INFO - 03/20/19 15:04:41 - 0:07:20 - 809 source words - csls_knn_10 - Precision at k = 5: 2.966625
+INFO - 03/20/19 15:04:41 - 0:07:20 - 809 source words - csls_knn_10 - Precision at k = 10: 4.573548
+INFO - 03/20/19 15:04:44 - 0:07:23 - Building the train dictionary ...
+INFO - 03/20/19 15:04:44 - 0:07:23 - New train dictionary of 6368 pairs.
+INFO - 03/20/19 15:04:44 - 0:07:23 - Mean cosine (nn method, S2T build, 10000 max size): 0.42974
+INFO - 03/20/19 15:07:09 - 0:09:48 - Building the train dictionary ...
+INFO - 03/20/19 15:07:09 - 0:09:48 - New train dictionary of 5706 pairs.
+INFO - 03/20/19 15:07:09 - 0:09:48 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.42535
+INFO - 03/20/19 15:07:09 - 0:09:48 - __log__:{"n_iter": 1, "tgt_ws_monolingual_scores": 0.11358498841609894, "tgt_EN_RW-STANFORD": 0.07379254843935937, "tgt_EN_WS-353-ALL": 0.1762063712197332, "tgt_EN_RG-65": 0.12857142857142856, "tgt_EN_VERB-143": 0.16966658843375404, "tgt_EN_MEN-TR-3k": 0.09327467662273647, "tgt_EN_WS-353-SIM": 0.2644255890352451, "tgt_EN_SEMEVAL17": 0.12799097811942733, "tgt_EN_YP-130": -0.011304649251853306, "tgt_EN_MC-30": -0.023809523809523815, "tgt_EN_SIMLEX-999": 0.13202342178588608, "tgt_EN_MTurk-287": 0.04195308520735491, "tgt_EN_WS-353-REL": 0.1500328502372203, "tgt_EN_MTurk-771": 0.15378148479851791, "precision_at_1-nn": 0.7416563658838072, "precision_at_5-nn": 2.595797280593325, "precision_at_10-nn": 3.955500618046971, "precision_at_1-csls_knn_10": 0.865265760197775, "precision_at_5-csls_knn_10": 2.966625463535229, "precision_at_10-csls_knn_10": 4.573547589616811, "mean_cosine-nn-S2T-10000": 0.42974093556404114, "mean_cosine-csls_knn_10-S2T-10000": 0.4253547489643097}
+INFO - 03/20/19 15:07:09 - 0:09:49 - End of iteration 1.
+                                     
+                                     
+INFO - 03/20/19 15:07:09 - 0:09:49 - Starting iteration 2...
+INFO - 03/20/19 15:07:09 - 0:09:49 - Building the train dictionary ...
+INFO - 03/20/19 15:09:48 - 0:12:28 - New train dictionary of 1331 pairs.
+INFO - 03/20/19 15:09:58 - 0:12:37 - ====================================================================
+INFO - 03/20/19 15:09:58 - 0:12:37 -                        Dataset      Found     Not found          Rho
+INFO - 03/20/19 15:09:58 - 0:12:37 - ====================================================================
+INFO - 03/20/19 15:09:58 - 0:12:37 -                 EN_RW-STANFORD        393          1641       0.0738
+INFO - 03/20/19 15:09:58 - 0:12:37 -                  EN_WS-353-ALL        228           125       0.1762
+INFO - 03/20/19 15:09:58 - 0:12:37 -                       EN_RG-65         15            50       0.1286
+INFO - 03/20/19 15:09:58 - 0:12:37 -                    EN_VERB-143        135             9       0.1697
+INFO - 03/20/19 15:09:58 - 0:12:37 -                   EN_MEN-TR-3k       1407          1593       0.0933
+INFO - 03/20/19 15:09:58 - 0:12:37 -                  EN_WS-353-SIM        124            79       0.2644
+INFO - 03/20/19 15:09:58 - 0:12:37 -                   EN_SEMEVAL17        163           225       0.1280
+INFO - 03/20/19 15:09:58 - 0:12:37 -                      EN_YP-130         74            56      -0.0113
+INFO - 03/20/19 15:09:58 - 0:12:37 -                       EN_MC-30          8            22      -0.0238
+INFO - 03/20/19 15:09:58 - 0:12:37 -                  EN_SIMLEX-999        631           368       0.1320
+INFO - 03/20/19 15:09:58 - 0:12:37 -                   EN_MTurk-287        114           173       0.0420
+INFO - 03/20/19 15:09:58 - 0:12:37 -                  EN_WS-353-REL        169            83       0.1500
+INFO - 03/20/19 15:09:58 - 0:12:37 -                   EN_MTurk-771        516           255       0.1538
+INFO - 03/20/19 15:09:58 - 0:12:37 - ====================================================================
+INFO - 03/20/19 15:09:58 - 0:12:37 - Monolingual target word similarity score average: 0.11358
+INFO - 03/20/19 15:09:58 - 0:12:38 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 15:09:58 - 0:12:38 - 809 source words - nn - Precision at k = 1: 0.741656
+INFO - 03/20/19 15:09:58 - 0:12:38 - 809 source words - nn - Precision at k = 5: 2.224969
+INFO - 03/20/19 15:09:58 - 0:12:38 - 809 source words - nn - Precision at k = 10: 3.708282
+INFO - 03/20/19 15:09:58 - 0:12:38 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 15:11:09 - 0:13:48 - 809 source words - csls_knn_10 - Precision at k = 1: 0.988875
+INFO - 03/20/19 15:11:09 - 0:13:48 - 809 source words - csls_knn_10 - Precision at k = 5: 3.213844
+INFO - 03/20/19 15:11:09 - 0:13:48 - 809 source words - csls_knn_10 - Precision at k = 10: 4.326329
+INFO - 03/20/19 15:11:11 - 0:13:51 - Building the train dictionary ...
+INFO - 03/20/19 15:11:11 - 0:13:51 - New train dictionary of 6354 pairs.
+INFO - 03/20/19 15:11:11 - 0:13:51 - Mean cosine (nn method, S2T build, 10000 max size): 0.43874
+INFO - 03/20/19 15:13:45 - 0:16:24 - Building the train dictionary ...
+INFO - 03/20/19 15:13:45 - 0:16:24 - New train dictionary of 5725 pairs.
+INFO - 03/20/19 15:13:45 - 0:16:24 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.43543
+INFO - 03/20/19 15:13:45 - 0:16:24 - __log__:{"n_iter": 2, "tgt_ws_monolingual_scores": 0.11358498841609894, "tgt_EN_RW-STANFORD": 0.07379254843935937, "tgt_EN_WS-353-ALL": 0.1762063712197332, "tgt_EN_RG-65": 0.12857142857142856, "tgt_EN_VERB-143": 0.16966658843375404, "tgt_EN_MEN-TR-3k": 0.09327467662273647, "tgt_EN_WS-353-SIM": 0.2644255890352451, "tgt_EN_SEMEVAL17": 0.12799097811942733, "tgt_EN_YP-130": -0.011304649251853306, "tgt_EN_MC-30": -0.023809523809523815, "tgt_EN_SIMLEX-999": 0.13202342178588608, "tgt_EN_MTurk-287": 0.04195308520735491, "tgt_EN_WS-353-REL": 0.1500328502372203, "tgt_EN_MTurk-771": 0.15378148479851791, "precision_at_1-nn": 0.7416563658838072, "precision_at_5-nn": 2.2249690976514214, "precision_at_10-nn": 3.7082818294190356, "precision_at_1-csls_knn_10": 0.9888751545117428, "precision_at_5-csls_knn_10": 3.2138442521631645, "precision_at_10-csls_knn_10": 4.326328800988875, "mean_cosine-nn-S2T-10000": 0.4387432038784027, "mean_cosine-csls_knn_10-S2T-10000": 0.43542617559432983}
+INFO - 03/20/19 15:13:45 - 0:16:24 - End of iteration 2.
+                                     
+                                     
+INFO - 03/20/19 15:13:45 - 0:16:24 - Starting iteration 3...
+INFO - 03/20/19 15:13:45 - 0:16:24 - Building the train dictionary ...
+INFO - 03/20/19 15:16:09 - 0:18:48 - New train dictionary of 1427 pairs.
+INFO - 03/20/19 15:16:19 - 0:18:58 - ====================================================================
+INFO - 03/20/19 15:16:19 - 0:18:58 -                        Dataset      Found     Not found          Rho
+INFO - 03/20/19 15:16:19 - 0:18:58 - ====================================================================
+INFO - 03/20/19 15:16:19 - 0:18:58 -                 EN_RW-STANFORD        393          1641       0.0738
+INFO - 03/20/19 15:16:19 - 0:18:58 -                  EN_WS-353-ALL        228           125       0.1762
+INFO - 03/20/19 15:16:19 - 0:18:58 -                       EN_RG-65         15            50       0.1286
+INFO - 03/20/19 15:16:19 - 0:18:58 -                    EN_VERB-143        135             9       0.1697
+INFO - 03/20/19 15:16:19 - 0:18:58 -                   EN_MEN-TR-3k       1407          1593       0.0933
+INFO - 03/20/19 15:16:19 - 0:18:58 -                  EN_WS-353-SIM        124            79       0.2644
+INFO - 03/20/19 15:16:19 - 0:18:58 -                   EN_SEMEVAL17        163           225       0.1280
+INFO - 03/20/19 15:16:19 - 0:18:58 -                      EN_YP-130         74            56      -0.0113
+INFO - 03/20/19 15:16:19 - 0:18:58 -                       EN_MC-30          8            22      -0.0238
+INFO - 03/20/19 15:16:19 - 0:18:58 -                  EN_SIMLEX-999        631           368       0.1320
+INFO - 03/20/19 15:16:19 - 0:18:58 -                   EN_MTurk-287        114           173       0.0420
+INFO - 03/20/19 15:16:19 - 0:18:58 -                  EN_WS-353-REL        169            83       0.1500
+INFO - 03/20/19 15:16:19 - 0:18:58 -                   EN_MTurk-771        516           255       0.1538
+INFO - 03/20/19 15:16:19 - 0:18:58 - ====================================================================
+INFO - 03/20/19 15:16:19 - 0:18:58 - Monolingual target word similarity score average: 0.11358
+INFO - 03/20/19 15:16:19 - 0:18:58 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 15:16:19 - 0:18:58 - 809 source words - nn - Precision at k = 1: 0.865266
+INFO - 03/20/19 15:16:19 - 0:18:58 - 809 source words - nn - Precision at k = 5: 2.101360
+INFO - 03/20/19 15:16:19 - 0:18:58 - 809 source words - nn - Precision at k = 10: 4.326329
+INFO - 03/20/19 15:16:19 - 0:18:59 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 15:17:33 - 0:20:12 - 809 source words - csls_knn_10 - Precision at k = 1: 0.865266
+INFO - 03/20/19 15:17:33 - 0:20:12 - 809 source words - csls_knn_10 - Precision at k = 5: 3.213844
+INFO - 03/20/19 15:17:33 - 0:20:12 - 809 source words - csls_knn_10 - Precision at k = 10: 4.573548
+INFO - 03/20/19 15:17:36 - 0:20:16 - Building the train dictionary ...
+INFO - 03/20/19 15:17:36 - 0:20:16 - New train dictionary of 6364 pairs.
+INFO - 03/20/19 15:17:36 - 0:20:16 - Mean cosine (nn method, S2T build, 10000 max size): 0.44246
+INFO - 03/20/19 15:20:11 - 0:22:50 - Building the train dictionary ...
+INFO - 03/20/19 15:20:11 - 0:22:50 - New train dictionary of 5792 pairs.
+INFO - 03/20/19 15:20:11 - 0:22:50 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.43890
+INFO - 03/20/19 15:20:11 - 0:22:50 - __log__:{"n_iter": 3, "tgt_ws_monolingual_scores": 0.11358498841609894, "tgt_EN_RW-STANFORD": 0.07379254843935937, "tgt_EN_WS-353-ALL": 0.1762063712197332, "tgt_EN_RG-65": 0.12857142857142856, "tgt_EN_VERB-143": 0.16966658843375404, "tgt_EN_MEN-TR-3k": 0.09327467662273647, "tgt_EN_WS-353-SIM": 0.2644255890352451, "tgt_EN_SEMEVAL17": 0.12799097811942733, "tgt_EN_YP-130": -0.011304649251853306, "tgt_EN_MC-30": -0.023809523809523815, "tgt_EN_SIMLEX-999": 0.13202342178588608, "tgt_EN_MTurk-287": 0.04195308520735491, "tgt_EN_WS-353-REL": 0.1500328502372203, "tgt_EN_MTurk-771": 0.15378148479851791, "precision_at_1-nn": 0.865265760197775, "precision_at_5-nn": 2.1013597033374536, "precision_at_10-nn": 4.326328800988875, "precision_at_1-csls_knn_10": 0.865265760197775, "precision_at_5-csls_knn_10": 3.2138442521631645, "precision_at_10-csls_knn_10": 4.573547589616811, "mean_cosine-nn-S2T-10000": 0.44245609641075134, "mean_cosine-csls_knn_10-S2T-10000": 0.43890082836151123}
+INFO - 03/20/19 15:20:11 - 0:22:50 - End of iteration 3.
+                                     
+                                     
+INFO - 03/20/19 15:20:11 - 0:22:50 - Starting iteration 4...
+INFO - 03/20/19 15:20:11 - 0:22:50 - Building the train dictionary ...
+INFO - 03/20/19 15:22:38 - 0:25:17 - New train dictionary of 1488 pairs.
+INFO - 03/20/19 15:22:49 - 0:25:28 - ====================================================================
+INFO - 03/20/19 15:22:49 - 0:25:29 -                        Dataset      Found     Not found          Rho
+INFO - 03/20/19 15:22:49 - 0:25:29 - ====================================================================
+INFO - 03/20/19 15:22:49 - 0:25:29 -                 EN_RW-STANFORD        393          1641       0.0738
+INFO - 03/20/19 15:22:49 - 0:25:29 -                  EN_WS-353-ALL        228           125       0.1762
+INFO - 03/20/19 15:22:49 - 0:25:29 -                       EN_RG-65         15            50       0.1286
+INFO - 03/20/19 15:22:49 - 0:25:29 -                    EN_VERB-143        135             9       0.1697
+INFO - 03/20/19 15:22:49 - 0:25:29 -                   EN_MEN-TR-3k       1407          1593       0.0933
+INFO - 03/20/19 15:22:49 - 0:25:29 -                  EN_WS-353-SIM        124            79       0.2644
+INFO - 03/20/19 15:22:49 - 0:25:29 -                   EN_SEMEVAL17        163           225       0.1280
+INFO - 03/20/19 15:22:49 - 0:25:29 -                      EN_YP-130         74            56      -0.0113
+INFO - 03/20/19 15:22:49 - 0:25:29 -                       EN_MC-30          8            22      -0.0238
+INFO - 03/20/19 15:22:49 - 0:25:29 -                  EN_SIMLEX-999        631           368       0.1320
+INFO - 03/20/19 15:22:49 - 0:25:29 -                   EN_MTurk-287        114           173       0.0420
+INFO - 03/20/19 15:22:49 - 0:25:29 -                  EN_WS-353-REL        169            83       0.1500
+INFO - 03/20/19 15:22:50 - 0:25:29 -                   EN_MTurk-771        516           255       0.1538
+INFO - 03/20/19 15:22:50 - 0:25:29 - ====================================================================
+INFO - 03/20/19 15:22:50 - 0:25:29 - Monolingual target word similarity score average: 0.11358
+INFO - 03/20/19 15:22:50 - 0:25:29 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 15:22:50 - 0:25:29 - 809 source words - nn - Precision at k = 1: 0.865266
+INFO - 03/20/19 15:22:50 - 0:25:29 - 809 source words - nn - Precision at k = 5: 2.472188
+INFO - 03/20/19 15:22:50 - 0:25:29 - 809 source words - nn - Precision at k = 10: 3.955501
+INFO - 03/20/19 15:22:50 - 0:25:29 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 15:24:07 - 0:26:47 - 809 source words - csls_knn_10 - Precision at k = 1: 0.741656
+INFO - 03/20/19 15:24:07 - 0:26:47 - 809 source words - csls_knn_10 - Precision at k = 5: 2.843016
+INFO - 03/20/19 15:24:07 - 0:26:47 - 809 source words - csls_knn_10 - Precision at k = 10: 4.202719
+INFO - 03/20/19 15:24:10 - 0:26:49 - Building the train dictionary ...
+INFO - 03/20/19 15:24:10 - 0:26:49 - New train dictionary of 6401 pairs.
+INFO - 03/20/19 15:24:10 - 0:26:49 - Mean cosine (nn method, S2T build, 10000 max size): 0.44489
+INFO - 03/20/19 15:26:31 - 0:29:10 - Building the train dictionary ...
+INFO - 03/20/19 15:26:31 - 0:29:10 - New train dictionary of 5783 pairs.
+INFO - 03/20/19 15:26:31 - 0:29:10 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.44289
+INFO - 03/20/19 15:26:31 - 0:29:10 - __log__:{"n_iter": 4, "tgt_ws_monolingual_scores": 0.11358498841609894, "tgt_EN_RW-STANFORD": 0.07379254843935937, "tgt_EN_WS-353-ALL": 0.1762063712197332, "tgt_EN_RG-65": 0.12857142857142856, "tgt_EN_VERB-143": 0.16966658843375404, "tgt_EN_MEN-TR-3k": 0.09327467662273647, "tgt_EN_WS-353-SIM": 0.2644255890352451, "tgt_EN_SEMEVAL17": 0.12799097811942733, "tgt_EN_YP-130": -0.011304649251853306, "tgt_EN_MC-30": -0.023809523809523815, "tgt_EN_SIMLEX-999": 0.13202342178588608, "tgt_EN_MTurk-287": 0.04195308520735491, "tgt_EN_WS-353-REL": 0.1500328502372203, "tgt_EN_MTurk-771": 0.15378148479851791, "precision_at_1-nn": 0.865265760197775, "precision_at_5-nn": 2.4721878862793574, "precision_at_10-nn": 3.955500618046971, "precision_at_1-csls_knn_10": 0.7416563658838072, "precision_at_5-csls_knn_10": 2.843016069221261, "precision_at_10-csls_knn_10": 4.202719406674907, "mean_cosine-nn-S2T-10000": 0.444894939661026, "mean_cosine-csls_knn_10-S2T-10000": 0.4428883194923401}
+INFO - 03/20/19 15:26:31 - 0:29:10 - End of iteration 4.
+                                     
+                                     
+INFO - 03/20/19 15:26:31 - 0:29:10 - Starting iteration 5...
+INFO - 03/20/19 15:26:31 - 0:29:10 - Building the train dictionary ...
+INFO - 03/20/19 15:28:51 - 0:31:30 - New train dictionary of 1537 pairs.
+INFO - 03/20/19 15:28:58 - 0:31:37 - ====================================================================
+INFO - 03/20/19 15:28:58 - 0:31:37 -                        Dataset      Found     Not found          Rho
+INFO - 03/20/19 15:28:58 - 0:31:37 - ====================================================================
+INFO - 03/20/19 15:28:58 - 0:31:37 -                 EN_RW-STANFORD        393          1641       0.0738
+INFO - 03/20/19 15:28:58 - 0:31:37 -                  EN_WS-353-ALL        228           125       0.1762
+INFO - 03/20/19 15:28:58 - 0:31:37 -                       EN_RG-65         15            50       0.1286
+INFO - 03/20/19 15:28:58 - 0:31:37 -                    EN_VERB-143        135             9       0.1697
+INFO - 03/20/19 15:28:58 - 0:31:37 -                   EN_MEN-TR-3k       1407          1593       0.0933
+INFO - 03/20/19 15:28:58 - 0:31:37 -                  EN_WS-353-SIM        124            79       0.2644
+INFO - 03/20/19 15:28:58 - 0:31:37 -                   EN_SEMEVAL17        163           225       0.1280
+INFO - 03/20/19 15:28:58 - 0:31:37 -                      EN_YP-130         74            56      -0.0113
+INFO - 03/20/19 15:28:58 - 0:31:37 -                       EN_MC-30          8            22      -0.0238
+INFO - 03/20/19 15:28:58 - 0:31:37 -                  EN_SIMLEX-999        631           368       0.1320
+INFO - 03/20/19 15:28:58 - 0:31:37 -                   EN_MTurk-287        114           173       0.0420
+INFO - 03/20/19 15:28:58 - 0:31:37 -                  EN_WS-353-REL        169            83       0.1500
+INFO - 03/20/19 15:28:58 - 0:31:37 -                   EN_MTurk-771        516           255       0.1538
+INFO - 03/20/19 15:28:58 - 0:31:37 - ====================================================================
+INFO - 03/20/19 15:28:58 - 0:31:37 - Monolingual target word similarity score average: 0.11358
+INFO - 03/20/19 15:28:58 - 0:31:38 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 15:28:58 - 0:31:38 - 809 source words - nn - Precision at k = 1: 0.988875
+INFO - 03/20/19 15:28:58 - 0:31:38 - 809 source words - nn - Precision at k = 5: 1.977750
+INFO - 03/20/19 15:28:58 - 0:31:38 - 809 source words - nn - Precision at k = 10: 3.831891
+INFO - 03/20/19 15:28:58 - 0:31:38 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 15:29:55 - 0:32:34 - 809 source words - csls_knn_10 - Precision at k = 1: 0.865266
+INFO - 03/20/19 15:29:55 - 0:32:34 - 809 source words - csls_knn_10 - Precision at k = 5: 2.348578
+INFO - 03/20/19 15:29:55 - 0:32:34 - 809 source words - csls_knn_10 - Precision at k = 10: 3.708282
+INFO - 03/20/19 15:29:56 - 0:32:36 - Building the train dictionary ...
+INFO - 03/20/19 15:29:56 - 0:32:36 - New train dictionary of 6407 pairs.
+INFO - 03/20/19 15:29:56 - 0:32:36 - Mean cosine (nn method, S2T build, 10000 max size): 0.44719
+INFO - 03/20/19 15:32:10 - 0:34:49 - Building the train dictionary ...
+INFO - 03/20/19 15:32:10 - 0:34:49 - New train dictionary of 5814 pairs.
+INFO - 03/20/19 15:32:10 - 0:34:49 - Mean cosine (csls_knn_10 method, S2T build, 10000 max size): 0.44481
+INFO - 03/20/19 15:32:10 - 0:34:49 - __log__:{"n_iter": 5, "tgt_ws_monolingual_scores": 0.11358498841609894, "tgt_EN_RW-STANFORD": 0.07379254843935937, "tgt_EN_WS-353-ALL": 0.1762063712197332, "tgt_EN_RG-65": 0.12857142857142856, "tgt_EN_VERB-143": 0.16966658843375404, "tgt_EN_MEN-TR-3k": 0.09327467662273647, "tgt_EN_WS-353-SIM": 0.2644255890352451, "tgt_EN_SEMEVAL17": 0.12799097811942733, "tgt_EN_YP-130": -0.011304649251853306, "tgt_EN_MC-30": -0.023809523809523815, "tgt_EN_SIMLEX-999": 0.13202342178588608, "tgt_EN_MTurk-287": 0.04195308520735491, "tgt_EN_WS-353-REL": 0.1500328502372203, "tgt_EN_MTurk-771": 0.15378148479851791, "precision_at_1-nn": 0.9888751545117428, "precision_at_5-nn": 1.9777503090234856, "precision_at_10-nn": 3.8318912237330034, "precision_at_1-csls_knn_10": 0.865265760197775, "precision_at_5-csls_knn_10": 2.3485784919653896, "precision_at_10-csls_knn_10": 3.7082818294190356, "mean_cosine-nn-S2T-10000": 0.44718578457832336, "mean_cosine-csls_knn_10-S2T-10000": 0.444812536239624}
+INFO - 03/20/19 15:32:10 - 0:34:49 - End of iteration 5.
+                                     
+                                     
+INFO - 03/20/19 15:32:10 - 0:34:49 - * Reloading the best model from /data/home/pyliao/bridge-with-l2/MUSE/dumped/supervised/03iilhzefe/best_mapping.pth ...
+INFO - 03/20/19 15:32:10 - 0:34:49 - Reloading all embeddings for mapping ...
+INFO - 03/20/19 15:32:14 - 0:34:54 - Loaded 50101 pre-trained word embeddings.
+INFO - 03/20/19 15:32:17 - 0:34:56 - Loaded 33601 pre-trained word embeddings.
+INFO - 03/20/19 15:32:17 - 0:34:56 - Map source embeddings to the target space ...
+INFO - 03/20/19 15:32:17 - 0:34:56 - Writing source embeddings to /data/home/pyliao/bridge-with-l2/MUSE/dumped/supervised/03iilhzefe/vectors-zh.txt ...
+INFO - 03/20/19 15:33:05 - 0:35:44 - Writing target embeddings to /data/home/pyliao/bridge-with-l2/MUSE/dumped/supervised/03iilhzefe/vectors-en.txt ...

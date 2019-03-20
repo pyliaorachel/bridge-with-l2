@@ -1,0 +1,43 @@
+INFO - 03/20/19 16:24:39 - 0:00:00 - ============ Initialized logger ============
+INFO - 03/20/19 16:24:39 - 0:00:00 - cuda: True
+                                     dico_eval: default
+                                     emb_dim: 300
+                                     exp_id: 
+                                     exp_name: supervised_eval
+                                     exp_path: /data/home/pyliao/bridge-with-l2/MUSE/dumped/supervised_eval/qr1qddqfsf
+                                     max_vocab: 40000
+                                     normalize_embeddings: center
+                                     src_emb: MUSE/dumped/supervised/wiki-zh-zh-wv_arxiv-zh-en-150K-5/vectors-zh.txt
+                                     src_lang: zh
+                                     tgt_emb: MUSE/dumped/supervised/wiki-zh-zh-wv_arxiv-zh-en-150K-5/vectors-zh.txt
+                                     tgt_lang: en
+                                     verbose: 2
+INFO - 03/20/19 16:24:39 - 0:00:00 - The experiment will be stored in /data/home/pyliao/bridge-with-l2/MUSE/dumped/supervised_eval/qr1qddqfsf
+INFO - 03/20/19 16:24:42 - 0:00:03 - Loaded 40000 pre-trained word embeddings.
+INFO - 03/20/19 16:24:47 - 0:00:08 - Loaded 40000 pre-trained word embeddings.
+INFO - 03/20/19 16:24:48 - 0:00:09 - ====================================================================
+INFO - 03/20/19 16:24:48 - 0:00:09 -                        Dataset      Found     Not found          Rho
+INFO - 03/20/19 16:24:48 - 0:00:09 - ====================================================================
+INFO - 03/20/19 16:24:48 - 0:00:09 -                 EN_RW-STANFORD          0          2034          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                  EN_WS-353-ALL          0           353          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                       EN_RG-65          0            65          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                    EN_VERB-143          0           144          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                   EN_MEN-TR-3k          0          3000          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                  EN_WS-353-SIM          0           203          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                   EN_SEMEVAL17          0           388          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                      EN_YP-130          0           130          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                       EN_MC-30          0            30          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                  EN_SIMLEX-999          0           999          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                   EN_MTurk-287          0           287          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                  EN_WS-353-REL          0           252          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 -                   EN_MTurk-771          0           771          nan
+INFO - 03/20/19 16:24:48 - 0:00:09 - ====================================================================
+INFO - 03/20/19 16:24:48 - 0:00:09 - Monolingual target word similarity score average: nan
+INFO - 03/20/19 16:24:48 - 0:00:09 - Found 0 pairs of words in the dictionary (0 unique). 2483 other pairs contained at least one unknown word (248 in lang1, 2483 in lang2)
+INFO - 03/20/19 16:24:48 - 0:00:09 - 0 source words - nn - Precision at k = 1: nan
+INFO - 03/20/19 16:24:48 - 0:00:09 - 0 source words - nn - Precision at k = 5: nan
+INFO - 03/20/19 16:24:48 - 0:00:09 - 0 source words - nn - Precision at k = 10: nan
+INFO - 03/20/19 16:24:48 - 0:00:09 - Found 0 pairs of words in the dictionary (0 unique). 2483 other pairs contained at least one unknown word (248 in lang1, 2483 in lang2)
+INFO - 03/20/19 16:25:31 - 0:00:52 - 0 source words - csls_knn_10 - Precision at k = 1: nan
+INFO - 03/20/19 16:25:31 - 0:00:52 - 0 source words - csls_knn_10 - Precision at k = 5: nan
+INFO - 03/20/19 16:25:31 - 0:00:52 - 0 source words - csls_knn_10 - Precision at k = 10: nan

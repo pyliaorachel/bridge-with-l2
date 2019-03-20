@@ -3,3 +3,4 @@ project/data/arxiv_zh_en_880K_clean.txt: 14328231
 project/data/arxiv_en_en_480K_clean.txt: 8664477
 project/data/arxiv_zh_en_480K_clean.txt: 8343281
 project/data/essay_zh_en_1M_clean.txt: 14859096
+project/data/weibo_zh_zh_1M_clean.txt: 18928635
