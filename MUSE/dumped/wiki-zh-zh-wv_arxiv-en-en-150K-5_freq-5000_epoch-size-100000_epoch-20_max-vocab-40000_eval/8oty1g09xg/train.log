@@ -1,0 +1,43 @@
+INFO - 03/20/19 16:20:59 - 0:00:00 - ============ Initialized logger ============
+INFO - 03/20/19 16:20:59 - 0:00:00 - cuda: True
+                                     dico_eval: default
+                                     emb_dim: 300
+                                     exp_id: 
+                                     exp_name: wiki-zh-zh-wv_arxiv-en-en-150K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_eval
+                                     exp_path: /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-wv_arxiv-en-en-150K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_eval/8oty1g09xg
+                                     max_vocab: 40000
+                                     normalize_embeddings: center
+                                     src_emb: MUSE/dumped/wiki-zh-zh-wv_arxiv-en-en-150K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000/m4i6jeyjhy/vectors-zh.txt
+                                     src_lang: zh
+                                     tgt_emb: MUSE/dumped/wiki-zh-zh-wv_arxiv-en-en-150K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000/m4i6jeyjhy/vectors-en.txt
+                                     tgt_lang: en
+                                     verbose: 2
+INFO - 03/20/19 16:20:59 - 0:00:00 - The experiment will be stored in /data/home/pyliao/bridge-with-l2/MUSE/dumped/wiki-zh-zh-wv_arxiv-en-en-150K-5_freq-5000_epoch-size-100000_epoch-20_max-vocab-40000_eval/8oty1g09xg
+INFO - 03/20/19 16:21:02 - 0:00:03 - Loaded 40000 pre-trained word embeddings.
+INFO - 03/20/19 16:21:07 - 0:00:07 - Loaded 33601 pre-trained word embeddings.
+INFO - 03/20/19 16:21:07 - 0:00:08 - ====================================================================
+INFO - 03/20/19 16:21:07 - 0:00:08 -                        Dataset      Found     Not found          Rho
+INFO - 03/20/19 16:21:07 - 0:00:08 - ====================================================================
+INFO - 03/20/19 16:21:07 - 0:00:08 -                 EN_RW-STANFORD        393          1641       0.0738
+INFO - 03/20/19 16:21:07 - 0:00:08 -                  EN_WS-353-ALL        228           125       0.1762
+INFO - 03/20/19 16:21:07 - 0:00:08 -                       EN_RG-65         15            50       0.1286
+INFO - 03/20/19 16:21:07 - 0:00:08 -                    EN_VERB-143        135             9       0.1697
+INFO - 03/20/19 16:21:07 - 0:00:08 -                   EN_MEN-TR-3k       1407          1593       0.0933
+INFO - 03/20/19 16:21:07 - 0:00:08 -                  EN_WS-353-SIM        124            79       0.2644
+INFO - 03/20/19 16:21:07 - 0:00:08 -                   EN_SEMEVAL17        163           225       0.1280
+INFO - 03/20/19 16:21:07 - 0:00:08 -                      EN_YP-130         74            56      -0.0113
+INFO - 03/20/19 16:21:07 - 0:00:08 -                       EN_MC-30          8            22      -0.0238
+INFO - 03/20/19 16:21:07 - 0:00:08 -                  EN_SIMLEX-999        631           368       0.1320
+INFO - 03/20/19 16:21:07 - 0:00:08 -                   EN_MTurk-287        114           173       0.0420
+INFO - 03/20/19 16:21:07 - 0:00:08 -                  EN_WS-353-REL        169            83       0.1500
+INFO - 03/20/19 16:21:07 - 0:00:08 -                   EN_MTurk-771        516           255       0.1538
+INFO - 03/20/19 16:21:07 - 0:00:08 - ====================================================================
+INFO - 03/20/19 16:21:07 - 0:00:08 - Monolingual target word similarity score average: 0.11359
+INFO - 03/20/19 16:21:08 - 0:00:08 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 16:21:08 - 0:00:08 - 809 source words - nn - Precision at k = 1: 0.000000
+INFO - 03/20/19 16:21:08 - 0:00:08 - 809 source words - nn - Precision at k = 5: 0.000000
+INFO - 03/20/19 16:21:08 - 0:00:08 - 809 source words - nn - Precision at k = 10: 0.000000
+INFO - 03/20/19 16:21:08 - 0:00:08 - Found 1220 pairs of words in the dictionary (809 unique). 1263 other pairs contained at least one unknown word (248 in lang1, 1143 in lang2)
+INFO - 03/20/19 16:21:45 - 0:00:45 - 809 source words - csls_knn_10 - Precision at k = 1: 0.000000
+INFO - 03/20/19 16:21:45 - 0:00:45 - 809 source words - csls_knn_10 - Precision at k = 5: 0.000000
+INFO - 03/20/19 16:21:45 - 0:00:45 - 809 source words - csls_knn_10 - Precision at k = 10: 0.000000
