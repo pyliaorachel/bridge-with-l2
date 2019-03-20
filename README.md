@@ -1,6 +1,6 @@
-# bridge-with-l2
+# Bridge with L2
 
-In exploration of the bridging effect of an L2 corpus between source and target languages.
+An exploration of L2 word embedding alignment.
 
 ## Usage
 
@@ -114,6 +114,14 @@ $ python project/tools/perplexity.py [--train TRAIN_CORPUS] --corpora [TEST_CORP
 $ python project/tools/perplexity.py --train project/data/wiki.en.txt --corpora project/data/arxiv_zh_en_880K.txt project/data/arxiv_en_en_480K.txt
 # e.g. use default training corpus
 $ python project/tools/perplexity.py --corpora project/data/arxiv_zh_en_880K.txt project/data/arxiv_en_en_480K.txt
+```
+
+Find top-10 similar words:
+
+```bash
+$ python project/tools/wv_neighbors.py WORD_VEC_PATH
+# e.g. 
+$ python project/tools/wv_neighbors.py project/data/arxiv_zh_en_880K_5.word2vec.vec
 ```
 
 ### Sites
