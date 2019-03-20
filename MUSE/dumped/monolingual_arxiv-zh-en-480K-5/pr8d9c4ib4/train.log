@@ -1,0 +1,34 @@
+INFO - 03/19/19 02:53:39 - 0:00:00 - ============ Initialized logger ============
+INFO - 03/19/19 02:53:39 - 0:00:00 - cuda: True
+                                     dico_eval: default
+                                     emb_dim: 300
+                                     exp_id: 
+                                     exp_name: monolingual_arxiv-zh-en-480K-5
+                                     exp_path: /data/home/pyliao/bridge-with-l2/MUSE/dumped/monolingual_arxiv-zh-en-480K-5/pr8d9c4ib4
+                                     max_vocab: 40000
+                                     normalize_embeddings: 
+                                     src_emb: project/data/arxiv_zh_en_480K_5.word2vec.vec
+                                     src_lang: en
+                                     tgt_emb: 
+                                     tgt_lang: 
+                                     verbose: 2
+INFO - 03/19/19 02:53:39 - 0:00:00 - The experiment will be stored in /data/home/pyliao/bridge-with-l2/MUSE/dumped/monolingual_arxiv-zh-en-480K-5/pr8d9c4ib4
+INFO - 03/19/19 02:53:47 - 0:00:08 - Loaded 29217 pre-trained word embeddings.
+INFO - 03/19/19 02:53:56 - 0:00:17 - ====================================================================
+INFO - 03/19/19 02:53:57 - 0:00:17 -                        Dataset      Found     Not found          Rho
+INFO - 03/19/19 02:53:57 - 0:00:17 - ====================================================================
+INFO - 03/19/19 02:53:57 - 0:00:17 -                 EN_RW-STANFORD        296          1738       0.2041
+INFO - 03/19/19 02:53:57 - 0:00:17 -                  EN_WS-353-ALL        219           134       0.3164
+INFO - 03/19/19 02:53:57 - 0:00:17 -                       EN_RG-65         10            55      -0.0788
+INFO - 03/19/19 02:53:57 - 0:00:17 -                    EN_VERB-143        127            17       0.1489
+INFO - 03/19/19 02:53:57 - 0:00:17 -                   EN_MEN-TR-3k       1226          1774       0.2297
+INFO - 03/19/19 02:53:57 - 0:00:17 -                  EN_WS-353-SIM        125            78       0.4033
+INFO - 03/19/19 02:53:57 - 0:00:17 -                   EN_SEMEVAL17        160           228       0.1513
+INFO - 03/19/19 02:53:57 - 0:00:17 -                      EN_YP-130         73            57       0.1380
+INFO - 03/19/19 02:53:57 - 0:00:17 -                       EN_MC-30          9            21       0.4500
+INFO - 03/19/19 02:53:57 - 0:00:18 -                  EN_SIMLEX-999        607           392       0.1644
+INFO - 03/19/19 02:53:57 - 0:00:18 -                   EN_MTurk-287        101           186       0.0709
+INFO - 03/19/19 02:53:57 - 0:00:18 -                  EN_WS-353-REL        163            89       0.2612
+INFO - 03/19/19 02:53:57 - 0:00:18 -                   EN_MTurk-771        459           312       0.2472
+INFO - 03/19/19 02:53:57 - 0:00:18 - ====================================================================
+INFO - 03/19/19 02:53:57 - 0:00:18 - Monolingual source word similarity score average: 0.20819
