@@ -1,0 +1,3 @@
+project/data/arxiv_zh_en_1K.txt: 4003.718303664476
+project/data/arxiv_en_en_1K.txt: 4812.481923163403
+project/data/essay_zh_en_1K.txt: 6161.47757904611
